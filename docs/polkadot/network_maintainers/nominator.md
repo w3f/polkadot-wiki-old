@@ -9,4 +9,5 @@ Doing so, you become a nominator for the validator of your choice. Pick your val
 While your DOTs are staked by nominating a validator, they are 'locked'. You can receive new DOTs in your account but you cannot stake as validator or transfer DOTs away from your account. You can un-nominate at any time to unlock your funds. Keep in mind that the un-nomination is effective at the next Era. Currently that means you may need to wait up to ~1 hour before the change takes place.
 
 ### Guides
-...
+
+COMING SOON!
