@@ -41,17 +41,11 @@ A generic term for a decentralized application, that is, one which runs as part 
 
 ## __Extrinsic__
 
-Generically, some function declared by the programmer, i.e., one that is not buil
-
-n to the language or framework.  Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
+Generically, some function declared by the programmer, i.e., one that is not built-in to the language or framework.  Specifically for Polkadot, this refers to a binary blob which represents some state transition (such as a transaction) and is used for parachains to communicate via the relay chain.
 
 ## __Finality__
 
-The property of a block which cannot be reverted.  Generally, created blocks are not final until some point in the future
-
-perhaps never, in the case of "probabilistic finality" such as in Bitcoin (although Bitcoin blocks are generally considered "final" after six confirmations due to the unlikelihood of reverting at that point).  In the Polkadot relay chain, the goal is for blocks to be finalized 1
-
-2 seconds after creation.
+The property of a block which cannot be reverted.  Generally, created blocks are not final until some point in the future - perhaps never, in the case of "probabilistic finality" such as in Bitcoin (although Bitcoin blocks are generally considered "final" after six confirmations due to the unlikelihood of reverting at that point).  In the Polkadot relay chain, the goal is for blocks to be finalized 10-12 seconds after creation.
 
 ## __Finality Gadget__
 
@@ -67,9 +61,7 @@ GHOST-based Recursive Ancestor Deriving Prefix Agreement.  It is the finality ga
 
 ## __Governance__
 
-The process of determining what changes to the network are permissible, such as modifications to code or movement of funds.  The governance system in Polkadot is 
-
-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
+The process of determining what changes to the network are permissible, such as modifications to code or movement of funds.  The governance system in Polkadot is on-chain and revolves around stakeholder voting, i.e. the majority of the stake (DOTs) determines the direction of the network.
 
 ## __Governance Council__
 
@@ -89,11 +81,11 @@ A tool which gives you information about a node, such as the latest blocks seale
 
 ## __Nominated Proof of Stake (NPoS)__
 
-A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator.
+A proof of stake system whereby nominators "lend" their stake to validators, as a show of faith in the good behavior of the validator.  Nominated proof-of-stake differs from delegated proof-of-stake in that nominators are subject to loss of stake if they nominate a bad validator; delegates are not subject to loss of stake based on the behavior of the validator.
 
 ## __Nominator__
 
-Nodes which select a set of validators.  A certain amount of DOTs must be staked in order to do so.
+Nodes which select a set of validators.  A certain amount of DOTs must be staked in order to do so, which may be lost if the validator behaves badly.  This forces nominators to carefully select validators.
 
 ## __On-chain governance__
 
@@ -103,7 +95,7 @@ Governance of a blockchain which is controlled by mechanisms controlled by the b
 
 A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment.
 
-## __Parachain Registry__ 
+## __Parachain Registry__
 
 A relatively simple database-like construct that holds both static and dynamic information on each chain.
 
