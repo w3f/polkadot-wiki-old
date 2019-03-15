@@ -10,16 +10,17 @@ By connecting these dots, we allow for the development of a truly decentralized 
 Polkadot is a protocol that allows independent blockchains to exchange information. Polkadot is an inter-chain blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also enforces the order and the validity of the messages between the chains. This interoperability also allows the additional benefit of scalability by creating a general environment for multiple state machines.
 
 * [Description](polkadot)
-* [Comparison With Other Stacks](polkadot/information/comparisons.md)
-* [Sample Applications](polkadot/builders/examples/)
 
 ## How Do I Get Started?
 
 * [Get started building on Polkadot](polkadot/builders/build-w-polkadot.md)
 * [Builders portal](polkadot/builders)
 
+* [Get started running a node](polkadot/network_maintainers)
+* [Learn more](polkadot)
 
 ## Other
 
 * [Community / Ecosystem](community)
+* [Sample Applications](polkadot/builders/examples/)
 * [Contributing to this Wiki](contribution_guidelines)
