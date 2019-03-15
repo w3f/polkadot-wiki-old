@@ -20,7 +20,7 @@ polkadot --dev
 
 You can muck around by cloning and building the http://github.com/paritytech/polka-ui and http://github.com/paritytech/polkadot-ui or just heading to https://polkadot.js.org/apps.
 
-## krummelake
+## Krumme Lanke
 
 Krumme Lanke is a testnet network used during the developement of PoC-2.
 
@@ -36,7 +36,7 @@ Connect to the global "Krumme Lanke" testnet by default by running:
 polkadot
 ```
 
-## alexander
+## Alexander
 
 Alexander is a testnet network used during the developement of PoC-3.
 
@@ -52,7 +52,7 @@ Connect to the global "Alexander" testnet by default by running:
 polkadot
 ```
 
-## local two-node testnet
+## Local Two-Node Testnet
 
 If you want to see the multi-node consensus algorithm in action locally, then
 you can create a local testnet. You'll need two terminals open. In one, run:
