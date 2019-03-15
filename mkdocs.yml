@@ -3,7 +3,7 @@ site_author: 'Web3 Foundation'
 
 nav:
  - Home: index.md
- - Builders: 
+ - Builders:
    - Home: polkadot/builders/index.md
    - Building on Polkadot: polkadot/builders/build_with_polkadot.md
    - Tools: polkadot/builders/tools/index.md
@@ -13,7 +13,8 @@ nav:
    - FAQ: polkadot/information/faq.md
    - Roadmap: polkadot/information/polkadot_roadmap.md
    - Terms: polkadot/information/terms_and_definitions.md
- - Network Maintainer: 
+   - Relevant Links: polkadot/information/relevant_links.md
+ - Network Maintainer:
    - Home: polkadot/network_maintainers/index.md
    - Node Operator / Validator: polkadot/network_maintainers/node_operator.md
    - Nominator: polkadot/network_maintainers/nominator.md
