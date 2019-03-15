@@ -45,11 +45,62 @@ Once you've determined that parachain development is the right path for your pro
 
 The most definitive resource for substrate development is the Parity maintained [Substrate Development Hub](https://docs.substrate.dev).
 
+You will likely want to get started by using the `substrate-node-new`
+script.
+
+You can use this script
+
+```bash
+curl https://getsubstrate.io -sSf | bash
+```
+
+Or alternatively try this [stable package](https://github.com/shawntabrizi/substrate-package) containing the node and ui.
+
 ### Set-up your chain
 
 Once you've decided on your development framework and have compiled your runtime module into the necessary WASM blob, the next thing to do is set up your chain.
 
-In order to deploy a parachain you will need to run your own collator node.
+You can run a development chain locally, using the substrate packages.
+
+In order to deploy a parachain to production you will need to run your own collator node. This is currently not possible but you can run a demo by following this [video tutorial](https://www.youtube.com/watch?v=pDqkzvA4C0E).
+
+#### Cumulus
+
+[Cumulus](https://github.com/paritytech/cumulus) is an in-development library that will make the overhead of writing parachains' distribution, p2p, database, and synchronization layers which is required for connecting to the Polkadot network.
+
+#### Ensuring a fair validator choice
+
+### How to include your parachain in polkadot
+
+For your parachain to be included in Polkadot you will need to be
+entered into the parachain registry.
+
+The whitepaper states that parachains can only be added to the 
+registry through full referendum voting. Additionally, the removal
+of the parachain would come only after a referendum which would include
+a grace period to allow for orderly transition to other chains.
+
+The current thinking is that there will also be a [Vickrey]() auction,
+aka a second-price auction, that will be used to sell registry entries
+to parachain projects for pre-defined time durations (eg. 6 months, 12 months,
+24 months).
+
+You may want to start thinking now about how you will fund the purchase
+of the registry entry. You may want to crowdsource the purchase by pooling
+funds from the community, or you may fund the purchase of the entry
+singly by yourself through private means.
+
+Some entries into the parachain registry may be granted to useful projects
+by the governance mechanism because they provide uniqe and substantial 
+value to polkadot.
+
+#### What happens when the time runs out?
+
+After purchasing an entry into the parachain registry, you will have
+a determined amount of time before your spot in the entry will end.
+
+Before the end date approaches too close you may want to begin to consider
+
 
 ## Smart Contracts
 

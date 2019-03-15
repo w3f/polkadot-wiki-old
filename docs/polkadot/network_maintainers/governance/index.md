@@ -12,7 +12,16 @@ In order to do this, we bring together various novel mechanisms, including an am
 
 ## [Voting]()
 
-## [Usage of DOT](https://hackmd.io/GivK-7lBQ6aYpFnzuOwnCg)
+## Usage of DOT
+
+* **Governance** -
+Polkadot holders have complete control over the protocol. All privileges, which on other platforms are exclusive to miners, will be given to the relay chain participants (DOT holders), including managing exceptional events such as protocol upgrades and fixes.
+
+* **Operation** - 
+Game theory incentivizes token holders to behave in honest ways. Good actors are rewarded by this mechanism whilst bad actors will lose their stake in the network. This ensures the network stays secure.
+
+* **Bonding** - 
+New parachains are added by bonding tokens. Outdated or non-useful parachains are removed by removing bonded tokens. This is a form of Proof of Stake.
 
 ## Guides
 

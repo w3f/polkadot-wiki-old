@@ -22,4 +22,4 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
 
 #### [Polkadash](http://polkadash.io/) - Validator monitor
 
-## [Other Useful links](https://forum.web3.foundation/t/useful-links-for-validators/20)
+## [Other Useful Links](https://forum.web3.foundation/t/useful-links-for-validators/20)
