@@ -5,7 +5,7 @@ nav:
  - Home: index.md
  - Builders: 
    - Home: polkadot/builders/index.md
-   - Building on Polkadot: polkadot/builders/build-w-polkadot.md
+   - Building on Polkadot: polkadot/builders/build_with_polkadot.md
    - Tools: polkadot/builders/tools/index.md
    - Examples: polkadot/builders/examples/index.md
    - Networks: polkadot/builders/networks.md
