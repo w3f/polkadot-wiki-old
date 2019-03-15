@@ -2,7 +2,13 @@
 
 ## Where are we now?
 
-Polkadot is under active development. However, it is already to get started planning your project and even start building it as a parachain or smart contract. One of the first questions that builders need to answer is whether they will build their project as a parachain or a smart contract. This guide is intended to provide a one-stop resource for those wishing to embark on their Polkadot journey.
+Polkadot is under active development. The current testnet release is version 0.3 Alexander.
+If you are thinking about building your project on polkadot, you may be wondering
+how to start. A big question is whether you will build a parachain or a smart contract.
+This guide will walk you through the basics of the polkadot ecosystem.
+
+The ecosystem is still evolving and so will this guide. So check back
+frequently for updates.
 
 ## What is the difference between a parachain and smart contract?
 
@@ -39,11 +45,19 @@ your idea there.
 
 ## Parachain
 
-Once you've determined that parachain development is the right path for your project, you will need to decide on what framework you will use to create your runtime module. Right now there is only one option which is Substrate.
+Once you've determined that parachain development is the right path for your project, 
+you will need to decide on what framework you will use to create your runtime module. 
+Right now there is only one option which is Substrate.
 
 ### Substrate
 
 The most definitive resource for substrate development is the Parity maintained [Substrate Development Hub](https://docs.substrate.dev).
+
+There are a few full length tutorials which are helpful for getting up to speed
+with development of runtime modules:
+
+ - [Token Curated Registry as DappChain](https://docs.substrate.dev/docs/building-a-token-curated-registry-dappchain-using-substrate)
+ - [Substratekitties: Collectibles tutorial on substrate](https://shawntabrizi.github.io/substrate-collectables-workshop/)
 
 You will likely want to get started by using the `substrate-node-new`
 script.
@@ -58,11 +72,18 @@ Or alternatively try this [stable package](https://github.com/shawntabrizi/subst
 
 ### Set-up your chain
 
-Once you've decided on your development framework and have compiled your runtime module into the necessary WASM blob, the next thing to do is set up your chain.
+Once you've decided on your development framework and have made your application
+you'll have a compiled WASM blob that needs a few more things before it can
+graduate to being a parachain on polkadot.
 
-You can run a development chain locally, using the substrate packages.
+Substrate provides a simple node for development but won't cut it for fuller
+applications.
 
-In order to deploy a parachain to production you will need to run your own collator node. This is currently not possible but you can run a demo by following this [video tutorial](https://www.youtube.com/watch?v=pDqkzvA4C0E).
+In order to deploy a parachain to production you will need to run your own collator node.
+You can try running an early demo by following this [video tutorial](https://www.youtube.com/watch?v=pDqkzvA4C0E).
+
+Right now the collator node part of the polkadot runtime is being actively developed
+so we'll be adding more here as it progresses.
 
 #### Cumulus
 
@@ -80,7 +101,7 @@ registry through full referendum voting. Additionally, the removal
 of the parachain would come only after a referendum which would include
 a grace period to allow for orderly transition to other chains.
 
-The current thinking is that there will also be a [Vickrey]() auction,
+The current thinking is that there will also be a [Vickrey](https://en.wikipedia.org/wiki/Vickrey_auction) auction,
 aka a second-price auction, that will be used to sell registry entries
 to parachain projects for pre-defined time durations (eg. 6 months, 12 months,
 24 months).
@@ -119,3 +140,24 @@ The [pDSL](https://github.com/Robbepop/pdsl) is still in experimental phase and 
 accepting external contributors. However, it provides some insight into the future of smart
 contracts. It intends to provide an efficient, simple, robust, accesible language for
 developers that will work with existing Rust tooling.
+
+## Deploying your app as a smart contract
+
+After you've developed your smart contract by using one of the platforms
+above you will deploy it to the chain by sending a transaction containing
+the deploy code.
+
+As the platforms become available, we will update examples in this wiki.
+
+## Paying for your smart contract
+
+Different platforms will have different ways for paying for your
+smart contract deployment and maintainence.
+
+Some ways you will pay for smart contracts include:
+
+ - a transaction fee associated with the deploy transaction
+ - a subscription model in which you pay to subscribe to a chain
+ - access token model in which you must hold enough tokens to use a chain (cp. EOS)
+ - storage rent
+ - free trial. Some chains may want to attract new developers with promotions
