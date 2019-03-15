@@ -23,6 +23,7 @@
 * __Nominator__ - Nodes which select a set of validators.  A certain amount of DOTs must be staked in order to do so.
 * __On-chain governance__ - Governance of a blockchain which is controlled by mechanisms controlled by the blockchain.  On-chain governance allows for decisions can be made in a transparent manner.  Note that there are a variety of different algorithms for making these decisions, such as simple majority voting or identity-based quadratic voting.
 * __Parachain__ - A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment.
+* __Parachain Registry__ - A relatively simple database-like construct that holds both static and dynamic information on each chain.
 * __Parity__ - A company, founded by Dr. Gavin Wood, which is developing Substrate.  It has also released several other projects including Parity Ethereum and Parity Wasm.
 * __Polkadot__ - A heterogenous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
 * __Polkadot Runtime Environment__ - The runtime environment which a runtime module can be executed in.  Parachains must support the Polkadot Runchain Environment - external chains which do not will have to use a bridge.
