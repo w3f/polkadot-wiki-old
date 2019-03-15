@@ -1,5 +1,7 @@
 # Polkadot Wiki
 
+[Polkadot wiki](https://wiki.polkadot.network)
+
 This repo contains markdown files for the Polkadot wiki.
 
 ## Build
@@ -14,6 +16,6 @@ The `cinder` directory contains all styling / theme components.
 ## Adding pages
 
 When adding pages you must manually add the entry into the `nav`
-field in the `mkdocs.yml` located in this directory. We do this 
+field in the `mkdocs.yml` located in this directory. We do this
 in order to have more control in the organization of the layout
 of the wiki and otherwise auto-generate is too messy.
