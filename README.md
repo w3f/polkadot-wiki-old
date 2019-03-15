@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/polkadot-wiki/badge/?version=latest)](https://polkadot-wiki.readthedocs.io/en/latest/?badge=latest)
+
 # Polkadot Wiki
 
 This repo contains markdown files for the Polkadot wiki.
