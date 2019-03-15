@@ -4,8 +4,8 @@ build:
 python:
     version: 3.7
     install:
-        method: pip
-        path: mkdocs==1.0.4
+        - method: pip
+          path: mkdocs==1.0.4
 
 version: 2
 
