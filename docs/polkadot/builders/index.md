@@ -19,7 +19,7 @@ that is not available to be found elsewhere.
 
 ## Development Guide
 
- - [How Can I Build With Polkadot?](./build-w-polkadot.md) **Start here**
+ - [How Can I Build With Polkadot?](./build_with_polkadot.md) **Start here**
  - [Development Roadmap](./dev_roadmap.md)
 
 ## Tools
