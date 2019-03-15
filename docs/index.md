@@ -15,7 +15,6 @@ Polkadot is a protocol that allows independent blockchains to exchange informati
 
 * [Get started building on Polkadot](polkadot/builders/build-w-polkadot.md)
 * [Builders portal](polkadot/builders)
-
 * [Get started running a node](polkadot/network_maintainers)
 * [Learn more](polkadot)
 
