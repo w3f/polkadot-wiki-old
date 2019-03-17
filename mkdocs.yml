@@ -11,6 +11,7 @@ nav:
    - Networks: polkadot/builders/networks.md
  - Information:
    - FAQ: polkadot/information/faq.md
+   - GRANDPA: polkadot/information/grandpa.md
    - Roadmap: polkadot/information/polkadot_roadmap.md
    - Terms: polkadot/information/terms_and_definitions.md
    - Relevant Links: polkadot/information/relevant_links.md

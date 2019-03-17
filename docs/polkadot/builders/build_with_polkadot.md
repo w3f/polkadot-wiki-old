@@ -3,9 +3,7 @@
 ## Where are we now?
 
 Polkadot is under active development. The current testnet release is version 0.3 Alexander.
-If you are thinking about building your project on polkadot, you may be wondering
-how to start. A big question is whether you will build a parachain or a smart contract.
-This guide will walk you through the basics of the polkadot ecosystem.
+If you are thinking about building your project on Polkadot, one of the biggest questions is whether you should build a parachain or a smart contract. This guide aims to help you understand the key differences between these two and provide the necessary resources you need to begin development.
 
 The ecosystem is still evolving and so will this guide. So check back
 frequently for updates.
@@ -88,6 +86,15 @@ so we'll be adding more here as it progresses.
 #### Cumulus
 
 [Cumulus](https://github.com/paritytech/cumulus) is an in-development library that will make the overhead of writing parachains' distribution, p2p, database, and synchronization layers which is required for connecting to the Polkadot network.
+
+It is an extenstion to the Substrate library that will make any Substrate
+runtime compatible with Polkadot by embedding a light client that will
+follow the relay chain.
+
+Getting started with Cumulus (once it's ready):
+
+ - Minimal modification to the Substrate chain already written
+ - Cumulus will port it over with little effort
 
 #### Ensuring a fair validator choice
 
