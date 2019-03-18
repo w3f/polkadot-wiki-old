@@ -61,7 +61,7 @@ WASM blobs to perform an upgrade (after it has been approved by the governance s
 simply means switching out the code blob for which validators are validating against. The
 [upgrade-key](https://github.com/paritytech/substrate/blob/master/srml/upgrade-key/src/lib.rs) module in the Substrate library makes this easy for any Substrate-built chain to implement.
 
-Another feature of Tezos is its smart contract language Michelson which facilitates
+Another feature of Tezos is its smart contract language [Michelson](https://www.michelson-lang.com/) which facilitates
 formal verification of the written logic. Formal verification is a tool which can
 help to prevent bugs that could lead to unwanted state transitions. Although Polkadot
 is currently written in the Rust language, which lacks the same level of formal
