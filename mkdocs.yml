@@ -10,6 +10,7 @@ nav:
    - Examples: polkadot/builders/examples/index.md
    - Networks: polkadot/builders/networks.md
  - Information:
+   - Comparisons: polkadot/information/comparisons.md
    - FAQ: polkadot/information/faq.md
    - GRANDPA: polkadot/information/grandpa.md
    - Roadmap: polkadot/information/polkadot_roadmap.md
