@@ -14,6 +14,7 @@
 - [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Dr. Gavin Wood presents an overview of Polkadot. (Video)
 - [Polkadot Overview](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/) - Dr. Jutta Steiner presents Polkadot. (Video)
 - [Interoperability Intro](https://www.youtube.com/watch?v=RSAFHhTwA8Q) - Rob Habermeier presents "Interopability: Connecting the Dots."
+- [Consensus and Finality in Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - Talk by Rob Habermeier detailing the consensus mechanism for Polkadot.
 
 
 ### Substrate
@@ -22,11 +23,14 @@
 - [Substrate Intro](https://youtu.be/iUMZyL5kTwc) - Dr. Gavin Wood presents Substrate, one of the technologies underlying Polkadot.
 - [How Substrate relates to Polkadot](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - A Tale of Two Technologies Presentation Transcript
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain on-stage in 30 minutes using Substrate.
+- [Preparing for Polkadot's Launch with Substrate](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815) - An overview of how to start preparing for Polkadot before the launch date.
+- [A breif summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post which recaps information regarding Substrate and Polkadot.
 
 ### Governance
 
 - [Governance](https://github.com/paritytech/polkadot/wiki/Governance) - Overview of governance system.
 - [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr. Gavin Wood presents the initial governance structure for Polkadot. (Video)
+- [The State of Web3 & Cryptogovernance on Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - A talk by Web3 Foundation director Ryan Zurrer on the governance mechanism in Polkadot.
 
 ### Consensus and Finality
 
@@ -55,6 +59,12 @@
 
 - [Parity Substrate](https://github.com/paritytech/substrate) - First implementation, written in Rust. Parity Technologies is a 75-person development team based in the UK and Germany. Parity’s tech is responsible for running the premier client for Ethereum, powering 40% of the nodes in the network. Parity also maintains clients for Bitcoin and is building one for ZCash.
 - [Substrate developer hub](https://docs.substrate.dev/) - Overviews, tutorials and reference documentation for Substrate.
+
+### Cumulus
+
+- [Cumulus](https://github.com/paritytech/cumulus) - A library for making Substrate-built chains compatible with Polkadot. 
+- [Cumulus: Entering the Substratosphere](https://www.youtube.com/watch?v=thgtXq5YMOo) - Talk from Polkadot cofounder Robert Habermeier at EthCC in March 2019 detailing the latest on building parachains with Cumulus.
+
 
 ### Wasm
 
