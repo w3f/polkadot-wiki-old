@@ -1,5 +1,7 @@
 site_name: Polkadot Wiki
+site_description: Information on Polkadot
 site_author: 'Web3 Foundation'
+site_url: https://wiki.polkadot.network
 
 nav:
  - Home: index.md
@@ -23,25 +25,29 @@ nav:
    - Nominator: polkadot/node/nominator.md
    - Collator: polkadot/node/collator.md
    - Governance: polkadot/node/governance/index.md
- - Chinese 中文波卡資源: other_languages/chinese.md
-
-theme:
-  custom_dir: cinder/
-  name: mkdocs
-
-favicon: favicon.ico
+ - Chinese 中文波卡資源:
+   - Home: other_languages/chinese.md
 
 # theme:
-#  name: 'material'
-#  palette:
-#    primary: 'deep orange'
-#    accent: 'deep orange'
-#  logo: 'images/logo.svg'
+#   custom_dir: cinder/
+#   name: mkdocs
+
+theme:
+  name: null
+  custom_dir: 'mkdocs-material/material'
+  language: 'en'
+  palette:
+    primary: 'deep blue'
+    accent: 'deep blue'
+  font: false
+  logo: 'images/logo.svg'
+  feature:
+    tabs: true
 
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/polkadot-io'
+      link: 'https://github.com/paritytech/polkadot'
     - type: 'twitter'
       link: 'https://twitter.com/polkadotnetwork'
     - type: 'medium'
@@ -51,5 +57,10 @@ extra:
 #   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 #   - mathjax-config.js
 
-# markdown_extensions:
+markdown_extensions:
 #    - mdx_math
+     - admonition
+     - codehilite:
+         guess_lang: false
+     - toc:
+         permalink: true
