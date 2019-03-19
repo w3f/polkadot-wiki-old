@@ -80,92 +80,161 @@ develop your project as a parachain or as a smart contract.
 
 ## So you want to build a parachain
 
-Once you've determined that parachain development is the right path for your project, 
-you will need to decide on what framework you will use to create your runtime module. 
-Right now there is only one option which is Substrate.
+Once you've determined that creating a parachain is the right approach for your
+project, the next step is to decide what tools and framework you will use. Right
+now the choice is easy since you only have one option: Parity's Substrate.
+
+> Aside: Actually this is not strictly true since you could write all your chain logic
+from scratch. The only requirement is that it must compile to WASM and expose
+the basic API that Polkadot validators expect. But if you're considering that
+then you can stop reading this guide because you won't need it and you will not
+benefit from the re-usability that frameworks like Substrate enable.
 
 ### Substrate
 
-The most definitive resource for substrate development is the Parity maintained [Substrate Development Hub](https://docs.substrate.dev).
+Substrate is a framework for blockchain innovators. It provides the basic building
+blocks that are needed to construct a chain and provides a pluggable and modular
+library of runtime modules from which to compose your chain logic. The motivation
+of building it was to bring the development time of a new blockchain down from years
+to weeks and days or even hours for simplistic chains.
 
-There are a few full length tutorials which are helpful for getting up to speed
-with development of runtime modules:
+The most definitive resource regarding Substrate development is the Parity maintained
+[Substrate Development Hub](https://docs.substrate.dev) which covers material from
+beginning your first parachain from a template to building Dappchains like Cryptokitties.
 
- - [Token Curated Registry as DappChain](https://docs.substrate.dev/docs/building-a-token-curated-registry-dappchain-using-substrate)
- - [Substratekitties: Collectibles tutorial on substrate](https://shawntabrizi.github.io/substrate-collectables-workshop/)
+It is recommended that you poke around in there for a while until you become familiar
+with the patterns for how a Substrate chain will be built. Once you have a solid 
+understanding you can run through the [Token Curated Registry](https://docs.substrate.dev/docs/building-a-token-curated-registry-dappchain-using-substrate)
+or the [Substratekitties](https://shawntabrizi.github.io/substrate-collectables-workshop/) tutorials.
 
-You will likely want to get st  arted by using the `substrate-node-new`
-script.
+#### Starting a new project
 
-You can use this script
+You will likely want to use the convienence script provided by the Substrate developers
+to start a new project template.
+
+First download the script by running this command:
 
 ```bash
 curl https://getsubstrate.io -sSf | bash
 ```
 
-Or alternatively try this [stable package](https://github.com/shawntabrizi/substrate-package) containing the node and ui.
+Then create your project by running:
 
-### Set-up your chain
+```bash
+substrate-node-new <myProject> <myName>
+```
 
-Once you've decided on your development framework and have made your application
-you'll have a compiled WASM blob that needs a few more things before it can
-graduate to being a parachain on polkadot.
+!!! attention
+    _While Substrate is still pre-1.0 release it is recommended to use instead this [stable package](https://github.com/shawntabrizi/substrate-package) containing the node and ui instead of the script above._
 
-Substrate provides a simple node for development but won't cut it for fuller
-applications.
+### Setting up your chain
 
-In order to deploy a parachain to production you will need to run your own collator node.
-You can try running an early demo by following this [video tutorial](https://www.youtube.com/watch?v=pDqkzvA4C0E).
+After you have created your chain logic using a framework like Substrate, you will
+compile it into a WASM blob which contains your state transition function. This is
+the core of your blockchain and is what the validators on the Polkadot relay chain
+will validate all state transitions against. But before you're able to submit your
+chain into the parachain registry of Polkadot there is still a couple things you
+need to take care of.
 
-Right now the collator node part of the polkadot runtime is being actively developed
-so we'll be adding more here as it progresses.
+The two big things you will need to resolve when you are finished developing your chain
+logic are 1) you need to set up at least one collator node and 2) you will need to ensure
+your entry on the relay chain by acquiring a spot on the parachain registry.
+
+You will need to do the first one because the validators on the relay chain need some way
+to become aware of new state transitions coming from your chain. This functionality is
+handled by the specialized type of node known as the [collator](../learn/terms_and_definitions.md#collator).
+Basically collators are the nodes which will producing blocks for your chain and there
+could be just one or there could be many. They can be ran as public services or there
+could be an incentive structure baked into your parachain to encourage users to pop
+up more of them.
+
+Right now it's still pretty early on in the development of collator nodes.
+There is an early demo that is available in the Polkadot repository, if you are
+keen you can try running an early demo by following this [video tutorial](https://www.youtube.com/watch?v=pDqkzvA4C0E).
+However, as development continues there will be libraries that will make setting up a
+Polkadot-compatible parachain _super easy_. And that library will be called Cumulus.
 
 #### Cumulus
 
-[Cumulus](https://github.com/paritytech/cumulus) is an in-development library that will make the overhead of writing parachains' distribution, p2p, database, and synchronization layers which is required for connecting to the Polkadot network.
+[Cumulus](https://github.com/paritytech/cumulus) is a library that is still in
+development and is _not_ ready to use yet. 
 
 It is an extenstion to the Substrate library that will make any Substrate
 runtime compatible with Polkadot by embedding a light client that will
 follow the relay chain.
 
-Getting started with Cumulus (once it's ready):
+It will handle some annoying things that your chain will need to do if it 
+wants to be part of Polkadot such as:
+
+ - handling interchain messaging between parachains
+ - out-of-the-box collator node
+ - follows the relay chain with an embedded light client
+ - compatible with Polkadot specific intricacies of block authorship
+
+Getting started with Cumulus once it's ready will be as easy as:
 
  - Minimal modification to the Substrate chain already written
  - Cumulus will port it over with little effort
 
-#### Ensuring a fair validator choice
+For the latest on Cumulus see a recent talk from Rob Habermeier below.
+
+[![img](http://img.youtube.com/vi/thgtXq5YMOo/0.jpg)](https://www.youtube.com/watch?v=thgtXq5YMOo)
+
+<!-- #### Ensuring a fair validator choice -->
 
 ### How to include your parachain in polkadot
 
-For your parachain to be included in Polkadot you will need to be
-entered into the parachain registry.
+The second very important step you will need to do once you're ready to integrate
+your chain into Polkadot is to secure a spot in the parachain registry.
 
-The whitepaper states that parachains can only be added to the 
-registry through full referendum voting. Additionally, the removal
-of the parachain would come only after a referendum which would include
-a grace period to allow for orderly transition to other chains.
+In the whitepaper it states that parachains will only be added to the
+network through a process of full referendum voting by the governance
+mechanism. Furthermore, the chain would exist until it is again voted
+out by a similar mechanism in which a referendum would grant a grace
+period for users to migrate off chains.
 
-The current thinking is that there will also be a [Vickrey](https://en.wikipedia.org/wiki/Vickrey_auction) auction,
-aka a second-price auction, that will be used to sell registry entries
-to parachain projects for pre-defined time durations (eg. 6 months, 12 months,
-24 months).
+It is still believed that the governance mechanism will integrate some
+especially useful and value-adding chains this way for the benefit of
+the Polkadot network as a whole. But this will not be the only way for 
+you to acquire a spot for your parachain. If you do not want to persuade
+the governance mechanism that your chain is useful then there is another
+way.
 
-You may want to start thinking now about how you will fund the purchase
-of the registry entry. You may want to crowdsource the purchase by pooling
-funds from the community, or you may fund the purchase of the entry
-singly by yourself through private means.
+The current thinking is that there will be some type of auction mechanism
+that will distribute the spots in the parachain registry. This auction may
+probably be something similar to what is currently employed in the Ethereum
+Name System to distribute domain names. Namely, it will be a [Vickrey](https://en.wikipedia.org/wiki/Vickrey_auction),
+also know as a second-price auction, that will be used to allocate registry entries
+to parachain projects for various time durations (eg. 6 months, 12 months,
+24 months). In order to participate in the auction you will need to stake
+enough DOTs to be the highest bidder and then allow your DOTs to be locked
+for the duration of your entry.
 
-Some entries into the parachain registry may be granted to useful projects
-by the governance mechanism because they provide uniqe and substantial 
-value to polkadot.
+You can start thinking now about how to fund enough DOTs to ensure you
+secure an entry on the parachain registry. Some ideas include a crowdfunding
+campaign in which participates will stake their own DOTs individually for a 
+single chain, a crowdsale for which participants will purchase some tokens
+of a chain so that chain can have enough DOTs to secure its entry, or through
+private fundraising means.
 
 #### What happens when the time runs out?
 
-After purchasing an entry into the parachain registry, you will have
-a determined amount of time before your spot in the entry will end.
+Once you secure your entry into the parachain registry you are ensured that
+spot until either 1) the duration of the time attached to that entry has elapsed
+or 2) the governance mechanism votes to remove it.
 
-Before the end date approaches too close you may want to begin to consider
+Option 2 will probably only happen in dire circumstances and will not be something
+that commonly takes place. Option 1 will be the way that most chains will expire
+off the Polkadot network. 
 
+The fact that you and all the users of the chains know the public deadline of that
+chains life is a good thing because it means that either a referendum could be
+held by the stakeholders of the chain to extend it (if your chain implements
+on-chain governance) or users can safely migrate off the platform to an
+alternative.
+
+In most cases it should be fairly straightforward to simple "renew" your
+entry on the parachain registy by continuing to stake DOTs.
 
 ## So you want to build a smart contract
 
