@@ -27,20 +27,20 @@ to natively support it.
 
 ## Want to learn more?
 
-- [Explore the Wiki](/polkadot/learn/comparisons) - Read the informational section of the wiki.
-- [Relevant Links](/polkadot/learn/relevant_links) - **Comprehensive links about Polkadot**
+- [Explore the Wiki](./polkadot/learn/comparisons.md) - Read the informational section of the wiki.
+- [Relevant Links](./polkadot/learn/relevant_links.md) - **Comprehensive links about Polkadot**
 
 ## Want to build on Polkadot?
 
-- [Builders Portal](polkadot/build) - Tools, libraries, and resources to help you build.
-- [Starters Guide](polkadot/build/build_with_polkadot.md) - Overview on how to get started building your project on Polkadot. (In Progress)
+- [Builders Portal](./polkadot/build) - Tools, libraries, and resources to help you build.
+- [Starters Guide](./polkadot/build/build_with_polkadot.md) - Overview on how to get started building your project on Polkadot. (In Progress)
 
 ## Want to run a node?
 
-- [Run a Node](polkadot/node/) - Information covering running a node on the Polkadot network.
+- [Run a Node](./polkadot/node/) - Information covering running a node on the Polkadot network.
 
 ## Resources
 
-- [Community / Ecosystem](community) - List of community rooms and channels to talk to others about Polkadot.
-- [Sample Applications](polkadot/build/examples/) - Some sample applications that are built on or currently being built for Polkadot.
-- [Contributing Guide](contribution_guidelines) - Rules for contributing to the wiki.
+- [Community / Ecosystem](./community.md) - List of community rooms and channels to talk to others about Polkadot.
+- [Sample Applications](./polkadot/build/examples/) - Some sample applications that are built on or currently being built for Polkadot.
+- [Contributing Guide](./contribution_guidelines.md) - Rules for contributing to the wiki.
