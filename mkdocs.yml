@@ -4,25 +4,25 @@ site_author: 'Web3 Foundation'
 nav:
  - Home: index.md
  - Build:
-   - Home: polkadot/builders/index.md
-   - Building on Polkadot: polkadot/builders/build_with_polkadot.md
-   - Tools: polkadot/builders/tools/index.md
-   - Examples: polkadot/builders/examples/index.md
-   - Networks: polkadot/builders/networks.md
+   - Home: polkadot/build/index.md
+   - Building on Polkadot: polkadot/build/build_with_polkadot.md
+   - Tools: polkadot/build/tools/index.md
+   - Examples: polkadot/build/examples/index.md
+   - Networks: polkadot/build/networks.md
  - Learn:
-   - Comparisons: polkadot/information/comparisons.md
-   - Cryptography: polkadot/information/cryptography.md
-   - FAQ: polkadot/information/faq.md
-   - GRANDPA: polkadot/information/grandpa.md
-   - Roadmap: polkadot/information/polkadot_roadmap.md
-   - Terms: polkadot/information/terms_and_definitions.md
-   - Relevant Links: polkadot/information/relevant_links.md
+   - Comparisons: polkadot/learn/comparisons.md
+   - Cryptography: polkadot/learn/cryptography.md
+   - FAQ: polkadot/learn/faq.md
+   - GRANDPA: polkadot/learn/grandpa.md
+   - Roadmap: polkadot/learn/polkadot_roadmap.md
+   - Terms: polkadot/learn/terms_and_definitions.md
+   - Relevant Links: polkadot/learn/relevant_links.md
  - Run the Network:
-   - Home: polkadot/network_maintainers/index.md
-   - Node Operator / Validator: polkadot/network_maintainers/node_operator.md
-   - Nominator: polkadot/network_maintainers/nominator.md
-   - Collator: polkadot/network_maintainers/collator.md
-   - Governance: polkadot/network_maintainers/governance/index.md
+   - Home: polkadot/node/index.md
+   - Node Operator / Validator: polkadot/node/node_operator.md
+   - Nominator: polkadot/node/nominator.md
+   - Collator: polkadot/node/collator.md
+   - Governance: polkadot/node/governance/index.md
  - Chinese 中文波卡資源: other_languages/chinese.md
 
 theme:

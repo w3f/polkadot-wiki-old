@@ -2,4 +2,4 @@
 
 > Specialization breeds optimization.
 
-[Links](information/relevant_links.md)
+[Links](learn/relevant_links.md)

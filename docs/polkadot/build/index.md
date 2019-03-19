@@ -1,8 +1,8 @@
-# Builders
+# Builders Portal
 
 > 🏗️ Polkadot is under construction, these documents will rapidly change.
 
-Welcome to the builders section of the Polkadot wiki.
+Welcome to the build section of the Polkadot wiki.
 
 Here you will be able to find the most up-to-date information
 on the status of the development tools in the ecosystem. We are
