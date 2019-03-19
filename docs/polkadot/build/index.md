@@ -1,6 +1,7 @@
 # Builders Portal
 
-> 🏗️ Polkadot is under construction, these documents will rapidly change.
+!!! info
+    _🏗️ Polkadot is under construction, these documents will rapidly change._
 
 Welcome to the build section of the Polkadot wiki.
 
