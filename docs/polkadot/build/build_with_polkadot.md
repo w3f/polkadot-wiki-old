@@ -238,36 +238,50 @@ entry on the parachain registy by continuing to stake DOTs.
 
 ## So you want to build a smart contract
 
-Polkadot will likely have a variety of parachains which offer smart contracts
-to developers. These are still rapidly progressing and more content will be
-posted as the technology is ready.
+Polkadot is designed to be a network of heterogeneous blockchains with
+compatible over a large array of different chain designs. Already some chains
+have announce that they will be supporting smart contracts either with their
+own implementation or by leveraging the Substrate Library's Smart Contract
+module. This means that the Polkadot network as a whole will be very friendly
+and attractive to smart contract developers who want flexibility in their
+application design, development, and deployment.
+
+Polkadot will also be compatible with pre-exisiting smart contract platforms
+such as Ethereum and Tezos through bridges. This means that even work spent
+developing on these platforms today will be applicable to running on Polkadot
+in the future.
+
+I assume that readers of this article will be more interested in Polkadot
+flavored platforms over the already existing ones. These platforms are still
+very early on, but already there is a good foundation from which can be 
+surveyed by prospective builders and entrepreneurs.
 
 ### Edgeware
 
 [Edgeware](https://edgewa.re) is a planned parachain for Polkadot which will
-allow for smart contracts.
+allow for smart contracts. Along with other interesting innovations in governance
+and token distribution, it will likely be the first parachain that will connect
+to the Polkadot mainnet with smart contracts enabled. You can stay up to date with
+the project on their [website](https://edgewa.re).
 
 ### pDSL (Parity's Domain Specific Language)
 
-The [pDSL](https://github.com/Robbepop/pdsl) is still in experimental phase and not yet
-accepting external contributors. However, it provides some insight into the future of smart
-contracts. It intends to provide an efficient, simple, robust, accesible language for
-developers that will work with existing Rust tooling.
+The [pDSL](https://github.com/Robbepop/pdsl) is intended to be a new domain specific
+language for writing smart contracts in Rust that will compile down to WASM code.
+As the READMA states, it is still in an experimental phase and is missing a lot of the
+planned features. Interested developers can start looking now to see what they can
+expect for the future but probably will not want to write any production code using
+it until it's further along.
 
-## Deploying your app as a smart contract
+<!-- ## Deploying your app as a smart contract -->
 
-After you've developed your smart contract by using one of the platforms
-above you will deploy it to the chain by sending a transaction containing
-the deploy code.
-
-As the platforms become available, we will update examples in this wiki.
 
 ## Paying for your smart contract
 
 Different platforms will have different ways for paying for your
 smart contract deployment and maintainence.
 
-Some ways you will pay for smart contracts include:
+Some ways you different platforms might implement paying for smart contracts:
 
  - a transaction fee associated with the deploy transaction
  - a subscription model in which you pay to subscribe to a chain
