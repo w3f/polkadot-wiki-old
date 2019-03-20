@@ -61,7 +61,7 @@ Unless you're absolutely positive that your application will need its own chain,
 or you're ready to complete all the surrounding requirements for launching a parachain,
 it is advisable you begin by trying out your idea with smart contracts.
 
-Here is a quick pro-con chart to help you digest the information:
+Here is a quick comparison chart to help you digest the information:
 
 | Parachain | Smart Contract |
 |-----------|----------------|
@@ -236,29 +236,57 @@ alternative.
 In most cases it should be fairly straightforward to simple "renew" your
 entry on the parachain registy by continuing to stake DOTs.
 
+### Benefits of being a parachain
+
+The benefit of being a parachin on Polkadot is that your chain will be secured
+with the same security as the entire Polkadot network without you needing to 
+maintain your own consensus. Additionally, your chain will be able to interact
+withh all other Polkadot parachains through the interchain communication system.
+
+Many tools and monitoring being built currently for Polkadot or parachains
+will be easily portable or re-usable by other parachains too. In the past 
+sovereign chains would need to have compatible wallets that supported them.
+With Polkadot, much of the basic tooling like wallets and block explorers
+will already be available and configurable to your parachain.
+
+Finally, being a Polkadot parachain will allow you and your community
+to experiment with the latest innovations in blockchain tech. Whether
+you are interested in governance, scalability, privacy, or custom VMs,
+Polkadot is general enough that it will support your innovations at launch
+and into the future.
+
+That's the end of the parachain section, you can either read about smart contracts
+or go straight to the [conclusion](#conclusion).
+
 ## So you want to build a smart contract
 
-Polkadot is designed to be a network of heterogeneous blockchains with
-compatible over a large array of different chain designs. Already some chains
-have announce that they will be supporting smart contracts either with their
-own implementation or by leveraging the Substrate Library's Smart Contract
-module. This means that the Polkadot network as a whole will be very friendly
-and attractive to smart contract developers who want flexibility in their
-application design, development, and deployment.
+The Polkadot relay chain itself will not support smart contracts but
+since Polkadot is a network of many heterogeneous blockchains, there
+will be parachains that do.
+
+Already Parity Technologies has laid much of the groundwork for an
+out-of-the-box solution for parachains that want to include smart contract
+functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/srml/contract)
+module in the core SRML will support smart contracts that are compiled
+to WASM. 
+
+In order to actually develop a smart contract that compiles to WASM, an
+appropriate language is also needed. For this, Parity has also been working
+on a domain specific language called [pDSL](#pdsl-paritys-domain-specific-language).
+
+There is already one project that has announce intent to become a Polkadot
+parachain and to support smart contracts called [Edgeware](#edgeware). More
+will likely begin to emerge as the tooling matures and the ecosystem around
+Polkadot expands.
 
 Polkadot will also be compatible with pre-exisiting smart contract platforms
 such as Ethereum and Tezos through bridges. This means that even work spent
-developing on these platforms today will be applicable to running on Polkadot
+developing on these platforms today may be applicable to running on Polkadot
 in the future.
-
-I assume that readers of this article will be more interested in Polkadot
-flavored platforms over the already existing ones. These platforms are still
-very early on, but already there is a good foundation from which can be 
-surveyed by prospective builders and entrepreneurs.
 
 ### Edgeware
 
-[Edgeware](https://edgewa.re) is a planned parachain for Polkadot which will
+Edgewareis a planned parachain for Polkadot which will
 allow for smart contracts. Along with other interesting innovations in governance
 and token distribution, it will likely be the first parachain that will connect
 to the Polkadot mainnet with smart contracts enabled. You can stay up to date with
@@ -268,13 +296,24 @@ the project on their [website](https://edgewa.re).
 
 The [pDSL](https://github.com/Robbepop/pdsl) is intended to be a new domain specific
 language for writing smart contracts in Rust that will compile down to WASM code.
-As the READMA states, it is still in an experimental phase and is missing a lot of the
-planned features. Interested developers can start looking now to see what they can
-expect for the future but probably will not want to write any production code using
-it until it's further along.
+As stated in the README, it is still in an experimental phase and missing a lot of the
+planned features but it is possible to start writing smart contracts with it today.
 
-<!-- ## Deploying your app as a smart contract -->
+For the interested developers, they can get started writing smart contracts using pDSL
+by studying the [examples](https://github.com/Robbepop/pdsl/tree/master/examples) which have 
+already been written. These can be used as guideposts to writing more complex logic which
+will be deployable on smart contract parachains. However, since the ecosystem is still
+so early it's probably not a good idea to try to write production code with it yet.
 
+## Deploying your app as a smart contract
+
+A smart contract is in essence some code that exists at an address on chain and
+can be executed. Once the code is developed it needs some way to actually get
+onto the chain and be available to users. To deploy your smart contract on chain
+may vary slightly for whichever platform you have chosen as your stack, but in
+general it will involve sending a special transaction which will `create` your
+smart contract on the ledger. Usually this transaction will require a fee to cover
+the computation costs of any constructor logic and for storage that it consumes.
 
 ## Paying for your smart contract
 
@@ -288,3 +327,46 @@ Some ways you different platforms might implement paying for smart contracts:
  - access token model in which you must hold enough tokens to use a chain (cp. EOS)
  - storage rent
  - free trial. Some chains may want to attract new developers with promotions
+
+In general most smart contract platforms implement the notion of `gas` which
+represents the computation required to run your smart contract logic across
+the network. Gas is usually paid for by paying the corresponding `gas price`
+that is sepcified in the transaction. 
+
+There are a couple things you will want to keep in mind while developing your
+application to ensure that the gas cost of it stays within reasonable bounds
+and won't become too expensive. These are storage of your contract and the 
+complexity of the logic. 
+
+Storage is expensive on chain since it increases the data required for nodes
+to perform a full sync. When developing smart contracts try to keep the amount
+of data sent to the chain as low as possible. To do this you may want to consider
+decentralized storage solutions such as [IPFS](https://ipfs.io) or [Storj](https://storj.io/)
+which can often work parallel to your smart contract, and allow you to keep only
+a pointer to the storage as a hash on chain. 
+
+Likewise it is advisable to keep the complexity of the on-chain logic as low
+as possible in order to minimize the amount of gas fees. Often this means that
+any non-critical calculations should be done before sending data to the chain.
+
+### It's still early
+
+Smart contracts on Polkadot is still very early, which explains why this section
+is composed of pointers to in progress projects and non-specific information.
+Keep up with the projects above and watch out for the first testnets to be released.
+If you're feeling brave you can try to work with the tools outlined above but be 
+aware that much of this technology is still prior to stable release so will probably
+change as we continue progress toward the future mainnet Polkadot release.
+
+## Conclusion
+
+Hopefully this guide has helped you to make the right decision for whether
+your new project will be a parachain or a smart contract, and shown you the
+essiential resources for which you can use to start developing on Polkadot today.
+Even though the tooling is still maturing, there is a benefit for arriving to
+the scene early: you have the ability to innovate by creating something
+truly new. If you would like to share your ideas for a parachain or a smart contract
+feel free to talk to us in the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) and if you have questions
+regarding development you can try asking in the [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org).
+Keep up to date by following the appropiate [social channels](https://wiki.polkadot.network/en/latest/community/) and good luck
+building your vision into reality on Polkadot!
