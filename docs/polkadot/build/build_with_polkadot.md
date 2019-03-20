@@ -3,6 +3,15 @@
 !!! attention
     _Polkadot and Substrate are both under active development and things are changing rapidly. Things should calm down in a couple weeks with the [1.0 release](https://github.com/paritytech/substrate/milestone/9) of Substrate but be aware that the APIs are still evolving._
 
+Polkadot is described in the [whitepaper](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf) as a fully extensible
+and scalable blockchain development, deployment, and interaction test bed.
+Builders will have the ability to use this exiciting new technology
+as the infrastructure for their new applications.
+
+This guide will walk you through the [current state of Polkadot](#where-are-we-now) development, explain the [difference between a
+parachain and a smart contract](#what-is-the-difference-between-a-parachain-and-smart-contract), walk through
+the necessary steps to take to [build a parachain](#so-you-want-to-build-a-parachain) from [starting a new project](#starting-a-new-project) to [including your chain in Polkadot](#how-to-include-your-parachain-in-polkadot); or to [build a smart contract](#so-you-want-to-build-a-smart-contract) from picking a platform to [paying for the deployment](#paying-for-your-smart-contract). 
+
 ## Where are we now?
 
 Polkadot has achieved the PoC 3 milestone and has been successfully running the
