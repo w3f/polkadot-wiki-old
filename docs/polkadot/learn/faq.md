@@ -6,7 +6,7 @@ _This FAQ focuses on technical questions for users interested in developing appl
 
 ### How many validators will be online at launch?
 
-Approximately 50.
+Somewhere between 50 - 100. Increasing to 1000 or so later on. [Source](https://youtu.be/IRc5Jma_eH8?t=1630) 
 
 ### How do I apply to be a validator?
 
