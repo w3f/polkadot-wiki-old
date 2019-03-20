@@ -237,21 +237,21 @@ you to acquire a spot for your parachain. If you do not want to persuade
 the governance mechanism that your chain is useful then there is another
 way.
 
-The current thinking is that there will be some type of auction mechanism
-that will distribute the spots in the parachain registry. This auction may
-probably be something similar to what is currently employed in the Ethereum
-Name System to distribute domain names. Namely, it will be a [Vickrey](https://en.wikipedia.org/wiki/Vickrey_auction),
-also know as a second-price auction, that will be used to allocate registry entries
-to parachain projects for various time durations (eg. 6 months, 12 months,
-24 months). In order to participate in the auction you will need to stake
-enough DOTs to be the highest bidder and then allow your DOTs to be locked
-for the duration of your entry.
+The current thinking is that there will be an auction mechanism
+that will distribute the spots in the parachain registry. This auction 
+will likely be a [Vickrey](https://en.wikipedia.org/wiki/Vickrey_auction) auction,
+also know as a second-price auction. The auction would be used to allocate registry entries
+to parachain projects for differing but constant time durations (eg. 6 months, 12 months,
+24 months). In order to participate in the auction participants need to stake DOTs. The
+participant which stakes enough DOTs to be the highest bidder
+will be required to lock up the number of DOTs of the second-highest bid
+for the duration of the registry inclusion.
 
-You can start thinking now about how to fund enough DOTs to ensure you
+Builders can start thinking now about how to fund enough DOTs to ensure they can
 secure an entry on the parachain registry. Some ideas include a crowdfunding
 campaign in which participates will stake their own DOTs individually for a 
 single chain, a crowdsale for which participants will purchase some tokens
-of a chain so that chain can have enough DOTs to secure its entry, or through
+of a chain so that chain can have enough DOTs to stake its own entry, or through
 private fundraising means.
 
 #### What happens when the time runs out?
