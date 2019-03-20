@@ -1,65 +1,95 @@
 # How Can I Build with Polkadot?
 
 !!! attention
-    _Polkadot and Substrate are both under active development and things are changing rapidly. This should calm down in a couple weeks with the release of 1.0 of Substrate but be aware that the APIs are still evolving._
+    _Polkadot and Substrate are both under active development and things are changing rapidly. Things should calm down in a couple weeks with the [1.0 release](https://github.com/paritytech/substrate/milestone/9) of Substrate but be aware that the APIs are still evolving._
 
 ## Where are we now?
 
-Polkadot is currently on the PoC 3 release code named Alexander, which went live on
-December 21, 2018. Substrate, the runtime module library on which Polkadot is being
-built on and enables developers to re-use many of the pieces to create their own 
-blockchain is nearing completion of the first 1.0 stable release.
+Polkadot has achieved the PoC 3 milestone and has been successfully running the
+Alexander testnet for three months. Progress is steadily being made toward the next
+PoC4 release which will include interchain messaging. Development is on track for a 
+mainnet launch by the end of the year.
 
-If you are a developer, builder, entreprenuer, or otherwise a visionary thinking
-about whether Polkadot is where you should start your next project, this guide is
-for you. Although the ecosystem is still evolving and Polkadot may be almost a year
-out from a mainnet launch, there is enough information and tools to begin planning and
-executing on your idea today.
+Meanwhile, Substrate which is the runtime module library on which Polkadot is being
+built, is closely approaching its first stable release. Substrate allows builders
+to re-use many of the pieces that are being used to create Polkadot and compose
+them into their own chain. It is also easily extensible by writing custom _runtime
+modules_ which dictate the runtime logic of the chain.
+
+If you are a developer, builder, entreprenuer, or otherwise a visionary
+considering Polkadot as the ecosystem for your next project, this guide
+will help you understand your options for development and decide what
+stack is right for you and your project. It will show you the resources
+available which you can use to begin planning and executing on your idea today. 
 
 ## What is the difference between a parachain and smart contract?
 
-The first question you may to want to ask yourself is whether you should build
-your project as a smart contract or as a parachain. Polkadot enables your to
-plug-in many of the same components used to build it into a custom chain built
-by you. But this unique feature may not always be the best choice for you since
-it comes with some overhead. There are already chains which are planning to
-support smart contracts on their platform which will be connected to the Polkadot
-network. It may be desirable to some to build on one of these chains instead of
-starting a new chain. We will now lay out the key differences between parachains
-and smart contract platforms and describe why you may want to choose one over another.
+Before you can begin any work on your idea at all, it is important
+that you understand the tradeoffs between the two development options
+you have for building on Polkadot: parachains or smart contracts.
 
-Broadly speaking, if you want to have control over the foundational mechanics of
-your network then a parachain is a good option for you. Building a parachain means
-that you can design the economics of the monetary system from the ground up to be
-how you like it. Maybe you want to implement a custom fee structure into your transactions
-or perhaps you like to implement a treasury which could act as a native DAO which
-would receive funds from the block reward and give stakeholders voice to
-allocate funds. If you have a very specific use case that can be optimized
-as a chain specific state transition function, or you are implementing something
-novel such as a new virtual machine, then likely you will be more attracted
-to building a parachain.
+Parachains are the individual chains which will connect into the Polkadot
+network to benefit from the shared security of the Polkadot relay chain
+validator set. Polkadot itself is being built with the same tools available
+to start creating parachains. Parachains allow for flexibility and less
+constraints on what is possible in the chain logic but come with some 
+additional overhead which makes it so that they aren't always the preferable
+option when compared to smart contracts.
+
+Smart contracts are executable programs that exist on a specific chain. They
+often have nice interoperability compatible with other applications on the
+same chain, but can not really interact with something on another chain. They
+come with less development overhead than building a full parachain but imply
+more constraints on what is allowed by the application logic. They are good
+mediums to try initial prototyping with, but eventually may outgrow themselves
+due to scalability constraints or complexity overload.
+
+Broadly speaking, if you want to have control over the protocol mechanics of
+your network then a parachain will be the good option for you. 
+
+Building a parachain means that you can design the economics of the monetary system 
+from the ground up. You can implement a custom fee structure into your transactions
+or a full-on treasury system which could act as a native DAO and uses portions
+of the block reward to allow stakeholders to allocate funds. 
+
+It opens up the flexibility to construct complex logic that may be too expensive
+to run as a smart contract. If there is a specific feature your chain will use
+as a cornerstone, you can even implement an optimized runtime for it to make it
+cheaper and faster.
+
+If there is a specific use case you are thinking of such as implementing a 
+completely new type of virtual machine, you will be able to do this by building
+a parachain.
 
 Instead if you want a lower barrier to entry and more rapid iteration cycles
-of quick prototyping and deployment, then you will probably be more attracted
-to the experience of smart contracts. Since smart contracts take less time
-to develop, it means that you can get your idea out into the world that much
-quicker. An additional benefit is that smart contracts have environments
-in which other applications are deployed. This means that if your application
-requires an application to already be deployed on the chain in order to
-interact with it in some capacity then you will want to build a smart contract
-on that chain. An example of this are the DeFi (decentralized finance) applications
-on Ethereum which build off of each other to create things like decentralized
-hedge funds.
+for quick prototyping and deployment, you will be more attracted to the smart
+contract medium. 
 
-You should be aware of some of the overhead of creating a parachain that simply
-does not exists for deploying a smart contract. One of these is that you will
-be required to figure out your own method of incentivizing collator nodes on
-your network or simply be required to keep one always running yourself. Another
-is that the inclusion into the Polkadot shared security will not be _free_, but
-will require the staking of DOTs in order to write your parachain to the registry.
-Unless you're absolutely positive that your application will need its own chain,
-or you're ready to complete all the surrounding requirements for launching a parachain,
-it is advisable you begin by trying out your idea with smart contracts.
+Smart contracts are usually simpler than parachain logic and therefore
+take less time to develop. They will have strong tooling like IDEs that
+allow you to get your idea out into the world that much quicker.
+
+As mentioned before, they will have access to the environment of the chain
+for which they are deployed. If your application requires interaction with
+a system that is already deployed on a chain as a smart contract, it will
+in most cases make the most sense to also write your application as a smart
+contract on the same chain.
+
+An example of the composable of smart contracts is evident in the recent phenomenon
+of DeFi (decentralized finance) applications. Projects like [Maker](https://makerdao.com)
+opened the way for further application to be consustructed on top of them
+such as decentralized hedge funds and loan management systems.
+
+There will be more overhead to creating a parachain that simply
+will not exist for deploying your application as smart contracts.
+These include running collator nodes for your parachain, or incentivizing them
+in some way, and staking DOTs or otherwise convincing the Polkadot governance
+mechanism to include your chain on the parachain registry.
+
+Unless you're absolutely sure that your project needs to be a parachain
+or if you're just looking forward to experimenting with new tech, it
+is advisable you start by first creating an MVP of your decentralized
+application as a smart contract.
 
 Here is a quick comparison chart to help you digest the information:
 
@@ -84,11 +114,10 @@ Once you've determined that creating a parachain is the right approach for your
 project, the next step is to decide what tools and framework you will use. Right
 now the choice is easy since you only have one option: Parity's Substrate.
 
-> Aside: Actually this is not strictly true since you could write all your chain logic
-from scratch. The only requirement is that it must compile to WASM and expose
-the basic API that Polkadot validators expect. But if you're considering that
-then you can stop reading this guide because you won't need it and you will not
-benefit from the re-usability that frameworks like Substrate enable.
+> Actually, its not strictly true that Substrate is your only choice since you could write all your chain logic
+from scratch as long as it compiled to WASM and has the correct interaction interface for Polkadot.
+But this approach will not
+benefit from the modular re-usability and developer friendliness that frameworks like Substrate enable.
 
 ### Substrate
 
@@ -133,38 +162,39 @@ After you have created your chain logic using a framework like Substrate, you wi
 compile it into a WASM blob which contains your state transition function. This is
 the core of your blockchain and is what the validators on the Polkadot relay chain
 will validate all state transitions against. But before you're able to submit your
-chain into the parachain registry of Polkadot there is still a couple things you
+chain into the Polkadot network there is still a couple things you
 need to take care of.
 
 The two big things you will need to resolve when you are finished developing your chain
 logic are 1) you need to set up at least one collator node and 2) you will need to ensure
-your entry on the relay chain by acquiring a spot on the parachain registry.
+your availability on the relay chain by acquiring a spot on the parachain registry.
 
-You will need to do the first one because the validators on the relay chain need some way
+The first one needs to be done because validators on the relay chain need some way
 to become aware of new state transitions coming from your chain. This functionality is
 handled by the specialized type of node known as the [collator](../learn/terms_and_definitions.md#collator).
-Basically collators are the nodes which will producing blocks for your chain and there
-could be just one or there could be many. They can be ran as public services or there
-could be an incentive structure baked into your parachain to encourage users to pop
-up more of them.
+Basically collators are the nodes which will handle state transitions for your chain
+and handing those state transitions with proofs to validators to validate.
 
-Right now it's still pretty early on in the development of collator nodes.
-There is an early demo that is available in the Polkadot repository, if you are
-keen you can try running an early demo by following this [video tutorial](https://www.youtube.com/watch?v=pDqkzvA4C0E).
-However, as development continues there will be libraries that will make setting up a
-Polkadot-compatible parachain _super easy_. And that library will be called Cumulus.
+Your chain could have one validator or it could have many. They can be ran as public
+services by the developers or there could be an incentive structure baked into the parachain
+to encourage the community to operate them.
+
+Right now it's still pretty early on in the development of definitive collator
+nodes which can be used for interaction with Polkadot.
+There is an early demo that is available in the Polkadot repository, this can be ran by
+following an early demo as shown in this [video tutorial](https://www.youtube.com/watch?v=pDqkzvA4C0E).
+As development continues there will be libraries that will make setting up a
+Polkadot-compatible parachain a no-brainer. One of these libraries is called Cumulus.
 
 #### Cumulus
 
-[Cumulus](https://github.com/paritytech/cumulus) is a library that is still in
-development and is _not_ ready to use yet. 
+[Cumulus](https://github.com/paritytech/cumulus) is still in
+development and is _not_ ready to use yet. It's intended goal is to be
+an extenstion to the Substrate library that will make any Substrate
+runtime compatible with Polkadot.
 
-It is an extenstion to the Substrate library that will make any Substrate
-runtime compatible with Polkadot by embedding a light client that will
-follow the relay chain.
-
-It will handle some annoying things that your chain will need to do if it 
-wants to be part of Polkadot such as:
+It will handle some of the overhead of any parachain that needs
+to be compatible with Polkadot. These include:
 
  - handling interchain messaging between parachains
  - out-of-the-box collator node
@@ -180,7 +210,14 @@ For the latest on Cumulus see a recent talk from Rob Habermeier below.
 
 [![img](http://img.youtube.com/vi/thgtXq5YMOo/0.jpg)](https://www.youtube.com/watch?v=thgtXq5YMOo)
 
-<!-- #### Ensuring a fair validator choice -->
+#### Ensuring a fair validator choice
+
+In Polkadot validators are automatically selected to validate for each parachain
+using randomness from the relay chain. Each era on the relay chain these validators will be rotated
+to ensure that there is a fair validator choice and that no single validator continues
+to validate for a specific chain. As a parchain developer or operator you will get
+this security feature included once you've made your chain compatible with Polkadot
+and acquired a spot on the parachain registry.
 
 ### How to include your parachain in polkadot
 
