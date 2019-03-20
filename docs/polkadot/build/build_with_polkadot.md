@@ -6,7 +6,7 @@
 Polkadot is described in the [whitepaper](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf) as a fully extensible
 and scalable blockchain development, deployment, and interaction test bed.
 Builders will have the ability to use this exiciting new technology
-as the infrastructure for their new applications.
+as the infrastructure for their own applications.
 
 This guide will walk you through the [current state of Polkadot](#where-are-we-now) development, explain the [difference between a
 parachain and a smart contract](#what-is-the-difference-between-a-parachain-and-smart-contract), walk through
