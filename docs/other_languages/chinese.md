@@ -1,4 +1,4 @@
-# Chinese Polkadot Resources 中文波卡資源
+# Learn in Chinese
 
 
 ## Polkadot 波卡 / Substrate 資源
