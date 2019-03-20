@@ -1,6 +1,6 @@
 # Polkadot & Substrate 中文资源
 
-## Polkadot 
+## Polkadot 波卡
 [Overview - 簡介](https://www.slideshare.net/casperLTH/polkadot)
 
 [Consensus - 共识创新之路](https://www.slideshare.net/casperLTH/polkadot-consensus-innovation)
@@ -27,13 +27,15 @@ Substrate 簡介
 
 ## Community 社区
 
-[中文电报群 - Telegram Group](https://t.me/polkadotChi)
-
 微信群 - Wechat Group
+
+![](../images/wechat_qr_code.jpg)
+
+[中文电报群 - Telegram Group](https://t.me/polkadotChi)
 
 [币乎 - Bihu](https://bihu.com/people/1657666605)
 
-[微博](https://www.weibo.com/PolkadotNetwork)
+[微博 - Weibo](https://www.weibo.com/PolkadotNetwork)
 
 [知乎 - Zhihu](https://www.zhihu.com/people/PolkadotNetwork/)
 
