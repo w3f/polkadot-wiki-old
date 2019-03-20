@@ -25,7 +25,7 @@ nav:
    - Nominator: polkadot/node/nominator.md
    - Collator: polkadot/node/collator.md
    - Governance: polkadot/node/governance/index.md
- - Chinese 中文波卡資源:
+ - Learn in Chinese:
    - Home: other_languages/chinese.md
 
 # theme:
