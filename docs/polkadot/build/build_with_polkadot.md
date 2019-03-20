@@ -256,7 +256,7 @@ private fundraising means.
 
 #### What happens when the time runs out?
 
-Once you secure your entry into the parachain registry you are ensured that
+Once you secure your entry into the parachain registry you are guaranteed that
 spot until either 1) the duration of the time attached to that entry has elapsed
 or 2) the governance mechanism votes to remove it.
 
@@ -264,36 +264,37 @@ Option 2 will probably only happen in dire circumstances and will not be somethi
 that commonly takes place. Option 1 will be the way that most chains will expire
 off the Polkadot network. 
 
-The fact that you and all the users of the chains know the public deadline of that
-chains life is a good thing because it means that either a referendum could be
-held by the stakeholders of the chain to extend it (if your chain implements
-on-chain governance) or users can safely migrate off the platform to an
-alternative.
+When your chain is approaching the end of its time duration some things that could
+happen include: a referendum could be
+held by the stakeholders of the chain to extend the lifetime by continuing to stake DOTs (if your chain implements
+on-chain governance), users can safely migrate off the platform to an
+alternative, a campaign could be held to fund the DOTs to acquire a different spot
+on the registry.
 
-In most cases it should be fairly straightforward to simple "renew" your
+In most cases it will likely be fairly straightforward to "renew" your
 entry on the parachain registy by continuing to stake DOTs.
 
 ### Benefits of being a parachain
 
 The benefit of being a parachin on Polkadot is that your chain will be secured
 with the same security as the entire Polkadot network without you needing to 
-maintain your own consensus. Additionally, your chain will be able to interact
+maintain your own consensus. On top of this, your chain will be able to interact
 withh all other Polkadot parachains through the interchain communication system.
 
-Many tools and monitoring being built currently for Polkadot or parachains
-will be easily portable or re-usable by other parachains too. In the past 
+The tools and monitoring systems being built for Polkadot or different parachains
+will be easily portable or re-usable in the future by new parachains. Without Polkadot,
 sovereign chains would need to have compatible wallets that supported them.
 With Polkadot, much of the basic tooling like wallets and block explorers
 will already be available and configurable to your parachain.
 
-Finally, being a Polkadot parachain will allow you and your community
+Being a Polkadot parachain will allow you and your community
 to experiment with the latest innovations in blockchain tech. Whether
 you are interested in governance, scalability, privacy, or custom VMs,
 Polkadot is general enough that it will support your innovations at launch
 and into the future.
 
-That's the end of the parachain section, you can either read about smart contracts
-or go straight to the [conclusion](#conclusion).
+_You've reached the end of the parachain section, you can either read about smart contracts
+or go straight to the [conclusion](#conclusion)._
 
 ## So you want to build a smart contract
 
@@ -307,14 +308,14 @@ functionality. The Substrate [contract](https://github.com/paritytech/substrate/
 module in the core SRML will support smart contracts that are compiled
 to WASM. 
 
-In order to actually develop a smart contract that compiles to WASM, an
-appropriate language is also needed. For this, Parity has also been working
+In order to develop a smart contract that compiles to WASM, an
+appropriate language is also needed. For this, Parity has been working
 on a domain specific language called [pDSL](#pdsl-paritys-domain-specific-language).
 
-There is already one project that has announce intent to become a Polkadot
-parachain and to support smart contracts called [Edgeware](#edgeware). More
-will likely begin to emerge as the tooling matures and the ecosystem around
-Polkadot expands.
+One project that has announced intent to become a Polkadot
+parachain with support for smart contracts is [Edgeware](#edgeware). As
+the ecosystem matures, there is a high probability that more chains will
+come forward as smart contract enabled parachains.
 
 Polkadot will also be compatible with pre-exisiting smart contract platforms
 such as Ethereum and Tezos through bridges. This means that even work spent
@@ -323,7 +324,7 @@ in the future.
 
 ### Edgeware
 
-Edgewareis a planned parachain for Polkadot which will
+Edgeware is a planned parachain for Polkadot which will
 allow for smart contracts. Along with other interesting innovations in governance
 and token distribution, it will likely be the first parachain that will connect
 to the Polkadot mainnet with smart contracts enabled. You can stay up to date with
@@ -346,8 +347,8 @@ so early it's probably not a good idea to try to write production code with it y
 
 A smart contract is in essence some code that exists at an address on chain and
 can be executed. Once the code is developed it needs some way to actually get
-onto the chain and be available to users. To deploy your smart contract on chain
-may vary slightly for whichever platform you have chosen as your stack, but in
+onto the chain and be available to users. Deploying your smart contract on chain
+will vary depending on which specific platform you are targeting, but in
 general it will involve sending a special transaction which will `create` your
 smart contract on the ledger. Usually this transaction will require a fee to cover
 the computation costs of any constructor logic and for storage that it consumes.
@@ -390,9 +391,9 @@ any non-critical calculations should be done before sending data to the chain.
 
 Smart contracts on Polkadot is still very early, which explains why this section
 is composed of pointers to in progress projects and non-specific information.
-Keep up with the projects above and watch out for the first testnets to be released.
-If you're feeling brave you can try to work with the tools outlined above but be 
-aware that much of this technology is still prior to stable release so will probably
+Keep up to date with the projects above and watch out for the first testnets to be released.
+If you're feeling brave you can try to work with the tools such as pDSL but be 
+aware that much of the technology is still prior to stable release so will probably
 change as we continue progress toward the future mainnet Polkadot release.
 
 ## Conclusion
@@ -402,7 +403,9 @@ your new project will be a parachain or a smart contract, and shown you the
 essiential resources for which you can use to start developing on Polkadot today.
 Even though the tooling is still maturing, there is a benefit for arriving to
 the scene early: you have the ability to innovate by creating something
-truly new. If you would like to share your ideas for a parachain or a smart contract
+truly new. 
+
+If you would like to share your ideas for a parachain or a smart contract
 feel free to talk to us in the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) and if you have questions
 regarding development you can try asking in the [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org).
 Keep up to date by following the appropiate [social channels](https://wiki.polkadot.network/en/latest/community/) and good luck
