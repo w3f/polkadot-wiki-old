@@ -33,8 +33,7 @@ to natively support it.
 ## Want to build on Polkadot?
 
 - [Builders Portal](./polkadot/build) - Tools, libraries, and resources to help you build.
-- [Starters Guide](./polkadot/build/build_with_polkadot.md) - Overview on how to get started building your project on Polkadot. (In Progress)
-
+- [Starters Guide](./polkadot/build/build_with_polkadot.md) - **Overview on how to get started building your project on Polkadot.**
 ## Want to run a node?
 
 - [Run a Node](./polkadot/node/) - Information covering running a node on the Polkadot network.
