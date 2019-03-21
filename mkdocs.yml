@@ -19,6 +19,7 @@ nav:
    - GRANDPA: polkadot/learn/grandpa.md
    - Implementations: polkadot/learn/implementations.md
    - Roadmap: polkadot/learn/roadmap.md
+   - Security: polkadot/learn/security.md
    - Terms: polkadot/learn/terms_and_definitions.md
    - Relevant Links: polkadot/learn/relevant_links.md
  - Run the Network:

@@ -29,6 +29,8 @@ Since there is no forced time between blocks due to Proof-of-Work and the only
 overhead on Validators is to validate state transitions, the block times should
 be quite fast. On a scale of 2 - 3 seconds may not be unreasonable after optimizations.
 
+However, the council will decide what is the rational limit on the speed of the block production on the relay chain. Therefore it will likely begin around 10-12 seconds and be brought down from there through governance.
+
 ### What is the token inflation rate?
 
 The token inflation and staking mechanics have not been finalized at this
