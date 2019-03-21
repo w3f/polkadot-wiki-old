@@ -2,22 +2,34 @@
 
 # Polkadot Wiki
 
-[Polkadot wiki](https://wiki.polkadot.network)
+This repository contains the source files for the [Polkadot wiki](https://wiki.polkadot.network).
 
-This repo contains markdown files for the Polkadot wiki.
+## Running locally
 
-## Build
+Clone the repository to your local file system.
 
-The wiki is hosted on [readthedocs](readthedocs.io) and is built automatically
-from this repository whenever a new commit is pushed to master.
+```bash
+git clone https://github.com/w3f/Polkadot-wiki.git
+```
+
+Install `mkdocs` by using the `pip` package manager.
+
+```bash
+pip install mkdocs --user
+```
+
+Run `mkdocs serve` from the repository root to spawn a hot reloading development server and navigate to `localhost:8000` in a web browser.
+
+## Publishing
+
+The wiki is hosted on [Read the Docs](https://readthedocs.org) and is built on each published commit to the master branch on the GitHub repository.
 
 ## Styling
 
-The `cinder` directory contains all styling / theme components.
+[Mkdocs-Material](https://squidfunk.github.io/mkdocs-material/) is used to give the wiki its sleek theme.
 
-## Adding pages
+## Contributing
 
-When adding pages you must manually add the entry into the `nav`
-field in the `mkdocs.yml` located in this directory. We do this
-in order to have more control in the organization of the layout
-of the wiki and otherwise auto-generate is too messy.
+Please read over the rules for contribution at the [CONTRIBUTING](CONTRIBUTING.md) document. 
+
+If you add a page please ensure that you give it the correct placement in the navigation by manually inputting it in the `mkdocs.yml` under the `nav` field. It is done in this way in order to have more control in how pages are displayed on the UI and give better organization to topics. 
