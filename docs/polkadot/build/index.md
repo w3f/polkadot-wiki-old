@@ -25,7 +25,8 @@ that is not available to be found elsewhere.
 
 ## Tools
 
-Visit the [tools](./tools/index.md) directory.
+- [Tools](./tools/index.md) - Maintained list of tools.
+- [Subkey](./tools/subkey.md) - Commandline utility for generating Substrate keys.
 
 ## Resources
 

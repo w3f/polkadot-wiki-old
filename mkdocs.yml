@@ -18,7 +18,7 @@ nav:
    - FAQ: polkadot/learn/faq.md
    - GRANDPA: polkadot/learn/grandpa.md
    - Implementations: polkadot/learn/implementations.md
-   - Roadmap: polkadot/learn/polkadot_roadmap.md
+   - Roadmap: polkadot/learn/roadmap.md
    - Terms: polkadot/learn/terms_and_definitions.md
    - Relevant Links: polkadot/learn/relevant_links.md
  - Run the Network:
