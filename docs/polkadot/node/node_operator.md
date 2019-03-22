@@ -10,7 +10,7 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
     _This tutorial will be keep up to date of the current Alexander testnet. Once PoC-4 get released, contents will be updated as well._
 To be a good validator, you should
 
-* Have certain amount of DOT stake (**Basic requirement**)
+* Have certain amount of DOT stake (**Basic Requirement**)
 
 * Have enough knowledge on network security to create a robust network
 
@@ -57,7 +57,7 @@ After installed all related dependencies, you can start polkadot node now. To sy
 polkadot
 ```
 
-It should takes at least few hours.
+It should take at least few hours.
 
 
 You can check the current highest block via [Telemetry](https://telemetry.polkadot.io/#/Alexander) or [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer)
