@@ -44,7 +44,7 @@ Note: when staking or nominating, currently you cannot transfer DOTs from these 
 
 ### Extrinsics
 
-![Polkadot UI 2](../../polkadot_ui_2.png)
+![Polkadot UI 2](../../images/polkadot_ui_2.png)
 
 Extrinsics are the bits of information added to the blockchain, i.e., the things 'extrinsic' from the system. These include transactions, staking, proposing, voting, and many other consensus-level actions.
 
@@ -87,7 +87,7 @@ You can save addresses here for later use. To add a new address to your address 
 
 ## Vanity
 
-![Polkadot UI 3](../../polkadot_ui_3.png)
+![Polkadot UI 3](../../images/polkadot_ui_3.png)
 
 Polkadot UI comes with a vanity address generator in the browser. To create a vanity address, enter a string and start hashing. The longer the string, the longer it will take to compute. Note that some characters are not allowed due to the hashing algorithm used in Polkadot.
 
