@@ -10,7 +10,7 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
     _This tutorial will be keep up to date of the current Alexander testnet. Once PoC-4 get released, contents will be updated as well._
 To be a good validator, you should
 
-* Have certain amount of DOT stake (**Basic requriement**)
+* Have certain amount of DOT stake (**Basic requirement**)
 
 * Have enough knowledge on network security to create a robust network
 
