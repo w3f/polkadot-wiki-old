@@ -22,6 +22,7 @@ nav:
    - Security: polkadot/learn/security.md
    - Terms: polkadot/learn/terms_and_definitions.md
    - Relevant Links: polkadot/learn/relevant_links.md
+   - Polkadot UI: polkadot/learn/UI.md
  - Run the Network:
    - Home: polkadot/node/index.md
    - Node Operator / Validator: polkadot/node/node_operator.md
