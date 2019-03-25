@@ -22,7 +22,7 @@ You should **NOT** run a validator if you have DOTs, but you do not have enough 
 
 As a nominator, you can still get the inflated token. If you want to know more about nominator, please come [HERE](./nominator.md).
 
-For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a [list of VPS](./node_operator.md#vps-list) for you to choose, feel free to pick one you like.
+For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a lot of [VPS](./node_operator.md#vps-list) choice out there, feel free to pick one you like.
 
  
 !!! attention
@@ -105,7 +105,15 @@ You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxl
 
 **Staking** 
 
-_TODO_
+Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many node are intended to be a validator.
+
+![](../../images/validator/polkadot-dashboard-staking.jpg)
+If there is slot available, you can click *stake* under your account to express your intention. Then you should see your node will be shown on the *next up* queue. After a certain blocks, your node will become a validator. 
+
+**Congratulations!**
+
+**Notice:** As mainnet get closer, you can expect more slots will be available for testing.
+
 
 ## VPS List
 
