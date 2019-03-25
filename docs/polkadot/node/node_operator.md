@@ -31,7 +31,7 @@ For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander te
 
 **Update to the latest version of polkadot**
 
-If you have installed the polkadot already, you can use the following command to install the latest version and check your current version.
+If you have installed polkadot already, you can use the following command to install the latest version and check your current version.
 
 ```bash
 cargo install --git https://github.com/paritytech/polkadot.git --branch v0.3 polkadot --force
@@ -62,7 +62,7 @@ This command will fetch & install the polkadot 0.3 version to your PATH.
 
 **Synchronize chain data**
 
-After installed all related dependencies, you can start polkadot node now. To synchronize the chain by executing the following command:
+After installed all related dependencies, you can start your polkadot node now. To synchronize the chain by executing the following command:
 
 ```bash
 polkadot
