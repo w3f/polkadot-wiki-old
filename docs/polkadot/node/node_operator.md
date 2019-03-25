@@ -7,7 +7,7 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
 ## How to run a polkadot / validator node
 
 !!! info
-    _This tutorial will be keep up to date of the current Alexander testnet. Once PoC-4 get released, contents will be updated as well._
+    _This tutorial would work with current Alexander testnet. Once PoC-4 is released, contents will be updated as well._
 To be a good validator, you should
 
 * Have certain amount of DOT stake (**Basic Requirement**)
@@ -31,7 +31,7 @@ For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander te
 
 **Update to the latest version of polkadot**
 
-If you have installed the polkadot already, you can use the following command to install the latest version and check.
+If you have installed the polkadot already, you can use the following command to install the latest version and check your current version.
 
 ```bash
 cargo install --git https://github.com/paritytech/polkadot.git --branch v0.3 polkadot --force
@@ -86,7 +86,14 @@ Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait fe
 
 **Create an account**
 
-_TODO_
+To be a validator, you also have to create an account to stake some DOTs to it. 
+
+![](../../images/validator/polkadot-dashboard-create-account.jpg)
+First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. 
+
+![](../../images/validator/polkadot-dashboard-backup-seed.jpg)
+
+You can then click *Save* and choose *Create and backup account* to store your seed file to other place.
 
 **Get testnet DOTs token**
 
