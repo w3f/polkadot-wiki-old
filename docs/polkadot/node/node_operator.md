@@ -12,6 +12,8 @@ To be a good validator, you should
 
 * Have certain amount of DOT stake (**Basic Requirement**)
 
+* Keep your node up to the latest version
+
 * Have enough knowledge on network security to create a robust network
 
 * Use HSM (Hardware Security Module) to protect your key (**Highly Recommended**)
@@ -27,7 +29,16 @@ For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander te
     _Please make sure that you do **NOT** use this setup & configuration on mainnet. This guide simply walks you through step-by-step how to set up & run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDOS protection and high availability._
 
 
-**Install Rust**
+**Update to the latest version of polkadot**
+
+If you have installed the polkadot already, you can use the following command to install the latest version and check.
+
+```bash
+cargo install --git https://github.com/paritytech/polkadot.git --branch v0.3 polkadot --force
+polkadot --version
+```
+
+**Install rust**
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
@@ -40,7 +51,7 @@ rustup update
 ```
 If you have installed rust already, run this command to check whether there is a new version available.
 
-**Install Polkadot PoC-3 Alexander**
+**Install polkadot PoC-3 alexander**
 
 ```bash
 cargo install --git https://github.com/paritytech/polkadot.git --branch v0.3 polkadot
@@ -49,7 +60,7 @@ cargo install --git https://github.com/paritytech/polkadot.git --branch v0.3 pol
 This command will fetch & install the polkadot 0.3 version to your PATH.
 
 
-**Synchronize Chain Data**
+**Synchronize chain data**
 
 After installed all related dependencies, you can start polkadot node now. To synchronize the chain by executing the following command:
 
@@ -73,11 +84,11 @@ Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait fe
 ![](../../images/validator/telemetry_monitor.jpg)    
 
 
-**Create an Account**
+**Create an account**
 
 _TODO_
 
-**Get Testnet DOTs token**
+**Get testnet DOTs token**
 
 When everything is configured correctly, you are required to get some testnet DOTs token to stake to be a validator.
 
