@@ -18,6 +18,7 @@ nav:
    - FAQ: polkadot/learn/faq.md
    - GRANDPA: polkadot/learn/grandpa.md
    - Implementations: polkadot/learn/implementations.md
+   - Phragmen: polkadot/learn/phragmen.md
    - Roadmap: polkadot/learn/roadmap.md
    - Security: polkadot/learn/security.md
    - Staking: polkadot/learn/staking.md

@@ -1,7 +1,7 @@
-# How Can I Build with Polkadot?
+# How to start building on Polkadot
 
 !!! attention
-    _Polkadot and Substrate are both under active development and things are changing rapidly. Things should calm down in a couple weeks with the [1.0 release](https://github.com/paritytech/substrate/milestone/9) of Substrate but be aware that the APIs are still evolving._
+    _Polkadot and Substrate are both under active development and things are changing rapidly. It should calm down in a couple weeks with the [1.0 release](https://github.com/paritytech/substrate/milestone/9) of Substrate but be aware that the APIs are still evolving._
 
 Polkadot is described in the [whitepaper](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf) as a fully extensible
 and scalable blockchain development, deployment, and interaction test bed.
