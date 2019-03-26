@@ -31,6 +31,6 @@ DOTs are required to make transactions on the Polkadot network. Testnet DOTs do 
 
 ### Getting testnet DOTs
 
-You can ask someone to send you testnet DOTs on the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
+You can request DOTs from the [faucet](https://faucets.blockxlabs.com/) ask someone to send you DOTs on the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
 
 You can make your own DOTs by [becoming a validator](https://github.com/paritytech/polkadot/wiki/Validating-on-PoC-2).

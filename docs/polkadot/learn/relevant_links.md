@@ -82,10 +82,10 @@
 - [Parity Bridge](https://github.com/paritytech/parity-bridge) - Bridge between any two ethereum-based networks.
 
 ## Running a node
-- [Polkadot UI](https://github.com/paritytech/polkadot/wiki/Polkadot-UI) - Get started on the testnet.
-- [Install PoC-3](https://github.com/paritytech/polkadot#install-poc-3-alexander-testnet) - Install Polkadot's client and connect to the global PoC-2 testnet.
-- [Substrate node](https://hackmd.io/y-E9Q9jTRreni6z9EU0kkA#) \- Install and run a Substrate node on BBQ-Birch testnet.
-- [Get testnet DOTS](https://github.com/paritytech/polkadot/wiki/DOT) \- Receive the native testnet token.
+- [Polkadot UI](./UI.md) - Get started on the testnet.
+- [Install PoC-3](https://github.com/paritytech/polkadot#install-poc-3-alexander-testnet) - Install Polkadot's client and connect to the global PoC-3 testnet.
+- [Substrate node](https://github.com/paritytech/substrate#joining-the-dried-danta-testnet) \- Install and run a Substrate node on Dried-Danta testnet.
+- [Get testnet DOTS](./DOT.md#getting-testnet-dots) \- Receive the native testnet token.
 - [Deploy a Parachain](https://github.com/paritytech/polkadot/wiki/Parachains) \- Deploy a blockchain on the testnet.
 
 
