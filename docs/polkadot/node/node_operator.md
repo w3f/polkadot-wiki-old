@@ -16,7 +16,7 @@ To be a good validator, you should
 
 * Have enough knowledge on network security to create a robust network
 
-* Use HSM (Hardware Security Module) to protect your key (**Highly Recommended**)
+* Use HSM (Hardware Security Module) to protect your key (**Highly Recommend**)
 
 You should **NOT** run a validator if you have DOTs, but you do not have enough technical knowledge to set up a validator. It is recommended to delegate / nominate your DOTs to someone you trust for helping you to do this kind of work. 
 
