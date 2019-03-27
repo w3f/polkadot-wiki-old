@@ -1,5 +1,16 @@
 # Basics
 
+## Themes in blockchain 3.0
+
+The following are some topics which have been [presented by Gavin Wood](https://slides.com/paritytech/polkadot-governance#/1) as "themes of blockchain 3.0":
+
+- Governance
+- Scalability
+- Future-proofing
+- Developability
+- Interopability
+- Efficiency
+
 ## Two sides of blockchain
 
 A blockchain is composed of two main pieces: 
