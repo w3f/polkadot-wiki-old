@@ -7,7 +7,7 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
 ## How to run a polkadot / validator node
 
 !!! info
-    _This tutorial would work with current Alexander testnet. Once PoC-4 is released, contents will be updated as well._
+    _This tutorial works with current Alexander testnet. Once PoC-4 is released, contents will be updated as well._
 To be a good validator, you should
 
 * Have certain amount of DOT stake (**Basic Requirement**)
@@ -44,7 +44,7 @@ polkadot --version
 curl https://sh.rustup.rs -sSf | sh
 sudo apt install make clang pkg-config libssl-dev
 ```
-This command would fetch the latest version of Rust and install it, then execute the second command to install required software before install Polkadot.
+This command will fetch the latest version of Rust and install it, then execute the second command to install required software before install Polkadot.
 
 ```
 rustup update
@@ -73,17 +73,6 @@ It should take at least few hours.
 
 You can check the current highest block via [Telemetry](https://telemetry.polkadot.io/#/Alexander) or [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer)
  
-If your node is fully synchronized, you can monitor your node status by executing 
-
-```bash
-polkadot --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
-```
-
-Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait few seconds, you should see your node information.
-
-![](../../images/validator/telemetry_monitor.jpg)    
-
-
 **Create an account**
 
 To be a validator, you also have to create an account to stake some DOTs to it. 
@@ -94,6 +83,16 @@ First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & 
 ![](../../images/validator/polkadot-dashboard-backup-seed.jpg)
 
 You can then click *Save* and choose *Create and backup account* to store your seed file to other place.
+
+After a while, if your node is fully synchronized, you can monitor your node status by executing 
+
+```bash
+polkadot --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
+```
+
+Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait few seconds, you should see your node information.
+
+![](../../images/validator/telemetry_monitor.jpg)
 
 **Get testnet DOTs token**
 
@@ -108,7 +107,7 @@ You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxl
 Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many node are intended to be a validator.
 
 ![](../../images/validator/polkadot-dashboard-staking.jpg)
-If there is slot available, you can click *stake* under your account to express your intention. Then you should see your node will be shown on the *next up* queue. After a certain blocks, your node will become a validator. 
+If there is slot available, you can click *stake* under your account to express your intention. Then you should see your node will be shown on the *next up* queue. After a certain blocks(era), your node will become a validator. 
 
 **Congratulations!**
 
