@@ -409,7 +409,7 @@ change as we continue progress toward the future mainnet Polkadot release.
 
 Hopefully this guide has helped you to make the right decision for whether
 your new project will be a parachain or a smart contract, and shown you the
-essiential resources for which you can use to start developing on Polkadot today.
+essential resources for which you can use to start developing on Polkadot today.
 Even though the tooling is still maturing, there is a benefit for arriving to
 the scene early: you have the ability to innovate by creating something
 truly new. 
