@@ -8,6 +8,7 @@ nav:
  - Build:
    - Home: polkadot/build/index.md
    - Building on Polkadot: polkadot/build/build_with_polkadot.md
+   - Deploy Parachains: polkadot/build/deploy_parachains.md
    - Tools: polkadot/build/tools/index.md
    - Examples: polkadot/build/examples/index.md
    - Networks: polkadot/build/networks.md
@@ -25,6 +26,7 @@ nav:
    - Terms: polkadot/learn/terms_and_definitions.md
    - Relevant Links: polkadot/learn/relevant_links.md
    - Parachains: polkadot/learn/parachains.md
+   - Polkadot Runtime Environment: polkadot/learn/PRE.md
    - Polkadot UI: polkadot/learn/UI.md
  - Run the Network:
    - Home: polkadot/node/index.md
