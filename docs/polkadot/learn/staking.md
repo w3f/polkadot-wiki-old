@@ -1,23 +1,30 @@
-# Staking Economics
+# Staking Information
+
+Polkadot will use NPoS(Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at the begining for someone who is interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Bascially, DOTs holder gets pay more for nominating multiple validators. As a validator, it only takes the role of either validating blocks or ensuring their finality, maintaining the veracity of the network to earn DOTs token, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight.
 
 ## Accounts 
-It has two different accounts for managing your funds, which is 
-`Stash` & `Controller` account.
+There are two different accounts for managing your funds, which is 
+Stash & Controller account.
 
-Stash: It is reponsible for holding the owner's funds that is controlled by a cold wallet and bonding DOTs token to the controller.
+**Stash:** It is reponsible for holding an owner's funds used for staking that are controlled by a cold wallet and bonding DOTs token to the controller. All bonded DOTs are locked. It has to be waited a certain of time (a number of era) in order to access the locked funds.
 
-Controller: It is actively reponsible for managing the account operations such as expressing an interest to switch between roles (validator, nominator, idle). The account is controlled by a hot wallet. 
+**Controller:** It is actively reponsible for managing the account operations such as expressing an interest to switch between roles (validator, nominator, idle).
 
 ## Operations
-_TODO_
+
+_TODO_ - Step-By-Step Guide for nominating potential validators 
 
 
 ## Slashing
+
 _TODO_
 
 
 ## Reward Calculation
-_TODO_
+ 
+Validator can create a reward cut that is not shared with the nominators. After value gets deducted, the remaining portion is based on the proportional to their staked value to split to all of the nominators who had a vote for this validator.
+
+Rewards can be used the same account(controller) to keep accumulating the rewards or stash account (inceaseing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
 
 ## Inflation
 It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month share with their nominators.
