@@ -17,11 +17,12 @@ _TODO_ - Step-By-Step Guide for nominating potential validators
 
 ## Slashing
 
-_TODO_
-
+Slashing will be applied if a validator has been reported to offline a number of times. Once slashing is determined, a value is deducted from the balance of the validator and all the nominators voted for this validator.
 
 ## Reward Calculation
  
+ _TODO_ - Explain what session & era are
+
 Validator can create a reward cut that is not shared with the nominators. After value gets deducted, the remaining portion is based on the proportional to their staked value to split to all of the nominators who had a vote for this validator.
 
 Rewards can be used the same account(controller) to keep accumulating the rewards or stash account (inceaseing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
