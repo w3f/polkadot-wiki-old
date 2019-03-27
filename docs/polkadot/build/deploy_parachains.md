@@ -53,4 +53,3 @@ Hex: 0x0000000000000000000000000000000000000000000000000000000000000000000000000
 ```
 
 The important information is the hex string. This is your genesis state and you will need to save it for the next steps.
-

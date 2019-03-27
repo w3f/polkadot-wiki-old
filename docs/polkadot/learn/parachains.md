@@ -12,10 +12,10 @@ The Polkadot architecture allows for the state transitions performed on the para
 
 ## Benefits of parachains
 
-Parachains have two major benefits over the purely sovereign chains that are not connected to Polkadot.
+Parachains have major benefits over the purely sovereign chains that are not connected to Polkadot.
 
-- [Pooled security](./security.md).
-- [Interchain messaging](./interchain.md).
+- [Pooled security](./security.md)
+- [Interchain messaging](./interchain.md)
 
 ## Deploying parachains
 
