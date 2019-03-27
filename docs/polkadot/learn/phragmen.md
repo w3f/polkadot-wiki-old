@@ -14,4 +14,3 @@ Phragmen's sequential method is used in the NPoS algorithm of Polkadot to elect 
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Implementations of Simple and Complicated Phragmen methods.
 - [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/srml/staking/src/phragmen.rs) - Rust implementation used in the Substrate Runtime Module Library.
 - [Phragmen's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper explaining Phragmen's election methods in detail.
-

@@ -3,8 +3,6 @@
 Polkadot is a blockchain technology but makes some innovations
 that sets it apart from other popular chains.
 
-[TOC]
-
 ## Ethereum
 
 [Ethereum](https://ethereum.org) is a smart contract platform blockchain
