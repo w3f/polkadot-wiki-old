@@ -23,7 +23,11 @@ Slashing will be applied if a validator has been reported to offline a number of
  
  _TODO_ - Explain what session & era are
 
-Validator can create a reward cut that is not shared with the nominators. After value gets deducted, the remaining portion is based on the proportional to their staked value to split to all of the nominators who had a vote for this validator.
+Validator can create a reward cut that is not shared with the nominators. After value gets deducted, the remaining portion is based on the proportional to their staked value to split in between validaor and all of the nominators who had a vote for this validator.
+
+For example, let say the reward is 100 DOT.
+If a validator specify validator payment = 50 DOT, the remaining 50 would split in between the validator and their nominators based on their share they had.
+
 
 Rewards can be used the same account(controller) to keep accumulating the rewards or stash account (inceaseing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
 
