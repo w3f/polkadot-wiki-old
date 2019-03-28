@@ -1,16 +1,14 @@
 # Staking Information
 
-Polkadot will use NPoS(Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at the begining for someone who is interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOTs holder gets pay more for nominating multiple validators to ensure the network will not be heavily centralized on few validators. As a validator, it only takes the role of either validating blocks or guaranteeing the finality of the chain to earn rewards, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight.
+Polkadot will use NPoS(Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at the begining for someone who is interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOTs holder gets pay more for nominating multiple validators to ensure the network will not be heavily centralized on few validators. As a validator, it only takes the role of either validating blocks or guaranteeing the finality of the chain to earn rewards, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight. 
 
-To elect a validator, 
-
-
+Any validators can indicate their intention to be a validator candidate in anytime. It will be added to a waiting queue for nominators to elect and become active in the next era if a validator get enough nomination support.      
 ## Accounts
 
 There are two different accounts for managing your funds, which is 
 Stash & Controller account. 
 
-**Stash:** It is reponsible for holding an owner's funds used for staking that are controlled by a cold wallet and bonding DOTs token to the controller. All bonded DOTs are locked. It has to be waited a certain of time (a number of era) in order to access the locked funds.
+**Stash:** It is reponsible for holding an owner's funds used for staking that are controlled by a cold wallet and bonding DOTs token to the controller. All bonded DOTs are locked. It has to be waited a certain of time in order to access the locked funds.
 
 **Controller:** It is actively reponsible for managing the account operations such as expressing an interest to switch between roles (validator, nominator, idle).
 
@@ -21,7 +19,7 @@ _TODO_ - Step-By-Step Guide for nominating potential validators
 
 ## Slashing
 
-Slashing will be applied if a validator has been reported to offline a number of times. Once slashing is determined, a value is deducted from the balance of the validator and all the nominators voted for this validator.
+Slashing will be applied if a validator has been reported to offline a number of times. Once slashing is determined, a value will be deducted from the balance of the validator and all the nominators voted for this validator.
 
 ## Reward Distribution
 
@@ -34,13 +32,10 @@ Based on the the current configuration in PoC-3 Alexander testnet, it takes 1 ho
 
     ***These parameters can be changed by proposing a referendum***
 
-
-
 Validator can create a reward cut that is not shared with the nominators. After value gets deducted, the remaining portion is based on the proportional to their staked value to split in between validaor and all of the nominators who had a vote for this validator.
 
 For example, assume reward is 100 DOTs.
 If a validator specify `validator_payment = 50 DOTs`, the remaining 50 would split in between the validator and their nominators based on their share they had.
-
 
 Rewards can be used the same account(controller) to keep accumulating the rewards or stash account (inceaseing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
 
