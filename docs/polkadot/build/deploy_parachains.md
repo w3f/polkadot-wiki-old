@@ -10,6 +10,8 @@ On the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) navigate to the `C
 
 **You will need to have the minimum deposit needed to create a referendum. Currently this minimum is 5 DOTs.**
 
+### Building the code
+
 The first step is to download locally the Polkadot code.
 
 ```bash
@@ -53,3 +55,7 @@ Hex: 0x0000000000000000000000000000000000000000000000000000000000000000000000000
 ```
 
 The important information is the hex string. This is your genesis state and you will need to save it for the next steps.
+
+### Deploying the parachain
+
+
