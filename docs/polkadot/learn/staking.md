@@ -2,7 +2,7 @@
 
 Polkadot will use NPoS (Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at the beginning for someone who is interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOTs holder get paid more for nominating multiple validators to ensure the network will not be heavily centralized on only a few validators. As a validator, it only takes the role of either validating blocks or guaranteeing the finality of the chain to earn rewards, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight. 
 
-Any validators can indicate their intention to be a validator candidate in anytime. It will be added to a waiting queue for nominators to elect and become active in the next era if a validator get enough nomination support.      
+Any potential validators can indicate their intention to be a validator candidate. Validators who signal intention will be added to a waiting queue for nominators to elect and become active in the next era if a validator get enough nomination support.      
 
 ## Accounts
 
