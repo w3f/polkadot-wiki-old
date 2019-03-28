@@ -5,7 +5,16 @@
 DOT is the native token of the Polkadot network in a similar way that BTC is the native
 token of Bitcoin or Ether is the native token of the Ethereum Blockchain.
 
-Currently, DOTs are integer numbers. You can compare them to Satoshis or Wei.
+Currently, DOTs have 15 decimal places, while the smallest unit is called the Femto-DOT. You can compare the Femto-DOT to Satoshis or Wei, while the DOT is like a bitcoin or an ether.
+
+|Unit |Decimals|
+|-----|--------|
+|Femto| 10**0  |
+|Pico | 10**3  |
+|Nano | 10**6  |
+|Micro| 10**9  |
+|Milli| 10**12 |
+|DOT  | 10**15 |
 
 ## What are the uses of DOTs?
 

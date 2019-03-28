@@ -2,8 +2,6 @@
 
 The following commands can be used to connect to the different networks.
 
-[TOC]
-
 ## Development
 
 Install Polkadot and have a `polkadot` binary install to your `PATH` with:

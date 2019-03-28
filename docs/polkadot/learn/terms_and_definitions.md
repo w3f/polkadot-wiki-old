@@ -1,8 +1,5 @@
 # Terms and Definitions
 
-[TOC]
-
-
 ## __Block__
 
 A collection of data, such as transactions, that together indicate a state transition of the blockchain.
