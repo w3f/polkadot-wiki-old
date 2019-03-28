@@ -9,7 +9,7 @@ Any potential validators can indicate their intention to be a validator candidat
 There are two different accounts for managing your funds, these are
 Stash & Controller accounts. 
 
-**Stash:** It is reponsible for holding an owner's funds used for staking that are controlled by a cold wallet and bonding DOTs token to the controller. All bonded DOTs are locked. It has to be waited a certain of time in order to access the locked funds.
+**Stash:** The stash is responsible for holding an owner's funds used for staking (could be held in a cold wallet) and bonding DOTs to the controller. All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds.
 
 **Controller:** It is actively reponsible for managing the account operations such as expressing an interest to switch between roles (validator, nominator, idle).
 
