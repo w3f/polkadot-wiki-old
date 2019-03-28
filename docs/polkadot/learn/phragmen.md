@@ -14,7 +14,7 @@ Updated as of Alexander v0.3.21.
 
 ### For nominators
 
-Currently the `equalise` flag is set to false so equalization will not take place. As a nominator your nomination will stau with the validator that you nominate to.
+Currently the `equalise` flag is set to false so equalization will not take place. As a nominator your nomination will stay with the validator that you nominate to.
 
 ### For validators
 
