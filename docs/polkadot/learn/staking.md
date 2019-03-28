@@ -36,7 +36,7 @@ Based on the the current configuration in PoC-3 Alexander testnet, it takes 1 ho
 Validator can create a reward cut that is not shared with the nominators. After value gets deducted, the remaining portion is based on the proportional to their staked value to split in between validaor and all of the nominators who had a vote for this validator.
 
 For example, assume reward is 100 DOTs.
-If a validator specify `validator_payment = 50 DOTs`, the remaining 50 would split in between the validator and their nominators based on their share they had.
+A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs would split between the validator and their nominators based on the portion of stakes they had.
 
 Rewards can be used the same account (controller) to keep accumulating the rewards or stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
 
