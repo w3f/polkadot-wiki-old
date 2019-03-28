@@ -7,7 +7,7 @@ Any validators can indicate their intention to be a validator candidate in anyti
 ## Accounts
 
 There are two different accounts for managing your funds, which is 
-Stash & Controller account. 
+Stash & Controller accounts. 
 
 **Stash:** It is reponsible for holding an owner's funds used for staking that are controlled by a cold wallet and bonding DOTs token to the controller. All bonded DOTs are locked. It has to be waited a certain of time in order to access the locked funds.
 
