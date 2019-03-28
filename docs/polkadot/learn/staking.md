@@ -33,7 +33,7 @@ Based on the the current configuration in PoC-3 Alexander testnet, it takes 1 ho
 
     ***These parameters can be changed by proposing a referendum***
 
-Validator can create a reward cut that is not shared with the nominators. After value gets deducted, the remaining portion is based on the proportional to their staked value to split in between validaor and all of the nominators who had a vote for this validator.
+Validator can create a cut of the reward that is not shared with the nominators. After value gets deducted, the remaining portion is based on their staked value and split between the validator and all of the nominators who have voted for this validator.
 
 For example, assume reward is 100 DOTs.
 A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs would split between the validator and their nominators based on the portion of stakes they had.
