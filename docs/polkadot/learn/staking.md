@@ -20,7 +20,7 @@ _TODO_ - Step-By-Step Guide for nominating potential validators
 
 ## Slashing
 
-Slashing will be applied if a validator has been reported to offline a number of times. Once slashing is determined, a value will be deducted from the balance of the validator and all the nominators voted for this validator.
+Slashing will be applied if a validator has been reported to be offline for a number of times. Once slashing is determined, a value will be deducted from the balance of the validator and all the nominators that have voted for this validator.
 
 ## Reward Distribution
 
