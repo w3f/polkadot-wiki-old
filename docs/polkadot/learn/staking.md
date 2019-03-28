@@ -1,6 +1,6 @@
 # Staking Information
 
-Polkadot will use NPoS(Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at the begining for someone who is interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Bascially, DOTs holder gets pay more for nominating multiple validators. As a validator, it only takes the role of either validating blocks or ensuring their finality, maintaining the veracity of the network to earn DOTs token, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight.
+Polkadot will use NPoS(Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at the begining for someone who is interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOTs holder gets pay more for nominating multiple validators to ensure the network will not be heavily centralized on few validators. As a validator, it only takes the role of either validating blocks or guaranteeing the finality of the chain to earn rewards, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight.
 
 ## Accounts 
 There are two different accounts for managing your funds, which is 
