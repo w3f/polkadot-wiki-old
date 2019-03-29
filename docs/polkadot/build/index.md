@@ -33,5 +33,6 @@ that is not available to be found elsewhere.
  - [Extrinsics Format](./extrinsic-format.md)
  - [Networks](./networks.md)
  - [Examples](./examples/index.md)
+ - [Rust Style Guide](./rust-style-guide.md)
 
 More coming soon.

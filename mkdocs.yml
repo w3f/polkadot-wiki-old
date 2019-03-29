@@ -9,9 +9,11 @@ nav:
    - Home: polkadot/build/index.md
    - Building on Polkadot: polkadot/build/build_with_polkadot.md
    - Deploy Parachains: polkadot/build/deploy_parachains.md
-   - Tools: polkadot/build/tools/index.md
    - Examples: polkadot/build/examples/index.md
+   - Extrinsic Format: polkadot/build/extrinsic-format.md
    - Networks: polkadot/build/networks.md
+   - Rust Style Guide: polkadot/build/rust-style-guide.md
+   - Tools: polkadot/build/tools/index.md
  - Learn:
    - Comparisons: polkadot/learn/comparisons.md
    - Cryptography: polkadot/learn/cryptography.md
