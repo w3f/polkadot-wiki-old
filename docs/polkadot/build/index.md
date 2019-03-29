@@ -30,7 +30,7 @@ that is not available to be found elsewhere.
 
 ## Resources
 
- - [Deploy your first parachain by Adrian Brink](https://www.youtube.com/watch?v=pDqkzvA4C0E) **For testnet 2**
+ - [Extrinsics Format](./extrinsic-format.md)
  - [Networks](./networks.md)
  - [Examples](./examples/index.md)
 
