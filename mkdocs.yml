@@ -17,6 +17,7 @@ nav:
    - Cryptography: polkadot/learn/cryptography.md
    - DOT: polkadot/learn/DOT.md
    - FAQ: polkadot/learn/faq.md
+   - Governance: polkadot/learn/governance.md
    - GRANDPA: polkadot/learn/grandpa.md
    - Implementations: polkadot/learn/implementations.md
    - Phragmen: polkadot/learn/phragmen.md
