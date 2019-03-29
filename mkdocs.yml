@@ -6,6 +6,7 @@ site_url: https://wiki.polkadot.network
 nav:
  - Home: index.md
  - Build:
+   - Cumulus: polkadot/build/cumulus.md
    - Home: polkadot/build/index.md
    - Building on Polkadot: polkadot/build/build_with_polkadot.md
    - Deploy Parachains: polkadot/build/deploy_parachains.md
