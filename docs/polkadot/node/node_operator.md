@@ -77,10 +77,11 @@ You can check the current highest block via [Telemetry](https://telemetry.polkad
 
 To be a validator, you also have to create an account to stake some DOTs to it. 
 
-![](../../images/validator/polkadot-dashboard-create-account.jpg)
+![create account](../../images/validator/polkadot-dashboard-create-account.jpg)
+
 First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. 
 
-![](../../images/validator/polkadot-dashboard-backup-seed.jpg)
+![backup-seed](../../images/validator/polkadot-dashboard-backup-seed.jpg)
 
 You can then click *Save* and choose *Create and backup account* to store your seed file to other place.
 
@@ -92,7 +93,7 @@ polkadot --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
 
 Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait few seconds, you should see your node information.
 
-![](../../images/validator/telemetry_monitor.jpg)
+![telemetry monitor](../../images/validator/telemetry_monitor.jpg)
 
 **Get testnet DOTs token**
 
@@ -106,10 +107,13 @@ You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxl
 
 Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many node are intended to be a validator.
 
-![](../../images/validator/polkadot-dashboard-staking.jpg)
+![staking dashboard](../../images/validator/polkadot-dashboard-staking.jpg)
+
 If there is slot available, you can click *stake* under your account to express your intention. Then you should see your node will be shown on the *next up* queue. After a certain blocks(era), your node will become a validator. 
 
 **Congratulations!**
+
+> If you want to run your validator as a systemd process see the short guide [below](#running-your-validator-as-a-systemd-process).
 
 **Notice:** As mainnet get closer, you can expect more slots will be available for testing.
 
@@ -123,6 +127,53 @@ If there is slot available, you can click *stake* under your account to express 
 * [Contabo](https://contabo.com/)
 * [Scaleway](https://www.scaleway.com/)
 
+## Running your validator as a systemd process
+
+You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd) process so that it will automatically restart on server reboots or crashes (and helps to avoid getting slashed!).
+
+First create a new unit file called `polkadot-validator.service` in `/etc/systemd/system/`.
+
+```bash
+touch /etc/systemd/system/polkadot-validator.service
+```
+
+In this unit file you will write the commands that you want to run on server boot / restart.
+
+```
+[Unit]
+Description=Polkadot Validator
+
+[Service]
+ExecStart=PATH_TO_POLKADOT_BIN --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+To enable this to autostart on bootup run:
+
+```bash
+systemctl enable polkadot-validator.service
+```
+
+Start it manually with:
+
+```bash
+systemctl start polkadot-validator.service
+```
+
+You can check it's working with:
+
+```bash
+systemctl status polkadot-validator.service
+```
+
+You can tail the logs with `journalctl` like so:
+
+```bash
+journalctl -f -u polkadot-validator
+```
 
 
 
