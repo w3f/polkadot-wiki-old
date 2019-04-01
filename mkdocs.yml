@@ -37,10 +37,7 @@ nav:
  - Learn in Chinese:
    - Home: other_languages/chinese.md
 
-# theme:
-#   custom_dir: cinder/
-#   name: mkdocs
-
+# Configuration for the Material theme
 theme:
   name: null
   custom_dir: 'mkdocs-material/material'
@@ -49,10 +46,11 @@ theme:
     primary: 'deep blue'
     accent: 'deep blue'
   font: false
-  logo: 'images/logo.svg'
+  logo: 'img/logo.svg'
   feature:
     tabs: true
 
+# Social links
 extra:
   social:
     - type: 'github'

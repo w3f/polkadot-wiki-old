@@ -77,10 +77,10 @@ You can check the current highest block via [Telemetry](https://telemetry.polkad
 
 To be a validator, you also have to create an account to stake some DOTs to it. 
 
-![](../../images/validator/polkadot-dashboard-create-account.jpg)
+![](../../img/validator/polkadot-dashboard-create-account.jpg)
 First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. 
 
-![](../../images/validator/polkadot-dashboard-backup-seed.jpg)
+![](../../img/validator/polkadot-dashboard-backup-seed.jpg)
 
 You can then click *Save* and choose *Create and backup account* to store your seed file to other place.
 
@@ -92,7 +92,7 @@ polkadot --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
 
 Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait few seconds, you should see your node information.
 
-![](../../images/validator/telemetry_monitor.jpg)
+![](../../img/validator/telemetry_monitor.jpg)
 
 **Get testnet DOTs token**
 
@@ -106,7 +106,7 @@ You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxl
 
 Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many node are intended to be a validator.
 
-![](../../images/validator/polkadot-dashboard-staking.jpg)
+![](../../img/validator/polkadot-dashboard-staking.jpg)
 If there is slot available, you can click *stake* under your account to express your intention. Then you should see your node will be shown on the *next up* queue. After a certain blocks(era), your node will become a validator. 
 
 **Congratulations!**

@@ -29,7 +29,7 @@ Substrate 簡介
 
 微信群 - Wechat Group
 
-![](../images/wechat_qr_code.jpg)
+![](../img/wechat_qr_code.jpg)
 
 [中文电报群 - Telegram Group](https://t.me/polkadotChi)
 
