@@ -41,22 +41,32 @@ nav:
  - Learn in Chinese:
    - Home: other_languages/chinese.md
 
-# theme:
-#   custom_dir: cinder/
-#   name: mkdocs
-
+# Configuration for the Material theme
 theme:
   name: null
   custom_dir: 'mkdocs-material/material'
   language: 'en'
   palette:
-    primary: 'deep blue'
-    accent: 'deep blue'
-  font: false
-  logo: 'images/logo.svg'
+    primary: 'grey'
+    accent: 'pink'
+  font: 
+    text: 'PT Sans'
+    code: 'Ubuntu Mono'
+  favicon: 'img/favicon.ico'
+  logo: 'img/logo.svg'
   feature:
-    tabs: true
+    tabs: false
 
+# Extra css for further customization 
+extra_css:
+  - 'stylesheets/extra.css'
+
+# Repository that houses the source code for this site. This
+# is needed to render the nice GH link on the top right.
+repo_name: 'w3f/polkadot-wiki'
+repo_url: 'https://github.com/w3f/polkadot-wiki'
+
+# Social links
 extra:
   social:
     - type: 'github'
