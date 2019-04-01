@@ -47,7 +47,7 @@ theme:
   custom_dir: 'mkdocs-material/material'
   language: 'en'
   palette:
-    primary: 'blue grey'
+    primary: 'grey'
     accent: 'pink'
   font: 
     text: 'PT Sans'
@@ -56,6 +56,10 @@ theme:
   logo: 'img/logo.svg'
   feature:
     tabs: false
+
+# Extra css for further customization 
+extra_css:
+  - 'stylesheets/extra.css'
 
 # Repository that houses the source code for this site. This
 # is needed to render the nice GH link on the top right.
