@@ -20,13 +20,30 @@ _TODO_ - Step-By-Step Guide for nominating potential validators
 
 ## Slashing
 
-Slashing will be applied if a validator has been reported to be offline for a number of times. Once slashing is determined, a value will be deducted from the balance of the validator and all the nominators that have voted for this validator.
+Slashing will be applied if a validator has been reported to be offline for a number of times. Essentially, there are two parameters that will be taken into decision whether the slashing will happen or not, these are `Offline Slash Grace` & `Unstake Threshold`. 
+`Offline Slash Grace` is configured by the network, and the current testnet configuration is set to `4`, whereas `Unstake Threshold` is decided by the validator. However,the maximum number of `Unstake threshold` is NOT allowed to be set greater than 10 in the current setting.
+
+In short, validators will be slashed if they have been reported offline more than `Offline Slash Grace + Unstake Threshold` times.
+
+At the same time, once slashing is determined, a value will be deducted from the balance of the validator and all the nominators that have voted for this validator.
+
+!!! info
+    **Example:**
+ 
+    Offline Slash Grace = 4 (Network define)
+
+    Unstake Threshold   = 5 (Validator define)
+
+    In this case, slashing will only occur if a validator has been reported offline more than 9 times.
+
 
 ## Reward Distribution
 
-Based on the the current configuration in PoC-3 Alexander testnet, it takes 1 hour to finish an era that means rewards will be distributed to the validators and nominators per hour. 
+Based on the the current configuration in PoC-3 Alexander testnet, rewards are recorded per session that is roughly 5 minutes and paid per era. It takes 1 hour to finish an era that means rewards will be distributed to the validators and nominators per hour. 
 
 !!! info
+    **Example:**
+
     PER_ERA * BLOCK_TIME = **Reward Distribution Time**
 
     600 * 6 = 3600 = 1 Hour
@@ -46,6 +63,6 @@ It will be closed to 10% in the first year. Each validator will get 1,000 - 2,00
 ## How many validators will be available for the polkadot ?
 Starting from 50 - 100 at the begining, and will be expanding up to 1,000 validators in the future.
 
-The above information is NOT finalized yet. You can take it as a reference instead.
+ **The above information is NOT finalized yet. You can take it as a reference instead.**
 
 
