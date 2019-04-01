@@ -3,5 +3,8 @@
 #*#
 .#*
 
-# In case we build the site locally, we do not want to
+# In case we build the site locally
 site
+
+# In case we build the theme locally
+mkdocs-material/node_modules
