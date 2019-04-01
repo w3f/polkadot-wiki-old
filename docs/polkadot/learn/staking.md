@@ -34,7 +34,7 @@ At the same time, once slashing is determined, a value will be deducted from the
 
     Unstake Threshold   = 5 (Validator define)
 
-    In this case, slashing will only be happened if a validator has been reported offline more than 9 times.
+    In this case, slashing will only occur if a validator has been reported offline more than 9 times.
 
 
 ## Reward Distribution
