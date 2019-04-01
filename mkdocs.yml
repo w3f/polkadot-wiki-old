@@ -50,6 +50,7 @@ theme:
     primary: 'deep blue'
     accent: 'deep blue'
   font: false
+  favicon: 'img/favicon.ico'
   logo: 'img/logo.svg'
   feature:
     tabs: true
