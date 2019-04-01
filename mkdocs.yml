@@ -38,8 +38,9 @@ nav:
    - Nominator: polkadot/node/nominator.md
    - Collator: polkadot/node/collator.md
    - Governance: polkadot/node/governance/index.md
- - Learn in Chinese:
-   - Home: other_languages/chinese.md
+ - Other Languages:
+   - Chinese: lang/chinese.md
+   - Japanese: lang/japanese.md
 
 # Configuration for the Material theme
 theme:
