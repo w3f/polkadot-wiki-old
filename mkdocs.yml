@@ -47,13 +47,20 @@ theme:
   custom_dir: 'mkdocs-material/material'
   language: 'en'
   palette:
-    primary: 'deep blue'
-    accent: 'deep blue'
-  font: false
+    primary: 'blue grey'
+    accent: 'pink'
+  font: 
+    text: 'PT Sans'
+    code: 'Ubuntu Mono'
   favicon: 'img/favicon.ico'
   logo: 'img/logo.svg'
   feature:
-    tabs: true
+    tabs: false
+
+# Repository that houses the source code for this site. This
+# is needed to render the nice GH link on the top right.
+repo_name: 'w3f/polkadot-wiki'
+repo_url: 'https://github.com/w3f/polkadot-wiki'
 
 # Social links
 extra:
