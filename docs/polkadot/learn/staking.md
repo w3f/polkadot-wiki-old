@@ -20,7 +20,7 @@ _TODO_ - Step-By-Step Guide for nominating potential validators
 
 ## Slashing
 
-Slashing will be applied if a validator has been reported to be offline for a number of times. Essentially, there are two parameters will be taken into decision whether the slashing will be happened or not, these are `Offline Slash Grace` & `Unstake Threshold`. 
+Slashing will be applied if a validator has been reported to be offline for a number of times. Essentially, there are two parameters that will be taken into decision whether the slashing will happen or not, these are `Offline Slash Grace` & `Unstake Threshold`. 
 `Offline Slash Grace` is configured by the network, and the current testnet configuration is set to `4`, whereas `Unstake Threshold` is decided by the validator. However,the maximum number of `Unstake threshold` is NOT allowed to be set greater than 10 in the current setting.
 
 In short, validators will be slashed if they have been reported offline more than `Offline Slash Grace + Unstake Threshold` times.
