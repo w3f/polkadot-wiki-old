@@ -19,7 +19,7 @@ _For more on Polkadot consensus please see [here](https://medium.com/polkadot-ne
 
 Polkadot is designed to _pool_ security through the relay chain validator set. This means that any chain which connects to the Polkadot network will not need to set up its own consensus or manage its own economic security, but will benefit from the strong economic security of the realy chain.
 
-This is remarkably different from Cosmos, since Cosmos posits that each chain is soveriegn first and must run its own instance of Tendermint consensus with its own consensus algorith. Cosmos now claims to have a notion of shared security similar to what is offered by Polkadot, but it is not implemented today.
+This is remarkably different from Cosmos, since Cosmos posits that each chain is soveriegn first and must run its own instance of Tendermint consensus with its own consensus algorithm. Cosmos now claims to have a notion of shared security similar to what is offered by Polkadot, but it is not implemented today and seems to be a recent addition.
 
 > Cosmos is a consensus bridge solution and **not** a validation bridge solution. There is no attempt in the Cosmos network to validate the sub-chains, and the hub can track all token transfers. Chains on Cosmos cannot trust each other since each is economically independent. The same Cosmos zone can spend resources on 2 other Cosmos zones and there would be no way for the zones to have information about this double spend unless they get it from the Cosmos hub.
 
