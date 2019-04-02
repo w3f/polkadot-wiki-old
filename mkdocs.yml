@@ -16,7 +16,11 @@ nav:
    - Rust Style Guide: polkadot/build/rust-style-guide.md
    - Tools: polkadot/build/tools/index.md
  - Learn:
-   - Comparisons: polkadot/learn/comparisons.md
+   - Comparisons:
+     - Cosmos: polkadot/learn/comparisons/cosmos.md
+     - Ethereum: polkadot/learn/comparisons.md
+     - Tezos: polkadot/learn/comparisons.md
+   - Consensus: polkadot/learn/consensus.md 
    - Cryptography: polkadot/learn/cryptography.md
    - DOT: polkadot/learn/DOT.md
    - FAQ: polkadot/learn/faq.md

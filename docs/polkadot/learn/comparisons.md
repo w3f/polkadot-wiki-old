@@ -89,8 +89,8 @@ Here is a quick table denoting key differences:
 
 |   |Cosmos|Polkadot|
 |---|---|---|
-|Consensus|Tendermint (PBFT)|GRANDPA|
+|Consensus|Tendermint (PBFT)|GRANDPA/BABE|
 |Governance|Validator/Delegator Vote|Referendum and Council representing stakeholders|
 |Models|Hub and Zones|Relay chain and parachains|
-|Security|Each zone has its own security|Shared security across parachains|
+|Security|Each zone has its own security|Pooled security|
 |Native token|Atom|Dot|
