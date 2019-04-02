@@ -28,12 +28,12 @@ to natively support it.
 ## Want to learn more?
 
 - [Explore the Wiki](./polkadot/learn/comparisons.md) - Read the informational section of the wiki.
-- [Relevant Links](./polkadot/learn/relevant_links.md) - **Comprehensive links about Polkadot**
+- [Relevant Links](./polkadot/learn/relevant-links.md) - **Comprehensive links about Polkadot**
 
 ## Want to build on Polkadot?
 
 - [Builders Portal](./polkadot/build) - Tools, libraries, and resources to help you build.
-- [Starters Guide](./polkadot/build/build_with_polkadot.md) - **Overview on how to get started building your project on Polkadot.**
+- [Starters Guide](./polkadot/build/build-with-polkadot.md) - **Overview on how to get started building your project on Polkadot.**
 ## Want to run a node?
 
 - [Run a Node](./polkadot/node/) - Information covering running a node on the Polkadot network.

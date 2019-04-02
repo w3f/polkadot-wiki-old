@@ -22,7 +22,7 @@ You should **NOT** run a validator if you have DOTs, but you do not have enough 
 
 As a nominator, you can still get the rewards by nominating multiple validators. If you want to know more about nominator, please see [HERE](./nominator.md).
 
-For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a lot of [VPS](./node_operator.md#vps-list) choice out there, feel free to pick one you like.
+For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a lot of [VPS](./node-operator.md#vps-list) choice out there, feel free to pick one you like.
 
  
 !!! attention
