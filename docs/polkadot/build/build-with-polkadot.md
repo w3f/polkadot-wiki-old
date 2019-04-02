@@ -180,7 +180,7 @@ your availability on the relay chain by acquiring a spot on the parachain regist
 
 The first one needs to be done because validators on the relay chain need some way
 to become aware of new state transitions coming from your chain. This functionality is
-handled by the specialized type of node known as the [collator](../learn/terms_and_definitions.md#collator).
+handled by the specialized type of node known as the [collator](../learn/terms-and-definitions.md#collator).
 Basically collators are the nodes which will handle state transitions for your chain
 and handing those state transitions with proofs to validators to validate.
 

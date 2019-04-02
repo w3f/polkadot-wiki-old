@@ -8,8 +8,8 @@ nav:
  - Build:
    - Cumulus: polkadot/build/cumulus.md
    - Home: polkadot/build/index.md
-   - Building on Polkadot: polkadot/build/build_with_polkadot.md
-   - Deploy Parachains: polkadot/build/deploy_parachains.md
+   - Building on Polkadot: polkadot/build/build-with-polkadot.md
+   - Deploy Parachains: polkadot/build/deploy-parachains.md
    - Examples: polkadot/build/examples/index.md
    - Extrinsic Format: polkadot/build/extrinsic-format.md
    - Networks: polkadot/build/networks.md
@@ -27,14 +27,14 @@ nav:
    - Roadmap: polkadot/learn/roadmap.md
    - Security: polkadot/learn/security.md
    - Staking: polkadot/learn/staking.md
-   - Terms: polkadot/learn/terms_and_definitions.md
-   - Relevant Links: polkadot/learn/relevant_links.md
+   - Terms: polkadot/learn/terms-and-definitions.md
+   - Relevant Links: polkadot/learn/relevant-links.md
    - Parachains: polkadot/learn/parachains.md
    - Polkadot Runtime Environment: polkadot/learn/PRE.md
    - Polkadot UI: polkadot/learn/UI.md
  - Run the Network:
    - Home: polkadot/node/index.md
-   - Node Operator / Validator: polkadot/node/node_operator.md
+   - Node Operator / Validator: polkadot/node/node-operator.md
    - Nominator: polkadot/node/nominator.md
    - Collator: polkadot/node/collator.md
    - Governance: polkadot/node/governance/index.md

@@ -20,8 +20,8 @@ that is not available to be found elsewhere.
 
 ## Development Guide
 
- - [How Can I Build With Polkadot?](./build_with_polkadot.md) **Start here**
- - [Development Roadmap](./dev_roadmap.md)
+ - [How Can I Build With Polkadot?](./build-with-polkadot.md) **Start here**
+ - [Development Roadmap](./dev-roadmap.md)
 
 ## Tools
 

@@ -19,4 +19,4 @@ Parachains have major benefits over the purely sovereign chains that are not con
 
 ## Deploying parachains
 
-Please see the builder's article on [deploying parachains](../build/deploy_parachains.md).
+Please see the builder's article on [deploying parachains](../build/deploy-parachains.md).
