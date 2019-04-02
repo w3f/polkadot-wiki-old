@@ -78,10 +78,10 @@ You can check the current highest block via [Telemetry](https://telemetry.polkad
 To be a validator, you also have to create two seperate accounts for managing your funds, namely `Stash` and `Controller`. If you want to know more about it, please see [here](../learn/staking.md#accounts). 
 
 
-![](../../images/validator/polkadot-dashboard-create-account.jpg)
+![create account](../../img/validator/polkadot-dashboard-create-account.jpg)
 First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. 
 
-![](../../images/validator/polkadot-dashboard-backup-seed.jpg)
+![backup seed](../../img/validator/polkadot-dashboard-backup-seed.jpg)
 
 You can then click *Save* and choose *Create and backup account* to store your seed file to other place.
 
@@ -106,7 +106,7 @@ When you have made a decision which account you will be using to be stash, you c
 
 After the transaction has gone through successfully, you should see there is a `Bond` button. Click it and then select your another account which you just created before to be a controller that is mainly for managing account operations.  
 
-![](../../images/validator/polkadot-dashboard-bonding.png)
+![dashboard bonding](../../img/validator/polkadot-dashboard-bonding.png)
 
 **Value boned** - how many DOTs you want to bond to this controller for staking
 
@@ -119,11 +119,11 @@ If everything is inputted properly, click `Bond`.
 
 Once the transaction is successfully executed, you should see the controller has `Validate` and `Nominate` options available.
 
-![](../../images/validator/polkadot-dashboard-validate.png)
+![dashboard validate](../../img/validator/polkadot-dashboard-validate.png)
 
 Select `Validate`. 
 
-![](../../images/validator/polkadot-dashboard-staking.png)
+![dashboard staking](../../img/validator/polkadot-dashboard-staking.png)
 
 **Unstake threshold** - after your validator have been reported to be offline a number of times, you will be slashed
 
@@ -139,18 +139,20 @@ polkadot --validator --key CONTROLLER_SEED --name SHOW_ON_TELEMETRY
 
 Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait few seconds, your node information will be shown.
 
-![](../../images/validator/telemetry_monitor.jpg)
+![telemetry monitor](../../img/validator/telemetry_monitor.jpg)
 
 
 Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many nodes are intended to be a validator.
 
 
-![](../../images/validator/polkadot-dashboard-staking-queue.png)
+![staking queue](../../img/validator/polkadot-dashboard-staking-queue.png)
 
 
 Your node will be shown on the *next up* queue. In next era(probably 1 hour), if there is slot available, your node will become an active validator. 
 
 **Congratulations!**
+
+> If you want to run your validator as a systemd process see the short guide [below](#running-your-validator-as-a-systemd-process).
 
 **Notice:** As mainnet get closer, you can expect more slots will be available for testing.
 
@@ -164,6 +166,53 @@ Your node will be shown on the *next up* queue. In next era(probably 1 hour), if
 * [Contabo](https://contabo.com/)
 * [Scaleway](https://www.scaleway.com/)
 
+## Running your validator as a systemd process
+
+You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd) process so that it will automatically restart on server reboots or crashes (and helps to avoid getting slashed!).
+
+First create a new unit file called `polkadot-validator.service` in `/etc/systemd/system/`.
+
+```bash
+touch /etc/systemd/system/polkadot-validator.service
+```
+
+In this unit file you will write the commands that you want to run on server boot / restart.
+
+```
+[Unit]
+Description=Polkadot Validator
+
+[Service]
+ExecStart=PATH_TO_POLKADOT_BIN --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+To enable this to autostart on bootup run:
+
+```bash
+systemctl enable polkadot-validator.service
+```
+
+Start it manually with:
+
+```bash
+systemctl start polkadot-validator.service
+```
+
+You can check it's working with:
+
+```bash
+systemctl status polkadot-validator.service
+```
+
+You can tail the logs with `journalctl` like so:
+
+```bash
+journalctl -f -u polkadot-validator
+```
 
 
 

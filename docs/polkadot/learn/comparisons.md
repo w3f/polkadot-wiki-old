@@ -73,28 +73,17 @@ tools may at some point become more widely available for these languages.
 
 ## Cosmos
 
-[Cosmos](https://cosmos.network/resources/whitepaper) may be considered the most similar to Polkadot in regard to
-the goal of being a multi-chain system. In Cosmos, multiple chains
-operate in what are called _zones_  and each use an individual
-instance of the Tendermint consensus algorithm. Interchain communication
-is handled via a master _hub_ chain and is limited to the transfer
-of digital assets rather than arbitrary information.
+[Cosmos](https://cosmos.network/resources/whitepaper), being a `network of distributed ledgers`, is often thought to be comparable to Polkadot. Although the goal of Cosmos is similar to Polkadot, to solve problems of blockchain scalability and interoperability, it can be understood that Polkadot is more robust in its ability to connect heterogeneous chains.
 
-There is no notion of shared security in Cosmos and each of
-the zoned chains are expected to have their own Validator sets
-and means of incentivising them.
+In Cosmos, a chain is referred to as a _zone_ and each uses an individual instance of the [Tendermint]() consensus algorithm. Interchain communication is handled via a master _hub_ chain and is limited to transfers of currencies rather than communicate arbritrary information across chains. The roughly synonymous terms to compare Cosmos to Polkadot is that a _zone_ maps to _parachain_ and _hub_ maps to _relay chain_ BUT these are only loose comparisons and and do not have the exact same properties or functions.
 
-Polkadot has stronger guarentees than Cosmos in ensuring the 
-economic security over the global state of the relay chain and
-parachains. However, the stricter coherence of Polkadot may
-not allow as much flexibility to parachains as Cosmos does
-to the zoned chains.
+One major difference is that there is no notion of shared security in Cosmos. Each Cosmos zone is expected to have their own validator sets running an individual consensus. 
 
-The governance of both projects is remarkably distinct as well.
-In Cosmos, the governance power lies solely with the validators
-and delegators whom vote on proposals and upgrades. While Polkadot's
-governance system is agreed upon by stake-weighted referndum and
-includes mechanisms to represent passive stakeholders such as the council.
+Cosmos is a consensus bridge solution and **not** a validation bridge solution. There is no attempt in the Cosmos network to validate the sub-chains, and the hub can track all token transfers. Chains on Cosmos cannot trust each other since each is economically independent. The same Cosmos zone can spend resources on 2 other Cosmos zones and there would be no way for the zones to have information about this double spend unless they get it from the Cosmos hub.
+
+Polkadot has much stronger guarentees than Cosmos in ensuring the economic security over the global state of the relay chain and of the parachains. It also gives greater levels of flexibility to parachain developers to use their own consensus and custom interchain logic.
+
+The governance of both projects is remarkably distinct as well. In Cosmos, the source of truth lies solely with the Cosmos hub and the validators of that chain. While Polkadot's governance system is agreed upon by stake-weighted referendum and includes mechanisms to represent passive stakeholders such as the council.
 
 Here is a quick table denoting key differences:
 
