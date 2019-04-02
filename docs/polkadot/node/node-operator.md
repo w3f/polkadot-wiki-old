@@ -20,7 +20,7 @@ To be a good validator, you should
 
 You should **NOT** run a validator if you have DOTs, but you do not have enough technical knowledge to set up a validator. It is recommended to delegate / nominate your DOTs to someone you trust for helping you to do this kind of work. 
 
-As a nominator, you can still get the rewards by nominating multiple validators. If you want to know more about nominator, please see [HERE](./nominator.md).
+As a nominator, you can still get the rewards by nominating multiple validators. If you want to know more about nominator, please see [here](./nominator.md).
 
 For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a lot of [VPS](./node-operator.md#vps-list) choice out there, feel free to pick one you like.
 
@@ -73,9 +73,10 @@ It should take at least few hours.
 
 You can check the current highest block via [Telemetry](https://telemetry.polkadot.io/#/Alexander) or [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer)
  
-**Create an account**
+**Create accounts**
 
-To be a validator, you also have to create an account to stake some DOTs to it. 
+To be a validator, you also have to create two seperate accounts for managing your funds, namely `Stash` and `Controller`. If you want to know more about it, please see [here](../learn/staking.md#accounts). 
+
 
 ![create account](../../img/validator/polkadot-dashboard-create-account.jpg)
 First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. 
@@ -84,30 +85,70 @@ First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & 
 
 You can then click *Save* and choose *Create and backup account* to store your seed file to other place.
 
-After a while, if your node is fully synchronized, you can monitor your node status by executing 
 
-```bash
-polkadot --validator --key YOUR_SEED --name SHOW_ON_TELEMETRY
-```
+Repeat the above steps to create one more account.
 
-Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait few seconds, you should see your node information.
-
-![telemetry monitor](../../img/validator/telemetry_monitor.jpg)
 
 **Get testnet DOTs token**
 
-When everything is configured correctly, you are required to get some testnet DOTs token to stake to be a validator.
+To continue the following steps, you are required to get some testnet DOTs token for `Stash` and `Controller` account in order to submit transactions and stake to be a validator.
 
 Please go to [Polkadot Watercooler - Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) channel, paste your account address to ask for testnet DOTs.
  
 You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxlabs.com/polkadot) as well ;)
 
+
+**Pair Accounts**
+
+First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) section, you should see all of your existing accounts.
+
+When you have made a decision which account you will be using to be stash, you can click `Set Session Key` and then submit a transaction.
+
+After the transaction has gone through successfully, you should see there is a `Bond` button. Click it and then select your another account which you just created before to be a controller that is mainly for managing account operations.  
+
+![dashboard bonding](../../img/validator/polkadot-dashboard-bonding.png)
+
+**Value boned** - how many DOTs you want to bond to this controller for staking
+
+**Payment destination** - decide your rewards where should it send
+
+If everything is inputted properly, click `Bond`.
+
+
 **Staking** 
 
-Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many node are intended to be a validator.
+Once the transaction is successfully executed, you should see the controller has `Validate` and `Nominate` options available.
 
-![staking dashboard](../../img/validator/polkadot-dashboard-staking.jpg)
-If there is slot available, you can click *stake* under your account to express your intention. Then you should see your node will be shown on the *next up* queue. After a certain blocks(era), your node will become a validator. 
+![dashboard validate](../../img/validator/polkadot-dashboard-validate.png)
+
+Select `Validate`. 
+
+![dashboard staking](../../img/validator/polkadot-dashboard-staking.png)
+
+**Unstake threshold** - after your validator have been reported to be offline a number of times, you will be slashed
+
+**Payment preferences** - rewards you will get before splitting to your nominators
+
+Click `Stake`
+
+Open your terminal, if your node is fully synchronized, run your validator with the `Controller` seed.
+
+```bash
+polkadot --validator --key CONTROLLER_SEED --name SHOW_ON_TELEMETRY
+```
+
+Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait few seconds, your node information will be shown.
+
+![telemetry monitor](../../img/validator/telemetry_monitor.jpg)
+
+
+Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many nodes are intended to be a validator.
+
+
+![staking queue](../../img/validator/polkadot-dashboard-staking-queue.png)
+
+
+Your node will be shown on the *next up* queue. In next era(probably 1 hour), if there is slot available, your node will become an active validator. 
 
 **Congratulations!**
 
