@@ -34,7 +34,7 @@ Another feature of Tezos is its smart contract language [Michelson](https://www.
 
 [Cosmos](https://cosmos.network/resources/whitepaper), being a "network of distributed ledgers", is often thought to be comparable to Polkadot. Although the goal of Cosmos is similar to Polkadot, to solve problems of blockchain scalability and interoperability, it can be understood that Polkadot is more robust in its ability to connect heterogeneous chains.
 
-In Cosmos, a chain is referred to as a _zone_ and each uses an individual instance of the [Tendermint]() consensus algorithm. Interchain communication is handled via a master _hub_ chain and is limited to transfers of currencies rather than communicate arbitrary information across chains. The roughly synonymous terms to compare Cosmos to Polkadot is that a _zone_ maps to _parachain_ and _hub_ maps to _relay chain_ BUT these are only loose comparisons and do not have the exact same properties or functions.
+In Cosmos, a chain is referred to as a _zone_ and each uses an individual instance of the [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html) consensus algorithm. Interchain communication is handled via a master _hub_ chain and is limited to transfers of currencies rather than communicate arbitrary information across chains. The roughly synonymous terms to compare Cosmos to Polkadot is that a _zone_ maps to _parachain_ and _hub_ maps to _relay chain_ BUT these are only loose comparisons and do not have the exact same properties or functions.
 
 One major difference is that there is no notion of shared security in Cosmos. Each Cosmos zone is expected to have their own validator sets running an individual consensus. 
 
