@@ -8,7 +8,8 @@ In Cosmos, a chain is referred to as a _zone_ and each uses an individual instan
 
 ## Consensus
 
-Cosmos uses a practical Byzantine-Fault-Tolerant (PBFT) derived consensus called [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html#what-is-tendermint). Tendermint can handle up to 1/3 byzantine nodes (malicious or offline nodes). 
+Cosmos uses the [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html#what-is-tendermint) consensus algorithm which is based on the practical Byzantine-Fault-Tolerant (pBFT) algorithm. For a general overview of pBFT, please see the overview [here]
+(https://crushcrypto.com/what-is-practical-byzantine-fault-tolerance/). In general, it is a family of consensus protocols that can handle no more than 1/3 byzantine nodes (malicious or offline nodes). 
 
 Polkadot uses a combination of block production mechanism with a finality gadget, respectively termed BABE and GRANDPA. BABE is similar to Oroborous Praos and GRANDPA is a finality gadget based on GHOST in the same vein as Casper FFG. It is **not** PBFT.
 
@@ -27,11 +28,23 @@ Polkadot has much stronger guarentees than Cosmos in ensuring the economic secur
 
 ### Validity
 
+Tendermint decides validity based on an application specific `validate()` function. And states that:
 
+> In blockchain sytems, a value is not valid if it does not contain an appropriate hash of the last value (block) added to the blockchain.
+
+This is different from how GRANDPA comes to consensus on chains. Due to the constraint that Tendermint uses the block and the prior block hash as part of its validity functon, it ties its finality gadget to its block production by design.
+
+GRANDPA instead is a finality gadget that is working as a separate process to the block production mechansim (BABE).
+
+Tendermint algorithm is based on a single cornerstone assertion: `n > 3f` where `n` is the total voting power of the system and `f` is the total voting power of "faulty processes" or malicious nodes in the system. This means that the minimum voting power required for Tendermint to continue operation is `n = 3f +1`. 
+
+- Tendermint requires 2 voting steps (three communication exchanges in total) to decide a value.
+ 
 
 ### Availability
 
-Cosmos fails if 1/3 of nodes goes offline. GRANDPA will not (see paper).
+Tendermint will safely halt (or come to a deadlock) if more than 1/3 of the validator set goes offline.
+
 
 ### Finality
 
@@ -60,7 +73,7 @@ For more on interchain messaging in Polkadot please see the dedicated [wiki page
 
 ## Programming Language
 
-Cosmos has written the `cosmos-sdk` in Golang, and has not signalled any desire or plan to support other languages. This is okay if you are a skilled Go developer or are willing to hire Go prgrammers or learn the Go language, but not very helpful if otherwise. In comparison, Polkadot uses the language-agnostic WebAssembly standard (Wasm) as the compiliation target of its runtime and parachain validation functions and runtimes. Many programming languages support Wasm compiliation or will support Wasm compiliation in the future. A non-exhaustive list of languages that support Wasm compilation are Rust, Go, C++, TypeScript (AssemblyScript), OCaml, Brainfuck, and [more](https://github.com/appcypher/awesome-wasm-langs).  To create a blockchain that will connect to the Polkadot network, it's possible to write your blockchain application in any of these languages. With Cosmos, you have no choice and must write in Go.
+Cosmos has written the [`cosmos-sdk`](https://github.com/cosmos/cosmos-sdk) in Golang, and has not signalled any desire or plan to support other languages. This is okay if you are a skilled Go developer or are willing to hire Go prgrammers or learn the Go language, but not very helpful if otherwise. In comparison, Polkadot uses the language-agnostic WebAssembly standard (Wasm) as the compiliation target of its runtime and parachain validation functions and runtimes. Many programming languages support Wasm compiliation or will support Wasm compiliation in the future. A non-exhaustive list of languages that support Wasm compilation are Rust, Go, C++, TypeScript (AssemblyScript), OCaml, Brainfuck, and [more](https://github.com/appcypher/awesome-wasm-langs).  To create a blockchain that will connect to the Polkadot network, it's possible to write your blockchain application in any of these languages. With Cosmos, you have no choice and must write in Go.
 
 ## FAQ
 

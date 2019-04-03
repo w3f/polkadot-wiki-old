@@ -9,6 +9,9 @@
 
 Proof of Work blockchains which run versions of [Nakamoto consensus](#nakamoto-consensus) are only able to achieve the notion of _probable finality_. Probably finality, also sometimes termed "eventual consensus", is that under some assumptions about the network and participants, if we see a few blocks building on a given block, we can estimate the probability that it is final. However, finality gadgets such as GRANDPA or Ethereum's Casper are designed to give stronger guarentees on the finality of blocks, that they can never be reverted after some process has taken place. The notion of unreversible consenus is known as _provable finality._
 
+In the GRANDPA paper, it is phrased in this way:
+
+> We say an oracle A in a protocol is _eventually consistent_ if it returns the same value to all participants after some unspecified time.
 
 ## What is GRANDPA/BABE?
 
