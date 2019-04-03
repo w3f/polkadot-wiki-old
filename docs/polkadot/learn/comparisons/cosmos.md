@@ -58,6 +58,10 @@ Polkadot allows arbritrary messages to circulate among its parachains. Parachain
 
 For more on interchain messaging in Polkadot please see the dedicated [wiki page](./interchain.md).
 
+## Programming Language
+
+Cosmos has written the `cosmos-sdk` in Golang, and has not signalled any desire or plan to support other languages. This is okay if you are a skilled Go developer or are willing to hire Go prgrammers or learn the Go language, but not very helpful if otherwise. In comparison, Polkadot uses the language-agnostic WebAssembly standard (Wasm) as the compiliation target of its runtime and parachain validation functions and runtimes. Many programming languages support Wasm compiliation or will support Wasm compiliation in the future. A non-exhaustive list of languages that support Wasm compilation are Rust, Go, C++, TypeScript (AssemblyScript), OCaml, Brainfuck, and [more](https://github.com/appcypher/awesome-wasm-langs).  To create a blockchain that will connect to the Polkadot network, it's possible to write your blockchain application in any of these languages. With Cosmos, you have no choice and must write in Go.
+
 ## FAQ
 
 Follows are responses to questions which are often brought up in the comparison of Cosmos and Polkadot.
