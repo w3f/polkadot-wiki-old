@@ -11,6 +11,16 @@
     color: #FFF;
 }
 
-/* .md-nav {
-    background: #3a3a3a
+/* Style for the image in Cosmos comparison page */
+/* img[alt="block production"] {
+    width: 200px;
+    float: right;
 } */
+
+.grandpa-img {
+    width: 200px;
+    float: right;
+    text-align: center;
+    margin: 6px;
+    color: #4D4D4D;
+}

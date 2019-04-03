@@ -25,6 +25,31 @@ This is remarkably different from Cosmos, since Cosmos posits that each chain is
 
 Polkadot has much stronger guarentees than Cosmos in ensuring the economic security over the global state of the relay chain and of the parachains. It also gives greater levels of flexibility to parachain developers to use their own consensus and custom interchain logic.
 
+### Validity
+
+
+
+### Availability
+
+Cosmos fails if 1/3 of nodes goes offline. GRANDPA will not (see paper).
+
+### Finality
+
+Finality for both Cosmos' Tendermint and algorithm and Polkadot's GRANDPA finality gadget are bounded by the bandwidth and latency of the messages which are able to propagate among the validator peers in the network. As the numbers of validators increases, the amount of nodes which must sign each message before consensus is reached expands and thereby causes the finality gadget to slow down. Among a small group of nodes, say 5, the latency for coming to consensus under either one of these algorithms could be low and the finality fast. As the numbers of validators increases to 100 and beyond both algorithms would slow down. In a decentralized network, a larger validator set is preferred because it is more resilient to take down, and the security guarentees are higher. Both networks have expressed interest in moving to larger validator sets. 
+
+The key difference between Cosmos and Polkadot is that _block production_ is conflated with the _finality gadget_ in Cosmos' Tendermint while in Polkadot these two things are separate. What this means is that both network's algorithms will reach finality in similar time frames based on the size of the validator set and network latency, but Polkadot will produce blocks faster than the finality time. Tendermint is bounded on the speed of their block production due to the time-to-finality, while Polkadot's block production could potential reach speeds much higher than the time-to-finality.
+
+Additionally, since GRANDPA comes to finality on chains rather than individual blocks in the chain, it could be that under similar conditions (same size validator set) Polkadot will have faster finality on more blocks than is possible under an algorithm like Tendermint where each block must be agreed upon in the consensus algorithm one at a time.
+
+<div class="grandpa-img">
+    <a href="../../../../img/GRANDPA/chain-selection.png" target="_blank">
+        <img src="../../../../img/GRANDPA/chain-selection.png" alt="block production"/>
+    </a>
+    <p>Visual 1.1</p>
+</div>
+
+For a visualization of what we mean by GRANDPA comes to finality on "chains" rather than blocks, consider `Visual 1.1`.
+
 ## Interchain Communication
 
 Cosmos allows each of its zones to transfer assets to other zones granted they are connected to the _Cosmos Hub_. Notably, the interchain communication in Cosmos is limited **only to transfer of assets.**
@@ -43,7 +68,7 @@ The simple answer is _yes_, if a chain would like to benefit from the pooled sec
 
 ### Is GRANDPA / BABE similar to PBFT?
 
-No. This is a misunderstanding. GRANDPA, the finality gadget, and BABE, the block production mechanism, are novel developments in consensus and they are very far away from PBFT. GRANDPA is derived from GHOST similar to Ethereum's Casper and BABE is a block production mechanism similar to Oroborous Praos. Neither of these technologies are based on PBFT. (This is not the case for Cosmos however, since Tendermint IS a modified PBFT).
+No. This is a misunderstanding. GRANDPA, the finality gadget, and BABE, the block production mechanism, are novel developments in consensus and they are very far away from PBFT. GRANDPA is derived from GHOST similar to Ethereum's Casper and BABE is a block production mechanism similar to Oroborous Praos. Neither of these technologies are based on PBFT. (This is not the case for Cosmos however, since Tendermint is based on a modified PBFT).
 
 ### Is Polkadot only going to work with POS chains? How is it trust-less in comparison to Cosmos?
 
@@ -53,7 +78,7 @@ Polkadot is primarily designed to be a very efficient and minimal heterogeneous 
 
 |   |Cosmos|Polkadot|
 |---|---|---|
-|Consensus|Tendermint (PBFT)|GRANDPA/BABE|
+|Consensus|Tendermint (BFT)|GRANDPA/BABE|
 |Governance|Validator/Delegator Vote|Referendum and Council representing stakeholders|
 |Models|Hub and Zones|Relay chain and parachains|
 |Security|Each zone has its own security|Pooled security|
@@ -63,3 +88,7 @@ Polkadot is primarily designed to be a very efficient and minimal heterogeneous 
 ## Further Reading
 
 https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introduction-part-1-d08a24a021b5
+
+### errata
+
+At the time of writing and according to [this dashboard](https://stargazer.certus.one) Cosmos has 94 validators with 6 second block times. Polkadot has expressed intent to launch with 50-100 validators with similar _time-to-finality._
