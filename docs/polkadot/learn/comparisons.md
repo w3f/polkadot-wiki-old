@@ -8,7 +8,7 @@ Polkadot is a blockchain technology but makes some innovations that sets it apar
 
 ### Ethereum 1.x
 
-Ethereum 1.x refers to the current Ethereum release (at the time of this writing at the Constantinople hard fork) and the immediately planned future upgrades.
+Ethereum 1.x refers to the current Ethereum release (at the time of writing at the Constantinople hard fork) and the immediately planned future upgrades.
 
 The difference between the current Ethereum and Polkadot is quite large. Ethereum is a single chain which allows developers to extend its functionality through the deployment of blobs of code onto the chain (called smart contracts). Polkadot, as described in the whitepaper, is a fully extensible and scalable blockchain development, deployment and interaction test bed. It aims to be able to assimilate new blockchains, high-frequency chains, and even consortium chains with ease.
 
