@@ -39,11 +39,11 @@ Specialization breeds optimization.
 Parachains - Pieces of web assembly code that tells you
 how to validate the blocks (raw bytes).
 
-Instatiation of pluggable consensus that follows the relay chain.
+Instantiation of plugable consensus that follows the relay chain.
 It knows how to run another blockchain node internally (a light client) and follow
 the relay chain.
 
-Extends the substrate runtime already into a polkadot validation 
+Extends the substrate runtime already into a Polkadot validation 
 compatible runtime. Typical block authorship has some key difference
 to Polkadot parachains.
 
@@ -59,11 +59,11 @@ Parachains:
 Sovereign chain:
 
  - provides their own finality and consensus
- - block authorsip is completely independent
+ - block authorship is completely independent
 
 How to get started with cumulus?
 
  - Minimal modification of substrate chain you've already written
- - Cumulus, as its ready will be used to port it over w/ litle effort
+ - Cumulus, as its ready will be used to port it over w/ little effort
 
 GRANDPA - GHOST-based Recursive ANcestor Deriving Prefix Agreement
