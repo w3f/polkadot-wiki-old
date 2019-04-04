@@ -13,19 +13,6 @@ Cosmos uses the [Tendermint](https://tendermint.com/docs/introduction/what-is-te
 
 Polkadot uses a combination of block production mechanism with a finality gadget, respectively termed BABE and GRANDPA. BABE is similar to Oroborous Praos and GRANDPA is a finality gadget based on GHOST in the same vein as Casper FFG. It is **not** PBFT.
 
-<!-- right now this links to Rob's article but later will link to the wiki consensus page -->
-_For more on Polkadot consensus please see [here](https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introduction-part-1-d08a24a021b5)_
-
-## Pooled Security
-
-Polkadot is designed to _pool_ security through the relay chain validator set. This means that any chain which connects to the Polkadot network will not need to set up its own consensus or manage its own economic security, but will benefit from the strong economic security of the realy chain.
-
-This is remarkably different from Cosmos, since Cosmos posits that each chain is soveriegn first and must run its own instance of Tendermint consensus with its own consensus algorithm. Cosmos now claims to have a notion of shared security similar to what is offered by Polkadot, but it is not implemented today and seems to be a recent addition.
-
-> Cosmos is a consensus bridge solution and **not** a validation bridge solution. There is no attempt in the Cosmos network to validate the sub-chains, and the hub can track all token transfers. Chains on Cosmos cannot trust each other since each is economically independent. The same Cosmos zone can spend resources on 2 other Cosmos zones and there would be no way for the zones to have information about this double spend unless they get it from the Cosmos hub.
-
-Polkadot has much stronger guarentees than Cosmos in ensuring the economic security over the global state of the relay chain and of the parachains. It also gives greater levels of flexibility to parachain developers to use their own consensus and custom interchain logic.
-
 ### Validity
 
 Tendermint decides validity based on an application specific `validate()` function. And states that:
@@ -43,8 +30,9 @@ Tendermint algorithm is based on a single cornerstone assertion: `n > 3f` where 
 
 ### Availability
 
-Tendermint will safely halt (or come to a deadlock) if more than 1/3 of the validator set goes offline.
+Tendermint will safely halt if more than 1/3 of the validator set goes offline.
 
+Similarly GRANDPA will stop finalizing blocks if more than 1/3 of the validator set cannot be reached, however blocks will continue to be produced with BABE. 
 
 ### Finality
 
@@ -62,6 +50,19 @@ Additionally, since GRANDPA comes to finality on chains rather than individual b
 </div>
 
 For a visualization of what we mean by GRANDPA comes to finality on "chains" rather than blocks, consider `Visual 1.1`.
+
+<!-- right now this links to Rob's article but later will link to the wiki consensus page -->
+_For more on Polkadot consensus please see [here](https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introduction-part-1-d08a24a021b5)_
+
+## Pooled Security
+
+Polkadot is designed to _pool_ security through the relay chain validator set. This means that any chain which connects to the Polkadot network will not need to set up its own consensus or manage its own economic security, but will benefit from the strong economic security of the realy chain.
+
+This is remarkably different from Cosmos, since Cosmos posits that each chain is soveriegn first and must run its own instance of Tendermint consensus with its own consensus algorithm. Cosmos now claims to have a notion of shared security similar to what is offered by Polkadot, but it is not implemented today and seems to be a recent addition.
+
+> Cosmos is a consensus bridge solution and **not** a validation bridge solution. There is no attempt in the Cosmos network to validate the sub-chains, and the hub can track all token transfers. Chains on Cosmos cannot trust each other since each is economically independent. The same Cosmos zone can spend resources on 2 other Cosmos zones and there would be no way for the zones to have information about this double spend unless they get it from the Cosmos hub.
+
+Polkadot has much stronger guarentees than Cosmos in ensuring the economic security over the global state of the relay chain and of the parachains. It also gives greater levels of flexibility to parachain developers to use their own consensus and custom interchain logic.
 
 ## Interchain Communication
 
@@ -105,7 +106,3 @@ Polkadot is primarily designed to be a very efficient and minimal heterogeneous 
 ## Further Reading
 
 https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introduction-part-1-d08a24a021b5
-
-### errata
-
-At the time of writing and according to [this dashboard](https://stargazer.certus.one) Cosmos has 94 validators with 6 second block times. Polkadot has expressed intent to launch with 50-100 validators with similar _time-to-finality._
