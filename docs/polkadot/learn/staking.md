@@ -11,7 +11,7 @@ Stash & Controller accounts.
 
 **Stash:** The stash is responsible for holding an owner's funds used for staking (could be held in a cold wallet) and bonding DOTs to the controller. All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds.
 
-**Controller:** It is actively reponsible for managing the account operations such as expressing an interest to switch between roles (validator, nominator, idle).
+**Controller:** It is actively responsible for managing the account operations such as expressing an interest to switch between roles (validator, nominator, idle).
 
 ## Operations
 
