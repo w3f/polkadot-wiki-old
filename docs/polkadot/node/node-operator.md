@@ -7,7 +7,8 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
 ## How to run a polkadot / validator node
 
 !!! info
-    _This tutorial works with current Alexander testnet. Once PoC-4 is released, contents will be updated as well._
+    _This tutorial works with current Alexander testnet and has been updated for PoC-4._
+
 To be a good validator, you should
 
 * Have certain amount of DOT stake (**Basic Requirement**)
@@ -22,21 +23,21 @@ You should **NOT** run a validator if you have DOTs, but you do not have enough 
 
 As a nominator, you can still get the rewards by nominating multiple validators. If you want to know more about nominator, please see [here](./nominator.md).
 
-For this tutorial, we use Ubuntu 18.04 and will be running on PoC-3 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a lot of [VPS](./node-operator.md#vps-list) choice out there, feel free to pick one you like.
-
+For this tutorial, we use Ubuntu 18.04 and will be running on PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a lot of [VPS](./node-operator.md#vps-list) choice out there, feel free to pick one you like.
  
 !!! attention
     _Please make sure that you do **NOT** use this setup & configuration on mainnet. This guide simply walks you through step-by-step how to set up & run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDOS protection and high availability._
 
 
-**Update to the latest version of polkadot**
+<!-- **Update to the latest version of polkadot** -->
 
-If you have installed polkadot already, you can use the following command to install the latest version and check your current version.
+<!-- Currently, the one-line installer will not work for PoC-4 -->
+<!-- If you have installed polkadot already, you can use the following command to install the latest version and check your current version.
 
 ```bash
-cargo install --git https://github.com/paritytech/polkadot.git --branch v0.3 polkadot --force
+cargo install --git https://github.com/paritytech/polkadot.git --branch v0.4 polkadot --force
 polkadot --version
-```
+``` -->
 
 **Install rust**
 
@@ -51,31 +52,43 @@ rustup update
 ```
 If you have installed rust already, run this command to check whether there is a new version available.
 
-**Install polkadot PoC-3 alexander**
+**Install polkadot PoC-4 Alexander**
 
-```bash
-cargo install --git https://github.com/paritytech/polkadot.git --branch v0.3 polkadot
+<!-- ```bash
+cargo install --git https://github.com/paritytech/polkadot.git --branch v0.4 polkadot
 ```
 
-This command will fetch & install the polkadot 0.3 version to your PATH.
+This command will fetch & install the polkadot 0.4 version to your PATH. -->
 
+Until support for the one-line installer is back up for PoC-4, you will need to build `polkadot` from source.
+
+```
+git clone https://github.com/paritytech/polkadot.git
+cd polkadot
+cargo clean
+git checkout v0.4
+./scripts/init.sh
+./scripts/build.sh
+cargo install --force --path ./ --branch v0.4.3
+```
+
+This may take a while depending on your hardware!
 
 **Synchronize chain data**
 
-After installed all related dependencies, you can start your polkadot node now. To synchronize the chain by executing the following command:
+After installing all related dependencies, you can start your polkadot node. Start to synchronize the chain by executing the following command:
 
 ```bash
-polkadot
+polkadot --chain alex
 ```
 
 It should take at least few hours.
-
 
 You can check the current highest block via [Telemetry](https://telemetry.polkadot.io/#/Alexander) or [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer)
  
 **Create accounts**
 
-To be a validator, you also have to create two seperate accounts for managing your funds, namely `Stash` and `Controller`. If you want to know more about it, please see [here](../learn/staking.md#accounts). 
+To be a validator, you also have to create two separate accounts for managing your funds, namely `Stash` and `Controller`. If you want to know more about it, please see [here](../learn/staking.md#accounts). 
 
 
 ![create account](../../img/validator/polkadot-dashboard-create-account.jpg)
@@ -110,7 +123,7 @@ After the transaction has gone through successfully, you should see there is a `
 
 **Value boned** - how many DOTs you want to bond to this controller for staking
 
-**Payment destination** - decide your rewards where should it send
+**Payment destination** - where your rewards get sent
 
 If everything is inputted properly, click `Bond`.
 
@@ -213,8 +226,6 @@ You can tail the logs with `journalctl` like so:
 ```bash
 journalctl -f -u polkadot-validator
 ```
-
-
 
 ## Other References
 
