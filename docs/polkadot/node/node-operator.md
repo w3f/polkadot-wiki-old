@@ -28,17 +28,6 @@ For this tutorial, we use Ubuntu 18.04 and will be running on PoC-4 Alexander te
 !!! attention
     _Please make sure that you do **NOT** use this setup & configuration on mainnet. This guide simply walks you through step-by-step how to set up & run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDOS protection and high availability._
 
-
-<!-- **Update to the latest version of polkadot** -->
-
-<!-- Currently, the one-line installer will not work for PoC-4 -->
-<!-- If you have installed polkadot already, you can use the following command to install the latest version and check your current version.
-
-```bash
-cargo install --git https://github.com/paritytech/polkadot.git --branch v0.4 polkadot --force
-polkadot --version
-``` -->
-
 **Install rust**
 
 ```bash
@@ -47,22 +36,16 @@ sudo apt install make clang pkg-config libssl-dev
 ```
 This command will fetch the latest version of Rust and install it, then execute the second command to install required software before install Polkadot.
 
-```
+```bash
 rustup update
 ```
 If you have installed rust already, run this command to check whether there is a new version available.
 
 **Install polkadot PoC-4 Alexander**
 
-<!-- ```bash
-cargo install --git https://github.com/paritytech/polkadot.git --branch v0.4 polkadot
-```
-
-This command will fetch & install the polkadot 0.4 version to your PATH. -->
-
 Until support for the one-line installer is back up for PoC-4, you will need to build `polkadot` from source.
 
-```
+```bash
 git clone https://github.com/paritytech/polkadot.git
 cd polkadot
 cargo clean
