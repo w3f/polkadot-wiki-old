@@ -81,9 +81,7 @@ First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & 
 
 You can then click *Save* and choose *Create and backup account* to store your seed file to other place.
 
-
 Repeat the above steps to create one more account.
-
 
 **Get testnet DOTs token**
 

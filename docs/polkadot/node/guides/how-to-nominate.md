@@ -58,4 +58,4 @@ If you return to the `Staking Overview` page and scroll until you find your vali
 
 ## How to stop nominating
 
-To stop nominating simply return to the `Account Actions` tab and click the `Stop Nominating` button. Your account will be set to `chill` and at the next session will no longer be nominating to the validator.
+To stop nominating simply return to the `Account Actions` tab and click the `Stop Nominating` button. Your account will be set to `chill` and at the next era will no longer be nominating to the validator. This may take up to an hour to take effect!
