@@ -38,9 +38,13 @@ nav:
    - Polkadot UI: polkadot/learn/UI.md
  - Run the Network:
    - Home: polkadot/node/index.md
-   - Node Operator / Validator: polkadot/node/node-operator.md
-   - Nominator: polkadot/node/nominator.md
    - Collator: polkadot/node/collator.md
+   - Nominator: polkadot/node/nominator.md
+   - Validator: polkadot/node/node-operator.md
+   - Guides:
+     - How to nominate: polkadot/node/guides/how-to-nominate.md
+     - How to validate: polkadot/node/guides/how-to-validate.md
+     - How to systemd: polkadot/node/guides/how-to-systemd.md
    - Governance: polkadot/node/governance/index.md
  - Other Languages:
    - Chinese: lang/chinese.md
