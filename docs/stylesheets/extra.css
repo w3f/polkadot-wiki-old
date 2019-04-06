@@ -27,6 +27,10 @@
     color: #e6007a;
 }
 
-/* .md-nav {
-    background: #3a3a3a
-} */
+.grandpa-img {
+    width: 200px;
+    float: right;
+    text-align: center;
+    margin: 6px;
+    color: #4D4D4D;
+}

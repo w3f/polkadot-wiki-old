@@ -32,24 +32,4 @@ Another feature of Tezos is its smart contract language [Michelson](https://www.
 
 ## Cosmos
 
-[Cosmos](https://cosmos.network/resources/whitepaper), being a "network of distributed ledgers", is often thought to be comparable to Polkadot. Although the goal of Cosmos is similar to Polkadot, to solve problems of blockchain scalability and interoperability, it can be understood that Polkadot is more robust in its ability to connect heterogeneous chains.
-
-In Cosmos, a chain is referred to as a _zone_ and each uses an individual instance of the [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html) consensus algorithm. Interchain communication is handled via a master _hub_ chain and is limited to transfers of currencies rather than communicate arbitrary information across chains. The roughly synonymous terms to compare Cosmos to Polkadot is that a _zone_ maps to _parachain_ and _hub_ maps to _relay chain_ BUT these are only loose comparisons and do not have the exact same properties or functions.
-
-One major difference is that there is no notion of shared security in Cosmos. Each Cosmos zone is expected to have their own validator sets running an individual consensus. 
-
-Cosmos is a consensus bridge solution and **not** a validation bridge solution. There is no attempt in the Cosmos network to validate the sub-chains, and the hub can track all token transfers. Chains on Cosmos cannot trust each other since each is economically independent. The same Cosmos zone can spend resources on 2 other Cosmos zones and there would be no way for the zones to have information about this double spend unless they get it from the Cosmos hub.
-
-Polkadot has much stronger guarantees than Cosmos in ensuring the economic security over the global state of the relay chain and of the parachains. It also gives greater levels of flexibility to parachain developers to use their own consensus and custom interchain logic.
-
-The governance of both projects is remarkably distinct as well. In Cosmos, the source of truth lies solely with the Cosmos hub and the validators of that chain. While Polkadot's governance system is agreed upon by stake-weighted referendum and includes mechanisms to represent passive stakeholders such as the council.
-
-Here is a quick table denoting key differences:
-
-|   |Cosmos|Polkadot|
-|---|---|---|
-|Consensus|Tendermint (PBFT)|GRANDPA|
-|Governance|Validator/Delegator Vote|Referendum and Council representing stakeholders|
-|Models|Hub and Zones|Relay chain and parachains|
-|Security|Each zone has its own security|Shared security across parachains|
-|Native token|Atom|Dot|
+Please see [here](./comparisons/cosmos.md).
