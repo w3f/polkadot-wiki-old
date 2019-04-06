@@ -22,7 +22,7 @@ For this tutorial, we use Ubuntu 18.04 and will be running on PoC-4 Alexander te
 !!! attention
     _Please make sure that you do **NOT** use this setup & configuration on mainnet. This guide simply walks you through step-by-step how to set up & run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDOS protection and high availability._
 
-**Install rust**
+## Install rust
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
@@ -35,7 +35,7 @@ rustup update
 ```
 If you have installed rust already, run this command to check whether there is a new version available.
 
-**Install polkadot PoC-4 Alexander**
+## Install `polkadot` PoC-4
 
 Until support for the one-line installer is back up for PoC-4, you will need to build `polkadot` from source.
 
@@ -51,7 +51,7 @@ cargo install --force --path ./ --branch v0.4.3
 
 This may take a while depending on your hardware!
 
-**Synchronize chain data**
+## Synchronize chain data
 
 After installing all related dependencies, you can start your polkadot node. Start to synchronize the chain by executing the following command:
 
@@ -63,10 +63,9 @@ It should take at least few hours.
 
 You can check the current highest block via [Telemetry](https://telemetry.polkadot.io/#/Alexander) or [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer)
  
-**Create accounts**
+## Create accounts
 
 To be a validator, you also have to create two separate accounts for managing your funds, namely `Stash` and `Controller`. If you want to know more about it, please see [here](../../learn/staking.md#accounts). 
-
 
 ![create account](../../../img/validator/polkadot-dashboard-create-account.jpg)
 First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. 
@@ -77,7 +76,7 @@ You can then click *Save* and choose *Create and backup account* to store your s
 
 Repeat the above steps to create one more account.
 
-**Get testnet DOTs token**
+## Get testnet DOTs token
 
 To continue the following steps, you are required to get some testnet DOTs token for `Stash` and `Controller` account in order to submit transactions and stake to be a validator.
 
@@ -85,8 +84,7 @@ Please go to [Polkadot Watercooler - Riot](https://riot.im/app/#/room/#polkadot-
  
 You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxlabs.com/polkadot) as well ;)
 
-
-**Pair Accounts**
+## Pair Accounts
 
 First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) section, you should see all of your existing accounts.
 
@@ -102,8 +100,7 @@ After the transaction has gone through successfully, you should see there is a `
 
 If everything is inputted properly, click `Bond`.
 
-
-**Staking** 
+## Staking
 
 Once the transaction is successfully executed, you should see the controller has `Validate` and `Nominate` options available.
 
@@ -129,12 +126,9 @@ Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after wait fe
 
 ![telemetry monitor](../../../img/validator/telemetry_monitor.jpg)
 
-
 Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many nodes are intended to be a validator.
 
-
 ![staking queue](../../../img/validator/polkadot-dashboard-staking-queue.png)
-
 
 Your node will be shown on the *next up* queue. In next era(probably 1 hour), if there is slot available, your node will become an active validator. 
 
