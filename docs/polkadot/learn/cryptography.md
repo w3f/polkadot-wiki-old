@@ -10,7 +10,7 @@ more advanced [research wiki](https://research.web3.foundation).
 
 ## Hashing Algorithm
 
-The hashing algorithm used in Polkadot is [Blake2s](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2).
+The hashing algorithm used in Polkadot is [Blake2b](https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2).
 Blake2 is considered to be a very fast cryptographic hash function that is 
 also used in the cryptocurrency [Zcash](https://z.cash).
 
