@@ -70,7 +70,7 @@ Cosmos allows each of its zones to transfer assets to other zones granted they a
 
 Polkadot allows arbitrary messages to circulate among its parachains. Parachains will communicate with each other with the validators only having enough knowledge required of the messages to verify that the interchain messages are being processed correctly. The messages of Polkadot's interchain system can encapsulate assets or more complicated functionality since at the core they are just a string of bytes. In fact, Polkadot is so flexible in its interchain communication that it even allows parachains to parse the same message in different ways, this is a ridiculous thing to implement but the chain logic would allow it and it holds no bearing on the state of any other parachain besides the one which does the interpreting.
 
-For more on interchain messaging in Polkadot please see the dedicated [wiki page](./interchain.md).
+For more on interchain messaging in Polkadot please see the dedicated [wiki page](../interchain.md).
 
 ## Programming Language
 
