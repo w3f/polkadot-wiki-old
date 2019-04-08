@@ -42,7 +42,7 @@ Unlock your account and sign the extrinsic, when the transaction is included in 
 
 ## Nominating a validator
 
-Go to the `Staking Overview` tab on the staking page of the Polkadot Dashboard. On the left side you will see a list of validators (on the right side are validators who have signalled intention to join the validator set and you can ignore them for now). From this list of validators, find one that you would like to nominate for and copy the address.
+Go to the `Staking Overview` tab on the staking page of the Polkadot Dashboard. On the left side you will see a list of validators (on the right side are validators who have signaled intention to join the validator set and you can ignore them for now). From this list of validators, find one that you would like to nominate for and copy the address.
 
 ![Validators](../../../img/guides/how-to-nominate/validators.png)
 

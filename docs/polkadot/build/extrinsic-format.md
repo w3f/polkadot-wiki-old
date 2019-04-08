@@ -10,7 +10,7 @@ For reference the **old** extrinsic format was:
 
 ## Current Format
 
-The Polkadot extrinisic format is:
+The Polkadot extrinsic format is:
 
 ```
 [ address (1/3/5/9/33-bytes, dependent on first byte), index (4-bytes), call (dynamic-length), signature on *original* fields (64 bytes) ]

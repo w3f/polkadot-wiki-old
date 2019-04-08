@@ -1,7 +1,7 @@
 # Roadmap For Developers
 
 Developers need some guide posts for when they can expect certain milestones
-to be reached by the upstream teams. We will try to keep the sectons below 
+to be reached by the upstream teams. We will try to keep the sections below 
 up to date with the what we know and add definite dates if possible.
 
 ## Substrate
@@ -20,7 +20,7 @@ Expected Features:
  - Outstanding bugs fixed
  - Decoupled balances
  - Integration tests
- - Enhanced control over wasm/native execution heuristics
+ - Enhanced control over Wasm/native execution heuristics
  - Panics/overflows sweeps in runtime
 
 ### 1.1

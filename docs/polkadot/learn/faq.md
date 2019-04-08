@@ -48,4 +48,4 @@ the validators on the relay chain whom validate each transition, the security
 of the parachain and the Polkadot network is completely separate from parachain
 economics. Parachains need collators to continue to progress, so it wouldn't be
 unreasonable to see them incent collator nodes in some way but it is completely
-up to parachain implementors.
+up to parachain implementers.

@@ -5,7 +5,7 @@
 
 Polkadot is described in the [whitepaper](https://github.com/w3f/polkadot-white-paper/raw/master/PolkaDotPaper.pdf) as a fully extensible
 and scalable blockchain development, deployment, and interaction test bed.
-Builders will have the ability to use this exiciting new technology
+Builders will have the ability to use this exciting new technology
 as the infrastructure for their own applications.
 
 This guide will walk you through the [current state of Polkadot](#where-are-we-now) development, explain the [difference between a
@@ -16,7 +16,7 @@ the necessary steps to take to [build a parachain](#so-you-want-to-build-a-parac
 
 Polkadot has achieved the PoC 3 milestone and has been successfully running the
 Alexander testnet for three months. Progress is steadily being made toward the next
-PoC4 release which will include interchain messaging. Development is on track for a 
+PoC-4 release which will include interchain messaging. Development is on track for a 
 mainnet launch by the end of the year.
 
 Meanwhile, Substrate which is the runtime module library on which Polkadot is being
@@ -25,7 +25,7 @@ to re-use many of the pieces that are being used to create Polkadot and compose
 them into their own chain. It is also easily extensible by writing custom _runtime
 modules_ which dictate the runtime logic of the chain.
 
-If you are a developer, builder, entreprenuer, or otherwise a visionary
+If you are a developer, builder, entrepreneur, or otherwise a visionary
 considering Polkadot as the ecosystem for your next project, this guide
 will help you understand your options for development and decide what
 stack is right for you and your project. It will show you the resources
@@ -34,7 +34,7 @@ available which you can use to begin planning and executing on your idea today.
 ## What is the difference between a parachain and smart contract?
 
 Before you can begin any work on your idea at all, it is important
-that you understand the tradeoffs between the two development options
+that you understand the trade-offs between the two development options
 you have for building on Polkadot: parachains or smart contracts.
 
 Parachains are the individual chains which will connect into the Polkadot
@@ -86,7 +86,7 @@ contract on the same chain.
 
 An example of the composable of smart contracts is evident in the recent phenomenon
 of DeFi (decentralized finance) applications. Projects like [Maker](https://makerdao.com)
-opened the way for further application to be consustructed on top of them
+opened the way for further application to be constructed on top of them
 such as decentralized hedge funds and loan management systems.
 
 There will be more overhead to creating a parachain that simply
@@ -107,7 +107,7 @@ Here is a quick comparison chart to help you digest the information:
 | more complex to develop (-) | easy to develop (+) |
 | requires collator node to deploy (-) | easy to deploy (+)  |
 | interaction between parachains (+) | interaction between applications (+) |
-| requires network maintainance (-) | easier to maintain (+) |
+| requires network maintenance (-) | easier to maintain (+) |
 | possible to implement complex network logic and advanced crypto (+) | harder to implement complex logic or crypto (-) |
 | is its own network (+) | exists on a network (-) |
 
@@ -147,7 +147,7 @@ or the [Substratekitties](https://shawntabrizi.github.io/substrate-collectables-
 
 #### Starting a new project
 
-You will likely want to use the convienence script provided by the Substrate developers
+You will likely want to use the convenience script provided by the Substrate developers
 to start a new project template.
 
 First download the script by running this command:
@@ -199,7 +199,7 @@ Polkadot-compatible parachain a no-brainer. One of these libraries is called Cum
 
 [Cumulus](https://github.com/paritytech/cumulus) is still in
 development and is _not_ ready to use yet. It's intended goal is to be
-an extenstion to the Substrate library that will make any Substrate
+an extension to the Substrate library that will make any Substrate
 runtime compatible with Polkadot.
 
 It will handle some of the overhead of any parachain that needs
@@ -224,7 +224,7 @@ For the latest on Cumulus see a recent talk from Rob Habermeier below.
 In Polkadot validators are automatically selected to validate for each parachain
 using randomness from the relay chain. Each era on the relay chain these validators will be rotated
 to ensure that there is a fair validator choice and that no single validator continues
-to validate for a specific chain. As a parchain developer or operator you will get
+to validate for a specific chain. As a parachain developer or operator you will get
 this security feature included once you've made your chain compatible with Polkadot
 and acquired a spot on the parachain registry.
 
@@ -281,14 +281,14 @@ alternative, a campaign could be held to fund the DOTs to acquire a different sp
 on the registry.
 
 In most cases it will likely be fairly straightforward to "renew" your
-entry on the parachain registy by continuing to stake DOTs.
+entry on the parachain registry by continuing to stake DOTs.
 
 ### Benefits of being a parachain
 
-The benefit of being a parachin on Polkadot is that your chain will be secured
+The benefit of being a parachain on Polkadot is that your chain will be secured
 with the same security as the entire Polkadot network without you needing to 
 maintain your own consensus. On top of this, your chain will be able to interact
-withh all other Polkadot parachains through the interchain communication system.
+with all other Polkadot parachains through the interchain communication system.
 
 The tools and monitoring systems being built for Polkadot or different parachains
 will be easily portable or re-usable in the future by new parachains. Without Polkadot,
@@ -326,7 +326,7 @@ parachain with support for smart contracts is [Edgeware](#edgeware). As
 the ecosystem matures, there is a high probability that more chains will
 come forward as smart contract enabled parachains.
 
-Polkadot will also be compatible with pre-exisiting smart contract platforms
+Polkadot will also be compatible with preexisting smart contract platforms
 such as Ethereum and Tezos through bridges. This means that even work spent
 developing on these platforms today may be applicable to running on Polkadot
 in the future.
@@ -365,7 +365,7 @@ the computation costs of any constructor logic and for storage that it consumes.
 ## Paying for your smart contract
 
 Different platforms will have different ways for paying for your
-smart contract deployment and maintainence.
+smart contract deployment and maintenance.
 
 Some ways you different platforms might implement paying for smart contracts:
 
@@ -378,7 +378,7 @@ Some ways you different platforms might implement paying for smart contracts:
 In general most smart contract platforms implement the notion of `gas` which
 represents the computation required to run your smart contract logic across
 the network. Gas is usually paid for by paying the corresponding `gas price`
-that is sepcified in the transaction. 
+that is specified in the transaction. 
 
 There are a couple things you will want to keep in mind while developing your
 application to ensure that the gas cost of it stays within reasonable bounds
@@ -417,5 +417,5 @@ truly new.
 If you would like to share your ideas for a parachain or a smart contract
 feel free to talk to us in the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) and if you have questions
 regarding development you can try asking in the [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org).
-Keep up to date by following the appropiate [social channels](https://wiki.polkadot.network/en/latest/community/) and good luck
+Keep up to date by following the appropriate [social channels](https://wiki.polkadot.network/en/latest/community/) and good luck
 building your vision into reality on Polkadot!

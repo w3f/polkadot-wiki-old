@@ -12,7 +12,7 @@ Please refer to heading 3 in the paper for a full description of the protocol. I
 
 ## Comparison with Casper FFG
 
-The two main differences between GRANDPA and Casper FFg (Friendly Finality Gadget) are:
+The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadget) are:
 
  - in GRANDPA, different voters can cast votes simultaneously for blocks at different heights
  - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block production mechanism
