@@ -12,6 +12,14 @@ For online systems, we usually do not have access to a real world lit candle. In
 
 However, this brings to light another problem that is inherent to blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify is a hard problem. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses for its randomness.
 
+## Why use a candle auction?
+
+Another issue of blockchain systems is that the open nature makes it easy for large holders of tokens to perform some types of attacks. Auctions are a prime example of this, in normal first-price auction mechanisms it is easy for an attacker to _grief_ other participants by sniping the auction at the last minute and winning it with no intention to use it.
+
+For this reason, there has been attention toward [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase. The candle auction is another solution.
+
+Candle auctions make it so that everyone always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise they might find themselves in the situation that the auction was determined to have "ended" before they even bid.
+
 ## How it's used in Polkadot
 
 Polkadot will use a _random beacon_ from the VRF that's used in other places of the protocol to determine the virtual "end-time" of the auction. 
