@@ -24,7 +24,7 @@ Candle auctions make it so that everyone always know the states of the bid, but 
 
 Polkadot will use a _random beacon_ from the VRF that's used in other places of the protocol to determine the virtual "end-time" of the auction. 
 
-When an account bids, they can place bids for any of the available units or ranges of slots. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous unit or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid for my an external account.
+When an account bids, they can place bids for any of the available units or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous unit or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid for my an external account.
 
 ## How does bidding work?
 
@@ -33,48 +33,90 @@ Parachain slots at genesis
 
        --6 months--
        v          v
-Slot A |     1    |     2    |     3     |     4     |
-Slot B |     1    |     2    |     3     |     4     |
-Slot C |__________|     2    |     3     |     4     |
-Slot D |__________|     2    |     3     |     4     |
-Slot E |__________|__________|     3     |     4     |
+Slot A |     1    |     2    |     3     |     4     |...
+Slot B |     1    |     2    |     3     |     4     |...
+Slot C |__________|     1    |     2     |     3     |     4     |...
+Slot D |__________|     1    |     2     |     3     |     4     |...
+Slot E |__________|__________|     1     |     2     |     3     |     4     |...
        ^                                             ^
        ---------------------2 years-------------------      
 
 Each unit of the range 1 - 4 represents a 6-month duration for a total of 2 years
 ```
 
-Auctions will take place at 6 months intervals, with the auction for a particular range of units in a slot starting 6 months before the beginning of that range.
+Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `unit`, more than on continuous `unit` is a `range`.
 
-For example, if an account would like to bid on the slot range 3-4 then the bidding would start at slot unit 2.
+Auctions will take place 6 months before the parachain slot begins.
 
-Bidders are allows to bid for a range of a minimum of 1 slot unit to a maximum of 4 slot units. The bids will determine the amount of DOTs they will lock up if they win.
+Bidders will submit configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the units 1 - 4.
+
+A bidder configuration for a single bidder may look like this:
+
+```js
+Bids [
+       {
+              range: [1,2,3,4],
+              bond_amount: 20, //DOTs
+       },
+       {
+              range: [1,2],
+              bond_amount: 30, //DOTs
+       },
+       {
+              range: [2,3,4],
+              bond_amount: 25, // DOTs
+       }
+       
+]
+
+```
 
 The algorithm tries to maximize the amount of staked DOTs at any particular slot unit.
 
-At the end of the auction a random number is obtained from the VRF. The random number is used to determine which block that occurred during the auction is considered the "end time" and takes the state of standing orders at that time.
+A random number is determined at each block using the VRF. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
-### Example
+### Examples
 
-There are 2 slots available for the range 1-3.
+threshold goes up and each block has a random number
+- preventing attack: once threshold reached, select a random block in the previous epoch 
 
-Alice bids `20 DOTs` for the range 1-3 at unit 0.
+selecting two bids, non-overlapping bids
 
-Bob bids `30 DOTs` for the unit 1 at unit 0.
+#### Non-compete
 
-Since there are 2 slots available, when the auction settles before unit 1, both Alice and Bob will be winners. A total of `50 DOTs` will be locked. Since Alice won a range, she will be able to keep here parachain there for the entire duration and that slot will not be auctioned again until its duration has elapsed.
+There is one parachain slot available.
 
-A new auction begins at unit 1 for the single remaining range 2-3.
+Alice bids `20 DOTs` for the range 1 - 2.
 
-Bob bids `30 DOTs` for unit 2 because he has decided to renew his parachain currently occupying a slot at unit 1.
+Bob bids `30 DOTs` for the range 3 - 4.
 
-However, a new comer Charlie has decided to bid `20 DOTs` for the range 2-3. Charlie becomes the new standing bid for the auction since his bid for a range of 2 units counts as 20*2 = `40 DOTs*units`.
+The auction ends.
 
-Bob sees Charlie's bid only after some time has progressed. Bob places a new bid for the range 2-3 with the same valuation of `30 DOTs`. He once again becomes the standing bid with a valuation of 30*2 = `60 DOTs*units`.
+Alice bonds `20 DOTs` and will have the parachain slot for the first year.
 
-The auction settles before the start of unit 2, the VRF determines which block the "actual" end time of the auction happened.
+Bob bonds `30 DOTs` and will have the parachain slot for the second year.
 
-It is determined that the end time of the auction took place preceding Bob's second bid. Although one would expect him to be rewarded with the range 2-3 with his standing order valued at `60 DOTs`, this does not happen. Instead, the block in which the auction ended was when Charlie had the highest standing bid valued at `40 DOTs`. Charlie becomes the beneficiary of the slot for range 2-3.
+#### Compete
+
+There is one parachain slot available.
+
+Charlie bids `75 DOTs` for the range 1 - 4.
+
+Dave bids `100 DOTs` for the range 3 - 4.
+
+Emily bids `40 DOTs` for the range 1 - 2.
+
+Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the amount of units in the specified range of the bid.
+
+Charlie - 75 * 4 = 300 for range 1 - 4
+
+Dave - 100 * 2 = 200 for range 3 - 4
+
+Emily - 40 * 2 = 80 for range 1 - 2
+
+Although Dave had the highest bid in accordance to DOT amount, when we do the calculations we see that since he only bid for a range of 2, he would need to share the slot with Emily who bid much less. Together Dave's and Emily's bids only equal a valuation of `280`. 
+
+Charlie's valuation for the entire range is `300` therefore Charlie is awarded the complete range of the parachain slot.
 
 ## Why doesn't everyone bid for the max length?
 
