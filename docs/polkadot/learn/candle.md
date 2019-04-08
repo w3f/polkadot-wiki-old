@@ -24,7 +24,7 @@ Candle auctions make it so that everyone always know the states of the bid, but 
 
 Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. This will determine the "end-time" of the auction.
 
-When an account bids, they can place bids for any of the available units or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous unit or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid for my an external account.
+When an account bids, they can place bids for any of the available units or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous unit or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid from an external account.
 
 ## How does bidding work?
 
