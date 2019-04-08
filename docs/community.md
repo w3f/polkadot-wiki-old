@@ -7,7 +7,7 @@ The Polkadot community is expanding every day. Below are the most essential link
 - [Join the Polkadot PoC-3 Testnet ("Alexander")](https://poc-3.polkadot.io/#/explorer) - Access the UI dashboard for interacting with the latest Polkadot testnet.
 - [Polkadot GitHub repo](https://github.com/paritytech/polkadot/) - Parity maintained repository that houses the Rust implementation of the Polkadot runtime environment.
 - [Polkadot meetups](https://github.com/w3f/Web3-collaboration/blob/master/meetups.md) - Information on hosting meetups, applying for funding, and materials for running it.
-asdf
+
 ## Riot
 
 - [Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org) - Room for beginners learning about Polkadot. **A good place to ask questions**
