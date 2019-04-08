@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "spellcheck": "mdspell --en-us --ignore-numbers --ignore-acronyms --no-suggestions --report 'docs/polkadot/**/*.md' 'docs/*.md'",
+    "spellcheck:interactive": "mdspell --en-us --ignore-numbers --ignore-acronyms 'docs/polkadot/**/*.md' 'docs/*.md'",
+    "spellcheck:report": "mdspell --en-us --ignore-numbers --ignore-acronyms --no-suggestions --report 'docs/polkadot/**/*.md' 'docs/*.md'"
   },
   "repository": {
     "type": "git",

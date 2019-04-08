@@ -39,7 +39,7 @@ Specialization breeds optimization.
 Parachains - Pieces of web assembly code that tells you
 how to validate the blocks (raw bytes).
 
-Instantiation of plugable consensus that follows the relay chain.
+Instantiation of pluggable consensus that follows the relay chain.
 It knows how to run another blockchain node internally (a light client) and follow
 the relay chain.
 

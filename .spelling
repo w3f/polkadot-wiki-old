@@ -1,0 +1,92 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+polkadot
+apis
+whitepaper
+blockchain
+parachain
+PoC
+testnet
+interchain
+mainnet
+runtime
+parachains
+validator
+composable
+DeFi
+incentivizing
+crypto
+Wasm
+pluggable
+dappchains
+cryptokitties
+substratekitties
+ui
+validators
+no-brainer
+Habermeier
+Vickrey
+eg
+crowdsale
+vms
+blockchains
+pDSL
+Edgeware
+Ethereum
+Tezos
+Storj
+testnets
+watercooler
+runtimes
+EthCC
+roadmap
+ristretto
+AdEx
+repo
+Robonomics
+Zerochain
+zksnarks
+Starlog
+metadata
+Joystream
+multisig
+merkle
+subkey
+commandline
+extrinsics
+Krumme
+Lanke
+non-whitespace
+parens
+param
+run-ons
+Polkascan
+PolkadotJS
+Polkawallet
+iOs
+ImageWallet
+Soramitsu
+ChainSafe
+Polkadot-JS
+util
+sr25519
+ed25519
+PoA
+sidechains
+sidechain
+natively
+e.g.
+ChainX
+ - docs/polkadot/build/extrinsic-format.md
+33-bytes
+ - docs/polkadot/build/tools/index.md
+oo7-polkadot
+api-cli
+monitor-rpc
+ - docs/polkadot/learn/bridges.md
+ERC-20
+EVM-based
+Edgeth
