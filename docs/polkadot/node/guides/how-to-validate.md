@@ -62,7 +62,7 @@ You can check the current highest block via [Telemetry](https://telemetry.polkad
  
 ## Create accounts
 
-To be a validator, you also have to create two separate accounts for managing your funds, namely `Stash` and `Controller`. If you want to know more about it, please see [here](../../learn/staking.md#accounts). 
+To be a validator, you also have to create two separate accounts for managing your funds, namely `Stash` and `Controller`. If you want to know more about it, please see [here](../../learn/staking.md#accounts). And there is additional `Session` key to represent your validator when running the node. Basically, you can use the controller account to be the session key.
 
 ![create account](../../../img/validator/polkadot-dashboard-create-account.jpg)
 First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. 
