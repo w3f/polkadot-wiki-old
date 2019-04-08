@@ -4,7 +4,34 @@ Polkadot uses a sophisticated governance mechanism that allows it to evolve grac
 
 In order to do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting.
 
-## [Overview](https://github.com/paritytech/polkadot/wiki/Governance#overview)
+## Mechanism
+
+### Purpose proposal
+
+Anyone can create a proposal by depositing minimum value in a certain period of time (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number supported proposal will be selected to allow everyone votes for it that is called referenda. Those tokens will be released once the proposal is tabled.
+
+### Voting on referenda
+
+Essentially, Polkadot introduces an idea called Voluntary Locking that lets the token holders increasing the voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+
+```
+Votes = tokens * periods 
+```
+
+Example: _TODO_
+
+Once voting is finished, only the winning voter’s tokens locked that means if that referendum hurts the network, those who voted against it that can immediately get back the locked tokens back and then sell it to the market before the proposal effective. Moreover, winning motions autonomously enacted after some cool-down period.
+
+ 
+### Adaptive Quorum Biasing
+
+Polkadot uses an innovative governance mechanism to dynamically adjust the turnout bias. If low turnout rate, super-majority is required in order to pass the motion that means the higher threshold of saying “ayes” has to be reached.
+
+Example: _TODO_
+
+
+This would be the tentative governance configuration for the polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
+
 
 ## [Council](https://github.com/paritytech/polkadot/wiki/Governance#council)
 
