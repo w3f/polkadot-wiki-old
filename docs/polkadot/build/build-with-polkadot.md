@@ -124,7 +124,7 @@ project, the next step is to decide what tools and framework you will use. Right
 now the choice is easy since you only have one option: Parity's Substrate.
 
 > Actually, its not strictly true that Substrate is your only choice since you could write all your chain logic
-from scratch as long as it compiled to WASM and has the correct interaction interface for Polkadot.
+from scratch as long as it compiled to Wasm and has the correct interaction interface for Polkadot.
 But this approach will not
 benefit from the modular re-usability and developer friendliness that frameworks like Substrate enable.
 
@@ -168,7 +168,7 @@ substrate-node-new <myProject> <myName>
 ### Setting up your chain
 
 After you have created your chain logic using a framework like Substrate, you will
-compile it into a WASM blob which contains your state transition function. This is
+compile it into a Wasm blob which contains your state transition function. This is
 the core of your blockchain and is what the validators on the Polkadot relay chain
 will validate all state transitions against. But before you're able to submit your
 chain into the Polkadot network there is still a couple things you
@@ -315,9 +315,9 @@ Already Parity Technologies has laid much of the groundwork for an
 out-of-the-box solution for parachains that want to include smart contract
 functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/srml/contract)
 module in the core SRML will support smart contracts that are compiled
-to WASM. 
+to Wasm. 
 
-In order to develop a smart contract that compiles to WASM, an
+In order to develop a smart contract that compiles to Wasm, an
 appropriate language is also needed. For this, Parity has been working
 on a domain specific language called [pDSL](#pdsl-paritys-domain-specific-language).
 
@@ -342,7 +342,7 @@ the project on their [website](https://edgewa.re).
 ### pDSL (Parity's Domain Specific Language)
 
 The [pDSL](https://github.com/Robbepop/pdsl) is intended to be a new domain specific
-language for writing smart contracts in Rust that will compile down to WASM code.
+language for writing smart contracts in Rust that will compile down to Wasm code.
 As stated in the README, it is still in an experimental phase and missing a lot of the
 planned features but it is possible to start writing smart contracts with it today.
 

@@ -1,4 +1,4 @@
-# WebAssembly (WASM)
+# WebAssembly (Wasm)
 
 WebAssembly is used in Polkadot and Substrate as the compiliation target for the runtime. 
 
@@ -9,6 +9,6 @@ WebAssembly is used in Polkadot and Substrate as the compiliation target for the
 ## Resources
 
 - [WebAssembly.org](https://webassembly.org/) - WebAssembly homepage that contains a link to the spec.
-- [wasmi](https://github.com/paritytech/wasmi) - WebAssembly interpreter written in Rust.
-- [Parity WASM](https://github.com/paritytech/parity-wasm) - WebAssembly serialization/deserialization in Rust.
-- [WASM utils](https://github.com/paritytech/wasm-utils) - Collection of WASM utilities used in Parity and WASM contract development.
+- [Wasmi](https://github.com/paritytech/Wasmi) - WebAssembly interpreter written in Rust.
+- [Parity Wasm](https://github.com/paritytech/parity-Wasm) - WebAssembly serialization/deserialization in Rust.
+- [Wasm utils](https://github.com/paritytech/Wasm-utils) - Collection of Wasm utilities used in Parity and Wasm contract development.

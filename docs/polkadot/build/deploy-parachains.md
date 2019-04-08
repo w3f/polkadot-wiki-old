@@ -37,7 +37,7 @@ cd polkadot/test-parachains
 ./build.sh
 ```
 
-This will create the WASM executable of the simple `adder` parachain contained in this folder. This parachain will simply add messages that are sent to it. The WASM executable will output into the `parachains/test/res/adder.wasm` path so make sure you are able to find it there.
+This will create the Wasm executable of the simple `adder` parachain contained in this folder. This parachain will simply add messages that are sent to it. The Wasm executable will output into the `parachains/test/res/adder.wasm` path so make sure you are able to find it there.
 
 You will need to build and run the collator node in order to get the genesis state of this parachain.
 
@@ -85,3 +85,4 @@ You can go to the `Chain State` tab and by querying the `parachains` state you s
 ### Interacting with the parachain
 
 _Coming soon_
+Wasm

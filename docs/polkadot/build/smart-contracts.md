@@ -13,7 +13,7 @@ When you write a smart contract on Ethereum you are creating the instructions
 which will be compiled down to a blob of code and deployed to a
 specific address on chain.
 
-In comparison, Substrate runtime modules are WASM blobs which will dictate
+In comparison, Substrate runtime modules are Wasm blobs which will dictate
 the entire logic of your parachain.
 
 **Code can be significantly changed by performing runtime upgrades**
