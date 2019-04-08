@@ -93,7 +93,7 @@ After the transaction has gone through successfully, you should see there is a `
 
 ![dashboard bonding](../../../img/validator/polkadot-dashboard-bonding.png)
 
-**Value boned** - how many DOTs you want to bond to this controller for staking
+**Value bonded** - how many DOTs you want to bond to this controller for staking
 
 **Payment destination** - where your rewards get sent
 
