@@ -66,9 +66,7 @@ Bids [
               range: [2,3,4],
               bond_amount: 25, // DOTs
        }
-       
 ]
-
 ```
 
 The algorithm tries to maximize the amount of staked DOTs at any particular slot unit.
