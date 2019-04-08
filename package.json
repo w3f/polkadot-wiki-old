@@ -33,7 +33,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run spellcheck:interactive"
+      "pre-commit": "./scripts/spell.sh"
     }
   }
 }
