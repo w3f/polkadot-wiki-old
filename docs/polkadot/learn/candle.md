@@ -69,7 +69,7 @@ Bids [
 ]
 ```
 
-The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the amount of staked DOTs at any particular slot unit.
+The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the amount of staked DOTs over the 4 units of the parachain slot.
 
 A random number is determined at each block which is based on the VRF used by Polkadot. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
