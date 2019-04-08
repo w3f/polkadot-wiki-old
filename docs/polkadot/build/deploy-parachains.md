@@ -37,7 +37,7 @@ cd polkadot/test-parachains
 ./build.sh
 ```
 
-This will create the WASM executable of the simple `adder` parachain contained in this folder. This parachain will simply add messages that are sent to it. The WASM executable will output into the `parachains/test/res/adder.wasm` path so make sure you are able to find it there.
+This will create the  executable of the simple `adder` parachain contained in this folder. This parachain will simply add messages that are sent to it. The  executable will output into the `parachains/test/res/adder.` path so make sure you are able to find it there.
 
 You will need to build and run the collator node in order to get the genesis state of this parachain.
 
@@ -66,7 +66,7 @@ Go to [Polkadot UI](https://polkadot.js.org/apps/#/extrinsics) on the `Extrinsic
 
 Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
 
-In the `id` input enter in the id of the parachain. In the case of the simple adder it will be `100`. In the `code` field click on the page button and then upload the `adder.wasm` binary that was compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got from running the collator node. In the `value` field you will need to input the minimum required value for creating a referendum. At the time of writing this is _5 DOTs_ on the Alexander testnet.
+In the `id` input enter in the id of the parachain. In the case of the simple adder it will be `100`. In the `code` field click on the page button and then upload the `adder.` binary that was compiled from before. In the `initial_head_data` we will copy and paste the hex data that we got from running the collator node. In the `value` field you will need to input the minimum required value for creating a referendum. At the time of writing this is _5 DOTs_ on the Alexander testnet.
 
 ![registering a parachain](../../img/parachain/register.png)
 
@@ -85,3 +85,4 @@ You can go to the `Chain State` tab and by querying the `parachains` state you s
 ### Interacting with the parachain
 
 _Coming soon_
+Wasm
