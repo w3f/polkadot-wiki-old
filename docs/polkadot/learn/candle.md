@@ -75,11 +75,6 @@ A random number is determined at each block using the VRF. Additionally, each au
 
 ### Examples
 
-threshold goes up and each block has a random number
-- preventing attack: once threshold reached, select a random block in the previous epoch 
-
-selecting two bids, non-overlapping bids
-
 #### Non-compete
 
 There is one parachain slot available.
