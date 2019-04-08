@@ -52,6 +52,8 @@ Bidders are allows to bid for a range of a minimum of 1 slot unit to a maximum o
 
 The algorithm tries to maximize the amount of staked DOTs at any particular slot unit.
 
+At the end of the auction a random number is obtained from the VRF. The random number is used to determine which block that ocurred during the auction is considered the "end time" and takes the state of standing orders at that time.
+
 ### Example
 
 There are 2 slots available for the range 1-3.
