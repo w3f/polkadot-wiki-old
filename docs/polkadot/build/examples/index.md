@@ -13,7 +13,7 @@ may be helpful for developers.
      - [Bellman-substrate (zksnarks on substrate) Repo](https://github.com/LayerXcom/bellman-substrate)
  - Starlog, IPFS metadata on substrate. [Repo](https://github.com/PACTCare/Starlog)
  - An example "Apple Store" to sell apples using Substrate. [Repo](https://github.com/osuketh/apple-store-substrate)
- - Joystream, a user governed video platform. [Repo](https://github.com/osuketh/apple-store-substrate)
+ - Joystream, a user governed video platform. [Repo](https://github.com/Joystream/substrate-node-joystream)
  - IPFS browser. [Repo](https://github.com/Polygos/substrate-node-ipfsbrowser)
  - Substrate multisig. [Repo](https://github.com/mixbytes/substrate-module-multisig)
  - Merkle tree module. [Repo](https://github.com/filiplazovic/substrate-merkle-tree)
