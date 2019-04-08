@@ -44,7 +44,7 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
 Each unit of the range 1 - 4 represents a 6-month duration for a total of 2 years
 ```
 
-Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `unit`, more than on continuous `unit` is a `range`.
+Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `unit`. More than one continuous `unit` is a `range`.
 
 Auctions will take place 6 months before the parachain slot begins.
 
