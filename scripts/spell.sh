@@ -2,6 +2,5 @@ npm run spellcheck
 if [ $? -eq 0 ]; then
     echo YAY
 else
-    npm run spellcheck:interactive
-
+    echo "Spell errors found in your files, please see the report above."
 fi
