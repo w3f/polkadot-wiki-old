@@ -6,7 +6,7 @@ There are likely three different types of bridging in Polkadot:
 
 * Bridge contracts - Smart contracts deployed as bridges between Polkadot and external chains.
 * Cross parachain communication - no contracts needed.
-* In-built birdging modules - Bridging to Polkadot from an external chain via a purpose built module.
+* In-built bridging modules - Bridging to Polkadot from an external chain via a purpose built module.
 
 
 ## Bridge Contracts

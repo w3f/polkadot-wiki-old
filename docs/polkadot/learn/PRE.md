@@ -9,7 +9,7 @@ The components of the Polkadot RE are:
 - Consensus Engine
 - Wasm Virtual Machine (VM)
 
-The runtime, which is defined as the code implementing the logic of the chain, is decoupled from the Polkadot RE. The seaparation of the two components allows the runtime to be easily upgradable without needing to upgrade the Polkadot RE. 
+The runtime, which is defined as the code implementing the logic of the chain, is decoupled from the Polkadot RE. The separation of the two components allows the runtime to be easily upgradable without needing to upgrade the Polkadot RE. 
 
 The Polkadot runtime (as well as the runtimes of the parachains) must be compiled WebAssembly (Wasm) blobs. The Polkadot runtime "plugs-in" to the Polkadot RE and will be swappable through the governance mechanism.
 

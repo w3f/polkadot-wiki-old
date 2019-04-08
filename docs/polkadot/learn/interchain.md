@@ -1,8 +1,8 @@
 # Interchain Communication
 
-Interchain transactions are resolved using a simple queueing mechanism based around a merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain. 
+Interchain transactions are resolved using a simple queuing mechanism based around a merkle tree to ensure fidelity. It is the task of the relay-chain validators to move transactions on the output queue of one parachain into the input queue of the destination parachain. 
 
-> The input and output queue are somtimes referred to in the codebase as "ingress" and "egress" messages.
+> The input and output queue are sometimes referred to in the codebase as "ingress" and "egress" messages.
 
 ## Summary
 

@@ -28,7 +28,7 @@ The governance mechanism will not be formally granted to all holders of DOTs but
 
 ### DOTs for consensus
 
-DOTs will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOTs to play active roles. Participants will put their DOTs at risk (via staking) to perform these functions. The staking of DOTs acts as a disincentive for malicious participants whom will be punsihed by the network by getting their DOTs slashed. The DOTs required to participate in the network will vary depending on the activity which is being performed, the duration the DOTs will be staked for, and the total number of DOTs staked.
+DOTs will be used to facilitate the consensus mechanism that underpins Polkadot. In order for the platform to function and allow for valid transactions to be carried out across parachains, Polkadot will rely on holders of DOTs to play active roles. Participants will put their DOTs at risk (via staking) to perform these functions. The staking of DOTs acts as a disincentive for malicious participants whom will be punished by the network by getting their DOTs slashed. The DOTs required to participate in the network will vary depending on the activity which is being performed, the duration the DOTs will be staked for, and the total number of DOTs staked.
 
 ### DOTs for bonding
 

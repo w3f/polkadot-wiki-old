@@ -1,6 +1,6 @@
 # WebAssembly (Wasm)
 
-WebAssembly is used in Polkadot and Substrate as the compiliation target for the runtime. 
+WebAssembly is used in Polkadot and Substrate as the compilation target for the runtime. 
 
 ## What is WebAssembly?
 

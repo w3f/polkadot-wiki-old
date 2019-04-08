@@ -8,7 +8,7 @@ The following are some topics which have been [presented by Gavin Wood](https://
 - Scalability
 - Future-proofing
 - Developability
-- Interopability
+- Interoperability
 - Efficiency
 
 ## Two sides of blockchain

@@ -1,6 +1,6 @@
 # Community
 
-The Polkadot community is expanding every day. Below are the most essiential links to the community channels.
+The Polkadot community is expanding every day. Below are the most essential links to the community channels.
 
 ## General
 

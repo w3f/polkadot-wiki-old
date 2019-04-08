@@ -102,11 +102,11 @@ A company, founded by Dr. Gavin Wood, which is developing Substrate.  It has als
 
 ## __Polkadot__
 
-A heterogenous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
+A heterogeneous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
 
 ## __Polkadot Runtime Environment__
 
-The runtime environment which a runtime module can be executed in.  Parachains must support the Polkadot Runchain Environment - external chains which do not will have to use a bridge.
+The runtime environment which a runtime module can be executed in.  Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
 
 ## __Proof of Stake (PoS)__
 
