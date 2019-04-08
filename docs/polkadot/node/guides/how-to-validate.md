@@ -38,12 +38,14 @@ Until support for the one-line installer is back up for PoC-4, you will need to 
 
 ```bash
 git clone https://github.com/paritytech/polkadot.git
+# To update your node. Run from this step.
 cd polkadot
 cargo clean
 git checkout v0.4
+git pull origin v0.4
 ./scripts/init.sh
 ./scripts/build.sh
-cargo install --force --path ./ --branch v0.4.3
+cargo install --path ./ --force
 ```
 
 This may take a while depending on your hardware!
