@@ -10,7 +10,7 @@ Candle auctions are a variant of open auctions in which bidders submit bids and 
 
 For online systems, we usually do not have access to a real world lit candle. Instead, we can simulate the property that the candle provides: randomness. By using a random number, we can determine when an action will end based on the output we are given.
 
-However, this brings to light another problem that is inherent to blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify is a hard problem. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses for its randomness.
+However, this brings to light another problem that is inherent to blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify is a hard problem. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses as a base for its randomness.
 
 ## Why use a candle auction?
 
@@ -22,7 +22,7 @@ Candle auctions make it so that everyone always know the states of the bid, but 
 
 ## How it's used in Polkadot
 
-Polkadot will use a _random beacon_ from the VRF that's used in other places of the protocol to determine the virtual "end-time" of the auction. 
+Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. This will determine the "end-time" of the auction.
 
 When an account bids, they can place bids for any of the available units or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous unit or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid for my an external account.
 
@@ -71,7 +71,7 @@ Bids [
 
 The algorithm tries to maximize the amount of staked DOTs at any particular slot unit.
 
-A random number is determined at each block using the VRF. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
+A random number is determined at each block which is based on the VRF used by Polkadot. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
 ### Examples
 
