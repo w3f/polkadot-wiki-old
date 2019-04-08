@@ -77,13 +77,3 @@ It is determined that the end time of the auction took place preceding Bob's sec
 ## Why doesn't everyone bid for the max length?
 
 For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOTs` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot relay chain.
-
-
-
-
-<!--
-(Should go up to a general mechanics section)We always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise they might find themselves in the situation that the auction was determined to have "ended" before they even bid!
-
--Vickrey auction was considered
--->
-
