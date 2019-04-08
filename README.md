@@ -1,4 +1,5 @@
 [![Documentation Status](https://readthedocs.org/projects/polkadot-wiki/badge/?version=latest)](https://polkadot-wiki.readthedocs.io/en/latest/?badge=latest)
+[![Build Status](https://travis-ci.org/w3f/polkadot-wiki.svg?branch=master)](https://travis-ci.org/w3f/polkadot-wiki)
 
 # Polkadot Wiki
 
