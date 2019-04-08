@@ -16,7 +16,7 @@ However, this brings to light another problem that is inherent to blockchain sys
 
 Another issue of blockchain systems is that the open nature makes it easy for large holders of tokens to perform some types of attacks. Auctions are a prime example of this, in normal first-price auction mechanisms it is easy for an attacker to _grief_ other participants by sniping the auction at the last minute and winning it with no intention to use it.
 
-For this reason, there has been attention toward [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase. The candle auction is another solution.
+For this reason, there has been attention toward [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase. The candle auction is another solution which does not need the two-step commit and reveal schemes like Vickrey auctions, and for this reason allows smart contracts to participate.
 
 Candle auctions make it so that everyone always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise they might find themselves in the situation that the auction was determined to have "ended" before they even bid.
 
@@ -69,7 +69,7 @@ Bids [
 ]
 ```
 
-The algorithm tries to maximize the amount of staked DOTs at any particular slot unit.
+The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the amount of staked DOTs at any particular slot unit.
 
 A random number is determined at each block which is based on the VRF used by Polkadot. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
