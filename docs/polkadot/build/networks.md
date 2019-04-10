@@ -20,7 +20,7 @@ You can muck around by cloning and building the http://github.com/paritytech/pol
 
 ## Krumme Lanke
 
-Krumme Lanke is a testnet network used during the developement of PoC-2.
+Krumme Lanke is a testnet network used during the development of PoC-2.
 
 Install Polkadot PoC-2 and have a `polkadot` binary installed to your `PATH` with:
 
@@ -36,7 +36,7 @@ polkadot
 
 ## Alexander
 
-Alexander is a testnet network used during the developement of PoC-3.
+Alexander is a testnet network used during the development of PoC-3.
 
 Install Polkadot PoC-3 and have a `polkadot` binary installed to your `PATH` with:
 

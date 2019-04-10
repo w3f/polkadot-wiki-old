@@ -10,4 +10,4 @@ While your DOTs are staked by nominating a validator, they are 'locked'. You can
 
 ### Guides
 
-- [How to nominate](https://hackmd.io/5Vr3CvSPS0KS8JrJN_r58A#How-to-nominate) - Short guide on nominating for Alexander testnet v0.3.18+
+- [How to nominate](./guides/how-to-nominate.md) - Guide on nominating for Alexander testnet v0.4.3 and above.

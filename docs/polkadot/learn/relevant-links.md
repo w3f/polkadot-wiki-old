@@ -13,7 +13,7 @@
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain on-stage in 30 minutes using Substrate. (Video)
 - [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Dr. Gavin Wood presents an overview of Polkadot. (Video)
 - [Polkadot Overview](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/) - Dr. Jutta Steiner presents Polkadot. (Video)
-- [Interoperability Intro](https://www.youtube.com/watch?v=RSAFHhTwA8Q) - Rob Habermeier presents "Interopability: Connecting the Dots."
+- [Interoperability Intro](https://www.youtube.com/watch?v=RSAFHhTwA8Q) - Rob Habermeier presents "Interoperability: Connecting the Dots."
 - [Consensus and Finality in Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - Talk by Rob Habermeier detailing the consensus mechanism for Polkadot.
 
 
@@ -24,7 +24,7 @@
 - [How Substrate relates to Polkadot](https://medium.com/polkadot-network/a-tale-of-two-technologies-presentation-transcript-e7397c1c7a49) - A Tale of Two Technologies Presentation Transcript
 - [Polkadot & Substrate Overview](https://www.youtube.com/watch?v=0IoUZdDi5Is&feature=youtu.be) - Dr. Gavin Wood presents Substrate (blockchain in-a-box + VM) and Polkadot, and builds a blockchain on-stage in 30 minutes using Substrate.
 - [Preparing for Polkadot's Launch with Substrate](https://medium.com/polkadot-network/preparing-for-polkadots-launch-with-substrate-cb97819ed815) - An overview of how to start preparing for Polkadot before the launch date.
-- [A breif summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post which recaps information regarding Substrate and Polkadot.
+- [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d) - Blog post which recaps information regarding Substrate and Polkadot.
 - [On the Horizon for Substrate](https://www.youtube.com/watch?v=IRc5Jma_eH8) - Video of Gavin Wood giving roadmap summary of Substrate and updates on Polkadot from the Melonport M-1 conference.
 
 ### Governance
@@ -58,7 +58,7 @@
 
 ### Substrate
 
-- [Parity Substrate](https://github.com/paritytech/substrate) - First implementation, written in Rust. Parity Technologies is a 75-person development team based in the UK and Germany. Parity’s tech is responsible for running the premier client for Ethereum, powering 40% of the nodes in the network. Parity also maintains clients for Bitcoin and is building one for ZCash.
+- [Parity Substrate](https://github.com/paritytech/substrate) - First implementation, written in Rust. Parity Technologies is a 75-person development team based in the UK and Germany. Parity’s tech is responsible for running the premier client for Ethereum, powering 40% of the nodes in the network. Parity also maintains clients for Bitcoin and is building one for Zcash.
 - [Substrate developer hub](https://docs.substrate.dev/) - Overviews, tutorials and reference documentation for Substrate.
 
 ### Cumulus
@@ -69,9 +69,9 @@
 
 ### Wasm
 
-- [wasmi](https://github.com/paritytech/wasmi) - WebAssembly interpreter written in Rust.
-- [Parity WASM](https://github.com/paritytech/parity-wasm) - WebAssembly serialization/deserialization in Rust.
-- [WASM utils](https://github.com/paritytech/wasm-utils) - Collection of WASM utilities used in Parity and WASM contract devepment.
+- [Wasmi](https://github.com/paritytech/Wasmi) - WebAssembly interpreter written in Rust.
+- [Parity Wasm](https://github.com/paritytech/parity-Wasm) - WebAssembly serialization/deserialization in Rust.
+- [Wasm utils](https://github.com/paritytech/Wasm-utils) - Collection of Wasm utilities used in Parity and Wasm contract development.
 
 ### Networking (libp2p)
 
@@ -91,7 +91,7 @@
 
 ### UI and explorers
 
-- [POC-3 UI](https://poc-3.polkadot.io/) - Browser and apps.
+- [PoC-3 UI](https://poc-3.polkadot.io/) - Browser and apps.
 - [Telemetry](http://telemetry.polkadot.io/) - Information services website for nodes.
 - [Polkadash](http://polkadash.io/) \- Dashboard displaying validators and governance proposals.
 - [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Polkadot Relay Chain and Parity Substrate chains.

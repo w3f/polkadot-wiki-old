@@ -1,5 +1,5 @@
 .md-header {
-    background: #4D4D4D !important;
+    background: #1E1E1E !important;
     color: #D85DA1;
 }
 
@@ -11,6 +11,31 @@
     color: #FFF;
 }
 
-/* .md-nav {
-    background: #3a3a3a
-} */
+.md-search__input {
+    color: #2C2B2B;
+}
+
+.md-search__input::placeholder {
+    color: #635F5F;
+}
+
+.md-icon.md-search__icon {
+    color: #e6007a;
+}
+
+.md-icon.md-icon--menu.md-header-nav__button {
+    color: #e6007a;
+}
+
+.grandpa-img {
+    width: 200px;
+    float: right;
+    text-align: center;
+    margin: 6px;
+    color: #4D4D4D;
+}
+
+.polka-re {
+    float: right;
+    width: 300px;
+}

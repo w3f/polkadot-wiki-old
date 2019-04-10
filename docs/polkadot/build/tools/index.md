@@ -22,7 +22,7 @@ The first [Polkadot client](https://github.com/paritytech/polkadot) is written i
 
 Currently the Rust ecosystem is the most mature for Polkadot parachain development. The framework for creating Polkadot parachains is called [Substrate](https://github.com/paritytech/substrate).
 
-There is comprehnsive documentation for building on Substrate available in the [Substrate Development Hub](https://docs.substrate.dev).
+There is comprehensive documentation for building on Substrate available in the [Substrate Development Hub](https://docs.substrate.dev).
 
 Additional tools you may be interested in:
 
@@ -36,17 +36,17 @@ Additional tools you may be interested in:
 
 ## JS
 
-There is an extensive ecosystem of Polkadot tools including a [client](https://github.com/polkadot-js/client) available in [polkadot-js](https://github.com/polkadot-js) organization.
+There is an extensive ecosystem of Polkadot tools including a [client](https://github.com/polkadot-js/client) available in [Polkadot-JS](https://github.com/polkadot-js) organization.
 
-Documentation on the [polkadot-js](https://polkadot.js.org) is a good starting point for diving deeper.
+Documentation on the [Polkadot-JS](https://polkadot.js.org) is a good starting point for diving deeper.
 
 Once you've configured and started to run a local node, you can interact with it through the generic polkadot [explorer](https://polkadot.js.org/apps/#/explorer).
 
 ### Libraries
 
  - [@polkadot/keyring](https://polkadot.js.org/common/keyring/) To create / load accounts in JavaScript, helpful for creating wallets or any application which will require the user to write to chain. [Examples](https://polkadot.js.org/common/examples/keyring/)
- - [@polkadot/util](https://polkadot.js.org/common/util/) Useful utility functions like checking if a string is hex encoded. **!Needs documention**
- - [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/) Crypto utilities that will come into handy while developing with Polkadot. **!Needs documention**
+ - [@polkadot/util](https://polkadot.js.org/common/util/) Useful utility functions like checking if a string is hex encoded. **!Needs documentation**
+ - [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/) Crypto utilities that will come into handy while developing with Polkadot. **!Needs documentation**
  - [oo7-polkadot](https://github.com/polkadot-js/oo7-polkadot) A bonds library for Polkadot. **!Needs documentation**
 
 ### CLI Tools

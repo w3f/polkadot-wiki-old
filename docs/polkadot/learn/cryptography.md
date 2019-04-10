@@ -22,7 +22,7 @@ derivation and signing algorithm.
 Sr25519 is based on the same underlying [Curve25519](https://en.wikipedia.org/wiki/Curve25519)
 as its EdDSA counterpart, [Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519).
 However, it uses Schnorr signatures instead of the EdDSA scheme. Schnorr signatures
-bring some noticable benefits over the ECDSA/EdDSA schemes. For one, it is more efficient
+bring some noticeable benefits over the ECDSA/EdDSA schemes. For one, it is more efficient
 and still retains the same feature set and security assumptions. Additionally,
 it allows for native multisignature through [signature aggregation](https://bitcoincore.org/en/2017/03/23/schnorr-signature-aggregation/).
 

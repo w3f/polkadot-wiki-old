@@ -102,11 +102,11 @@ A company, founded by Dr. Gavin Wood, which is developing Substrate.  It has als
 
 ## __Polkadot__
 
-A heterogenous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
+A heterogeneous multi-chain technology allowing for various blockchains of different characteristics to perform interchain communication.
 
 ## __Polkadot Runtime Environment__
 
-The runtime environment which a runtime module can be executed in.  Parachains must support the Polkadot Runchain Environment - external chains which do not will have to use a bridge.
+The runtime environment which a runtime module can be executed in.  Parachains must support the Polkadot Runtime Environment - external chains which do not will have to use a bridge.
 
 ## __Proof of Stake (PoS)__
 
@@ -134,7 +134,7 @@ A state transition function which indicates a valid algorithm for determining th
 
 ## __Runtime Module__
 
-WASM code which encodes a state transition function.
+Wasm code which encodes a state transition function.
 
 ## __Safety__
 
@@ -176,6 +176,6 @@ A program which allows one to store, receive, and transmit DOTs or other blockch
 
 A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
 
-## __WebAssembly / WASM__
+## __WebAssembly / Wasm__
 
-An instruction format for a virtual, stack-based machine.  Polkadot Runtime Modules are compiled to WASM.
+An instruction format for a virtual, stack-based machine.  Polkadot Runtime Modules are compiled to Wasm.
