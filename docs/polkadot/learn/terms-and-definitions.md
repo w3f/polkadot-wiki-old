@@ -179,3 +179,7 @@ A Switzerland-based foundation which nurtures and stewards technologies and appl
 ## __WebAssembly / Wasm__
 
 An instruction format for a virtual, stack-based machine.  Polkadot Runtime Modules are compiled to Wasm.
+
+## __Witness__
+
+Cryptographic proof statements of data validity.
