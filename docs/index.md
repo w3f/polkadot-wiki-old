@@ -24,6 +24,10 @@ delivery among parachains. Parachains are independent blockchains with their own
 that gather and process transactions while plugging in to the security of the relay chain. Bridges
 allow the Polkadot network to make it interoperable with other blockchains not built to natively support it.
 
+For a video overview of the architecture of Polkadot watch the video below for the whiteboard interview with W3F researcher Alistair Stewart:
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/xBfC6uTjvbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Want to learn more?
 
 - [Explore the Wiki](./polkadot/learn/comparisons.md) - Read the informational section of the wiki.
