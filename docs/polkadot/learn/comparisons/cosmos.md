@@ -66,11 +66,18 @@ Polkadot has much stronger guarantees than Cosmos in ensuring the economic secur
 
 ## Interchain Communication
 
-Cosmos allows each of its zones to transfer assets to other zones granted they are connected to the _Cosmos Hub_. Notably, the interchain communication in Cosmos is limited **only to transfer of assets.**
+Cosmos uses the inter-blockchain communication (IBC) standard for the transmission of messages across its zones. The specification for IBS is in progress on [this pull request](https://github.com/cosmos/ics/pull/68) and is described in a series of tweets [here](https://twitter.com/cosmossdk/status/1107729527004762112).
 
-Polkadot allows arbitrary messages to circulate among its parachains. Parachains will communicate with each other with the validators only having enough knowledge required of the messages to verify that the interchain messages are being processed correctly. The messages of Polkadot's interchain system can encapsulate assets or more complicated functionality since at the core they are just a string of bytes. In fact, Polkadot is so flexible in its interchain communication that it even allows parachains to parse the same message in different ways, this is a ridiculous thing to implement but the chain logic would allow it and it holds no bearing on the state of any other parachain besides the one which does the interpreting.
+It is difficult to describe the Cosmos IBC protocol with fairness since the specification provided is a work-in-progress and does not necessarily reflect what is implemented in the live Cosmos hub today. As far as we can tell, Cosmos IBC is limited to only the transfer of assets (tokens) across chains which are running Tendermint. They specify it is agnostic to chains as long as it fits the two properties of "fast finality" and "accumulator proofs" but as neither of these things are well-specified it must be assumed it only works with the Tendermint software (in other words, not truly agnostic). 
 
-For more on interchain messaging in Polkadot please see the dedicated [wiki page](../interchain.md).
+Previously believed that:
+```
+Cosmos IBC allows each of its zones to transfer assets to other zones granted they are connected to the _Cosmos Hub_. Notably, the interchain communication in Cosmos is limited **only to transfer of assets.**
+```
+
+In comparison, Polkadot allows arbitrary messages to circulate among its parachains. Parachains are able to communicate with each other and validators only need enough data to verify that the interchain messages are being processed correctly. The messages of Polkadot's interchain system can encapsulate assets or more complicated functionality. They are strings of arbitrary bytes. In fact, Polkadot is so flexible in its interchain communication that it even allows parachains to parse the same message in different ways. Although this is a ridiculous thing for parachains to implement, it is allowed. The way that one parachain interprets a message is independent of how any other parachain interprets messages. Of course, the impact a message has on one parachain's state can not effect the state of another parachain (unless it sets off a domino effect of interchain messages by initiating the receiving parachain to send a new message to other parachains).
+
+For more on parachain messaging in Polkadot please see the [interchain page](../interchain.md).
 
 ## Programming Language
 
