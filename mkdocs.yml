@@ -25,7 +25,7 @@ nav:
    - DOT: polkadot/learn/DOT.md
    - FAQ: polkadot/learn/faq.md
    - Governance: polkadot/learn/governance.md
-   - GRANDPA: polkadot/learn/grandpa.md
+   - GRANDPA: polkadot/learn/consensus.md
    - Implementations: polkadot/learn/implementations.md
    - Phragmen: polkadot/learn/phragmen.md
    - Roadmap: polkadot/learn/roadmap.md

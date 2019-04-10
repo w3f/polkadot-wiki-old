@@ -2,8 +2,7 @@
 
 ## Why do we need consensus?
 
-## Hybrid Consensus
-
+Consensus is a method for coming to agreement over a shared state. In order for the state of the blockchain to continue to build and move forward, all nodes in the network must agree and come to consensus. It is the way that the nodes in a decentralized network are able to stay synced with each other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to provide the _objective_ view of the state amid participants which each have their own _subjective_ views of the network. It is the process for which these nodes communicate and come to agreement, and are able to build new blocks.
 
 ## Probable Finality vs. Provable Finality
 
@@ -15,7 +14,17 @@ In the GRANDPA paper, it is phrased in this way:
 
 ## What is GRANDPA/BABE?
 
+### Hybrid Consensus
+
+There are two acronyms we use when we talk about the consensus protocol of Polkadot, GRANDPA and BABE.
+
 ### GRANDPA: Finality Gadget
+
+GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is implemented for the Polkadot relay chain.
+
+It works in partially synchronous network models and can cope with 1/5 Byzantine nodes in an asynchronous setting.
+
+A notable distinction is that GRANDPA reaches agreements on chains rather than blocks.
 
 ### "Polite" GRANDPA
 
@@ -33,6 +42,20 @@ Probable finality as found in all Proof of Work chains is known as Nakamoto cons
 
 ### HoneyBadgerBFT
 
+### Casper FFG
+
+The two main differences between GRANDPA and Casper FFG (Friendly Finality Gadget) are:
+
+ - in GRANDPA, different voters can cast votes simultaneously for blocks at different heights
+ - GRANDPA only depends on finalized blocks to affect the fork-choice rule of the underlying block production mechanism
+
 ### Casper CBC
 
+_Coming soon!_
+
 ### Avalanche
+
+## Resources
+
+- [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) - The academic description of the GRANDPA finality gadget. Contains formal proofs of the algorithm.
+- [Rust implementation](https://github.com/paritytech/finality-grandpa) - The reference implementation and the accompanying [Substrate runtime module](https://github.com/paritytech/substrate/blob/master/srml/grandpa/src/lib.rs).
