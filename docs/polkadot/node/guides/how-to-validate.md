@@ -80,7 +80,7 @@ Reproduce those steps for all 3 accounts.
 
 ## Get testnet DOTs token
 
-To continue the following steps, you are required to get some testnet DOTs token for the `Stash` and `Controller` accounts in order to submit transactions and use these DOTs as stake. The `Session` account doesn't need any DOT. Note that your accounts (`Stash` and `Controller`) need to have (much) more than 100mili DOTs as this is the minimum amount required for an account to exist. Having more allows you to pay for transactions fees.
+To continue the following steps, you are required to get some testnet DOTs token for the `Stash` and `Controller` accounts in order to submit transactions and use these DOTs as stake. The `Session` account doesn't need any DOT. Note that your accounts (`Stash` and `Controller`) need to have (much) more than 100 milliDOTs as this is the minimum amount required for an account to exist. Having more allows you to pay for transactions fees.
 
 Please go to [Polkadot Watercooler - Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) channel, paste your account address to ask for testnet DOTs. You can paste one account and transfer some of the DOTs received to the other account.
  
@@ -95,7 +95,7 @@ It is now time to setup our validator. We will do the following:
 
 First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) section, you should see all of your existing accounts.
 
-Select your `Stash` account, in our case it has, 200mili DOTs, and click on `Bond`. We will bound 100mili.
+Select your `Stash` account, in our case it has, 200 milliDOTs, and click on `Bond`. We will bound 100 milliDOTs.
 
 ![dashboard bonding](../../../img/validator/polkadot-dashboard-bonding.png)
 
