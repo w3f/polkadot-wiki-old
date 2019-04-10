@@ -64,22 +64,20 @@ You can check the current highest block via [Telemetry](https://telemetry.polkad
  
 ## Create accounts
 
-To be a validator, you also have to create two separate accounts for managing your funds, namely `Stash` and `Controller`. If you want to know more about it, please see [here](../../learn/staking.md#accounts). And there is additional `Session` key to represent your validator when running the node. Basically, you can use the controller account to be the session key.
+To be a validator, you will need three separate accounts for managing your funds, namely `Stash`, `Controller` and `Session`. If you want to know more about it, please see [here](../../learn/staking.md#accounts).
 
 ![create account](../../../img/validator/polkadot-dashboard-create-account.jpg)
-First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. 
+First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) & click *Create account* tab, then input your account name, save the seed, and input your password for this account. To make things simple and identify them easiely, make sure to use `stash`, `controller` and `session` in the name your accounts.
 
 ![backup seed](../../../img/validator/polkadot-dashboard-backup-seed.jpg)
 
-You can then click *Save* and choose *Create and backup account* to store your seed file to other place.
-
-Repeat the above steps to create one more account.
+You can then click *Save* and choose *Create and backup account* to store your JSON key file on your computer.
 
 ## Get testnet DOTs token
 
-To continue the following steps, you are required to get some testnet DOTs token for `Stash` and `Controller` account in order to submit transactions and stake to be a validator.
+To continue the following steps, you are required to get some testnet DOTs token for the `Stash` and `Controller` accounts in order to submit transactions and use these DOTs as stake.
 
-Please go to [Polkadot Watercooler - Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) channel, paste your account address to ask for testnet DOTs.
+Please go to [Polkadot Watercooler - Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) channel, paste your account address to ask for testnet DOTs. You can paste one account and transfer some of the DOTs received to the other account.
  
 You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxlabs.com/polkadot) as well ;)
 
