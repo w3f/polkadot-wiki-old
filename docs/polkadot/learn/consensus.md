@@ -38,7 +38,9 @@ Polite GRANDPA is an implementation method which allows for better network perfo
 
 ### BABE: Block Production
 
-BABE (acronym) is the block production mechanism ran between the validator nodes that determines the authors of new blocks.
+BABE (Blind Assignment for Blockchain Extension) is the block production mechanism ran between the validator nodes that determines the authors of new blocks.
+
+BABE assigns block production slots to validators according to stake and using the Polkadot [randomness cycle](./randomness.md).
 
 ## Comparisons
 
