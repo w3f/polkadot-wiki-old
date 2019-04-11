@@ -42,6 +42,10 @@ BABE (Blind Assignment for Blockchain Extension) is the block production mechani
 
 BABE assigns block production slots to validators according to stake and using the Polkadot [randomness cycle](./randomness.md).
 
+BABE is comparable as an algorithm to Ouroboros Praos, with some key differences in chain selection rule and slot time adjustments.
+
+For details on BABE please see the [working draft](http://research.web3.foundation/en/latest/polkadot/BABE/Babe/).
+
 ## Comparisons
 
 ### Nakamoto consensus

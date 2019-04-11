@@ -33,6 +33,7 @@ nav:
    - Security: polkadot/learn/security.md
    - Staking: polkadot/learn/staking.md
    - Terms: polkadot/learn/terms-and-definitions.md
+   - Randomness: polkadot/learn/randomness.md
    - Relevant Links: polkadot/learn/relevant-links.md
    - Parachains: polkadot/learn/parachains.md
    - Parachain Slots: polkadot/learn/candle.md

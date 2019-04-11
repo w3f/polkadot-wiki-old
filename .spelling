@@ -191,6 +191,7 @@ trustlessly
 VRFs
 millidots
 CoinDesk
+vdfs
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
