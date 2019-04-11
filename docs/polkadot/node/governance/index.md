@@ -36,7 +36,7 @@ Kevin: Vote `Yes` with 15 DOTs 4 weeks lock => 15 * 2 = 30 Votes
 According to the above scenario, even though combining both Logan and Kevin DOTs are more than Peter, the locking period for both of them are far less than Peter that leads the voting power becomes less.
 
 
-Once voting is finished, only the winning voter’s tokens locked that means if that referendum hurts the network, those who voted against it that can immediately get back the locked tokens back and then sell it to the market before the proposal effective. Moreover, winning motions autonomously enacted after some cool-down period.
+Once voting is finished, only the winning voter’s tokens locked that means if that referendum hurts the network, those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning motions are autonomously enacted only after some cool-down period.
 
  
 ### Adaptive Quorum Biasing
