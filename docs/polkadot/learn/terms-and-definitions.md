@@ -64,6 +64,8 @@ The process of determining what changes to the network are permissible, such as 
 
 An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders.  Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
+## Hybrid Consensus
+
 ## __LIBP2P__
 
 An open-source library for encrypted peer-to-peer communications and other networking functionality.  More information at: [https://libp2p.io/](https://libp2p.io/)
