@@ -14,11 +14,27 @@ Anyone can create a proposal by depositing minimum value in a certain period of 
 
 Essentially, Polkadot introduces an idea called Voluntary Locking that lets the token holders increasing the voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
+Based on the current testnet setting, the maximum number of lock periods could NOT be more than 6.
+
+**Each period takes 2 weeks that means the longest locking time would be 12 weeks.**
+
+
 ```
 Votes = tokens * periods 
 ```
 
-Example: _TODO_
+```
+Example: 
+
+Peter: Vote `No` with 10 DOTs 12 weeks lock  => 10 * 6 = 60 Votes
+
+Logan: Vote `Yes` with 20 DOTs 2 weeks lock => 20 * 1 = 20 Votes
+
+Kevin: Vote `Yes` with 15 DOTs 4 weeks lock => 15 * 2 = 30 Votes
+```
+
+According to the above scenario, even though combining both Logan and Kevin DOTs are more than Peter, the locking period for both of them are far less than Peter that leads the voting power becomes less.
+
 
 Once voting is finished, only the winning voter’s tokens locked that means if that referendum hurts the network, those who voted against it that can immediately get back the locked tokens back and then sell it to the market before the proposal effective. Moreover, winning motions autonomously enacted after some cool-down period.
 
