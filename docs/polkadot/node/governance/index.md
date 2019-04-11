@@ -12,7 +12,7 @@ Anyone can create a proposal by depositing minimum value in a certain period of 
 
 ### Voting on referenda
 
-Essentially, Polkadot introduces an idea called Voluntary Locking that lets the token holders increasing the voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+Essentially, Polkadot introduces an idea called Voluntary Locking that lets the token holders to increase the voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
 Based on the current testnet setting, the maximum number of lock periods could NOT be more than 6.
 
