@@ -8,7 +8,7 @@ blockchains can exchange information and trust-free transactions via the Polkado
 tenets of scalability, governance and interoperability.
 
 By connecting these dots, we allow for the development of a truly decentralized web, serving as a
-foundational building block for the creation of an ecosystem of Dapps and services that will distribute power
+foundational building block for the creation of an ecosystem of @(Dapps) and services that will distribute power
 and equity for the common good.
 
 ## What Is Polkadot?
