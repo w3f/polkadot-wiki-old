@@ -25,7 +25,7 @@ nav:
    - DOT: polkadot/learn/DOT.md
    - FAQ: polkadot/learn/faq.md
    - Governance: polkadot/learn/governance.md
-   - GRANDPA: polkadot/learn/grandpa.md
+   - GRANDPA: polkadot/learn/consensus.md
    - ICMP: polkadot/learn/interchain.md
    - Implementations: polkadot/learn/implementations.md
    - Phragmen: polkadot/learn/phragmen.md
@@ -33,6 +33,7 @@ nav:
    - Security: polkadot/learn/security.md
    - Staking: polkadot/learn/staking.md
    - Terms: polkadot/learn/terms-and-definitions.md
+   - Randomness: polkadot/learn/randomness.md
    - Relevant Links: polkadot/learn/relevant-links.md
    - Parachains: polkadot/learn/parachains.md
    - Parachain Slots: polkadot/learn/candle.md

@@ -17,7 +17,7 @@ TODO -->
 
 ### How does consensus on the relay chain work?
 
-Please see the entry on the [GRANPDA](./grandpa.md) finality gadget.
+Please see the entry on the [GRANPDA](./consensus.md#grandpa-finality-gadget) finality gadget.
 
 ### What is the expected block time on the relay chain?
 
