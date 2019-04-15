@@ -65,4 +65,6 @@ Starting from 50 - 100 at the beginning, and will be expanding up to 1,000 valid
 
  **The above information is NOT finalized yet. You can take it as a reference instead.**
 
+## Resources
 
+- [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.

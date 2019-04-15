@@ -1,4 +1,4 @@
-# Polkadot compared to {Cosmos, Ethereum, Tezos}
+# Polkadot comparisons
 
 Polkadot is a blockchain technology but makes some innovations that sets it apart from other popular chains.
 

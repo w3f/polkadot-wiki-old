@@ -11,10 +11,6 @@ Somewhere between 50 - 100. Increasing to 1000 or so later on. [Source](https://
 This has not been announced at this time. Please follow the appropriate
 social channels to stay up to date.
 
-<!-- ### How does the Nominated Proof-of-stake (NPoS) scheme work?
-
-TODO -->
-
 ### How does consensus on the relay chain work?
 
 Please see the entry on the [GRANPDA](./consensus.md#grandpa-finality-gadget) finality gadget.
@@ -49,3 +45,15 @@ of the parachain and the Polkadot network is completely separate from parachain
 economics. Parachains need collators to continue to progress, so it wouldn't be
 unreasonable to see them incent collator nodes in some way but it is completely
 up to parachain implementers.
+
+## Answered by Gav series
+
+The "Answered by Gav" series is a collection of posts uploaded to Reddit of questions that have been asked in the Polkadot Watercooler Riot channel and answered by Polkadot founder Gavin Wood.
+
+- [Reason for using asynchronous rather than synchronous communication? Difference in terms of TPS?](https://www.reddit.com/r/dot/comments/b87d96/answered_by_gav_reason_for_using_asynchronous/)
+- [How exactly do validators in an ETH parachain keep moving around and how is communication between zones trustless?](https://www.reddit.com/r/dot/comments/b87awr/answered_by_gav_how_exactly_do_validators_in_an/)
+- [What are the main issues with Bitcoin integration and will it ever be possible? Same problem with other POW chains? Is Polkadot only going to work with POS chains? How is it trust-less in comparison to Cosmos though?](https://www.reddit.com/r/dot/comments/b87bua/answered_by_gav_what_are_the_main_issues_with/)
+- [What are the current thoughts around governance especially since projects have to be voted in to receive the parachains security?](https://www.reddit.com/r/dot/comments/b87cjz/answered_by_gav_what_are_the_current_thoughts/)
+- [Also is there any detailed overview of how exactly a token transfer from ETH could be exchanged with another chain's currency?](https://www.reddit.com/r/dot/comments/b87ds8/answered_by_gav_also_is_there_any_detailed/)
+- [Can I run multiple Validators with the same Session Key?](https://www.reddit.com/r/dot/comments/bcqrx9/answered_by_gav_can_i_run_multiple_validators/)
+- [How to tackle the concentration risk of Validators in data centers?](https://www.reddit.com/r/dot/comments/bcqwit/answered_by_gav_how_to_tackle_the_concentration/)
