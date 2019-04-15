@@ -92,7 +92,7 @@ Governance of a blockchain which is controlled by mechanisms controlled by the b
 
 ## Parachain
 
-A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment.
+A blockchain which meets several characteristics which allow it work within the confines of the Polkadot Runtime Environment. Also known as "parallelized chain."
 
 ## Parachain Registry
 
