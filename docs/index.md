@@ -4,11 +4,11 @@
 
 Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol.
 
-If you're looking for an introduction on Polkadot please [see here](./introduction.md).
+If you're looking for an introduction on Polkadot please [see here](./learn/introduction.md).
 
 ## Want to learn more?
 
-- [Explore the Wiki](./polkadot/learn/comparisons.md) - Read the informational section of the wiki.
+- [Explore the Wiki](./polkadot/learn/index.md) - Read the informational section of the wiki.
 - [Relevant Links](./polkadot/learn/relevant-links.md) - **Comprehensive links about Polkadot.**
 
 ## Want to build on Polkadot?

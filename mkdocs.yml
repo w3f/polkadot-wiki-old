@@ -6,8 +6,8 @@ site_url: https://wiki.polkadot.network
 nav:
  - Home: index.md
  - Build:
-   - Cumulus: polkadot/build/cumulus.md
    - Home: polkadot/build/index.md
+   - Cumulus: polkadot/build/cumulus.md
    - Building on Polkadot: polkadot/build/build-with-polkadot.md
    - Deploy Parachains: polkadot/build/deploy-parachains.md
    - Examples: polkadot/build/examples/index.md
@@ -16,6 +16,7 @@ nav:
    - Rust Style Guide: polkadot/build/rust-style-guide.md
    - Tools: polkadot/build/tools/index.md
  - Learn:
+   - Home: polkadot/learn/index.md
    - Comparisons:
      - Cosmos: polkadot/learn/comparisons/cosmos.md
      - Ethereum: polkadot/learn/comparisons.md
