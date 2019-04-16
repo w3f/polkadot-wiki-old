@@ -26,7 +26,7 @@ The implementation of the Phragmen method can be found in the Substrate `srml-st
 
 ## External Resources
 
-- [W3F Research Page on Sequential Phragmen Method](http://research.web3.foundation/en/latest/polkadot/NPoS/phragmen/) - The formal adaptation of the Phragmen method as applied to Polkadot validators.
+- [W3F Research Page on Sequential Phragmen Method](https://research.web3.foundation/en/latest/polkadot/NPoS/4.%20Sequential%20Phragm%C3%A9n%E2%80%99s%20method./) - The formal adaptation of the Phragmen method as applied to Polkadot validators.
 - [Python Reference Implementations](https://github.com/w3f/consensus/tree/master/NPoS) - Implementations of Simple and Complicated Phragmen methods.
 - [Substrate Implementation](https://github.com/paritytech/substrate/blob/master/srml/staking/src/phragmen.rs) - Rust implementation used in the Substrate Runtime Module Library.
 - [Phragmen's and Thiele's Election Methods](https://arxiv.org/pdf/1611.08826.pdf) - 95-page paper explaining Phragmen's election methods in detail.

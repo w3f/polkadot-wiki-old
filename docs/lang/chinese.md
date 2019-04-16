@@ -1,5 +1,8 @@
 # Polkadot & Substrate 中文资源
 
+## News 新闻
+[Gavin Wood - 中国之旅探访](https://www.8btc.com/article/392902)
+
 ## Polkadot 波卡
 [Overview - 簡介](https://www.slideshare.net/casperLTH/polkadot)
 
