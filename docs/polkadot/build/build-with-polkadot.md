@@ -137,6 +137,8 @@ It’s still very early for smart contracts on Polkadot and the development is o
 - [pDSL](https://github.com/Robbepop/pdsl). (Keep an eye out for content on the wiki tab.)
 - [Substrate contracts module](https://github.com/paritytech/substrate).
 
+
+
 ## Conclusion
 
 This guide has given you a mental model and shown the requisite resources to help you determine and start building your project as a parachain or smart contract today. Even though the tooling is still maturing, the advantage of being early will be the familiarity and head start on your project, allowing you to innovate and create something truly new.

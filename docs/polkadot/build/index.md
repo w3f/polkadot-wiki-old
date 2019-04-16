@@ -17,13 +17,13 @@ that is not available to be found elsewhere.
 
 ## Development Guide
 
- - [How Can I Build With Polkadot?](./build-with-polkadot.md) **Start here**
+ - [Starter's Guide](./build-with-polkadot.md) - High level overview on choosing a parachain or smart contract, and what resources are available today to get started.
  - [Development Roadmap](./dev-roadmap.md)
 
 ## Tools
 
 - [Tools](./tools/index.md) - Maintained list of tools.
-- [Subkey](./tools/subkey.md) - Commandline utility for generating Substrate keys.
+- [Subkey](./tools/subkey.md) - Commandline utility for generating Polkadot/Substrate keys.
 
 ## Resources
 
