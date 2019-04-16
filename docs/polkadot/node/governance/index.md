@@ -43,10 +43,16 @@ Once voting is finished, only the winning voter’s tokens locked that means if 
 
 Polkadot uses an innovative governance mechanism to dynamically adjust the turnout bias. If low turnout rate, super-majority is required in order to pass the motion that means the higher threshold of saying “ayes” has to be reached.
 
-Example: _TODO_
+```
+Example:
+
+If the referenda only has 20% turnout, Ayes has to be reached 14% in order to pass it.
+
+In contrast, if it has 50% turnout, Ayes has to be reached 29% that means as more token holders voting on a referenda, super-majority required decrease as turnout highers.
+```
 
 
-This would be the tentative governance configuration for the polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
+This would be the tentative governance configuration for the Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
 
 ## [Council](https://github.com/paritytech/polkadot/wiki/Governance#council)
