@@ -57,6 +57,15 @@ This would be the tentative governance configuration for the Polkadot in the ini
 
 ## [Council](https://github.com/paritytech/polkadot/wiki/Governance#council)
 
+Since not everyone is interested in participating the governance, there is a council entity to represent the passive token holders. Council member election is done through an approval vote.
+
+The council is called upon primarily for two tasks of governance: proposing sensible referenda and cancelling uncontroversially dangerous or malicious referenda.
+
+
+_TODO_ Council Election Process
+
+_TODO_ Council Propose Referendum
+
 ## [Referenda](https://github.com/paritytech/polkadot/wiki/Governance#referenda)
 
 ## [Voting]()
