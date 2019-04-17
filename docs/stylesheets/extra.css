@@ -45,6 +45,15 @@
     width: 300px;
 }
 
+.img-container {
+	width: 300px;
+	float: right;
+	text-align: center;
+	margin: 6px;
+	color: #000;
+	font-size: 12px;
+}
+
 /* Tool-tips */
 *,
 *:before,
