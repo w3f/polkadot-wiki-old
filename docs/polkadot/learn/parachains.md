@@ -28,6 +28,10 @@ By connecting to Polkadot a parachain gains two major advantages over an indepen
 
 Parachains are operated and new blocks are authored by [collator nodes](../node/collator.md) that maintain "full-nodes" of a particular parachain. They retain all necessary information to be able to propose new blocks and execute transactions in a similar way as miners do in traditional PoW blockchains. A block proposed by a collator node will be checked by the validator node before it is accepted as a canonical state transition by the relay chain.
 
+## How will parachain slots be distributed?
+
+Parachain slots will be acquirable through auction, please see the [parachain slots](./candle.md) article.
+
 ## Deploying parachains
 
 Please see the builder's article on [deploying parachains](../build/deploy-parachains.md).

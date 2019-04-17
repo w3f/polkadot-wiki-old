@@ -1,5 +1,12 @@
 # Parachain Slots Auction
 
+<div class="img-container">
+    <a href="../../../img/parachain-roadmap.jpg" targe="_blank">
+        <img alt="Polkadot's roadmap to 200 parachains" src="../../../img/parachain-roadmap.jpg"/>
+    </a>
+    Polkadot's roadmap to 200 parachains.
+</div>
+
 An old-timey auction mechanism used for the sale of ships in the 16th Century has re-emerged as the auction process for which parachain slots of Polkadot will be sold.
 
 [Candle auctions](https://en.wikipedia.org/wiki/Candle_auction) are also sometimes known as _Sudden Termination Auctions_ and have been used in online auctions to prevent _auction sniping_.
