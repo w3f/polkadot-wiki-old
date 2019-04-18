@@ -6,8 +6,8 @@ site_url: https://wiki.polkadot.network
 nav:
  - Home: index.md
  - Build:
-   - Cumulus: polkadot/build/cumulus.md
    - Home: polkadot/build/index.md
+   - Cumulus: polkadot/build/cumulus.md
    - Building on Polkadot: polkadot/build/build-with-polkadot.md
    - Deploy Parachains: polkadot/build/deploy-parachains.md
    - Examples: polkadot/build/examples/index.md
@@ -16,6 +16,7 @@ nav:
    - Rust Style Guide: polkadot/build/rust-style-guide.md
    - Tools: polkadot/build/tools/index.md
  - Learn:
+   - Home: polkadot/learn/index.md
    - Comparisons:
      - Cosmos: polkadot/learn/comparisons/cosmos.md
      - Ethereum: polkadot/learn/comparisons.md
@@ -25,15 +26,19 @@ nav:
    - DOT: polkadot/learn/DOT.md
    - FAQ: polkadot/learn/faq.md
    - Governance: polkadot/learn/governance.md
-   - GRANDPA: polkadot/learn/grandpa.md
+   - Glossary: glossary.md
+   - GRANDPA: polkadot/learn/consensus.md
+   - ICMP: polkadot/learn/interchain.md
    - Implementations: polkadot/learn/implementations.md
    - Phragmen: polkadot/learn/phragmen.md
    - Roadmap: polkadot/learn/roadmap.md
    - Security: polkadot/learn/security.md
+   - SPREE: polkadot/learn/spree.md
    - Staking: polkadot/learn/staking.md
-   - Terms: polkadot/learn/terms-and-definitions.md
+   - Randomness: polkadot/learn/randomness.md
    - Relevant Links: polkadot/learn/relevant-links.md
    - Parachains: polkadot/learn/parachains.md
+   - Parachain Slots: polkadot/learn/candle.md
    - Polkadot Runtime Environment: polkadot/learn/PRE.md
    - Polkadot UI: polkadot/learn/UI.md
  - Run the Network:
@@ -85,14 +90,10 @@ extra:
     - type: 'medium'
       link: 'https://medium.com/@polkadotnetwork'
 
-# extra_javascript:
-#   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-#   - mathjax-config.js
-
 markdown_extensions:
-#    - mdx_math
      - admonition
      - codehilite:
          guess_lang: false
      - toc:
          permalink: true
+     - mdtooltips
