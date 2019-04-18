@@ -15,6 +15,7 @@
 - [Polkadot Overview](https://techcrunch.com/video/fireside-chat-with-jutta-steiner-parity-technologies/) - Dr. Jutta Steiner presents Polkadot. (Video)
 - [Interoperability Intro](https://www.youtube.com/watch?v=RSAFHhTwA8Q) - Rob Habermeier presents "Interoperability: Connecting the Dots."
 - [Consensus and Finality in Polkadot](https://www.youtube.com/watch?v=qvoAf2uIF3c) - Talk by Rob Habermeier detailing the consensus mechanism for Polkadot.
+- [DOT Day Seoul](https://www.youtube.com/playlist?list=PLOyWqupZ-WGt3mA_d9wu74vVe0bM37-39) - Video playlist of all talks at DOT Day Seoul.
 
 
 ### Substrate

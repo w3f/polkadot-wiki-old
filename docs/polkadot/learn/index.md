@@ -17,6 +17,7 @@
 - [Polkadot Runtime Environment](./PRE.md) - Gives general information on the Polkadot Runtime Environment.
 - [Randomness](./randomness.md) - What does Polkadot use for randomness and how?
 - [Security](./security.md) - How does the Polkadot network remain secure?
+- [SPREE](./spree.md) - Shared Protected Runtime Execution Environments,
 - [Staking](./staking.md) - How does staking work in Polkadot?
 - [WebAssembly](./wasm.md) - What is WebAssembly and how is it used in Polkadot?
 

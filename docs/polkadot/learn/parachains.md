@@ -32,6 +32,10 @@ Parachains are operated and new blocks are authored by [collator nodes](../node/
 
 "Parachain consensus" is special in that it will follow the Polkadot relay chain. Parachains cannot use other consensus algorithms that provide their own finality, and if they do will be sovereign chains that must bridge to the relay chain. Parachains have control over how blocks are authored and by who.
 
+## How will parachain slots be distributed?
+
+Parachain slots will be acquirable through auction, please see the [parachain slots](./candle.md) article.
+
 ## Deploying parachains
 
 Please see the builder's article on [deploying parachains](../build/deploy-parachains.md).
