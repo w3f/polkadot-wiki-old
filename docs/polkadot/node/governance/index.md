@@ -12,16 +12,16 @@ Anyone can create a proposal by depositing minimum value in a certain period of 
 
 ### Voting on referenda
 
-Essentially, Polkadot introduces an idea called Voluntary Locking that lets the token holders to increase the voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+Essentially, holding only a small amount of the DOTs token does not mean that they do not have the ability to influence the referenda result. Since Polkadot introduces an idea called Voluntary Locking that lets the token holders increasing the voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+
+```
+Votes = tokens * periods 
+```
 
 Based on the current testnet setting, the maximum number of lock periods could NOT be more than 6.
 
 **Each period takes 2 weeks that means the longest locking time would be 12 weeks.**
 
-
-```
-Votes = tokens * periods 
-```
 
 ```
 Example: 
@@ -43,13 +43,28 @@ Once voting is finished, only the winning voter’s tokens locked that means if 
 
 Polkadot uses an innovative governance mechanism to dynamically adjust the turnout bias. If low turnout rate, super-majority is required in order to pass the motion that means the higher threshold of saying “ayes” has to be reached.
 
-Example: _TODO_
+```
+Example:
+
+If the referenda only has 20% turnout, Ayes has to be reached 14% in order to pass it.
+
+In contrast, if it has 50% turnout, Ayes has to be reached 29% that means as more token holders voting on a referenda, super-majority required decrease as turnout highers.
+```
 
 
-This would be the tentative governance configuration for the polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
+This would be the tentative governance configuration for the Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
 
 ## [Council](https://github.com/paritytech/polkadot/wiki/Governance#council)
+
+Since not everyone is interested in participating the governance, there is a council entity to represent the passive token holders. Council member election is done through an approval vote.
+
+The council is called upon primarily for two tasks of governance: proposing sensible referenda and cancelling uncontroversially dangerous or malicious referenda.
+
+
+_TODO_ Council Election Process
+
+_TODO_ Council Propose Referendum
 
 ## [Referenda](https://github.com/paritytech/polkadot/wiki/Governance#referenda)
 
