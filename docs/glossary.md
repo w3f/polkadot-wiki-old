@@ -178,7 +178,11 @@ A program which allows one to store, receive, and transmit DOTs or other blockch
 
 A Switzerland-based foundation which nurtures and stewards technologies and applications in the fields of decentralized web software protocols, particularly those which utilize modern cryptographic methods to safeguard decentralization, to the benefit and for the stability of the Web3 ecosystem.
 
-## WebAssembly / Wasm
+## WebAssembly
+
+An instruction format for a virtual, stack-based machine.  Polkadot Runtime Modules are compiled to WebAssembly. Also known as Wasm.
+
+## Wasm
 
 An instruction format for a virtual, stack-based machine.  Polkadot Runtime Modules are compiled to Wasm.
 

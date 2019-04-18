@@ -65,13 +65,13 @@ We recommend that you poke around in there to become familiar with the common pa
 
 ### How to set up your parachain
 
-After creating your chain logic with Substrate, you will be able to compile it down to a Wasm executable. This Wasm code blob will contain the entire state transition function of your chain.
+After creating your chain logic with Substrate, you will be able to compile it down to a @(Wasm) executable. This Wasm code blob will contain the entire state transition function of your chain.
 
 Validators on the Polkadot relay chain will use this Wasm blob to validate all of the state transitions of your parachain.
 
 In order for the Polkadot validators to stay up to date with the recent state transitions of your parachain, it will need some required infrastructure. The work described above is performed by your parachain’s collator node.
 
-Substrate comes with its own networking layer built-in but unfortunately it will not be a Polkadot-compatible collator node out-of-the-box.
+Substrate comes with its own networking layer built-in but it will not be a Polkadot-compatible collator node out-of-the-box.
 
 For this, Parity Technologies has been developing an extension to Substrate called Cumulus, which will make it easy to turn any Substrate-built chain into a Polkadot-ready parachain.
 
@@ -128,7 +128,6 @@ Storage rent.
 
 You will need to consider the storage and complexity of your smart contract to ensure that gas usage stays within reasonable bounds. Storage will likely be expensive for whichever smart contract platform you use, so it is necessary to keep as much data off-chain as possible. You may consider using IPFS or Storj to keep the data and submitting only the content address on chain.
 
-
 ### It's still early
 
 It’s still very early for smart contracts on Polkadot and the development is only now stabilizing. We are actively producing content to help developers get up to speed and will maintain the wiki with the latest resources. You should also keep up to date with the following links:
@@ -136,7 +135,6 @@ It’s still very early for smart contracts on Polkadot and the development is o
 - [Edgeware](https://edgewa.re).
 - [pDSL](https://github.com/Robbepop/pdsl). (Keep an eye out for content on the wiki tab.)
 - [Substrate contracts module](https://github.com/paritytech/substrate).
-
 
 
 ## Conclusion
