@@ -6,8 +6,7 @@ Any potential validators can indicate their intention to be a validator candidat
 
 ## Accounts
 
-There are three different accounts for managing your funds, these are
-`Stash`, `Controller` and `Session` accounts. 
+There are three different accounts for managing your funds: `Stash`, `Controller` and `Session` accounts. 
 
 - **Stash:** This is the primary account that holds the funds and has a portion bonded for participation; The funds can be kept in a cold wallet; All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
 - **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken). 
@@ -58,7 +57,7 @@ A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs 
 Rewards can be used the same account (controller) to keep accumulating the rewards or stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
 
 ## Inflation
-It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month share with their nominators.
+It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
 
 ## How many validators will be available for the polkadot ?
 Starting from 50 - 100 at the beginning, and will be expanding up to 1,000 validators in the future.
