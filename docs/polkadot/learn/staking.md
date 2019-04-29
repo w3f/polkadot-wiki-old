@@ -6,8 +6,7 @@ Any potential validators can indicate their intention to be a validator candidat
 
 ## Accounts
 
-There are three different accounts for managing your funds, these are
-`Stash`, `Controller` and `Session` accounts. 
+There are three different accounts for managing your funds: `Stash`, `Controller` and `Session` accounts. 
 
 - **Stash:** This is the primary account that holds the funds and has a portion bonded for participation; The funds can be kept in a cold wallet; All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
 - **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken). 
