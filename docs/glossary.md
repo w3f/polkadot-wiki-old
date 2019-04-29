@@ -8,6 +8,10 @@ A collection of data, such as transactions, that together indicate a state trans
 
 An application which allows a user to explore the different blocks on a blockchain.
 
+## BLS
+
+Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS permits a diverse array of signature aggregation options far beyond any other known signature scheme, which makes BLS a preferred scheme for voting in consensus algorithms and for threshold signatures.
+
 ## Bonding
 
 A process by which tokens can be "frozen" in exchange for attaching a parachain to a relay chain.  This process ensures that only chains that are valid and running will be attached to the relay chain, as it would behoove DOT holders to stop bonding their tokens.
@@ -145,6 +149,14 @@ The property of a distributed system indicating that the system will properly me
 ## Sealing
 
 The process of adding a block to the relay chain.  Note that finalization is a separate process - blocks are finalized some time after they are sealed (the goal is approximately 10 - 12 seconds).
+
+## Session certificate
+
+Another name for the session "key" which is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p. 
+
+## Session key
+
+A session "key" is a BLS key for GRANDPA, a sr25519 key for BABE, and eventually an Ed25519 key for libp2p. 
 
 ## Staking
 

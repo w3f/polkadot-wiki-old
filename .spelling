@@ -199,6 +199,20 @@ shasper
 landchain
 inherents
 cidchain
+cryptosystems
+cryptocurrencies
+secp256k1
+backdoors
+burdges
+tradeoffs
+Monero
+CryptoNote
+cofactor
+musig
+schnorrkel-ristretto25519
+boneh-lynn-shacham
+bip32-ed25519
+brudges
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
@@ -223,3 +237,5 @@ sqrt
  - docs/polkadot/learn/phragmen.md
 Phragm
 Thiele's
+ - docs/polkadot/learn/keys.md
+HSMs
