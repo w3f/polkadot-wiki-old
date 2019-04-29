@@ -58,7 +58,7 @@ A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs 
 Rewards can be used the same account (controller) to keep accumulating the rewards or stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
 
 ## Inflation
-It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month share with their nominators.
+It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
 
 ## How many validators will be available for the polkadot ?
 Starting from 50 - 100 at the beginning, and will be expanding up to 1,000 validators in the future.
