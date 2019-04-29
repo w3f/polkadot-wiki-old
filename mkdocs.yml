@@ -30,6 +30,7 @@ nav:
    - GRANDPA: polkadot/learn/consensus.md
    - ICMP: polkadot/learn/interchain.md
    - Implementations: polkadot/learn/implementations.md
+   - Keys: polkadot/learn/keys.md
    - Phragmen: polkadot/learn/phragmen.md
    - Roadmap: polkadot/learn/roadmap.md
    - Security: polkadot/learn/security.md
