@@ -15,7 +15,7 @@ An old-timey auction mechanism used for the sale of ships in the 16th Century ha
 
 Candle auctions are a variant of open auctions in which bidders submit bids and the highest bidder wins. However, candle auctions get their name from the "inch of a candle" that determined the duration for which bids were accepted. When the flame extinguished from the candle, the auction would suddenly terminate and the standing bid at that point would win.
 
-For online systems, we usually do not have access to a real world lit candle. Instead, we can simulate the property that the candle provides: randomness. By using a random number, we can determine when an action will end based on the output we are given.
+For online systems, we usually do not have access to a real world lit candle. Instead, we can simulate the property that the candle provides: randomness. By using a random number, we can determine when an auction will end based on the output we are given.
 
 However, this brings to light another problem that is inherent to blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify is a hard problem. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses as a base for its randomness.
 
