@@ -9,7 +9,7 @@ Currently, DOTs have 15 decimal places, while the smallest unit is called the Fe
 
 |Unit |Decimals|
 |-----|--------|
-|Femto| 10**0  |
+|Femto| 0      |
 |Pico | 10**3  |
 |Nano | 10**6  |
 |Micro| 10**9  |
