@@ -32,6 +32,8 @@ It works in partially synchronous network model as long as 2/3 of nodes are hone
 
 A notable distinction is that GRANDPA reaches agreements on chains rather than blocks.
 
+For details on GRANDPA, please see the [GRANDPA page](http://research.web3.foundation/en/latest/polkadot/GRANDPA/) on the Web3 Research Wiki.
+
 ### "Polite" GRANDPA
 
 Polite GRANDPA is an implementation method which allows for better network performance among nodes. It is mentioned here because it should be considered part of the specification and replicated by independent teams building clients. <!-- TODO: link -->
