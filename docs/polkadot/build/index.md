@@ -1,15 +1,12 @@
 # Builders Portal
 
 !!! info
-    _🏗️ Polkadot is under construction, these documents will rapidly change._
+    _🏗️ Polkadot is under construction, these documents will likely change._
 
-Welcome to the build section of the Polkadot wiki.
+Welcome to the builders section of the Polkadot wiki.
 
-Here you will be able to find the most up-to-date information
-on the status of the development tools in the ecosystem. We are
-always adding new tools and frameworks as we learn about them
-so if you are working on something that should be included please
-reach out to us on [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
+Here you will be able to find the most up-to-date information on the status of the development tools in the @(Polkadot) ecosystem.
+We are always adding new tools and frameworks as we learn about them so if you are working on something that should be included please reach out to us on [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
 
 This section of the wiki is divided into three parts: the first
 part takes the shape of a technical guide that will get you quickly
@@ -20,13 +17,13 @@ that is not available to be found elsewhere.
 
 ## Development Guide
 
- - [How Can I Build With Polkadot?](./build-with-polkadot.md) **Start here**
+ - [Starter's Guide](./build-with-polkadot.md) - High level overview on choosing a parachain or smart contract, and what resources are available today to get started.
  - [Development Roadmap](./dev-roadmap.md)
 
 ## Tools
 
 - [Tools](./tools/index.md) - Maintained list of tools.
-- [Subkey](./tools/subkey.md) - Commandline utility for generating Substrate keys.
+- [Subkey](./tools/subkey.md) - Commandline utility for generating Polkadot/Substrate keys.
 
 ## Resources
 

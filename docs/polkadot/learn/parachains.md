@@ -28,6 +28,10 @@ By connecting to Polkadot a parachain gains two major advantages over an indepen
 
 Parachains are operated and new blocks are authored by [collator nodes](../node/collator.md) that maintain "full-nodes" of a particular parachain. They retain all necessary information to be able to propose new blocks and execute transactions in a similar way as miners do in traditional PoW blockchains. A block proposed by a collator node will be checked by the validator node before it is accepted as a canonical state transition by the relay chain.
 
+## What is "parachain consensus"?
+
+"Parachain consensus" is special in that it will follow the Polkadot relay chain. Parachains cannot use other consensus algorithms that provide their own finality, and if they do will be sovereign chains that must bridge to the relay chain. Parachains have control over how blocks are authored and by who.
+
 ## How will parachain slots be distributed?
 
 Parachain slots will be acquirable through auction, please see the [parachain slots](./candle.md) article.
