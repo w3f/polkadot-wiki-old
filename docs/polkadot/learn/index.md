@@ -23,7 +23,7 @@
 
 ## Resources
 
-- [Glossary](../glossary.md) - Definitions of domain specific terms used in Polkadot documentation.
+- [Glossary](../../glossary.md) - Definitions of domain specific terms used in Polkadot documentation.
 - [Implementations](./implementations.md) - List of implementations of the Polkadot protocol (who is building them and links to the source code).
 - [Links](./relevant-links.md) - Comprehensive list of external links.
 - [Roadmap](./roadmap.md) - The implementation roadmap of Polkadot.
