@@ -99,19 +99,59 @@ Parachain slots will be sold in open auctions, the mechanics of which can be fou
 
 ## So you want to build a smart contract
 
-Although the Polkadot relay chain does not support smart contracts, there will be Polkadot parachains that do.
+The Polkadot relay chain itself will not support smart contracts but
+since Polkadot is a network of many heterogeneous blockchains, there
+will be parachains that do.
 
-Parity Technologies has already laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual machine and includes a domain specific language (ink!) in Rust.
+Already Parity Technologies has laid much of the groundwork for an
+out-of-the-box solution for parachains that want to include smart contract
+functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/srml/contract)
+module in the core SRML will support smart contracts that are compiled
+to Wasm. 
+
+In order to develop a smart contract that compiles to Wasm, an
+appropriate language is also needed. For this, Parity has been working
+on a domain specific language called [Ink](#ink).
+
+One project that has announced intent to become a Polkadot
+parachain with support for smart contracts is [Edgeware](#edgeware). As
+the ecosystem matures, there is a high probability that more chains will
+come forward as smart contract enabled parachains.
+
+Polkadot will also be compatible with preexisting smart contract platforms
+such as Ethereum and Tezos through bridges. This means that even work spent
+developing on these platforms today may be applicable to running on Polkadot
+in the future.
+
+### Edgeware
+
+Edgeware is a planned parachain for Polkadot which will
+allow for smart contracts. Along with other interesting innovations in governance
+and token distribution, it will likely be the first parachain that will connect
+to the Polkadot mainnet with smart contracts enabled. You can stay up to date with
+the project on their [website](https://edgewa.re).
+
+### Ink
+
+[Ink](https://github.com/paritytech/ink) is intended to be a new domain specific
+language for writing smart contracts in Rust that will compile down to Wasm code.
+As stated in the README, it is still in an experimental phase and missing a lot of the
+planned features but it is possible to start writing smart contracts with it today.
+
+For the interested developers, they can get started writing smart contracts using Ink
+by studying the [examples](https://github.com/paritytech/ink/tree/master/examples)
+which have already been written. These can be used as guideposts to writing more 
+complex logic which will be deployable on smart contract parachains.
+
+Ink! has laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual machine and compatible with Substrate chains.
 
 Substrate includes a contract module that includes the core logic needed for a smart contract chain. Along these lines, ink! will be a smart contract language written in Rust that takes advantage of the already existing Rust tooling and support and will compile to Wasm.
-
-Edgeware is a project that has already announced its intent to launch using this smart contract technology described above and will connect to Polkadot at or soon after mainnet launch.
 
 ## Deploying your smart contract
 
 A smart contract is simply some code that exists at an address on a chain and is callable by external actors. The key part is that you actually have to put the code on chain before anyone can start executing it!
 
-Deploying your smart contract on chain will vary slightly for whichever specific parachain you will use, but generally you will send a special transaction that will CREATE the smart contract on the ledger.
+Deploying your smart contract on chain will vary slightly for whichever specific parachain you will use, but generally you will send a special transaction that will CREATE the smart contract on the ledger. You will likely need to pay an associated fee for the initialization logic and any storage that your contract consumes.
 
 ## Paying for your smart contract
 
@@ -135,7 +175,6 @@ It’s still very early for smart contracts on Polkadot and the development is o
 - [Edgeware](https://edgewa.re).
 - [ink!](https://github.com/paritytech/ink). (Keep an eye out for content on the wiki tab.)
 - [Substrate contracts module](https://github.com/paritytech/substrate).
-
 
 ## Conclusion
 
