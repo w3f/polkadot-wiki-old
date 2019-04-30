@@ -319,7 +319,7 @@ to Wasm.
 
 In order to develop a smart contract that compiles to Wasm, an
 appropriate language is also needed. For this, Parity has been working
-on a domain specific language called [pDSL](#pdsl-paritys-domain-specific-language).
+on a domain specific language called [Ink](#ink).
 
 One project that has announced intent to become a Polkadot
 parachain with support for smart contracts is [Edgeware](#edgeware). As
@@ -339,18 +339,19 @@ and token distribution, it will likely be the first parachain that will connect
 to the Polkadot mainnet with smart contracts enabled. You can stay up to date with
 the project on their [website](https://edgewa.re).
 
-### pDSL (Parity's Domain Specific Language)
+### Ink
 
-The [pDSL](https://github.com/Robbepop/pdsl) is intended to be a new domain specific
+[Ink](https://github.com/paritytech/ink) is intended to be a new domain specific
 language for writing smart contracts in Rust that will compile down to Wasm code.
 As stated in the README, it is still in an experimental phase and missing a lot of the
 planned features but it is possible to start writing smart contracts with it today.
 
-For the interested developers, they can get started writing smart contracts using pDSL
-by studying the [examples](https://github.com/Robbepop/pdsl/tree/master/examples) which have 
-already been written. These can be used as guideposts to writing more complex logic which
-will be deployable on smart contract parachains. However, since the ecosystem is still
-so early it's probably not a good idea to try to write production code with it yet.
+For the interested developers, they can get started writing smart contracts using Ink
+by studying the [examples](https://github.com/paritytech/ink/tree/master/examples)
+which have already been written. These can be used as guideposts to writing more 
+complex logic which will be deployable on smart contract parachains. However,
+since the ecosystem is still so early it's probably not a good idea to try to
+write production code with it yet.
 
 ## Deploying your app as a smart contract
 
@@ -398,12 +399,12 @@ any non-critical calculations should be done before sending data to the chain.
 
 ### It's still early
 
-Smart contracts on Polkadot is still very early, which explains why this section
-is composed of pointers to in progress projects and non-specific information.
-Keep up to date with the projects above and watch out for the first testnets to be released.
-If you're feeling brave you can try to work with the tools such as pDSL but be 
-aware that much of the technology is still prior to stable release so will probably
-change as we continue progress toward the future mainnet Polkadot release.
+Smart contract development on Polkadot is still very early, which explains why
+this section is composed of pointers to in progress projects and non-specific information.  Keep up to date with the projects above and watch out for the first testnets
+to be released.  If you're feeling brave you can try to work with the tools
+such as Ink but be aware that much of the technology is still prior to stable
+release so will probably change as we continue progress toward the future
+mainnet Polkadot release.
 
 ## Conclusion
 
