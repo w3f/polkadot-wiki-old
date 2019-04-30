@@ -11,7 +11,7 @@
 [Governance - 治理](https://mp.weixin.qq.com/s/yyPaHsU7Nf7sUBVGIq1jbw)
 
 
-## Prachain 平行链资料
+## Parachain 平行链资料
 [如何在Polkadot上开始建立](./build/build-with-polkadot.md) 
 
 [部署平行链](./build/deploy-parachains.md) 
