@@ -12,6 +12,8 @@
 
 
 ## Prachain 平行链资料
+[如何在Polkadot上开始建立](./build/build-with-polkadot.md) 
+
 [部署平行链](./build/deploy-parachains.md) 
 
 ## Substrate
