@@ -8,35 +8,41 @@ will be filled out.
 
 ## Block Explorers
 
+ - [Polka.io](https://polka.io) - Blockchain explorer for Polkadot.
+ - [PolkadotJS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to the Alexander testnet by default, but can be configured to connect to other remote or local endpoints.
  - [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot. **Currently down.**
- - [PolkadotJS Explorer](https://polkadot.js.org/apps/#/explorer) - Currently connects to the Alexander testnet by default, but can be configured to connect to other remote or local endpoints.
 
 ## Wallets
 
- - [Polkawallet](https://polkawallet.io/) - A mobile wallet for Polkadot on both iOs and Android. Currently in development but a Beta version is available for download.
+ - [Polkawallet](https://polkawallet.io/) - A mobile wallet for Polkadot on both iOs and Android. Currently in development but a Beta version is available for download. Follow development on [GitHub](https://github.com/polkawallet-io/polkawallet-RN).
+ - [SpeckleOS](https://www.speckleos.io/) - Browser extension wallet. In development - follow progress on [GitHub](https://github.com/SpeckleOS/speckle-browser-extension).
  - [ImageWallet](https://www.reddit.com/r/dot/comments/ah3py1/introducing_alpha_version_of_httpsimagewalletio/) - Cross-chain wallet with visuals. **In development with planned support for Polkadot and all Substrate chains.**
 
 ## Rust
 
-The first [Polkadot client](https://github.com/paritytech/polkadot) is written in Rust.
+### Clients
 
-Currently the Rust ecosystem is the most mature for Polkadot parachain development. The framework for creating Polkadot parachains is called [Substrate](https://github.com/paritytech/substrate).
+- [Polkadot](https://github.com/paritytech/polkadot) - Rust implementation of the Polkadot Runtime Environment.
 
-There is comprehensive documentation for building on Substrate available in the [Substrate Development Hub](https://docs.substrate.dev).
+### Tools
 
-Additional tools you may be interested in:
+- [Substrate](https://github.com/paritytech/substrate) - Blockchain development platform written in Rust. Polkadot is being built on top of Substrate.
+- [Substrate Development Hub](https://docs.substrate.dev) - Comprehensive documentation and tutorials for building a blockchain using Substrate.
 
 ## C++
 
-[Soramitsu](https://github.com/soramitsu) is developing a [client](https://github.com/soramitsu/polkadot) in C++.
+- [Kagome](https://github.com/soramitsu/kagome) - A C++ Polkadot client developed by [Soramitsu](https://github.com/soramitsu).
 
 ## Go
 
-[ChainSafe Systems](https://chainsafe.io) is writing a [client](https://github.com/ChainSafeSystems/go-pre) in Go.
+- [Gossamer](https://github.com/ChainSafe/gossamer) - A Go implementation of the Polkadot Runtime Environment.
+- [Golkadot](https://github.com/opennetsys/golkadot) - A Go implementation of Polkadot Substrate.
 
 ## JS
 
-There is an extensive ecosystem of Polkadot tools including a [client](https://github.com/polkadot-js/client) available in [Polkadot-JS](https://github.com/polkadot-js) organization.
+### Client
+
+- [PolkadotJS client](https://github.com/polkadot-js/client) - Alternative client for JavaScript enthusiasts.
 
 Documentation on the [Polkadot-JS](https://polkadot.js.org) is a good starting point for diving deeper.
 
