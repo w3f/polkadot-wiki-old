@@ -7,6 +7,8 @@ This repository contains the source files for the [Polkadot wiki](https://wiki.p
 
 ## Running locally
 
+Note that you will need the `pip` package manager, which is generally installed with Python.
+
 Clone the repository to your local file system.
 
 ```bash
@@ -17,6 +19,12 @@ Install `mkdocs` by using the `pip` package manager.
 
 ```bash
 pip install mkdocs --user
+```
+
+Now install all necessary dependencies, once again by using `pip`.
+
+```bash
+pip install -r requirements.txt
 ```
 
 Run `mkdocs serve` from the repository root to spawn a hot reloading development server and navigate to `localhost:8000` in a web browser.
