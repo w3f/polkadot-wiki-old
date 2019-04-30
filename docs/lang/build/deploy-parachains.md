@@ -37,7 +37,7 @@ cd polkadot/test-parachains
 
 它会在这个资料夹建立简单`adder`平行链的Wasm可执行文件，它将简单地添加发送到给它的消息。Wasm可执行文件会在`parachains/test/res/adder.wasm`路径，所以确保你能在那找到。
 
-你需要生成并运行(Collator)校对人节点从而取得平行链的创世纪状态。
+你需要生成并运行校对人(Collator)节点从而取得平行链的创世纪状态。
 
 前往`test-parachains/adder/collator`资料夹并执行`build`和`run`指令
 
