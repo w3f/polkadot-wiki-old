@@ -1,18 +1,19 @@
 # Bridges
 
-One of the central ideas in blockchain intercommunication is the role of bridges. Some of the exact details of how bridging will work in Polkadot has yet to be decided, so this page is a work in progress and will be updated as more details come out.
+One of the central ideas in blockchain intercommunication is the role of bridges. Some of the exact details of how bridging will work in Polkadot have yet to be decided; please consider this page a work in progress.  It will be updated as more details are determined.
 
-There are likely three different types of bridging in Polkadot:
+Currently, there are three different types of bridging in Polkadot:
 
-* Bridge contracts - Smart contracts deployed as bridges between Polkadot and external chains.
-* Cross parachain communication - no contracts needed.
-* In-built bridging modules - Bridging to Polkadot from an external chain via a purpose built module.
+* _Bridge contracts_ - Smart contracts deployed as bridges between Polkadot and external chains.
+* _Cross-parachain communication_ - No contracts needed.
+* _In-built bridging modules_ - Bridging to Polkadot from an external chain via a purpose-built module.
 
 
 ## Bridge Contracts
-Those who are already familiar with Ethereum will probably already know of the [Parity Bridge](https://github.com/paritytech/parity-bridge) and the efforts being made to connect PoA sidechains to the Ethereum mainnet. The bridge is a combination of 2 smart contracts: one deployed on each chain that allows for cross-chain transfers of value. Ether deposited into the contract on the main net will provide a balance denominated in (say) ERC-20 tokens on the sidechain. While ERC-20 tokens deposited back into the contract on the sidechain can free up Ether on main net.
 
-In the case of Polkadot, it should be possible to have a bridge contract deployed on to (say) an EVM-based standalone chain and a contract deployed on a smart contract capable parachain. This wouldn't necessarily be the most efficient method of bridging, but given the generality of a Turing complete parachain it would be possible to bridge Polkadot and any other smart contract capable blockchain.
+Those who are already familiar with Ethereum may know of the [Parity Bridge](https://github.com/paritytech/parity-bridge) and the efforts being made to connect PoA sidechains to the Ethereum mainnet. The bridge is a combination of two smart contracts, one deployed on each chain, that allow for cross-chain transfers of value. As an example of usage, the initial Parity Bridge proof of concept connects two Ethereum chains, `main` and `side`.  Ether deposited into the contract on `main` generate a balance denominated in ERC-20 tokens on `side`. Conversely, ERC-20 tokens deposited back into the contract on `side` can free up Ether on `main`.
+
+In the case of Polkadot, it should be possible to have a bridge contract deployed on, say, an EVM-based standalone chain and a contract deployed on a smart contract capable parachain. This would not necessarily be the most efficient method of bridging, but given the generality of a Turing-complete parachain it would be possible to bridge Polkadot and any other smart contract capable blockchain.
 
 ### Resources
 
@@ -21,16 +22,17 @@ In the case of Polkadot, it should be possible to have a bridge contract deploye
 * [POA Network](https://poa.network/)
 * [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA Network's implementation of Parity's bridge chain solution.
 
-## Cross parachain communication
-As mentioned on the [parachains](./parachains.md) page, parachains will be able to send messages (including transactions) to each other without the need for smart contracts to perform the bridging functionality. Cross parachain messaging will be native to Polkadot.
+## Cross-Parachain Communication
+As mentioned on the [parachains](./parachains.md) page, parachains will be able to send messages (including transactions) to each other without the need for smart contracts to perform the bridging functionality. Cross-parachain messaging will be native to Polkadot.
 
 
-## In-built bridging modules
-Receiving messages on a parachain from another blockchain will likely be done natively within a module of the client software. This would negate the need for for bridging contracts. The collator node functionality is intended for the exact purpose of transaction collation, including transactions which have originated outside of Polkadot.
+## In-built Bridging Modules
+
+Receiving messages on a parachain from a non-parachain blockchain will likely be done natively within a module of the client software. This would negate the need for for bridging contracts and allow non-parachains to act as "virtual parachains". Collators for the specific blockchain can then collate transactions or other state transitions, and submit them to the relay chain as if the blockchain were a parachain.
 
 The bridging modules will likely be written with particular parachains in mind (e.g. Bitcoin, Ethereum), which means that any blockchain that's based on either of those should be able to be bridged directly to Polkadot without the need of going through a bridge contract on a parachain. This should allow for faster execution for those chains that are compatible.
 
-For the standalone chains that don't have an in-built module on Polkadot, it should be possible to deploy a bridge contract to a Turing complete parachain.
+For the standalone chains that don't have an in-built bridging module on Polkadot, it will be necessary to deploy bridge contracts (see above).
 
 ### Resources
 * [ChainX BTC Bridge](https://github.com/chainx-org/ChainX/tree/develop/cxrml/bridge/btc) - ChainX have implemented a BTC to Substrate bridge for their parachain
