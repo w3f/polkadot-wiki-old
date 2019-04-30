@@ -7,14 +7,14 @@ token of Bitcoin or Ether is the native token of the Ethereum Blockchain.
 
 Currently, DOTs have 15 decimal places, while the smallest unit is called the Femto-DOT. You can compare the Femto-DOT to Satoshis or Wei, while the DOT is like a bitcoin or an ether.
 
-|Unit |Decimals|
+|Unit |Decimal Places|
 |-----|--------|
-|Femto| 10**0  |
-|Pico | 10**3  |
-|Nano | 10**6  |
-|Micro| 10**9  |
-|Milli| 10**12 |
-|DOT  | 10**15 |
+|Femto| 0  |
+|Pico | 3  |
+|Nano | 6  |
+|Micro| 9  |
+|Milli| 12 |
+|DOT  | 15 |
 
 ## What are the uses of DOTs?
 
