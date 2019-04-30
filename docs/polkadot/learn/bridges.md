@@ -22,7 +22,7 @@ In the case of Polkadot, it should be possible to have a bridge contract deploye
 * [Case study](https://medium.com/giveth/ethereum-dapp-scaling-poa-network-acee8a51e772) of POA Network's implementation of Parity's bridge chain solution.
 
 ## Cross parachain communication
-As mentioned on the [[Parachains|parachains]] page, parachains will be able to send messages (including transactions) to each other without the need for smart contracts to perform the bridging functionality. Cross parachain messaging will be native to Polkadot.
+As mentioned on the [parachains](./parachains.md) page, parachains will be able to send messages (including transactions) to each other without the need for smart contracts to perform the bridging functionality. Cross parachain messaging will be native to Polkadot.
 
 
 ## In-built bridging modules
