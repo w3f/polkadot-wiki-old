@@ -101,9 +101,9 @@ Parachain slots will be sold in open auctions, the mechanics of which can be fou
 
 Although the Polkadot relay chain does not support smart contracts, there will be Polkadot parachains that do.
 
-Parity Technologies has already laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual machine and includes a domain specific language (pDSL) in Rust.
+Parity Technologies has already laid much of the groundwork for a new smart contract stack that is based on a Wasm virtual machine and includes a domain specific language (ink!) in Rust.
 
-Substrate includes a contract module that includes the core logic needed for a smart contract chain. Along these lines, the pDSL will be a smart contract language written in Rust that takes advantage of the already existing Rust tooling and support and will compile to Wasm.
+Substrate includes a contract module that includes the core logic needed for a smart contract chain. Along these lines, ink! will be a smart contract language written in Rust that takes advantage of the already existing Rust tooling and support and will compile to Wasm.
 
 Edgeware is a project that has already announced its intent to launch using this smart contract technology described above and will connect to Polkadot at or soon after mainnet launch.
 
@@ -133,7 +133,7 @@ You will need to consider the storage and complexity of your smart contract to e
 It’s still very early for smart contracts on Polkadot and the development is only now stabilizing. We are actively producing content to help developers get up to speed and will maintain the wiki with the latest resources. You should also keep up to date with the following links:
 
 - [Edgeware](https://edgewa.re).
-- [pDSL](https://github.com/Robbepop/pdsl). (Keep an eye out for content on the wiki tab.)
+- [ink!](https://github.com/paritytech/ink). (Keep an eye out for content on the wiki tab.)
 - [Substrate contracts module](https://github.com/paritytech/substrate).
 
 
