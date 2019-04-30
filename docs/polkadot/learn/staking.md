@@ -1,8 +1,10 @@
-# Staking Information
+# Staking
 
-Polkadot will use NPoS (Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at the beginning for someone who is interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOTs holder get paid more for nominating multiple validators to ensure the network will not be heavily centralized on only a few validators. As a validator, it only takes the role of either validating blocks or guaranteeing the finality of the chain to earn rewards, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight. 
+Polkadot uses NPoS (Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at genesis for those who are interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOT holders get paid more for nominating multiple validators to ensure the network will not be heavily centralized on only a few validators. Validators take the role of both validating blocks and guaranteeing the finality of the chain, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight. Both validators and nominators will earn rewards proportional to the amount that they stake, with validators having the ability to set payment preferences.
 
 Any potential validators can indicate their intention to be a validator candidate. Validators who signal intention will be added to a waiting queue for nominators to elect and become active in the next era if a validator get enough nomination support.      
+
+![staking](../../img/NPoS/article-1.png)
 
 ## Accounts
 
@@ -12,14 +14,22 @@ There are three different accounts for managing your funds: `Stash`, `Controller
 - **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken). 
 - **Session** The seed of this account should be passed to the node using the `--key` parameter. The session account does not need to have funds as it does not need to send any transaction. The best practice is to create a dedicated account to be used as session account. Although a single account can theoretically be used as both `session` and `controller`, it is not recommended to do so. Having a dedicated `session` account would prevent the theft of funds should the validator node be compromised and the `--key` leaked.
 
-## Operations
+For more on how keys are used in Polkadot and the cryptography behind it [see here](./keys.md).
 
-_TODO_ - Step-By-Step Guide for nominating potential validators 
+## Validators and nominators
 
+Since validator slots will be limited, most of those who wish to stake their DOTs and contribute economic security to the network will be nominators. Validators do most of the heavy lifting, they produce new block candidates in BABE, vote and come to consensus in GRANDPA, validate STF of parachains, and possibly some other responsibilities in regard to data availability. Nominators, on the other hand do not need to do anything once they have bonded their DOTs. The experience of the nominator is very alike to "set it and forget it" while the validator will be doing an actual service for the network by performing the critical operations. For this reason, the validator has certain privileges in regard to the payout of the staking mechanism and will be able to declare its own allocation before the share which is divvied to nominators.
+
+![staking](../../img/NPoS/article-2.png)
+
+### Want to stake DOTs?
+
+- [Nominator Guide](../node/guides/how-to-nominate.md) - Become a nominator on the Alexander testnet.
+- [Validator Guide](../node/guides/how-to-validate.md) - Become a validator on the Alexander testnet.
 
 ## Slashing
 
-Slashing will be applied if a validator has been reported to be offline for a number of times. Essentially, there are two parameters that will be taken into decision whether the slashing will happen or not, these are `Offline Slash Grace` & `Unstake Threshold`. 
+Slashing will be applied if a validator has been reported to be offline for a number of times. Essentially, there are two parameters that will be taken into account whether the slashing will happen or not, these are `Offline Slash Grace` & `Unstake Threshold`. 
 `Offline Slash Grace` is configured by the network, and the current testnet configuration is set to `4`, whereas `Unstake Threshold` is decided by the validator. However,the maximum number of `Unstake threshold` is NOT allowed to be set greater than 10 in the current setting.
 
 In short, validators will be slashed if they have been reported offline more than `Offline Slash Grace + Unstake Threshold` times.
@@ -38,7 +48,7 @@ At the same time, once slashing is determined, a value will be deducted from the
 
 ## Reward Distribution
 
-Based on the the current configuration in PoC-3 Alexander testnet, rewards are recorded per session that is roughly 5 minutes and paid per era. It takes 1 hour to finish an era that means rewards will be distributed to the validators and nominators per hour. 
+Based on the the current configuration in the Alexander testnet, rewards are recorded per session that is roughly 5 minutes and paid per era. It takes 1 hour to finish an era that means rewards will be distributed to the validators and nominators per hour. 
 
 !!! info
     **Example:**
@@ -57,12 +67,12 @@ A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs 
 Rewards can be used the same account (controller) to keep accumulating the rewards or stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
 
 ## Inflation
+
 It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
 
-## How many validators will be available for the polkadot ?
-Starting from 50 - 100 at the beginning, and will be expanding up to 1,000 validators in the future.
+## How many validators will Polkadot have?
 
- **The above information is NOT finalized yet. You can take it as a reference instead.**
+The plan is to start with somewhere between 50 to 100 open validator positions and open more gradually. The top bound on the number of validators has not been determined yet, but should only be limited by the bandwidth strain of the network due to frequent and voluminous peer-to-peer message passing. The practical estimation of the number of validators that Polkadot will have at maturity is in the ballpark of 1000.
 
 ## Resources
 
