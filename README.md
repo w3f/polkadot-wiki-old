@@ -43,7 +43,7 @@ Please read over the rules for contribution at the [CONTRIBUTING](CONTRIBUTING.m
 
 ### Contributor set-up
 
-As a contributor, you will need to run `npm i` in the local copy of your repository after your bring it down.
+As a contributor, you will need to run `npm i` in the local copy of your repository after you bring it down.
 
 ### Adding a new page
 
