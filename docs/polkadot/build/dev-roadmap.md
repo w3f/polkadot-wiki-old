@@ -33,21 +33,11 @@ Expected Features:
 
 ## Polkadot 
 
-### PoC 4
-
-26% Complete
-
-[Milestone tracker](https://github.com/paritytech/polkadot/milestone/1)
-
-Expected Features:
-
- - Interchain communication
- - `--light` default; `--heavy` optional
- - `--validator` implies `--heavy` 
+Current release: **PoC-4**
 
 ### PoC 5,6,7
 
-14% Complete
+7% Progress on issue tracker
 
 [Milestone tracker](https://github.com/paritytech/polkadot/milestone/2)
 
@@ -55,3 +45,4 @@ Expected Features:
 
  - BLS signature aggregation for parachain candidate attestations 
  - [Integrate Parachain tokens into governance](https://github.com/paritytech/polkadot/issues/124)
+ - Improvements to parachain validation 

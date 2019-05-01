@@ -85,4 +85,3 @@ You can go to the `Chain State` tab and by querying the `parachains` state you s
 ### Interacting with the parachain
 
 _Coming soon_
-Wasm
