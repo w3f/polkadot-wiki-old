@@ -53,7 +53,7 @@ Each unit of the range 1 - 4 represents a 6-month duration for a total of 2 year
 
 Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `unit`. More than one continuous `unit` is a `range`.
 
-Auctions will take place 6 months before the parachain slot begins.
+Several auctions will take place in the preceding six months before a set of parachain slot leases begin.
 
 Bidders will submit configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the units 1 - 4.
 
