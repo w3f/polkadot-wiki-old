@@ -59,7 +59,7 @@ Polkadot提供了二个方法部署应用程序:
 
 新项目确定了建立平行链是适当的方法后，下一步是决定使用哪个框架，目前只有Substrate是开发平行链的框架。
 
-将来也会有很多Polkadot runtime的[实现](http://wiki.polkadot.network/en/latest/polkadot/learn/implementations/)在各种语言包括C ++，Rust，Go和JS。
+将来也会有很多Polkadot runtime的[实现](../../polkadot/learn/implementations.md)在各种语言包括C ++，Rust，Go和JS。
 
 ### 开始使用Substrate
 
@@ -85,7 +85,7 @@ Substrate内置拥有自己的网络层，但它不能够直接兼容Polkadot校
 
 #### Cumulus
 
-[Cumulus](http://wiki.polkadot.network/en/latest/polkadot/build/cumulus/)的目标是成为Substrate的扩展，它将会使所有Substrate runtime兼容于Polkadot。
+[Cumulus](../../polkadot/build/cumulus.md)的目标是成为Substrate的扩展，它将会使所有Substrate runtime兼容于Polkadot。
 
 它处理任何需要连接到Polkadot网络上需要实现的平行链，这些包括：
 
@@ -103,7 +103,7 @@ Polkadot其中一个始创人Rob Habermeier，最近在EthCC分享了最新Cumul
 
 为了将平行链加入在Polkadot网络中，你需要拥有一个平行链位置。
 
-平行链位置将会通过公开拍卖出售，其机制可以在[平行链拍卖](../learn/candle.md)维基页面上找到。
+平行链位置将会通过公开拍卖出售，其机制可以在[平行链拍卖](../../polkadot/learn/candle.md)维基页面上找到。
 
 ## 所以你想建立智能合约
 
