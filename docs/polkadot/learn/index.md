@@ -12,7 +12,7 @@
 - [Governance](./governance.md) - How does governance work in Polkadot?
 - [Interchain Communication](./interchain.md) - Information regarding how interchain messaging works.
 - [Parachains](./parachains.md) - Overview of parachains.
-- [Parachain Auctions](./candle.md) - Describes the mechanism for the auctioning of parachain slots.
+- [Parachain Auctions](./auction.md) - Describes the mechanism for the auctioning of parachain slots.
 - [Phragmen](./phragmen.md) - Information on the Phragmen method.
 - [Polkadot Runtime Environment](./PRE.md) - Gives general information on the Polkadot Runtime Environment.
 - [Randomness](./randomness.md) - What does Polkadot use for randomness and how?

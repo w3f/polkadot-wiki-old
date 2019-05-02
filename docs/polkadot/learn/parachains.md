@@ -34,7 +34,7 @@ Parachains are operated and new blocks are authored by [collator nodes](../node/
 
 ## How will parachain slots be distributed?
 
-Parachain slots will be acquirable through auction, please see the [parachain slots](./candle.md) article.
+Parachain slots will be acquirable through auction, please see the [parachain slots](./auction.md) article.
 
 ## Deploying parachains
 
