@@ -125,7 +125,7 @@ Edgeware的计划了在Polkadot上运行平行链，它将会是个智能合约�
 
 [Ink](https://github.com/paritytech/ink)有意成为用于编写Rust智能合约的新领域专用语言，把Rust编译成Wasm代码。如README中所述，它仍处于实验阶段，缺少了很多计划中的功能，但现在是可以开始使用它来编写智能合约。
 
-对于感兴趣的开发者，你们可以通过学习经已编写好的[例子](https://github.com/Robbepop/pdsl/tree/master/examples)开始来编写智能合约。这些可以用来作为参考编写更加复杂的逻辑并将可以部署在支持智能合约的平行链上。
+对于感兴趣的开发者，你们可以通过学习经已编写好的[例子](https://github.com/paritytech/ink/tree/master/examples)开始来编写智能合约。这些可以用来作为参考编写更加复杂的逻辑并将可以部署在支持智能合约的平行链上。
 
 Ink!为基于Wasm虚拟机并与Substrate链兼容的新智能合约堆栈制定了基础。
 
