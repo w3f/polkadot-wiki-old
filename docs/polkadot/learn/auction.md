@@ -11,23 +11,23 @@ The parachain slots of Polkadot will be sold according to an English auction wit
 
 ## Mechanics of an English auction with retroactively determined close
 
-English auctions are open auctions where bidders will submit bids that are increasingly higher and the highest bidder at the conclusion of the auction is considered the winner.
+English auctions are open auctions where bidders submit bids that are increasingly higher and the highest bidder at the conclusion of the auction is considered the winner.
 
-There are many variations on the typical English auction in which one of the procedures is changed to alter the mechanic of the auction. One example of the variation is the candle auction, which gets its name from a mechanism originally employed in the 16th century for the sale of ships. The candle auction changes the English auction by determining the end of the auction phase through some external, random event such as the extinguishing of a lit candle's flame.
+There are many variations on the typical English auction in which one of the procedures is changed to alter the mechanics of the auction. One example of the variations is the candle auction, which gets its name from a mechanism originally employed in the 16th century for the sale of ships. The candle auction changes the English auction by determining the end of the auction phase through some external, random event such as the extinguishing of a lit candle's flame.
 
-A parachain auction will differ from the candle auction in that it will not close at a random time but instead be retroactively determined to have an end that was sooner than the actual close _after_ the close of the auction. This means that during the whole open phase of the auctions, bids will be accepted but last minute bids will have a probability of not winning compared to earlier ones.
-<!-- 
-However, this brings to light another problem that is inherent to blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify is a hard problem. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses as a base for its randomness. -->
+A parachain auction will differ from the candle auction in that it will not close at a random time. Instead it is retroactively determined to have ended at some point while the bids were being accepted. While the auction is open, bids will continue to be accepted. However, later bids have higher probability of not winning since the retroactively determined close moment may be found to be before a later bid was submitted.
 
 ## Why use an English auction with retroactively determined close?
 
-The open and transparent nature of blockchain systems makes it so that some types of attacks become easier to perform. Auctions, especially English auctions, can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
+The open and transparent nature of blockchain systems opens attack vectors which are non-existent in traditional auction formats. English auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
 
-Auction sniping takes place when the end of an auction is known and bidders are hesitant to bid their true price early, in hopes of paying less than they actually value the item. In this scenario, one person Alice values an item for 30 USD but only bids 10 USD because there appears to be competition, and if there is Alice will continue to place incrementally higher bids until the true value is exceeded. However, another person Eve who values the items actually only 11 USD is watching the auction and submits a bid of 11 USD at the last second. Alice has no time to respond to this bid and loses the item even though Alice's true value for the item was higher.
+Auction sniping takes place when the end of an auction is known and bidders are hesitant to bid their true price early, in hopes of paying less than they actually value the item. 
 
-On blockchains this may be even worse since it potentially gives the producer of the block an opportunity to snipe any auction at the last concluding block. This may also lead to a case where a motivated and well-funded user or even a malicious block producer could _grief_ other users by sniping auctions.
+For example, Alice may value an item at auction for 30 USD. She submits an initial bid of 10 USD in hopes of acquiring the items at a lower price. Alice's strategy is place incrementally higher bids until her true value of 30 USD is exceeded. Another bidder Eve values the same item at 11 USD. Eve's strategy is to watch auction and submit a bid of 11 USD at the last second. Alice will have no time to respond to this bid before the close of the auction and will lose the item. The auction mechanism is sub-optimal because it has not discovered the true price of the item and the item has not gone to the actor whom valued it the most.
 
-For this reason, there has been attention toward [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase. The English auction with retroactively determined close is another solution which does not need the two-step commit and reveal schemes like Vickrey auctions, and for this reason allows smart contracts to participate.
+On blockchains this may be even worse since it potentially gives the producer of the block an opportunity to snipe any auction at the last concluding block. There is also the possibility of a malicious bidder or a block producer to _grief_ honest bidders by sniping auctions.
+
+For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase, have emerged as a well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable names on the [ENS](https://ens.domains). The English auction with retroactively determined close is another solution which does not need the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart contracts to participate.
 
 English auctions with retroactively determined closes make it so that everyone always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise they might find themselves in the situation that the auction was determined to have "ended" before they even bid.
 
@@ -59,7 +59,7 @@ Each parachain slot has a maximum duration of 2 years. Each 6 month interval in 
 
 Several auctions will take place in the preceding six months before a set of parachain slot leases begin.
 
-Bidders will submit configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the units 1 - 4.
+Bidders will submit a configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the units 1 - 4.
 
 A bidder configuration for a single bidder may look like this:
 
@@ -122,11 +122,21 @@ Although Dave had the highest bid in accordance to DOT amount, when we do the ca
 
 Charlie's valuation for the entire range is `300` therefore Charlie is awarded the complete range of the parachain slot.
 
-## Why doesn't everyone bid for the max length?
+## FAQ
+
+### Why doesn't everyone bid for the max length?
 
 For the duration of the slot the `DOTs` bid in the auction will be locked up. This means that there are opportunity costs from the possibility of using those `DOTs` for something else. For parachains that are beneficial to Polkadot, this should align the interests between parachains and the Polkadot relay chain.
 
-## How does this mechanism help ensure parachain diversity?
+### How does this mechanism help ensure parachain diversity?
 
 The method for dividing the parachain slots into six month intervals was partly inspired by the desire to allow for a greater amount of parachain diversity, and prevent particularly large and well-funded parachains from hoarding slots. By making each unit a six-month duration but the overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure they secure a slot at the end of their lease while gradually allowing other parachains to enter the ecosystem to occupy the six-month durations which are not filled. For example, if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in getting the next slot which would open for 2 - 5. Under this mechanism that parachain could acquire unit 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to be occupied by another.
  
+### Why is randomness difficult on blockchains?
+
+Randomness is problematic for blockchain systems. Generating a random number trustlessly on a transparent and open network in which other parties must be able to verify opens the possibility for actors to attempt to alter or manipulate the randomness. There have been a few solutions that have been put forward, including hash-onions like [RANDAO](https://github.com/randao/randao) and [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The latter is what Polkadot uses as a base for its randomness.
+
+## Resources
+
+- [Parachain Allocation](http://research.web3.foundation/en/latest/polkadot/Parachain-Allocation/) - W3F research page on parachain allocation that goes more in depth to the mechanism.
+- [paritytech/polkadot#239](https://github.com/paritytech/polkadot/pull/239) - Pull request introducing the parachain slots code.
