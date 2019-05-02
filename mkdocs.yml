@@ -40,7 +40,7 @@ nav:
    - Randomness: polkadot/learn/randomness.md
    - Relevant Links: polkadot/learn/relevant-links.md
    - Parachains: polkadot/learn/parachains.md
-   - Parachain Slots: polkadot/learn/candle.md
+   - Parachain Slots: polkadot/learn/auction.md
    - Polkadot Runtime Environment: polkadot/learn/PRE.md
    - Polkadot UI: polkadot/learn/UI.md
  - Run the Network:

@@ -95,7 +95,7 @@ Rob Habermeier, a co-founder of Polkadot, recently gave a talk at EthCC that gav
 
 In order to include your parachain into the Polkadot network, you will need to acquire a parachain slot.
 
-Parachain slots will be sold in open auctions, the mechanics of which can be found on the [parachain auction](../learn/candle.md) page of the wiki.
+Parachain slots will be sold in open auctions, the mechanics of which can be found on the [parachain auction](../learn/auction.md) page of the wiki.
 
 ## So you want to build a smart contract
 
