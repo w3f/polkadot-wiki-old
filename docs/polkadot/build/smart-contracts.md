@@ -1,4 +1,4 @@
-# Comparison to Smart Contract Engineering
+# Smart Contracts
 
 Developers may be familiar with other blockchains and their environments
 for developing smart contracts. A comparison between Polkadot and other
