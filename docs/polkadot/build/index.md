@@ -32,4 +32,7 @@ that is not available to be found elsewhere.
  - [Examples](./examples/index.md)
  - [Rust Style Guide](./rust-style-guide.md)
 
+## Hackathon
+ - [Resources For Running a Hackathon](./hackathon.md)
+
 More coming soon.
