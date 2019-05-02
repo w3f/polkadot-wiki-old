@@ -215,6 +215,8 @@ schnorrkel-ristretto25519
 boneh-lynn-shacham
 bip32-ed25519
 brudges
+altcoins
+1.1m
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
@@ -241,3 +243,5 @@ Phragm
 Thiele's
  - docs/polkadot/learn/keys.md
 HSMs
+ - docs/polkadot/learn/security.md
+stakers
