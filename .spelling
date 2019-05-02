@@ -248,3 +248,5 @@ HSMs
 polkadot#239
  - docs/polkadot/learn/security.md
 stakers
+ - docs/polkadot/build/smart-contracts.md
+upgradeability

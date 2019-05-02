@@ -2,6 +2,15 @@
 
 The Polkadot relay chain will not support smart contracts natively, however parachains on Polkadot will support smart contracts. There are already announced projects such as [Edgeware](https://edgewa.re), thanks to the Substrate built-in [contract module](https://crates.parity.io/srml_contract/index.html) it is likely more parachains will support this feature.
 
+## Resources
+
+Here are the list of current resources available to developer who want to get started writing smart contracts to deploy on parachains based on Substrate.
+
+- [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts. 
+- [Deploying your first contract](https://github.com/paritytech/ink/wiki/Deploying-Your-First-Contract) - Guide to deploy the provided `flipper` contract.
+- [Writing your first contract](https://github.com/paritytech/ink/wiki/Writing-Your-First-Contract) - Guide to how one would write the `flipper` contract.
+- [Substrate contracts workshop](https://shawntabrizi.github.io/substrate-contracts-workshop/#/) - Walks you through the basics of using `ink!` and writing an ERC20 token.
+
 ## What is the difference between developing a smart contract versus a parachain?
 
 ### Layer of Abstraction
