@@ -1,6 +1,6 @@
 # Polkadot開發者快速入门指南
 
-!!! attention
+!!! info
     _本文是Medium博客上[Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735)的最新版本_
 
 Polkadot是个网络协议，缩短了区块链开发者的开发时间。以前发布和维护着一个新的区块链需要用数年时间，但利用Polkadot只需要数星期甚至几天就可以了。
@@ -11,7 +11,7 @@ Polkadot预计在今年年尾的时候主网发布，所以也将会列出现在
 
 ## 我们处于哪里？
 
-**你需要知道什么**: Polkadot处于PoC-4阶段，测试网络称Alexander在整个PoC-3发布后经已运行了三个月。PoC-4发布于本周早期并带来了一些新功能。Polkadot是基于Substrate区块链开发框架建立，开发者可以使用Substrate在他们的链创建自定义状态转换。Substrate将接近1.0稳定版本，这将会把所有核心API部份稳定下来。
+**你需要知道什么**: Polkadot处于PoC-4阶段，测试网络称Alexander在整个PoC-3发布后经已运行了三个月。PoC-4发布于本周早期并带来了一些新功能。Polkadot是基于Substrate区块链开发框架建立，开发者可以使用Substrate在他们的链上创建自定义状态转换。Substrate快接近1.0稳定版本了，这将会把所有核心API部份稳定下来。
 
 总之，现在是最好的时间开始为Polkadot的发布做准备。在你开始写代码之前，你应该了解不同范式会提供给有兴趣的开发者在Polkadot上构建。
 
@@ -25,7 +25,7 @@ Polkadot提供了二个方法部署应用程序:
 
 使用其中任何一个都需要衡量比较，阅读本节将有助你理解它们的分別。
 
-平行链是独立的链连接到Polkadot网络取得中继链上验证人的共享安全和跨链消息传递。平行链提供了极大灵活性和定制，但将需要更多时间来构建。
+平行链是独立的链连接到Polkadot网络取得中继链上验证人的共享安全和跨链消息传递。平行链提供了极大灵活性和可定制，但将需要更多时间来构建。
 
 当Polkadot主网上线后，将会有一个或多个智能合约平台会成为平行链，智能合约是仅存在于某个链上并且执行复杂性有限的程序。因为它们只存在于单一链，所以它们很容易跟其它在同一链内的智能合约互相沟通，但是它们将始终会受到主链的固有特性约束和限制。
 
@@ -33,12 +33,12 @@ Polkadot提供了二个方法部署应用程序:
 
 平行链会为开发者提供更多空间从头开始建立链的货币体制，它提供比智能合约平台更简洁和有效地执行复杂的逻辑，平行链还提供治理的形式，并且可以比现有硬分叉的过程减少争议的方式进行升级。
 
-建立在平行链上有的一些特点:
+建立平行链的特点:
 
--自定义费用结构 (例如:支付固定交易费用 或 按字节计算)
--自定义代币通涨政策
--通过状态转变函数分配财政
--利用治理机制方法管理和分配DAO的链上资金
+- 自定义费用结构 (例如:支付固定交易费用 或 按字节计算)
+- 自定义代币通涨政策
+- 通过状态转变函数分配财政
+- 利用治理机制方法管理和分配DAO的链上资金
 
 ![build 1](../../../img/build-1.png)
 
@@ -48,18 +48,18 @@ Polkadot提供了二个方法部署应用程序:
 
 大概你经已了解到那一款更适合你的应用程序(或混合两者)，但如果你需要快速回顾，你可以利用以下比较图表作为备忘单：
 
-IMAGEEE
+![build 2](../../../img/build-2.png)
 
 本指南现在分为两部分，具体取决于你的应用决定是在平行链或智能合约上建立。你可以随意阅读这两个部分，也可以只阅读适用于你的部分。
 
-- [建立平行链](#所以你想建立一个平行链)
-- [建立智能合约](#所以你想建立智能合约)
+- [建立平行链](#_3)
+- [建立智能合约](#_5)
 
 ## 所以你想建立一个平行链
 
 新项目确定了建立平行链是适当的方法后，下一步是决定使用哪个框架，目前只有Substrate是开发平行链的框架。
 
-将来也会有很多Polkadot runtime的实现在各种语言包括C ++，Rust，Go和JS。
+将来也会有很多Polkadot runtime的[实现](http://wiki.polkadot.network/en/latest/polkadot/learn/implementations/)在各种语言包括C ++，Rust，Go和JS。
 
 ### 开始使用Substrate
 
@@ -85,14 +85,14 @@ Substrate内置拥有自己的网络层，但它不能够直接兼容Polkadot校
 
 #### Cumulus
 
-[Cumulus](./cumulus.md)的目标是成为Substrate的扩展，它将会使所有Substrate runtime兼容于Polkadot。
+[Cumulus](http://wiki.polkadot.network/en/latest/polkadot/build/cumulus/)的目标是成为Substrate的扩展，它将会使所有Substrate runtime兼容于Polkadot。
 
 它处理任何需要连接到Polkadot网络上需要实现的平行链，这些包括：
 
  - 处理平行链之间消息传递
- - 即用校对人节点设定
- - 中继链的嵌入式轻客户端
- - 与Polkadot上产生的区块兼容并可被验证
+ - 即用校对人节点设定
+ - 中继链的嵌入式轻客户端
+ - 与Polkadot上产生的区块兼容并可被验证
  - 只需要细小修改，把Cumulus整合到Substrate链，并移植到Polkadot上成为平行链。可能只是导入crate和添加一行代码。
 
 Polkadot其中一个始创人Rob Habermeier，最近在EthCC分享了最新Cumulus的开发状况，在下面可以观看。
@@ -119,7 +119,7 @@ Polkadot也会通过桥接(Bridge)方式把现有的智能合约平台(例如:�
 
 ### Edgeware
 
-Edgeware的计划了在Polkadot上运行平行链，它将会是个智能合约平台。带有具创新的治理和代币分配，它将会是第一个连接到在Polkadot网络上带有智能合约的平行链。你可以在它们的网站上了解其项目的最新消息。
+Edgeware的计划了在Polkadot上运行平行链，它将会是个智能合约平台。带有具创新的治理和代币分配，它将会是第一个连接到在Polkadot网络上带有智能合约的平行链。你可以在它们的[网站](https://edgewa.re/)上了解其项目的最新消息。
 
 ### Ink
 

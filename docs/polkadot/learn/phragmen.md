@@ -10,7 +10,7 @@ Phragmen's sequential method is used in the NPoS algorithm of Polkadot to elect 
 
 ## What does it mean for node operators?
 
-Updated as of Alexander v0.3.21.
+_Updated as of Alexander v0.4.3_
 
 ### For nominators
 

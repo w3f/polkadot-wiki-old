@@ -34,14 +34,14 @@ Connect to the global "Krumme Lanke" testnet by default by running:
 polkadot
 ```
 
-## Alexander
+## Alexander (PoC-4)
 
-Alexander is a testnet network used during the development of PoC-3.
+Alexander is a testnet network used during the development of PoC-3 and PoC-4.
 
-Install Polkadot PoC-3 and have a `polkadot` binary installed to your `PATH` with:
+Install Polkadot PoC-4 and have a `polkadot` binary installed to your `PATH` with:
 
 ```bash
-cargo install --git https://github.com/paritytech/polkadot.git --branch v0.3 polkadot
+cargo install --git https://github.com/paritytech/polkadot.git --branch v0.4 polkadot
 ```
 
 Connect to the global "Alexander" testnet by default by running:

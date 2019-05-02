@@ -37,7 +37,7 @@ cd polkadot/test-parachains
 
 它会在这个资料夹建立简单`adder`平行链的Wasm可执行文件，它将简单地添加发送到给它的消息。Wasm可执行文件会在`parachains/test/res/adder.wasm`路径，所以确保你能在那找到。
 
-你需要生成并运行(Collator)校对人节点从而取得平行链的创世纪状态。
+你需要生成并运行校对人(Collator)节点从而取得平行链的创世纪状态。
 
 前往`test-parachains/adder/collator`资料夹并执行`build`和`run`指令
 
@@ -70,7 +70,7 @@ Hex: 0x0000000000000000000000000000000000000000000000000000000000000000000000000
 
 假如你前往到`Democracy`标签，你应该会看到你的提案在议案部分
 
-一旦你等待的提案成为公投，你可以投票选择`赞成(Nay)`或`反对(Aye)`，投赞成票使你能够部署平行链。
+一旦你等待的提案成为公投，你可以投票选择`赞成(Aye)`或`反对(Nay)`，投赞成票使你能够部署平行链。
 
 ![parachain referendum](../../img/parachain/referendum.png)
 
