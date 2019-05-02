@@ -54,9 +54,9 @@ For a visualization of what we mean by GRANDPA comes to finality on "chains" rat
 <!-- right now this links to Rob's article but later will link to the wiki consensus page -->
 _For more on Polkadot consensus please see [here](https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introduction-part-1-d08a24a021b5)_
 
-## Pooled Security
+## Shared Security
 
-Polkadot is designed to _pool_ security through the relay chain validator set. This means that any chain which connects to the Polkadot network will not need to set up its own consensus or manage its own economic security, but will benefit from the strong economic security of the relay chain.
+Polkadot is designed to share or _pool_ security through the relay chain validator set. This means that any chain which connects to the Polkadot network will not need to set up its own consensus or manage its own economic security, but will benefit from the strong economic security of the relay chain.
 
 This is remarkably different from Cosmos, since Cosmos posits that each chain is sovereign first and must run its own instance of Tendermint consensus with its own consensus algorithm. Cosmos now claims to have a notion of shared security similar to what is offered by Polkadot, but it is not implemented today and seems to be a recent addition.
 
@@ -89,7 +89,7 @@ Follows are responses to questions which are often brought up in the comparison 
 
 ### Do parachains need to connect to the relay chain or can they be sovereign chains like in Cosmos?
 
-The simple answer is _yes_, if a chain would like to benefit from the pooled security and interchain communication enabled by Polkadot then it must become a parachain to the Polkadot relay chain. However, a chain built using Substrate does not need to connect to Polkadot if it does not want to share in these benefits and it can implement its own consensus and security just as each Cosmos zone does. The difference between them is that in Cosmos, there is no choice, a chain must have its own security and validator set running Tendermint consensus. While Polkadot/Substrate allows a chain to be sovereign with its own security by implementing one of the provided consensus algorithms or by developing a custom one. If the chain chooses it can make its consensus compatible with Polkadot and become a parachain.
+The simple answer is _yes_, if a chain would like to benefit from the shared security and interchain communication enabled by Polkadot then it must become a parachain to the Polkadot relay chain. However, a chain built using Substrate does not need to connect to Polkadot if it does not want to share in these benefits and it can implement its own consensus and security just as each Cosmos zone does. The difference between them is that in Cosmos, there is no choice, a chain must have its own security and validator set running Tendermint consensus. While Polkadot/Substrate allows a chain to be sovereign with its own security by implementing one of the provided consensus algorithms or by developing a custom one. If the chain chooses it can make its consensus compatible with Polkadot and become a parachain.
 
 ### Is GRANDPA / BABE similar to PBFT?
 
@@ -106,7 +106,7 @@ Polkadot is primarily designed to be a very efficient and minimal heterogeneous 
 |Consensus|Tendermint (BFT)|GRANDPA/BABE|
 |Governance|Validator/Delegator Vote|Referendum and Council representing stakeholders|
 |Models|Hub and Zones|Relay chain and parachains|
-|Security|Each zone has its own security|Pooled security|
+|Security|Each zone has its own security|Shared security|
 |Native token|Atom|Dot|
 
 

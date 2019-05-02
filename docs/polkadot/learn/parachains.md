@@ -14,7 +14,7 @@ The Polkadot architecture allows for the state transitions performed on the para
 
 By connecting to Polkadot a parachain gains two major advantages over an independent _sovereign chain:_
 
-- [Pooled security](./security.md)
+- [Shared security](./security.md)
 - [Trust-free interchain transactability](./interchain.md)
 
 ## Examples
