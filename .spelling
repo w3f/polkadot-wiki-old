@@ -216,6 +216,8 @@ boneh-lynn-shacham
 bip32-ed25519
 brudges
 paritytech
+altcoins
+1.1m
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
@@ -244,3 +246,5 @@ Thiele's
 HSMs
  - docs/polkadot/learn/auction.md
 polkadot#239
+ - docs/polkadot/learn/security.md
+stakers
