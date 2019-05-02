@@ -95,7 +95,7 @@ Substrate内置拥有自己的网络层，但它不能够直接兼容Polkadot校
  - 与Polkadot上产生的区块兼容并可被验证
  - 只需要细小修改，把Cumulus整合到Substrate链，并移植到Polkadot上成为平行链。可能只是导入crate和添加一行代码。
 
-Polkadot其中一个始创人Rob Habermeier，最近在EthCC分享了最新Cumulus的开发状况，在下面可以观看。
+Polkadot其中一位始创人Rob Habermeier，最近在EthCC分享了最新Cumulus的开发状况，在下面可以观看。
 
 [![img](http://img.youtube.com/vi/thgtXq5YMOo/0.jpg)](https://www.youtube.com/watch?v=thgtXq5YMOo)
 
