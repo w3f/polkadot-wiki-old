@@ -220,6 +220,7 @@ altcoins
 1.1m
 ownable
 OpenZeppelin
+sybil
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
