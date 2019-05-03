@@ -218,6 +218,8 @@ brudges
 paritytech
 altcoins
 1.1m
+ownable
+OpenZeppelin
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
@@ -248,3 +250,8 @@ HSMs
 polkadot#239
  - docs/polkadot/learn/security.md
 stakers
+ - docs/polkadot/build/smart-contracts.md
+upgradeability
+ - docs/polkadot/build/hackathon.md
+Hackathon
+hackathon
