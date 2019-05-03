@@ -14,6 +14,7 @@ nav:
    - Extrinsic Format: polkadot/build/extrinsic-format.md
    - Networks: polkadot/build/networks.md
    - Rust Style Guide: polkadot/build/rust-style-guide.md
+   - Smart Contracts: polkadot/build/smart-contracts.md
    - Tools: polkadot/build/tools/index.md
  - Learn:
    - Home: polkadot/learn/index.md
