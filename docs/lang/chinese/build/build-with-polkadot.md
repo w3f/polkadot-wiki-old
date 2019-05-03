@@ -164,6 +164,6 @@ Polkadot的智能合约还是处于早期，而且开发才刚刚开始稳定下
 
 本指南經已給了一個全面兩者的分別及展示了必要的资料帮助你作出决定項目是適合建立平行链还是智能合约。尽管工具还没成熟，但是提早熟悉對你有好处，项目赢在起跑线，并且允許你创造真正创新的东西。
 
-如果你有任何平行链或智能合约有趣的想法分享，请随时在[Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)与我们交谈，如果你对开发有疑问，可以尝试在[Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org)或Substrate Technical频道问技术性问题，一如既往保持留意我们的[社交频道](https://wiki.polkadot.network/en/latest/community/)。
+如果你有任何平行链或智能合约有趣的想法分享，请随时在[Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)与我们交谈，如果你对开发有疑问，可以尝试在[Polkadot Beginners Lounge](https://riot.im/app/#/room/#polkadotnoobs:matrix.org)或[Substrate Technical](https://riot.im/app/#/room/#substrate-technical:matrix.org)频道问技术性问题，一如既往保持留意我们的[社交频道](https://wiki.polkadot.network/en/latest/community/)。
 
 祝你好运!
