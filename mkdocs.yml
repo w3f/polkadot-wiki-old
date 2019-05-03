@@ -55,7 +55,7 @@ nav:
      - How to systemd: polkadot/node/guides/how-to-systemd.md
    - Governance: polkadot/node/governance/index.md
  - Other Languages:
-   - Chinese: lang/chinese.md
+   - Chinese: lang/chinese/index.md
    - Japanese: lang/japanese.md
 
 # Configuration for the Material theme

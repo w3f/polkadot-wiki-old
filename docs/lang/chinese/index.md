@@ -12,6 +12,8 @@
 
 
 ## Parachain 平行链资料
+[開發者快速入门指南](./build/build-with-polkadot.md) 
+
 [部署平行链](./build/deploy-parachains.md) 
 
 ## Substrate
@@ -36,14 +38,14 @@ Substrate 簡介
 
 #### 微信公众号 - Page Account
 
-![](../img/wechat_page_account.jpg)
+![](../../img/wechat_page_account.jpg)
 
 
 #### 微信群 - Wechat Group
 
 请加polkadot-web3
 
-![](../img/polkadot-wechat.jpg)
+![](../../img/polkadot-wechat.jpg)
 
 [中文电报群 - Telegram Group](https://t.me/polkadotChi)
 
