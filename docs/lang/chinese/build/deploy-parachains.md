@@ -66,19 +66,19 @@ Hex: 0x0000000000000000000000000000000000000000000000000000000000000000000000000
 
 在id栏位输入平行链的`id`，在这个简单的adder情况，将会是`100`。在`code`栏位，按下页面按钮之后你可以直接上传你之前编译好的`adder.wasm`二进制档案。在`initial_head_data`，你需要复制和贴下你从校对人取的Hex数据。在`value`栏位，你需要输入最小要求的数值从而创建公投，在Alexander测试网络暂时是5 DOTs。
 
-![registering a parachain](../../img/parachain/register.png)
+![registering a parachain](../../../img/parachain/register.png)
 
 假如你前往到`Democracy`标签，你应该会看到你的提案在议案部分
 
 一旦你等待的提案成为公投，你可以投票选择`赞成(Aye)`或`反对(Nay)`，投赞成票使你能够部署平行链。
 
-![parachain referendum](../../img/parachain/referendum.png)
+![parachain referendum](../../../img/parachain/referendum.png)
 
 当公投结束后，你可以查询你的平行链状态。
 
 前往`Chain State`标签之后选择查询`parachains`状态 ，你应该能够看到一些你的平行链资料。
 
-![parachain info](../../img/parachain/info.png)
+![parachain info](../../../img/parachain/info.png)
 
 ### 与Parachain互动
 
