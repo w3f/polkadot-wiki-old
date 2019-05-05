@@ -64,7 +64,7 @@ Validator can create a cut of the reward that is not shared with the nominators.
 For example, assume reward is 100 DOTs.
 A validator may specify `validator_payment = 50 DOTs` and the remaining 50 DOTs would split between the validator and their nominators based on the portion of stakes they had.
 
-Rewards can be used the same account (controller) to keep accumulating the rewards or stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
+Rewards can be used by the same account (controller) to keep accumulating the rewards or by the stash account (increasing the staked value/not increasing the staked value). Also, it is possible to top-up/withdraw partial bonded DOTs without having to complete un-stake everything.
 
 ## Inflation
 

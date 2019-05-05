@@ -6,7 +6,7 @@ Consensus is a method for coming to agreement over a shared state. In order for 
 
 ## What kinds of consensus exist?
 
-Although most of the time we refer to one of Proof of Work (PoW) and Proof of Stake (PoS) as the the consensus algorithm for blockchains, these are not the only ones that have been invented and exist. These two are the most popular and have arguably been among the largest innovations of blockchain technology as a whole, but there are a whole host of others (some of which are described in [this CoinDesk article](https://www.coindesk.com/short-guide-blockchain-consensus-protocols)).
+Although most of the time we refer to one of Proof of Work (PoW) and Proof of Stake (PoS) as the consensus algorithm for blockchains, these are not the only ones that have been invented and exist. These two are the most popular and have arguably been among the largest innovations of blockchain technology as a whole, but there are a whole host of others (some of which are described in [this CoinDesk article](https://www.coindesk.com/short-guide-blockchain-consensus-protocols)).
 
 ## Probable Finality vs. Provable Finality
 
@@ -40,7 +40,7 @@ Polite GRANDPA is an implementation method which allows for better network perfo
 
 ### BABE: Block Production
 
-BABE (Blind Assignment for Blockchain Extension) is the block production mechanism ran between the validator nodes that determines the authors of new blocks.
+BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between the validator nodes and determines the authors of new blocks.
 
 BABE assigns block production slots to validators according to stake and using the Polkadot [randomness cycle](./randomness.md).
 

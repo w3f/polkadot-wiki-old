@@ -97,7 +97,7 @@ From here you can transfer, stake and unstake tokens.
 
  - transfer(recipient,value) - Transfer by entering the recipient's address in the 'recipient field', then entering the number of DOTs you would like to send.
 
- - stake() - Stake the entirety of your selected account's balance to become a Validator. However, becoming a Validator requires more than just staking. To get more information on becoming a Validator, read the requirements and tutorial here.
+ - stake() - Stake the entirety of your selected account's balance to become a Validator. However, becoming a Validator requires more than just staking. To get more information on becoming a Validator, read the requirements and tutorial in the[Validator Guide](../node/guides/how-to-validate.md).
 
  - unstake() - Unstake the entirety of your selected account's balance to withdraw your bid to be a Validator.
 
