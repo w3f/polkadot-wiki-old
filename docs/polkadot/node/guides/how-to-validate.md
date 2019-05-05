@@ -133,12 +133,11 @@ Click `Stake`
 Open your terminal, if your node is fully synchronized, run your validator with the seed from the `Session` account.
 
 ```bash
-polkadot --validator \
+polkadot \
 --chain alex \
 --validator \
---key <SESSION_ACCOUNT_SEED>
+--key <SESSION_ACCOUNT_SEED> \
 --name <VALIDATOR_NAME_ON_TELEMETRY> \
---telemetry \
 --telemetry-url ws://telemetry.polkadot.io:1024
 ```
 
