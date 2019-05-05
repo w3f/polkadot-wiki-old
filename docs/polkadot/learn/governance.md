@@ -104,4 +104,4 @@ So, in general:
 
 ### Conclusion
 
-This is the governance mechanism, as it stands, for Polkadot Genesis. It may (and quite likely) will change before genesis based on feedback from the team, community and auditors. Wee know this is far from perfect, but we hope and expect that it is good enough to deliver the platform on which a truly great governance system can evolve and adapt over the course of Polkadot's lifetime.
+This is the governance mechanism, as it stands, for Polkadot Genesis. It may (and quite likely) will change before genesis based on feedback from the team, community and auditors. We know this is far from perfect, but we hope and expect that it is good enough to deliver the platform on which a truly great governance system can evolve and adapt over the course of Polkadot's lifetime.
