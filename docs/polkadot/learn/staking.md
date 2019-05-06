@@ -10,6 +10,8 @@ Any potential validators can indicate their intention to be a validator candidat
 
 There are three different accounts for managing your funds: `Stash`, `Controller` and `Session` accounts. 
 
+![staking](../../img/NPoS/staking-keys.png)
+
 - **Stash:** This is the primary account that holds the funds and has a portion bonded for participation; The funds can be kept in a cold wallet; All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
 - **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken). 
 - **Session** The seed of this account should be passed to the node using the `--key` parameter. The session account does not need to have funds as it does not need to send any transaction. The best practice is to create a dedicated account to be used as session account. Although a single account can theoretically be used as both `session` and `controller`, it is not recommended to do so. Having a dedicated `session` account would prevent the theft of funds should the validator node be compromised and the `--key` leaked.
@@ -69,6 +71,31 @@ Rewards can be used the same account (controller) to keep accumulating the rewar
 ## Inflation
 
 It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
+
+![staking](../../img/NPoS/staking-participation-rate.png)
+
+<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation)</sup></sub>
+
+**Blue line**: return rate based on the staking participation
+
+**Green line**: how many percentages of DOTs being staked to the network and the corresponding inflation rate.
+
+The above chart shows the inflation model of the network. Depends on the staking participation, the inflation rate will be dynamically changed to incentivize / disincentivize token holders to participate in the staking, for instance, inflation would be changed to 10% if there is 50% of DOTs being staked to the network.
+
+On the other hand, come up with the ideal staking rate is not an easy task since the network itself requires to have enough amount of DOTs being staked to provide the security guarantee and to avoid illiquidity for the market. 
+
+For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics/).
+
+## Why stake?
+
+- 10% inflation/year when the network launches
+- 50% targeted active staking 
+- ~20% annual return
+
+## Why not stake?
+
+- Tokens will be locked for about 12 weeks
+- Punishment in case of validator found to be misbehaving
 
 ## How many validators will Polkadot have?
 
