@@ -76,6 +76,10 @@ It will be closed to 10% in the first year. Each validator will get 1,000 - 2,00
 
 <sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation)</sup></sub>
 
+**x-axis**: amount of DOTs staked
+
+**y-axis**: the annualized pecentage
+
 **Blue line**: return rate based on the staking participation
 
 **Green line**:  inflation rate
