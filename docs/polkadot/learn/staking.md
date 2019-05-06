@@ -80,7 +80,7 @@ It will be closed to 10% in the first year. Each validator will get 1,000 - 2,00
 
 **Green line**: how many percentages of DOTs being staked to the network and the corresponding inflation rate.
 
-The above chart shows the inflation model of the network. Depends on the staking participation, the inflation rate will be dynamically changed to incentivize / disincentivize token holders to participate in the staking, for instance, inflation would be changed to 10% if there is 50% of DOTs being staked to the network.
+The above chart shows the inflation model of the network. Depending on the staking participation, the inflation rate will be dynamically changed to incentivize / disincentivize token holders to participate in staking. For instance, inflation would be 10% if there is 50% of DOTs being staked to the network.
 
 On the other hand, come up with the ideal staking rate is not an easy task since the network itself requires to have enough amount of DOTs being staked to provide the security guarantee and to avoid illiquidity for the market. 
 
