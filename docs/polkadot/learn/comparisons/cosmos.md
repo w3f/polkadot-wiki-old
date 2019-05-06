@@ -8,8 +8,7 @@ In Cosmos, a chain is referred to as a _zone_ and each uses an individual instan
 
 ## Consensus
 
-Cosmos uses the [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html#what-is-tendermint) consensus algorithm which is based on the practical Byzantine-Fault-Tolerant (PBFT) algorithm. For a general overview of PBFT, please see the overview [here]
-(https://crushcrypto.com/what-is-practical-byzantine-fault-tolerance/). In general, it is a family of consensus protocols that can handle no more than 1/3 byzantine nodes (malicious or offline nodes). 
+Cosmos uses the [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html#what-is-tendermint) consensus algorithm which is based on the practical Byzantine-Fault-Tolerant (PBFT) algorithm. For a general overview of PBFT, please see the overview [here](https://crushcrypto.com/what-is-practical-byzantine-fault-tolerance/). In general, it is a family of consensus protocols that can handle no more than 1/3 byzantine nodes (malicious or offline nodes). 
 
 Polkadot uses a combination of block production mechanism with a finality gadget, respectively termed BABE and GRANDPA. BABE is similar to Ouroboros Praos and GRANDPA is a finality gadget based on GHOST in the same vein as Casper FFG. It is **not** PBFT.
 
