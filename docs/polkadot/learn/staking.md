@@ -78,7 +78,7 @@ It will be closed to 10% in the first year. Each validator will get 1,000 - 2,00
 
 **x-axis**: amount of DOTs staked
 
-**y-axis**: the annualized pecentage
+**y-axis**: the annualized percentage
 
 **Blue line**: return rate based on the staking participation
 
