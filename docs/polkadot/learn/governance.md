@@ -16,7 +16,7 @@ On the face of it, this may seem somewhat restrictive: forcing a stakeholder-bas
 
 Despite this, by taking advantage of the fact that turnout is rarely 100%, we can effect different outcomes depending on the circumstances, crafting a balance of power between active and passive stakeholders. For example, simple voting systems typically introduce a notion of [quorum](https://en.wikipedia.org/wiki/Quorum), whereby a minimum amount of turnout must be reached before a vote is considered valid. This might be phrased as a "positive turnout bias", i.e. additional turnout makes change strictly *at least* as likely as a system with no need of quorum.
 
-Another mechanism used, one again which favors the *nay* side (or the *status quo*), is to require a super-majority approval. This works on two principles: firstly that the status quo tends to be safer than any change, and thus should have some bias towards it. Secondly that, like all means of empirical measurement, there is inevitably going to be some degree of inaccuracy and volatility over time. A result could be 51%-49% one month and then change to 49%-51% the following month because of macro-environmental factors such as the economy, social-demographic progression or even the weather. Given the costs involved in enacting the changes of a proposal, it is advantageous to ensure that a result would not likely flip within a short period of time after enactment, and thus a supermajority should approve the non-status-quo option. (As an example of why this can be important, a supre-majority was indeed not required in the UK's "Brexit" referendum, resulting in a result that, two years on from the vote but before the enactment, appears indeed to have flipped).
+Another mechanism used, one again which favors the *nay* side (or the *status quo*), is to require a super-majority approval. This works on two principles: firstly that the status quo tends to be safer than any change, and thus should have some bias towards it. Secondly that, like all means of empirical measurement, there is inevitably going to be some degree of inaccuracy and volatility over time. A result could be 51%-49% one month and then change to 49%-51% the following month because of macro-environmental factors such as the economy, social-demographic progression or even the weather. Given the costs involved in enacting the changes of a proposal, it is advantageous to ensure that a result would not likely flip within a short period of time after enactment, and thus a supermajority should approve the non-status-quo option. (As an example of why this can be important, a super-majority was indeed not required in the UK's "Brexit" referendum, resulting in a result that, two years on from the vote but before the enactment, appears indeed to have flipped).
 
 TODO: Decision graphs comparing majority-carries, static quorum, and super majority.
 
@@ -34,7 +34,7 @@ There is no particular voting period for a seat but rather a continuous election
 
 After an election happens, all unsuccessful candidates except for a number of runners-up are removed along with their approvals. Runners-up get to stay on (along with their approvals) ready for the next tally.
 
-The council is called upon primarily for two tasks of governance: proposing sensible referenda and cancelling uncontroversially dangerous or malicious referenda.
+The council is called upon primarily for two tasks of governance: proposing sensible referenda, and cancelling uncontroversially dangerous or malicious referenda.
 
 For a referendum to be proposed by the council, a strict majority of members must be in favor, with no member exercising a veto. Vetoes may be exercised only once by a member for any single proposal; if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time. In the case that all members vote in favor, the vote is considered unanimous and is treated as uncontroversial.
 
@@ -79,7 +79,7 @@ Once the votes are tallied, the result must be determined. There are three optio
 * A *positive turnout bias*, whereby a heavy super-majority of *aye* votes is required to **carry** at low turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as above.
 * A *negative turnout bias*, whereby a heavy super-majority of *nay* votes is required to **reject** at low turnouts, but as turnout increases towards 100%, it becomes a simple majority-carries as above.
 
-We assume that a majority council agreement, with no veto, signals a sensible, perhaps an irregular state transition. For this, we use the *majority carries* metric. As an exception to this when there is complete agreement within the council we assume that is signals a largely technocratic and uncontroversial protocol change. For this reason we assert that the "burden of proof" should fall on those against the motion and thus we use the *negative turnout bias* metric.
+We assume that a majority council agreement, with no veto, signals a sensible, perhaps an irregular state transition. For this, we use the *majority carries* metric. An exception to this is when there is complete agreement within the council. In this case we assume it signals a largely technocratic and uncontroversial protocol change. For this reason we assert that the "burden of proof" should fall on those against the motion and thus we use the *negative turnout bias* metric.
 
 Publicly submitted referenda, being public, can easily include malevolent or ill-considered actions. Here the onus must be placed on the proponents and so we bias any abstention votes against the motion, in favor of the (assumed safe, since its functional enough to administer this vote) status quo and use a *positive turnout bias*.
 
@@ -98,10 +98,10 @@ Where $t$ is the total number of voting tokens and $T$ is the total number of to
 So, in general:
 
 * Proposals submitted through the enactment of a referendum may (of course) use any counting mechanism;
-* Proposals submitted by unanimous council agreement need have more (probably much more) nay votes to aye votes before they are rejected;
+* Proposals submitted by unanimous council agreement need to have more (probably many more) nay votes to aye votes before they are rejected;
 * Proposals submitted by simple majority council agreement must have more aye votes to nay votes to be accepted;
 * Publicly submitted proposals must have more (probably much more) aye votes to nay votes in order to be approved.
 
 ### Conclusion
 
-This is the governance mechanism, as it stands, for Polkadot Genesis. It may (and quite likely) will yet change before genesis based on the feedback of the team, community and auditors. Wee know this is far from perfect, but we hope and expect that it is good enough to deliver the platform on which a truly great governance system can evolve and adapt over the course of Polkadot's lifetime.
+This is the governance mechanism, as it stands, for Polkadot Genesis. It may (and quite likely) will change before genesis based on feedback from the team, community and auditors. We know this is far from perfect, but we hope and expect that it is good enough to deliver the platform on which a truly great governance system can evolve and adapt over the course of Polkadot's lifetime.

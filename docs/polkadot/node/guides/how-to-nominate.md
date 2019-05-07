@@ -8,7 +8,7 @@ It has been updated for the Alexander testnet and Polkadot release PoC-4.
 
 We will assume that you will be starting with two fresh accounts. If you already have a `stash` and `controller` account and DOTs for which to nominate with, go ahead and skip to the next section.
 
-The first step is to create two accounts on the [Polkadot Dashboard](https://polkadot.js.org/apps/#/accounts/create). Name one account `My Stash` and another account `My Controller`.
+The first step is to create two accounts by going to the accounts tab on the Polkadot Dashboard and clicking on [create account](https://polkadot.js.org/apps/#/accounts/create). Name one account `My Stash` and another account `My Controller`.
 
 ![Creating an account](../../../img/guides/how-to-nominate/create-account.png)
 

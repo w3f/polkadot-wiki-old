@@ -85,7 +85,7 @@ It handles the network compatibility overhead that any parachain would need to i
 - Out-of-the-box Collator node setup
 - An embedded light client of the relay chain
 - Polkadot block authorship compatibility
-- Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on Polkadot with minimal modification, possible as little work as importing a crate and adding a single line.
+- Integrating Cumulus with your Substrate chain will port it into a parachain capable of working on Polkadot with minimal modification, possibly as little work as importing a crate and adding a single line.
 
 Rob Habermeier, a co-founder of Polkadot, recently gave a talk at EthCC that gave the latest on the development of Cumulus, which you can watch below.
 
@@ -159,7 +159,7 @@ Each platform will have a different way of paying for and maintaining the state 
 
 The different patterns you may see for paying for your smart contract include:
 
-- A transaction fee associated with the deploy transaction.
+- A transaction fee associated with deploying each transaction.
 - A subscription model in which you pay some chain entity routinely for usage of the platform.
 - An access token model for which you need to hold a threshold of native tokens to use the platform (EOS has something similar).
 Storage rent.

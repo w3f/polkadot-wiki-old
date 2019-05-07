@@ -89,7 +89,7 @@ You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxl
 ## Bond DOTs
 
 It is now time to setup our validator. We will do the following:
-- Bound the DOTs of the `Stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
+- Bond the DOTs of the `Stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
 - Select the `Controller` as.. the controller. This is the account that will decide when to start or stop validating.
 - Select the `Session` account as.. the session. This is the account whose seed will be used to run the node.
 
@@ -133,14 +133,19 @@ Click `Stake`
 Open your terminal, if your node is fully synchronized, run your validator with the seed from the `Session` account.
 
 ```bash
-polkadot --validator --key SESSION_ACCOUNT_SEED --name NAME_ON_TELEMETRY
+polkadot \
+--chain alex \
+--validator \
+--key <SESSION_ACCOUNT_SEED> \
+--name <VALIDATOR_NAME_ON_TELEMETRY> \
+--telemetry-url ws://telemetry.polkadot.io:1024
 ```
 
 Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after a few seconds, your node information will be shown.
 
 ![telemetry monitor](../../../img/validator/telemetry_monitor.jpg)
 
-Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many nodes are intended to be a validator.
+Go to [Staking apps](https://polkadot.js.org/apps/#/staking), select the "Staking Overview" tab, and you should see the list of active validators that are out there. At the top of the page, it shows how many validators slots are available and how many nodes are intending to be a validator.
 
 ![staking queue](../../../img/validator/polkadot-dashboard-staking-queue.png)
 
