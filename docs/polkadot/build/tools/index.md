@@ -60,6 +60,7 @@ Once you've configured and started to run a local node, you can interact with it
 ### Polkadot-JS Common
 
 Polkadot-JS Common provides various useful utility functions that are used across all projects in the @polkadot namespace and is split into a number of internal utility packages as follows. The documentation and usage instructions are provided at [Polkadot-JS/Common API Documentation](https://polkadot.js.org/common/).
+
 - [@polkadot/keyring](https://polkadot.js.org/common/keyring/) To create / load accounts in JavaScript, helpful for creating wallets or any application which will require the user to write to chain. [Examples](https://polkadot.js.org/common/examples/keyring/)
 - [@polkadot/util](https://polkadot.js.org/common/util/) Useful utility functions like checking if a string is hex encoded.
 - [@polkadot/util-crypto](https://polkadot.js.org/common/util-crypto/) Crypto utilities that will come into handy while developing with Polkadot.
@@ -71,4 +72,9 @@ Polkadot-JS Common provides various useful utility functions that are used acros
 ### CLI Tools
 
 - [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Simple commandline interface for the polkadot API. [Documentation](https://polkadot.js.org/api/api/)
-- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc) Simple RPC monitor for Polkadot. [RPC documentation](https://polkadot.js.org/api/METHODS_RPC.html)
+- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc) Simple RPC monitor for Polkadot. See the RPC tools below for additional information.
+
+### RPC Tools
+
+- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - Demonstrates how the JS tools interact with the node over RPC. 
+- [RPC documentation](https://polkadot.js.org/api/METHODS_RPC.html) - Documents Substrate RPC endpoints.
