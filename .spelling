@@ -228,6 +228,8 @@ OpenZeppelin
 sybil
 illiquidity
 disincentivize
+api
+rpc-provider
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
