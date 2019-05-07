@@ -1,6 +1,6 @@
 # Staking
 
-Polkadot uses NPoS (Nominated Proof-of-Stake) consensus, which will have a limited amount of slots available at genesis for those who are interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOT holders get paid more for nominating multiple validators to ensure the network will not be heavily centralized on only a few validators. Validators take the role of both validating blocks and guaranteeing the finality of the chain, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight. Both validators and nominators will earn rewards proportional to the amount that they stake, with validators having the ability to set payment preferences.
+Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. Polkadot will have a limited amount of slots available at genesis for those who are interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOT holders get paid more for nominating multiple validators to ensure the network will not be heavily centralized on only a few validators. Validators take the role of both validating blocks and guaranteeing the finality of the chain, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight. Both validators and nominators will earn rewards proportional to the amount that they stake, with validators having the ability to set payment preferences.
 
 Any potential validators can indicate their intention to be a validator candidate. Validators who signal intention will be added to a waiting queue for nominators to elect and become active in the next era if a validator get enough nomination support.      
 
@@ -9,6 +9,8 @@ Any potential validators can indicate their intention to be a validator candidat
 ## Accounts
 
 There are three different accounts for managing your funds: `Stash`, `Controller` and `Session` accounts. 
+
+![staking](../../img/NPoS/staking-keys.png)
 
 - **Stash:** This is the primary account that holds the funds and has a portion bonded for participation; The funds can be kept in a cold wallet; All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
 - **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken). 
@@ -69,6 +71,35 @@ Rewards can be used by the same account (controller) to keep accumulating the re
 ## Inflation
 
 It will be closed to 10% in the first year. Each validator will get 1,000 - 2,000 DOTs per month to share with their nominators.
+
+![staking](../../img/NPoS/staking-participation-rate.png)
+
+<sub><sup>Source: [Research - Web3 Foundation](https://research.web3.foundation)</sup></sub>
+
+**x-axis**: amount of DOTs staked
+
+**y-axis**: the annualized percentage
+
+**Blue line**: return rate based on the staking participation
+
+**Green line**:  inflation rate
+
+The above chart shows the inflation model of the network. Depending on the staking participation, the inflation rate will be dynamically changed to incentivize / disincentivize token holders to participate in staking. For instance, inflation would be 10% if there is 50% of DOTs being staked to the network.
+
+Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees we want and to avoid illiquidity on the market. 
+
+For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics/).
+
+## Why stake?
+
+- 10% inflation/year when the network launches
+- 50% targeted active staking 
+- ~20% annual return
+
+## Why not stake?
+
+- Tokens will be locked for about 12 weeks
+- Punishment in case of validator found to be misbehaving
 
 ## How many validators will Polkadot have?
 
