@@ -6,60 +6,60 @@ In order to do this, we bring together various novel mechanisms, including an am
 
 ## Mechanism
 
-### Purpose proposal
+### Creating proposals
 
-Anyone can create a proposal by depositing minimum value in a certain period of time (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number supported proposal will be selected to allow everyone votes for it that is called referenda. Those tokens will be released once the proposal is tabled.
+Anyone can create a proposal by depositing minimum value in a certain period of time (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number of supported proposals will be selected. Those tokens will be released once the proposal is tabled.
 
 ### Voting on referenda
 
-Essentially, holding only a small amount of the DOTs token does not mean that they do not have the ability to influence the referenda result. Since Polkadot introduces an idea called Voluntary Locking that lets the token holders increasing the voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+Essentially, holding only a small amount of DOT tokens does not mean that they do not have the ability to influence the referenda result. Since Polkadot introduces an idea called Voluntary Locking that lets the token holders increasing their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
 ```
-Votes = tokens * periods 
+Max votes = tokens * periods 
 ```
 
 Based on the current testnet setting, the maximum number of lock periods could NOT be more than 6.
 
-**Each period takes 2 weeks that means the longest locking time would be 12 weeks.**
+**Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
 
 
 ```
 Example: 
 
-Peter: Vote `No` with 10 DOTs 12 weeks lock  => 10 * 6 = 60 Votes
+Peter: Votes `No` with 10 DOTs for a 12 week lock period  => 10 * 6 = 60 Votes
 
-Logan: Vote `Yes` with 20 DOTs 2 weeks lock => 20 * 1 = 20 Votes
+Logan: Votes `Yes` with 20 DOTs for a 2 week lock period => 20 * 1 = 20 Votes
 
-Kevin: Vote `Yes` with 15 DOTs 4 weeks lock => 15 * 2 = 30 Votes
+Kevin: Votes `Yes` with 15 DOTs for a 4 week lock period => 15 * 2 = 30 Votes
 ```
 
-According to the above scenario, even though combining both Logan and Kevin DOTs are more than Peter, the locking period for both of them are far less than Peter leading to their voting power counting as less.
+According to the above scenario, even though combining both Logan and Kevin's DOTs is more than Peter, the lock period for both of them is far less than Peter, leading to their voting power counting as less.
 
 
-Once voting is finished, only the winning voter’s tokens locked that means if that referendum hurts the network, those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning motions are autonomously enacted only after some cool-down period.
+Once voting is finished, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning motions are autonomously enacted only after some cool-down period.
 
  
 ### Adaptive Quorum Biasing
 
-Polkadot uses an innovative governance mechanism to dynamically adjust the turnout bias. If low turnout rate, super-majority is required in order to pass the motion that means the higher threshold of saying “ayes” has to be reached.
+Polkadot uses an innovative governance mechanism to dynamically adjust the turnout bias. If there is a low turnout rate, a super-majority is required in order to pass the motion, which means a higher threshold of "aye" (yes) votes has to be reached.
 
 ```
 Example:
 
-If the referenda only has 20% turnout, Ayes has to be reached 14% in order to pass it.
+If the referenda only has 20% turnout, the tally of "aye" votes has to reach 14% in order for it to pass.
 
-In contrast, if it has 50% turnout, Ayes has to be reached 29% that means as more token holders voting on a referenda, super-majority required decrease as turnout highers.
+In contrast, if it has 50% turnout, the tally of "aye" votes has to reached 29%, which means that as more token holders vote on a referenda, then the super-majority required decreases as the turnout increases.
 ```
 
 
-This would be the tentative governance configuration for the Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
+This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
 
 ## [Council](https://github.com/paritytech/polkadot/wiki/Governance#council)
 
-Since not everyone is interested in participating the governance, there is a council entity to represent the passive token holders. Council member election is done through an approval vote.
+Since not everyone is interested in participating in governance, there is a council entity to represent the passive token holders. Election of council members is done through an approval vote.
 
-The council is called upon primarily for two tasks of governance: proposing sensible referenda and cancelling uncontroversially dangerous or malicious referenda.
+The council is called upon primarily for two tasks of governance: proposing sensible referenda, and cancelling uncontroversially dangerous or malicious referenda.
 
 
 _TODO_ Council Election Process
