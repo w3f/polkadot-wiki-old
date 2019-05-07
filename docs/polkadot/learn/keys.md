@@ -37,8 +37,6 @@ The 3 keys of the session certificate:
 
 A BLS key is desirable for GRANDPA because it allows for signature aggregations in a much more efficient way than is possible using Schnorr signatures. However, Schnorr signatures are useful for block production in BABE so must be employed there. Finally, libp2p is implemented to work with the more common Ed25519 keys and so is required for that.
 
-_TODO: Why are different keys needed for each of these functions? More details._
-
 ## FAQ
 
 ### Why was `ed25519` selected over `secp256k1`?

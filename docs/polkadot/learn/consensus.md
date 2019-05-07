@@ -36,7 +36,7 @@ For details on GRANDPA, please see the [GRANDPA page](http://research.web3.found
 
 ### "Polite" GRANDPA
 
-Polite GRANDPA is an implementation method which allows for better network performance among nodes. It is mentioned here because it should be considered part of the specification and replicated by independent teams building clients. <!-- TODO: link -->
+Polite GRANDPA is an implementation method which allows for better network performance among nodes. It is mentioned here because it should be considered part of the specification and replicated by independent teams building clients.
 
 ### BABE: Block Production
 

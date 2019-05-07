@@ -18,4 +18,4 @@ There are proposed solutions that have been considered for stronger randomness b
 
 ## Resources
 
-- [Discussion on Randomness used in Polkadot](https://github.com/paritytech/ink/issues/57) - W3F researchers discuss the randomness in Polkadot and when it is usable and under which assumptions. <!-- TODO break this down into paragraphs above -->
+- [Discussion on Randomness used in Polkadot](https://github.com/paritytech/ink/issues/57) - W3F researchers discuss the randomness in Polkadot and when it is usable and under which assumptions. 
