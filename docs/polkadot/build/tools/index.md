@@ -70,5 +70,5 @@ Polkadot-JS Common provides various useful utility functions that are used acros
 
 ### CLI Tools
 
-- [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Simple commandline interface for the polkadot API. **!Needs documentation**
-- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc) Simple RPC monitor for Polkadot. **!Needs documentation**
+- [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Simple commandline interface for the polkadot API. [Documentation](https://polkadot.js.org/api/api/)
+- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc) Simple RPC monitor for Polkadot. [RPC documentation](https://polkadot.js.org/api/METHODS_RPC.html)
