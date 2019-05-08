@@ -61,11 +61,6 @@ Since not everyone is interested in participating in governance, there is a coun
 
 The council is called upon primarily for two tasks of governance: proposing sensible referenda, and cancelling uncontroversially dangerous or malicious referenda.
 
-
-_TODO_ Council Election Process
-
-_TODO_ Council Propose Referendum
-
 ## [Referenda](https://github.com/paritytech/polkadot/wiki/Governance#referenda)
 
 ## [Voting]()

@@ -35,9 +35,7 @@ The 3 keys of the session certificate:
 - An SR25519 key used for BABE.
 - And; An Ed25519 key used for libp2p.
 
-A BLS key is desirable for GRANDPA because it allows for signature aggregations in a much more efficient way than is possible using Schnorr signatures. However, Schnorr signatures are useful for block production in BABE so must be employed there. Finally, libp2p is implemented to work with the more common Ed25519 keys and so is required for that.
-
-_TODO: Why are different keys needed for each of these functions? More details._
+A BLS key is desirable for GRANDPA because it allows for signature aggregations in a much more efficient way than is possible using Schnorr signatures. BABE requires keys suitable for use in a [Verifiable Random Function](../randomness#vrfs) as well as for digital signatures. SR25519 keys have both capabilities and so are used for BABE. Finally, libp2p is implemented to work with the more common Ed25519 keys and so is required for that.
 
 ## FAQ
 
