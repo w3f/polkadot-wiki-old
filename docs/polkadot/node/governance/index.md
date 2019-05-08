@@ -22,7 +22,6 @@ Based on the current testnet setting, the maximum number of lock periods could N
 
 **Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
 
-
 ```
 Example: 
 
@@ -35,11 +34,9 @@ Kevin: Votes `Yes` with 15 DOTs for a 4 week lock period => 15 * 2 = 30 Votes
 
 According to the above scenario, even though combining both Logan and Kevin's DOTs is more than Peter, the lock period for both of them is far less than Peter, leading to their voting power counting as less.
 
-
 Once voting is finished, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning motions are autonomously enacted only after some cool-down period.
 
- 
-### Adaptive Quorum Biasing
+### [Adaptive Quorum Biasing](../../learn/governance.md#vote-counting)
 
 Polkadot uses an innovative governance mechanism to dynamically adjust the turnout bias. If there is a low turnout rate, a super-majority is required in order to pass the motion, which means a higher threshold of "aye" (yes) votes has to be reached.
 
@@ -51,19 +48,15 @@ If the referenda only has 20% turnout, the tally of "aye" votes has to reach 14%
 In contrast, if it has 50% turnout, the tally of "aye" votes has to reached 29%, which means that as more token holders vote on a referenda, then the super-majority required decreases as the turnout increases.
 ```
 
-
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
-
-## [Council](https://github.com/paritytech/polkadot/wiki/Governance#council)
+## [Council](../../learn/governance.md#council)
 
 Since not everyone is interested in participating in governance, there is a council entity to represent the passive token holders. Election of council members is done through an approval vote.
 
 The council is called upon primarily for two tasks of governance: proposing sensible referenda, and cancelling uncontroversially dangerous or malicious referenda.
 
-## [Referenda](https://github.com/paritytech/polkadot/wiki/Governance#referenda)
-
-## [Voting]()
+## [Referenda](../../learn/governance.md#referenda)
 
 ## Usage of DOT
 
@@ -78,6 +71,6 @@ New parachains are added by bonding tokens. Outdated or non-useful parachains ar
 
 ## Guides
 
-### [How to create a proposal ?]()
-### [How to join the council ?]()
-### [How to propose a referendum ?]()
+### [How to create a proposal]()
+### [How to join the council]()
+### [How to propose a referendum]()
