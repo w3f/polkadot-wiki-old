@@ -6,6 +6,8 @@ In order to do this, we bring together various novel mechanisms, including an am
 
 ## Overview
 
+![Governance Overview](../../../img/governance/Governance-diagram.png)
+
 The governance system of Polkadot is founded wholly around the idea of stakeholder voting. A key and unfailing rule is:
 
 **All changes to the protocol must be agreed upon by stake-weighted referendum; the majority of stake can always command the network.**
@@ -91,6 +93,9 @@ $
 
 Where $t$ is the total number of voting tokens and $T$ is the total number of tokens issued in the system. $aye$ is the number of *aye* votes, and $nay$ the number of *nay* votes.
 
+![AQB](../../../img/governance/AQB.png)
+![AQB-electorate](../../../img/governance/AQB-electorate.png)
+
 So, in general:
 
 * Proposals submitted through the enactment of a referendum may (of course) use any counting mechanism;
@@ -101,3 +106,7 @@ So, in general:
 ### Conclusion
 
 This is the governance mechanism, as it stands, for Polkadot Genesis. It may (and quite likely) will change before genesis based on feedback from the team, community and auditors. We know this is far from perfect, but we hope and expect that it is good enough to deliver the platform on which a truly great governance system can evolve and adapt over the course of Polkadot's lifetime.
+
+## Resources
+
+- The above has been adapted from Gavin Wood's original post on [governance](https://github.com/paritytech/polkadot/wiki/Governance).
