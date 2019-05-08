@@ -78,6 +78,10 @@ theme:
 extra_css:
   - 'stylesheets/extra.css'
 
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://research.web3.foundation/en/latest/mathjax-config.js
+
 # Repository that houses the source code for this site. This
 # is needed to render the nice GH link on the top right.
 repo_name: 'w3f/polkadot-wiki'
