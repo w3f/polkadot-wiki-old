@@ -57,6 +57,7 @@ nav:
  - Other Languages:
    - Chinese: lang/chinese/index.md
    - Japanese: lang/japanese.md
+ - News: news.md
 
 # Configuration for the Material theme
 theme:
