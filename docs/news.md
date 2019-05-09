@@ -2,6 +2,7 @@
 
 This Week in Polkadot is a weekly aggregation of the top news in the Polkadot space, maintained by Rory from W3F.
 
+- [This Week in Polkadot 10](https://www.reddit.com/r/dot/comments/bm5bmc/this_week_in_polkadot/) - May 8, 2019
 - [This Week in Polkadot 9](https://www.reddit.com/r/dot/comments/bj3mvo/this_week_in_polkadot/) - April 30, 2019
 - [This Week in Polkadot 8](https://www.reddit.com/r/dot/comments/bgkjhj/this_week_in_polkadot/) - April 23, 2019
 - [This Week in Polkadot 7](https://www.reddit.com/r/dot/comments/bdyg5w/this_week_in_polkadot/) - April 16, 2019
