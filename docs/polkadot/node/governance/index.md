@@ -50,24 +50,38 @@ In contrast, if it has 50% turnout, the tally of "aye" votes has to reached 29%,
 
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
-## [Council](../../learn/governance.md#council)
+## Council
 
-Since not everyone is interested in participating in governance, there is a council entity to represent the passive token holders. Election of council members is done through an approval vote.
+The council is an on-chain entity comprised of a set of account IDs. Its overall purpose is to represent the passive stakeholders whom do not participate in the governance process. Election of council members is done through an approval vote.
 
-The council is called upon primarily for two tasks of governance: proposing sensible referenda, and cancelling uncontroversially dangerous or malicious referenda.
+The two main tasks of the council are:
 
-## [Referenda](../../learn/governance.md#referenda)
+- Making sensible proposals for referenda.
+- Cancelling any uncontroversially dangerous or malicious referenda.
 
-## Usage of DOT
+### How does one join the council?
 
-* **Governance** -
-Polkadot holders have complete control over the protocol. All privileges, which on other platforms are exclusive to miners, will be given to the relay chain participants (DOT holders), including managing exceptional events such as protocol upgrades and fixes.
+An account wishing to join the council must first signal their candidacy and submit the required bond. The requisite bond for council membership is configurable by the governance process. The voting process is continuous and voters may at any time register approval of an account for inclusion to the council. Each voting period, the tally is taken for new votes and the winners of the vote are allowed to present themselves as active for the council seat. The council seat is then active for duration of the term. The number of desired seats for the council is a parameter that can be determined by the governance process and is envisioned to be 24 for Polkadot with 12 month terms.
 
-* **Operation** - 
-Game theory incentivizes token holders to behave in honest ways. Good actors are rewarded by this mechanism whilst bad actors will lose their stake in the network. This ensures the network stays secure.
+### How are council motions made? What can they do?
 
-* **Bonding** - 
-New parachains are added by bonding tokens. Outdated or non-useful parachains are removed by removing bonded tokens. This is a form of Proof of Stake.
+### How does one vote for a council member?
+
+Voters must also submit a bond to signal approvals for council seats. If a voter becomes inactive, they may be "reaped" by an external actor and their bond claimed as a reward. The process of the running votes is known as [approval voting](https://en.wikipedia.org/wiki/Approval_voting).
+
+### Resources
+
+- [Governance Description](../../learn/governance.md#council)
+- [Council Module](https://github.com/paritytech/)
+
+## Referenda (General Stakeholder Voting)
+
+### Resources
+
+- [Governance Description](../../learn/governance.md#referenda)
+- [Democracy Module](https://github.com/paritytech/)
+
+## [Usage of DOT](../../learn/DOT.md#dots-for-governance)
 
 ## Guides
 
