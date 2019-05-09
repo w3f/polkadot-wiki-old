@@ -80,9 +80,9 @@ It will be closed to 10% in the first year. Each validator will get 1,000 - 2,00
 
 **y-axis**: the annualized percentage
 
-**Blue line**: return rate based on the staking participation
+**Green line**: return rate based on the staking participation
 
-**Green line**:  inflation rate
+**Blue line**:  inflation rate
 
 The above chart shows the inflation model of the network. Depending on the staking participation, the inflation rate will be dynamically changed to incentivize / disincentivize token holders to participate in staking. For instance, inflation would be 10% if there is 50% of DOTs being staked to the network.
 

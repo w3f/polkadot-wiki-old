@@ -1,25 +1,27 @@
 # Parachain Slots Auction
 
 <div class="img-container">
-    <a href="../../../img/parachain-roadmap.jpg" targe="_blank">
+    <a href="https://slides.com/paritytech/validating-in-polkadot#/20" target="_blank">
         <img alt="Polkadot's roadmap to 200 parachains" src="../../../img/parachain-roadmap.jpg"/>
     </a>
-    Polkadot's roadmap to 200 parachains.
+    Parachain auction schedule. [Click for slide]
 </div>
 
-The parachain slots of Polkadot will be sold according to an English auction with retroactively determined close. 
+The parachain slots of Polkadot will be sold according to an unpermissioned [Candle auction](https://en.wikipedia.org/wiki/Candle_auction) which has been slightly modified to be secure on a blockchain.
 
-## Mechanics of an English auction with retroactively determined close
+## Mechanics of a Candle auction
 
-English auctions are open auctions where bidders submit bids that are increasingly higher and the highest bidder at the conclusion of the auction is considered the winner.
+Candle auctions are a variant of open auctions where bidders submit bids that are increasingly higher and the highest bidder at the conclusion of the auction is considered the winner. 
 
-There are many variations on the typical English auction in which one of the procedures is changed to alter the mechanics of the auction. One example of the variations is the candle auction, which gets its name from a mechanism originally employed in the 16th century for the sale of ships. The candle auction changes the English auction by determining the end of the auction phase through some external, random event such as the extinguishing of a lit candle's flame.
+Candle auctions were originally employed in 16th century for the sale of ships and get their name from the "inch of a candle" that determined the open period of the auction. When the flame extinguished and the candle went out, the auction would suddenly terminate and the standing bid at that point would win.
 
-A parachain auction will differ from the candle auction in that it will not close at a random time. Instead it is retroactively determined to have ended at some point while the bids were being accepted. While the auction is open, bids will continue to be accepted. However, later bids have higher probability of not winning since the retroactively determined close moment may be found to be before a later bid was submitted.
+When Candle auctions are used online, they require a random number to decide the moment of termination. 
 
-## Why use an English auction with retroactively determined close?
+Parachain slot auctions will differ slightly from a normal Candle auction in that it does not use the random number to decide the duration of its opening phase. Instead, it has a known open phase and will be retroactively determined (at the normal close) to have ended at some point in the past. So during the open phase, bids will continue to be accepted but, later bids have higher probability of losing since the retroactively determined close moment may be found to be preceding the moment a bid was submitted.
 
-The open and transparent nature of blockchain systems opens attack vectors which are non-existent in traditional auction formats. English auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
+## Why use a Candle auction?
+
+The open and transparent nature of blockchain systems opens attack vectors which are non-existent in traditional auction formats. Normal open auctions in particular can be vulnerable to _auction sniping_ when implemented over the internet or on a blockchain.
 
 Auction sniping takes place when the end of an auction is known and bidders are hesitant to bid their true price early, in hopes of paying less than they actually value the item. 
 
@@ -27,15 +29,17 @@ For example, Alice may value an item at auction for 30 USD. She submits an initi
 
 On blockchains this may be even worse since it potentially gives the producer of the block an opportunity to snipe any auction at the last concluding block. There is also the possibility of a malicious bidder or a block producer to _grief_ honest bidders by sniping auctions.
 
-For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase, have emerged as a well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable names on the [ENS](https://ens.domains). The English auction with retroactively determined close is another solution which does not need the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart contracts to participate.
+For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a variant of second price auction in which bids are hidden and only revealed in a later phase, have emerged as a well-regarded mechanic. For example, it is implemented as the mechanism to auction human readable names on the [ENS](https://ens.domains). The Candle auction is another solution which does not need the two-step commit and reveal schemes (a main component of Vickrey auctions), and for this reason allows smart contracts to participate.
 
-English auctions with retroactively determined closes make it so that everyone always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise they might find themselves in the situation that the auction was determined to have "ended" before they even bid.
+Candle auctions make it so that everyone always know the states of the bid, but not when the auction will be determined to have "ended." This helps to ensure that bidders are willing to bid their true bids early. Otherwise they might find themselves in the situation that the auction was determined to have "ended" before they even bid.
 
 ## How it's used in Polkadot
 
 Polkadot will use a _random beacon_ based on the VRF that's used also in other places of the protocol. The VRF will provide the base of the randomness which will retroactively determine the "end-time" of the auction.
 
-When an account bids, they can place bids for any of the available units or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous unit or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid from an external account.
+When an account bids, they can place bids for any of the available periods or ranges in a slot. However, if a parachain (with the same STF) bids then that parachain must bid on a continuous period or range to the one they already occupy. They will not be able to bid for an overlapping slot (no multiples of the same parachain at the same time) and they will not be able to bid for a future slot if there is a gap in between. In the case a parachain is rebooted after having already reached the conclusion of its slot duration, it will need to be started again from a new genesis (which could be snapshot of all the old state) and will need to be bid from an external account.
+
+The slot durations are capped to 2 years and divided into 6-month periods. Parachains may lease a slot for any contiguous range of the slot duration. Parachains may lease more than one slot over time, meaning that they could extend their lease to Polkadot past the 2 year slot duration simply by leasing a contiguous slot.
 
 ## How does bidding work?
 
@@ -52,14 +56,14 @@ Slot E |__________|__________|     1     |     2     |     3     |     4     |..
        ^                                             ^
        ---------------------2 years-------------------      
 
-Each unit of the range 1 - 4 represents a 6-month duration for a total of 2 years
+Each period of the range 1 - 4 represents a 6-month duration for a total of 2 years
 ```
 
-Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `unit`. More than one continuous `unit` is a `range`.
+Each parachain slot has a maximum duration of 2 years. Each 6 month interval in the slot is divided into its own `lease period`. More than one continuous `period` is a `range`.
 
 Several auctions will take place in the preceding six months before a set of parachain slot leases begin.
 
-Bidders will submit a configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the units 1 - 4.
+Bidders will submit a configuration of bids specifying the DOT amount they are willing to lock up and for which ranges. The slot ranges may be any continuous range of the periods 1 - 4.
 
 A bidder configuration for a single bidder may look like this:
 
@@ -67,20 +71,20 @@ A bidder configuration for a single bidder may look like this:
 Bids [
        {
               range: [1,2,3,4],
-              bond_amount: 20, //DOTs
+              bond_amount: 300, //DOTs
        },
        {
               range: [1,2],
-              bond_amount: 30, //DOTs
+              bond_amount: 777, //DOTs
        },
        {
               range: [2,3,4],
-              bond_amount: 25, // DOTs
+              bond_amount: 450, // DOTs
        }
 ]
 ```
 
-The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the amount of staked DOTs over the 4 units of the parachain slot.
+The winner selection algorithm will pick bids which may be non-overlapping in order to maximize the amount of DOTs held over the entire 2-year lease duration of the parachain slot. This means that the highest bidder for any given slot lease period might not always win (see the [example below](#compete)).
 
 A random number is determined at each block which is based on the VRF used by Polkadot. Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random number produced by the VRF is examined next to the threshold to determine if that block is the end of the auction. Additionally, the VRF will pick a block from the last epoch to take the state of bids from (to mitigate some types of attacks from malicious validators).
 
@@ -110,7 +114,7 @@ Dave bids `100 DOTs` for the range 3 - 4.
 
 Emily bids `40 DOTs` for the range 1 - 2.
 
-Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the amount of units in the specified range of the bid.
+Let's calculate every bidder's valuation according to the algorithm. We do this by multiplying the bond amount by the amount of periods in the specified range of the bid.
 
 Charlie - 75 * 4 = 300 for range 1 - 4
 
@@ -130,7 +134,7 @@ For the duration of the slot the `DOTs` bid in the auction will be locked up. Th
 
 ### How does this mechanism help ensure parachain diversity?
 
-The method for dividing the parachain slots into six month intervals was partly inspired by the desire to allow for a greater amount of parachain diversity, and prevent particularly large and well-funded parachains from hoarding slots. By making each unit a six-month duration but the overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure they secure a slot at the end of their lease while gradually allowing other parachains to enter the ecosystem to occupy the six-month durations which are not filled. For example, if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in getting the next slot which would open for 2 - 5. Under this mechanism that parachain could acquire unit 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to be occupied by another.
+The method for dividing the parachain slots into six month intervals was partly inspired by the desire to allow for a greater amount of parachain diversity, and prevent particularly large and well-funded parachains from hoarding slots. By making each period a six-month duration but the overall slot a 2-year duration, the mechanism can cope with well-funded parachains that will ensure they secure a slot at the end of their lease while gradually allowing other parachains to enter the ecosystem to occupy the six-month durations which are not filled. For example, if a large, well-funded parachain has already acquired a slot for range 1 - 4, they would be very interested in getting the next slot which would open for 2 - 5. Under this mechanism that parachain could acquire period 5 (since that is the only one it needs) and allow range 2 - 4 of the second parachain slot to be occupied by another.
  
 ### Why is randomness difficult on blockchains?
 
