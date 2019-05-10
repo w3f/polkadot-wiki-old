@@ -63,7 +63,7 @@ The two main tasks of the council are:
 
 An account wishing to join the council must first signal their candidacy and submit the required bond. The requisite bond for council membership is configurable by the governance process. The voting process is continuous and voters may at any time register approval of an account for inclusion to the council. Each voting period, the tally is taken for new votes and the winners of the vote are allowed to present themselves as active for the council seat. The council seat is then active for duration of the term. The number of desired seats for the council is a parameter that can be determined by the governance process and is envisioned to be 24 for Polkadot with 12 month terms.
 
-### How are council motions made? What can they do?
+<!-- ### How are council motions made? What can they do? -->
 
 ### How does one vote for a council member?
 
