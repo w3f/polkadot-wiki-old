@@ -98,9 +98,6 @@ extra:
     - type: 'medium'
       link: 'https://medium.com/@polkadotnetwork'
 
-extra_javascript: 
-    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-
 markdown_extensions:
     - admonition
     - codehilite:
@@ -108,6 +105,5 @@ markdown_extensions:
     - toc:
         permalink: true
     - mdtooltips
-    - mdx_math
 
   
