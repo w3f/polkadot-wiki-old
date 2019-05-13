@@ -13,7 +13,7 @@ In order to make any changes to the network, the idea is to compose of active to
 The following steps are the governance procedure in the Polkadot network:
 
 - [Proposing proposals](#proposing-proposals) (Involved info: [Referenda](#referenda))
-- [Voting in a referendum](#voting-in-a-referendum) (Involved info: Voluntary Locking)
+- [Voting in a referendum](#voting-in-a-referendum) (Involved info: [Voluntary Locking](#voluntary-locking)
 - [Vote Counting](#vote-counting) (Involved info: [Adaptive Quorum Biasing](#adaptive-quorum-biasing))
 
 To better understand how council forms and what they are responsible for, please read [this section](#council).
@@ -30,16 +30,7 @@ To better understand how council forms and what they are responsible for, please
 
 ### Voting in a referendum
 
-Essentially, holding only a small amount of DOT tokens does not mean that they cannot influence the referenda result. Since Polkadot introduces an idea called `Voluntary Locking` that lets the token holders increasing their voting power by declaring how long they are willing to lock-up their DOTs, 
-hence, the maximum number of votes for each token holder will be calculated by the following formula:
-
-```
-Max votes = tokens * periods 
-```
-
-Based on the current testnet setting, the maximum number of lock periods could NOT be more than 6.
-
-**Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
+To vote, a voter must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. At the same time, holding only a small amount of DOT tokens does not mean that they cannot influence the referenda result, you can read more about the [Voluntary Locking](#voluntary-locking).
 
 ```
 Example: 
@@ -108,6 +99,18 @@ $${450 \over \sqrt{1050}} < {600 \over \sqrt{1000}}$$
 $${13.887} < {18.974}$$
 
 Based on the above result, proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
+
+## Voluntary Locking
+
+Polkadot utilize an idea called `Voluntary Locking` that lets the token holders increasing their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+
+```
+Max votes = tokens * periods 
+```
+
+Based on the current testnet setting, the maximum number of lock periods could NOT be more than 6.
+
+**Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
 
 
 ## Adaptive Quorum Biasing
