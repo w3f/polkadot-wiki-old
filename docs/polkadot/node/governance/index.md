@@ -2,7 +2,7 @@
 
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at the ultimate behest of its assembled stakeholders.
 
-To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting.
+To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive supermajority thresholds and batch approval voting.
 
 All changes to the protocol must be agreed upon by stake-weighted referendum; the majority of the stake can always command the network.
 
@@ -12,13 +12,13 @@ In order to make any changes to the network, the idea is to compose of active to
 
 The following steps are the governance procedure in the Polkadot network:
 
-- Proposing proposals (Involved info: [Referenda](#referenda))
-- Voting in a referendum (Involved info: Voluntary Locking)
-- Vote Counting (Involved info: [Adaptive Quorum Biasing](#adaptive-quorum-biasing))
+- [Proposing proposals](#proposing-proposals) (Involved info: [Referenda](#referenda))
+- [Voting in a referendum](#voting-in-a-referendum) (Involved info: Voluntary Locking)
+- [Vote Counting](#vote-counting) (Involved info: [Adaptive Quorum Biasing](#adaptive-quorum-biasing))
 
 To better understand how council forms and what they are responsible for, please read [this section](#council).
 
-### Proposing motions/proposals
+### Proposing proposals
 
 - **Public**: Anyone can propose a proposal by depositing minimum value in a certain period (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number of supported proposal will be selected to be a referendum. Those tokens will be released once the proposal is tabled. At genesis, every two weeks will have a referendum on the most supported proposal.
 
@@ -55,30 +55,78 @@ According to the above scenario, even though combining both Logan and Kevin's DO
 
 ### Vote Counting
 
-_TODO_
+Depending on who are the entity proposed the proposal and whether all council members voted yes, there are three different scenarios. 
 
-Once voting is finished, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning motions are autonomously enacted only after some cool-down period.
+We assume that a majority `council` agreement, with no veto, signals a sensible, perhaps an irregular state transition. For this, we use the `majority carries` metric. As an exception to this when there is **complete agreement** within the council we assume that is signals a largely technocratic and uncontroversial protocol change. For this reason we assert that the "burden of proof" should fall on those against the motion and thus we use the `negative turnout bias` metric.
+
+Publicly submitted referenda, being `public`, can easily include malevolent or ill-considered actions. Here the onus must be placed on the proponents and so we bias any abstention votes against the motion, in favour of the (assumed safe, since its functional enough to administer this vote) status quo and use a `positive turnout bias`.
+
+**SuperMajorityApprove**
+
+A ``positive turnout bias``, whereby a heavy supermajority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simplemajority-carries as below.
+$${against \over \sqrt{voters}} < {approve \over \sqrt{electorate}}$$
+
+**SuperMajorityAgainst**
+
+A ``negative turnout bias``, whereby a heavy supermajority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simplemajority-carries as below.
+$${approve \over \sqrt{voters}} < {against \over \sqrt{electorate}}$$
+
+**SimpleMajority**
+
+Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried.
+$${approve} > {against}$$
+
+To calculate the voting for a proposal, we need this four information.
+
+```
+Approve - the number of aye votes
+
+Against - the number of nay votes
+
+Voters - the total number of voting tokens
+
+Electorate - the total number of DOTs tokens issued in the network
+```
+
+We use the public proposal as an example so `SuperMajorityApprove` formula will be applied. There is no strict qurorum, but supermajority required increases as turnout lowers. For simplicity, assume we only have 1,000 DOTs tokens in total.
+```
+John  - 500 DOTs
+Peter - 100 DOTs
+Lilly - 150 DOTs
+JJ    - 150 DOTs
+Ken   - 100 DOTs
+
+John: Votes `Yes`for a 2 week lock period  => 500 * 1 = 500 Votes
+
+Peter: Votes `Yes` for a 2 week lock period => 100 * 1 = 100 Votes
+
+JJ: Votes `No` for a 6 week lock period => 150 * 3 = 450 Votes
+```
+
+$${450 \over \sqrt{1050}} < {600 \over \sqrt{1000}}$$
+
+$${13.887} < {18.974}$$
+
+Based on the above result, proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
 
 
 ## Adaptive Quorum Biasing
 
 Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective supermajority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
 
-If a proposal is proposed by the public(DOTs holders), it would be ``Positive Turnout Bias``.
-
 ![](../../../img/governance/adaptive-quorum-biasing.png)
 
 Let's use the above image as an example.
 
-if the referenda only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass.
+if there is publicly submitted referenda only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass since we applied the ``Positive Turnout Bias``
 
-In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referenda, then the super-majority required decreases as the turnout increases.
+In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referenda, then the supermajority required decreases as the turnout increases.
 
 Suppose there is a unanimous proposal proposed by the council, ``Negative Turnout Bias`` would be used, so that means the proposal is passed by default. Hence, more token holders have to participate in voting to prevent it from passing if they do not like this proposal.
 
 Referring to the above image, when the referenda only has 25% turnout, the tally of "nay" votes has to reach 34% for it to reject.
 
-In short, when turnout rate is low, a super-majority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple majority.
+In short, when turnout rate is low, a supermajority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simplemajority.
 
 ## Referenda
 
@@ -103,6 +151,8 @@ For a referendum to be proposed by the council, a strict majority of members mus
 For a referendum to be cancelled, there must be a unanimous vote to do so. Since unanimity is a high requirement, it is expected that this measure will only be used when it is an entirely uncontroversial move. This may function as a last-resort if there is an issue found late in the day with a referendum's proposal such as a bug in the code of the runtime that the proposal would institute.
 
 ### How to be a council member?
+
+![](../../../img/governance/approval-vote.png)
 
 At genesis, there will be 6 to 12 seats to start. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). To elect a new council member, Polkadot employs `approval voting` method to allow token holders that choose a list of candidates they want to support in equal weight and the one with the most approval votes wins the election, while top-N runners-up remain on the candidates' list for next election.
 
@@ -146,7 +196,7 @@ Kelvin              X       X
 
                     4       4       1       1
 ```
-For the top-N(say 4 in the example) runners-up, they can stay there and keep their votes for the next seat. After round 2, even though candidate A & B get the same votes in this round, candidate A gets elected because after adding the older unused approvals counter still higher than B.
+For the top-N(say 4 in the example) runners-up, they can stay there and keep their votes persist until next election. After round 2, even though candidate A & B get the same votes in this round, candidate A gets elected because after adding the older unused approvals counter still higher than B.
 
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
