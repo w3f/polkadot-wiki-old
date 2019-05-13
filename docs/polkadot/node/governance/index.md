@@ -12,7 +12,7 @@ In order to make any changes to the network, the idea is to compose of active to
 
 The following steps are the governance procedure in the Polkadot network:
 
-- [Proposing proposals](#proposing-proposals) (Involved info: [Referenda](#referenda))
+- [Proposing referenda](#proposing-proposals) (Involved info: [Referenda](#referenda))
 - [Voting in a referendum](#voting-in-a-referendum) (Involved info: [Voluntary Locking](#voluntary-locking)
 - [Vote Counting](#vote-counting) (Involved info: [Adaptive Quorum Biasing](#adaptive-quorum-biasing))
 
