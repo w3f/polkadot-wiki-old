@@ -121,7 +121,7 @@ Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a le
 
 Let's use the above image as an example.
 
-if there is publicly submitted referenda only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass since we applied the ``Positive Turnout Bias``.
+If there is publicly submitted referenda only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass since we applied the ``Positive Turnout Bias``.
 
 In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referenda, then the super-majority required decreases as the turnout increases.
 
