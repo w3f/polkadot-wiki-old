@@ -203,19 +203,17 @@ For the top-N(say 4 in this example) runners-up, they can stay there and keep th
 
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
-## Usage of DOT
+## Referenda (General Stakeholder Voting)
 
-* **Governance** -
-Polkadot holders have complete control over the protocol. All privileges, which on other platforms are exclusive to miners, will be given to the relay chain participants (DOT holders), including managing exceptional events such as protocol upgrades and fixes.
+### Resources
 
-* **Operation** - 
-Game theory incentivizes token holders to behave in honest ways. Good actors are rewarded by this mechanism whilst bad actors will lose their stake in the network. This ensures the network stays secure.
+- [Governance Description](../../learn/governance.md#referenda)
+- [Democracy Module](https://github.com/paritytech/)
 
-* **Bonding** - 
-New parachains are added by bonding tokens. Outdated or non-useful parachains are removed by removing bonded tokens. This is a form of Proof of Stake.
+## [Usage of DOT](../../learn/DOT.md#dots-for-governance)
 
 ## Guides
 
-### [How to create a proposal ?]()
-### [How to join the council ?]()
-### [How to propose a referendum ?]()
+### [How to create a proposal]()
+### [How to join the council]()
+### [How to propose a referendum]()
