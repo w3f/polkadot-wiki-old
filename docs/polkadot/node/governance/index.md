@@ -26,7 +26,7 @@ To better understand how council forms and what they are responsible for, please
 
     Unanimous Council - Where everyone in the council thinks that is a good proposal, it can move to the referenda.
 
-    Majority Council - Where simple-majority council agreement must have more aye votes to nay votes to be accepted.
+    Majority Council - When agreement from only the simple majority of council members is needed. (More Aye votes to Nay votes for acceptance, more Nay votes to Aye votes for rejection.) 
 
 ### Voting in a referendum
 
