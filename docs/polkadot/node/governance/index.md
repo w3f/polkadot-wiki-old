@@ -2,35 +2,35 @@
 
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at the ultimate behest of its assembled stakeholders.
 
-To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referendum with adaptive super-majority thresholds and batch approval voting.
+To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting.
 
-All changes to the protocol must be agreed upon by stake-weighted referendum; the majority of the stake can always command the network.
+All changes to the protocol must be agreed upon by stake-weighted referenda; the majority of the stake can always command the network.
 
 ## Mechanism
 
-In order to make any changes to the network, the idea is to compose of active token holders and council together to administrate the network upgrade decision. No matter whether the proposal is proposed by the public(DOT holders) or council, it finally will have to go through the [referendum](../../learn/governance.md#referenda) to let all DOT holders make the decision.
+In order to make any changes to the network, the idea is to compose of active token holders and council together to administrate the network upgrade decision. No matter whether the proposal is proposed by the public(DOT holders) or council, it finally will have to go through the [referenda](../../learn/governance.md#referenda) to let all DOT holders make the decision.
 
 The following steps are the governance procedure in the Polkadot network:
 
-- [Proposing Referendums](#proposing-referendums) (Involved info: [Referendum](../../learn/governance.md#referenda))
+- [Proposing Referenda](#proposing-referenda) (Involved info: [Referenda](../../learn/governance.md#referenda))
 - [Voting for a proposal](#voting-for-a-proposal) (Involved info: [Voluntary Locking](#voluntary-locking))
 - [Tallying](#tallying) (Involved info: [Adaptive Quorum Biasing](#adaptive-quorum-biasing))
 
 To better understand how council forms, please read [this section](#council).
 
-### Proposing referendums
+### Proposing Referenda
 
-- **Public**: Anyone can propose a referendum by depositing minimum value in a certain period (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number of supported proposal will be selected to be a referendum. Those tokens will be released once the proposal is tabled. At genesis, every two weeks will have a referendum on the most supported proposal.
+- **Public**: Anyone can propose a referenda by depositing minimum value in a certain period (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number of supported proposal will be selected to be a referenda. Those tokens will be released once the proposal is tabled. At genesis, every two weeks will have a referenda on the most supported proposal.
 
 - **[Council](#council)**: 
 
-    Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referendum.
+    Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referenda.
 
     Majority Council - When agreement from only the simple majority of council members is needed. (More Aye votes to Nay votes for acceptance, more Nay votes to Aye votes for rejection.) 
 
 ### Voting for a proposal
 
-To vote, a voter must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. At the same time, holding only a small amount of DOT tokens does not mean that they cannot influence the referendum result, you can read more about the [Voluntary Locking](#voluntary-locking).
+To vote, a voter must lock their tokens up for at least the enactment delay period beyond the end of the referenda. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. At the same time, holding only a small amount of DOT tokens does not mean that they cannot influence the referenda result, you can read more about the [Voluntary Locking](#voluntary-locking).
 
 ```
 Example: 
@@ -50,11 +50,11 @@ Depending on who are the entity proposed the proposal and whether all council me
 
 We assume that a majority `council` agreement, with no veto, signals a sensible, perhaps an irregular state transition. For this, we use the `majority carries` metric. As an exception to this when there is **complete agreement** within the council we assume that is signals a largely technocratic and uncontroversial protocol change. For this reason we assert that the "burden of proof" should fall on those against the motion and thus we use the `negative turnout bias` metric.
 
-Publicly submitted referendum, being `public`, can easily include malevolent or ill-considered actions. Here the onus must be placed on the proponents and so we bias any abstention votes against the motion, in favor of the (assumed safe, since its functional enough to administer this vote) status quo and use a `positive turnout bias`.
+Publicly submitted referenda, being `public`, can easily include malevolent or ill-considered actions. Here the onus must be placed on the proponents and so we bias any abstention votes against the motion, in favor of the (assumed safe, since its functional enough to administer this vote) status quo and use a `positive turnout bias`.
 
 **Super-Majority Approve**
 
-A ``positive turnout bias``, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple- majority-carriers as below.
+A ``positive turnout bias``, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
 $${against \over \sqrt{voters}} < {approve \over \sqrt{electorate}}$$
 
 **Super-Majority Against**
@@ -79,13 +79,13 @@ Voters - the total number of voting tokens
 Electorate - the total number of DOTs tokens issued in the network
 ```
 
-We use the public proposal as an example so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers. For simplicity, assume we only have 1,000 DOTs tokens in total.
+We use the public proposal as an example so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers. For simplicity, assume we only have 1,500 DOTs tokens in total.
 ```
 John  - 500 DOTs
 Peter - 100 DOTs
 Lilly - 150 DOTs
 JJ    - 150 DOTs
-Ken   - 100 DOTs
+Ken   - 600 DOTs
 
 John: Votes `Yes`for a 2 week lock period  => 500 * 1 = 500 Votes
 
@@ -94,11 +94,11 @@ Peter: Votes `Yes` for a 2 week lock period => 100 * 1 = 100 Votes
 JJ: Votes `No` for a 6 week lock period => 150 * 3 = 450 Votes
 ```
 
-$${450 \over \sqrt{1050}} < {600 \over \sqrt{1000}}$$
+$${450 \over \sqrt{1050}} < {600 \over \sqrt{1500}}$$
 
-$${13.887} < {18.974}$$
+$${13.887} < {15.492}$$
 
-Based on the above result, proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
+Based on the above result, proposal will be approved. In addition, only the winning voter's tokens are locked, which means if that referenda hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning proposals are autonomously enacted only after some cool-down period.
 
 ## Voluntary Locking
 
@@ -121,13 +121,13 @@ Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a le
 
 Let's use the above image as an example.
 
-If there is publicly submitted referendum only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass since we applied the ``Positive Turnout Bias``.
+If there is publicly submitted referenda only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass since we applied the ``Positive Turnout Bias``.
 
-In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referendum, then the super-majority required decreases as the turnout increases.
+In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referenda, then the super-majority required decreases as the turnout increases.
 
 Suppose there is a unanimous proposal proposed by the council, ``Negative Turnout Bias`` would be used, so that means the proposal is passed by default. Hence, more token holders have to participate in voting to prevent it from passing if they do not like this proposal.
 
-Referring to the above image, when the referendum only has 25% turnout, the tally of "nay" votes has to reach 34% for it to reject.
+Referring to the above image, when the referenda only has 25% turnout, the tally of "nay" votes has to reach 34% for it to reject.
 
 In short, when turnout rate is low, a super-majority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
@@ -139,7 +139,7 @@ Since not everyone is interested in participating in governance, there is a coun
 
 ![](../../../img/governance/approval-vote.png)
 
- At genesis, there will be 6 to 12 seats to start. All stakeholders are free to signal their approval (or not) of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referendum.
+ At genesis, there will be 6 to 12 seats to start. All stakeholders are free to signal their approval (or not) of any of the registered candidates. For every two weeks, one of those seats is up for election and increase over the course of 9 months to 24 people (roughly one extra individual coming on every two weeks). All members have a fixed term (1 year). Council members can be removed early only by a referenda.
 
 To elect a new council member, Polkadot employs `approval voting` method to allow token holders that choose a list of candidates they want to support in equal weight and the one with the most approval votes wins the election, while top-N runners-up remain on the candidates' list for next election. 
 
@@ -184,4 +184,4 @@ This would be the tentative governance configuration for Polkadot in the initial
 
 ### [How to create a proposal]()
 ### [How to join the council]()
-### [How to propose a referendum]()
+### [How to propose a referenda]()
