@@ -2,7 +2,7 @@
 
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at the ultimate behest of its assembled stakeholders.
 
-To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive supermajority thresholds and batch approval voting.
+To do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting.
 
 All changes to the protocol must be agreed upon by stake-weighted referendum; the majority of the stake can always command the network.
 
@@ -26,7 +26,7 @@ To better understand how council forms and what they are responsible for, please
 
     Unanimous Council - Where everyone in the council thinks that is a good proposal, it can move to the referenda.
 
-    Majority Council - Where Simple majority council agreement must have more aye votes to nay votes to be accepted.
+    Majority Council - Where simple-majority council agreement must have more aye votes to nay votes to be accepted.
 
 ### Voting in a referendum
 
@@ -59,19 +59,19 @@ Depending on who are the entity proposed the proposal and whether all council me
 
 We assume that a majority `council` agreement, with no veto, signals a sensible, perhaps an irregular state transition. For this, we use the `majority carries` metric. As an exception to this when there is **complete agreement** within the council we assume that is signals a largely technocratic and uncontroversial protocol change. For this reason we assert that the "burden of proof" should fall on those against the motion and thus we use the `negative turnout bias` metric.
 
-Publicly submitted referenda, being `public`, can easily include malevolent or ill-considered actions. Here the onus must be placed on the proponents and so we bias any abstention votes against the motion, in favour of the (assumed safe, since its functional enough to administer this vote) status quo and use a `positive turnout bias`.
+Publicly submitted referenda, being `public`, can easily include malevolent or ill-considered actions. Here the onus must be placed on the proponents and so we bias any abstention votes against the motion, in favor of the (assumed safe, since its functional enough to administer this vote) status quo and use a `positive turnout bias`.
 
-**SuperMajorityApprove**
+**Super-Majority Approve**
 
-A ``positive turnout bias``, whereby a heavy supermajority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simplemajority-carries as below.
+A ``positive turnout bias``, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple- majority-carriers as below.
 $${against \over \sqrt{voters}} < {approve \over \sqrt{electorate}}$$
 
-**SuperMajorityAgainst**
+**Super-Majority Against**
 
-A ``negative turnout bias``, whereby a heavy supermajority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simplemajority-carries as below.
+A ``negative turnout bias``, whereby a heavy super-majority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
 $${approve \over \sqrt{voters}} < {against \over \sqrt{electorate}}$$
 
-**SimpleMajority**
+**Simple-Majority**
 
 Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried.
 $${approve} > {against}$$
@@ -88,7 +88,7 @@ Voters - the total number of voting tokens
 Electorate - the total number of DOTs tokens issued in the network
 ```
 
-We use the public proposal as an example so `SuperMajorityApprove` formula will be applied. There is no strict qurorum, but supermajority required increases as turnout lowers. For simplicity, assume we only have 1,000 DOTs tokens in total.
+We use the public proposal as an example so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers. For simplicity, assume we only have 1,000 DOTs tokens in total.
 ```
 John  - 500 DOTs
 Peter - 100 DOTs
@@ -112,21 +112,21 @@ Based on the above result, proposal will be approved. In addition, only the winn
 
 ## Adaptive Quorum Biasing
 
-Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective supermajority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
+Polkadot introduces a concept "Adaptive Quorum Biasing", which functions as a lever that the council can use to alter the effective super-majority required to make it easier or more difficult for a proposal to pass in the case that there is no clear majority of voting power backing it or against it.
 
 ![](../../../img/governance/adaptive-quorum-biasing.png)
 
 Let's use the above image as an example.
 
-if there is publicly submitted referenda only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass since we applied the ``Positive Turnout Bias``
+if there is publicly submitted referenda only has 25% turnout, the tally of "aye" votes has to reach 66% for it to pass since we applied the ``Positive Turnout Bias``.
 
-In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referenda, then the supermajority required decreases as the turnout increases.
+In contrast, when it has 75% turnout, the tally of "aye" votes has to reach 54%, which means that as more token holders vote on referenda, then the super-majority required decreases as the turnout increases.
 
 Suppose there is a unanimous proposal proposed by the council, ``Negative Turnout Bias`` would be used, so that means the proposal is passed by default. Hence, more token holders have to participate in voting to prevent it from passing if they do not like this proposal.
 
 Referring to the above image, when the referenda only has 25% turnout, the tally of "nay" votes has to reach 34% for it to reject.
 
-In short, when turnout rate is low, a supermajority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simplemajority.
+In short, when turnout rate is low, a super-majority is required to pass the proposal, which means a higher threshold of "aye" (yes) votes have to be reached, but as turnout increases towards 100%, it becomes a simple-majority.
 
 ## Referenda
 
@@ -146,7 +146,7 @@ Since not everyone is interested in participating in governance, there is a coun
 
 The council is called upon primarily for two tasks of governance: proposing sensible referenda and canceling uncontroversially dangerous or malicious referenda. 
 
-For a referendum to be proposed by the council, a strict majority of members must be in favour, with no member exercising a veto. Vetos may be exercised only once by a member for any single proposal; if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time. In the case that all members vote in favour, the vote is considered unanimous and is treated as uncontroversial.
+For a referendum to be proposed by the council, a strict majority of members must be in favor, with no member exercising a veto. Veto may be exercised only once by a member for any single proposal; if, after a cool-down period, the proposal is resubmitted, they may not veto it a second time. In the case that all members vote in favor, the vote is considered unanimous and is treated as uncontroversial.
 
 For a referendum to be cancelled, there must be a unanimous vote to do so. Since unanimity is a high requirement, it is expected that this measure will only be used when it is an entirely uncontroversial move. This may function as a last-resort if there is an issue found late in the day with a referendum's proposal such as a bug in the code of the runtime that the proposal would institute.
 
@@ -196,7 +196,7 @@ Kelvin              X       X
 
                     4       4       1       1
 ```
-For the top-N(say 4 in the example) runners-up, they can stay there and keep their votes persist until next election. After round 2, even though candidate A & B get the same votes in this round, candidate A gets elected because after adding the older unused approvals counter still higher than B.
+For the top-N(say 4 in this example) runners-up, they can stay there and keep their votes persist until next election. After round 2, even though candidate A & B get the same votes in this round, candidate A gets elected because after adding the older unused approvals counter still higher than B.
 
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
