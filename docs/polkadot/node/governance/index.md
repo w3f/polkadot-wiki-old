@@ -20,7 +20,7 @@ To better understand how council forms and what they are responsible for, please
 
 ### Proposing proposals
 
-- **Public**: Anyone can propose a proposal by depositing minimum value in a certain period (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number of supported proposal will be selected to be a referendum. Those tokens will be released once the proposal is tabled. At genesis, every two weeks will have a referendum on the most supported proposal.
+- **Public**: Anyone can propose a referendum by depositing minimum value in a certain period (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number of supported proposal will be selected to be a referendum. Those tokens will be released once the proposal is tabled. At genesis, every two weeks will have a referendum on the most supported proposal.
 
 - **[Council](#council)**: 
 
