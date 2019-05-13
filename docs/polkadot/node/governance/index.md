@@ -22,7 +22,6 @@ Based on the current testnet setting, the maximum number of lock periods could N
 
 **Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
 
-
 ```
 Example: 
 
@@ -35,11 +34,9 @@ Kevin: Votes `Yes` with 15 DOTs for a 4 week lock period => 15 * 2 = 30 Votes
 
 According to the above scenario, even though combining both Logan and Kevin's DOTs is more than Peter, the lock period for both of them is far less than Peter, leading to their voting power counting as less.
 
-
 Once voting is finished, only the winning voter's tokens are locked, which means if that referendum hurts the network, then those who voted against it can immediately get their locked tokens back. They can exit the network and sell their tokens to the market before the proposal becomes effective. Moreover, winning motions are autonomously enacted only after some cool-down period.
 
- 
-### Adaptive Quorum Biasing
+### [Adaptive Quorum Biasing](../../learn/governance.md#vote-counting)
 
 Polkadot uses an innovative governance mechanism to dynamically adjust the turnout bias. If there is a low turnout rate, a super-majority is required in order to pass the motion, which means a higher threshold of "aye" (yes) votes has to be reached.
 
@@ -51,33 +48,43 @@ If the referenda only has 20% turnout, the tally of "aye" votes has to reach 14%
 In contrast, if it has 50% turnout, the tally of "aye" votes has to reached 29%, which means that as more token holders vote on a referenda, then the super-majority required decreases as the turnout increases.
 ```
 
-
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
+## Council
 
-## [Council](https://github.com/paritytech/polkadot/wiki/Governance#council)
+The council is an on-chain entity comprised of a set of account IDs. Its overall purpose is to represent the passive stakeholders whom do not participate in the governance process. Election of council members is done through an approval vote.
 
-Since not everyone is interested in participating in governance, there is a council entity to represent the passive token holders. Election of council members is done through an approval vote.
+The two main tasks of the council are:
 
-The council is called upon primarily for two tasks of governance: proposing sensible referenda, and cancelling uncontroversially dangerous or malicious referenda.
+- Making sensible proposals for referenda.
+- Cancelling any uncontroversially dangerous or malicious referenda.
 
-## [Referenda](https://github.com/paritytech/polkadot/wiki/Governance#referenda)
+### How does one join the council?
 
-## [Voting]()
+An account wishing to join the council must first signal their candidacy and submit the required bond. The requisite bond for council membership is configurable by the governance process. The voting process is continuous and voters may at any time register approval of an account for inclusion to the council. Each voting period, the tally is taken for new votes and the winners of the vote are allowed to present themselves as active for the council seat. The council seat is then active for duration of the term. The number of desired seats for the council is a parameter that can be determined by the governance process and is envisioned to be 24 for Polkadot with 12 month terms.
 
-## Usage of DOT
+<!-- ### How are council motions made? What can they do? -->
 
-* **Governance** -
-Polkadot holders have complete control over the protocol. All privileges, which on other platforms are exclusive to miners, will be given to the relay chain participants (DOT holders), including managing exceptional events such as protocol upgrades and fixes.
+### How does one vote for a council member?
 
-* **Operation** - 
-Game theory incentivizes token holders to behave in honest ways. Good actors are rewarded by this mechanism whilst bad actors will lose their stake in the network. This ensures the network stays secure.
+Voters must also submit a bond to signal approvals for council seats. If a voter becomes inactive, they may be "reaped" by an external actor and their bond claimed as a reward. The process of the running votes is known as [approval voting](https://en.wikipedia.org/wiki/Approval_voting).
 
-* **Bonding** - 
-New parachains are added by bonding tokens. Outdated or non-useful parachains are removed by removing bonded tokens. This is a form of Proof of Stake.
+### Resources
+
+- [Governance Description](../../learn/governance.md#council)
+- [Council Module](https://github.com/paritytech/)
+
+## Referenda (General Stakeholder Voting)
+
+### Resources
+
+- [Governance Description](../../learn/governance.md#referenda)
+- [Democracy Module](https://github.com/paritytech/)
+
+## [Usage of DOT](../../learn/DOT.md#dots-for-governance)
 
 ## Guides
 
-### [How to create a proposal ?]()
-### [How to join the council ?]()
-### [How to propose a referendum ?]()
+### [How to create a proposal]()
+### [How to join the council]()
+### [How to propose a referendum]()

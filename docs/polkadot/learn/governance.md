@@ -1,12 +1,12 @@
 # Governance
 
-[_Gav Wood edited this page on Jan 23_](https://github.com/paritytech/polkadot/wiki/Governance)
-
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully over time at the ultimate behest of its assembled stakeholders.
 
 In order to do this, we bring together various novel mechanisms, including an amorphous state-transition function stored on-chain and defined in a platform-neutral intermediate language (i.e. WebAssembly) and several on-chain voting mechanisms such as referenda with adaptive super-majority thresholds and batch approval voting.
 
 ## Overview
+
+![Governance Overview](../../../img/governance/Governance-diagram.png)
 
 The governance system of Polkadot is founded wholly around the idea of stakeholder voting. A key and unfailing rule is:
 
@@ -17,6 +17,36 @@ On the face of it, this may seem somewhat restrictive: forcing a stakeholder-bas
 Despite this, by taking advantage of the fact that turnout is rarely 100%, we can effect different outcomes depending on the circumstances, crafting a balance of power between active and passive stakeholders. For example, simple voting systems typically introduce a notion of [quorum](https://en.wikipedia.org/wiki/Quorum), whereby a minimum amount of turnout must be reached before a vote is considered valid. This might be phrased as a "positive turnout bias", i.e. additional turnout makes change strictly *at least* as likely as a system with no need of quorum.
 
 Another mechanism used, one again which favors the *nay* side (or the *status quo*), is to require a super-majority approval. This works on two principles: firstly that the status quo tends to be safer than any change, and thus should have some bias towards it. Secondly that, like all means of empirical measurement, there is inevitably going to be some degree of inaccuracy and volatility over time. A result could be 51%-49% one month and then change to 49%-51% the following month because of macro-environmental factors such as the economy, social-demographic progression or even the weather. Given the costs involved in enacting the changes of a proposal, it is advantageous to ensure that a result would not likely flip within a short period of time after enactment, and thus a supermajority should approve the non-status-quo option. (As an example of why this can be important, a super-majority was indeed not required in the UK's "Brexit" referendum, resulting in a result that, two years on from the vote but before the enactment, appears indeed to have flipped).
+
+```
+Majority Carries
+----------------
+            AYE - Requires > 50% votes
+          /
+Proposal -
+          \
+            NAY - Requires > 50% votes
+```
+```
+Static Quorum
+-------------
+            AYE - Requires > 50% votes AND turnout >= QUORUM 
+          /
+Proposal -
+          \
+            NAY - Requires > 50% votes AND turnout >= QUORUM
+
+where QUORUM is a constant percentage of the total voting population
+```
+```
+Supermajority
+----------------
+            AYE - Requires > 66.7% votes
+          /
+Proposal -
+          \
+            NAY - Requires > 66.7% votes
+```
 
 In our case, we introduce something broadly similar, only more sophisticated, to ensure that as turnout drops, a "sensible" decision prevails. Specifically we have a council which, in the model of a board of directors, is a group of individuals delegated by stakeholders to help determine what happens when there is no commanding majority of stake in favor or against a proposal.
 
@@ -93,6 +123,9 @@ $
 
 Where $t$ is the total number of voting tokens and $T$ is the total number of tokens issued in the system. $aye$ is the number of *aye* votes, and $nay$ the number of *nay* votes.
 
+![AQB](../../../img/governance/AQB.png)
+![AQB-electorate](../../../img/governance/AQB-electorate.png)
+
 So, in general:
 
 * Proposals submitted through the enactment of a referendum may (of course) use any counting mechanism;
@@ -103,3 +136,7 @@ So, in general:
 ### Conclusion
 
 This is the governance mechanism, as it stands, for Polkadot Genesis. It may (and quite likely) will change before genesis based on feedback from the team, community and auditors. We know this is far from perfect, but we hope and expect that it is good enough to deliver the platform on which a truly great governance system can evolve and adapt over the course of Polkadot's lifetime.
+
+## Resources
+
+- The above has been adapted from Gavin Wood's original post on [governance](https://github.com/paritytech/polkadot/wiki/Governance).
