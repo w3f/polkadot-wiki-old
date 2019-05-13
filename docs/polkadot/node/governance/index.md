@@ -67,7 +67,7 @@ $${approve \over \sqrt{voters}} < {against \over \sqrt{electorate}}$$
 Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried.
 $${approve} > {against}$$
 
-To calculate the voting for a proposal, we need this four information.
+We need the following information to calculate the required voting thresholds of proposals:
 
 ```
 Approve - the number of aye votes
