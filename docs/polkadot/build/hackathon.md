@@ -34,7 +34,7 @@ Hackathon is aiming for those participants to deliver their prototype to demonst
 3. Decision
 4. Follow up
 
-## What we can help you?
+## How we can help you
 
 - Provide technical resources/materials. 
 - Find a venue.
