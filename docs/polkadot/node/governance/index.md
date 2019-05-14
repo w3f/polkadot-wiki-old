@@ -52,6 +52,18 @@ We assume that a majority `council` agreement, with no veto, signals a sensible,
 
 Publicly submitted referenda, being `public`, can easily include malevolent or ill-considered actions. Here the onus must be placed on the proponents and so we bias any abstention votes against the motion, in favor of the (assumed safe, since its functional enough to administer this vote) status quo and use a `positive turnout bias`.
 
+We need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
+
+```
+approve - the number of aye votes
+
+against - the number of nay votes
+
+voters - the total number of voting tokens
+
+electorate - the total number of DOTs tokens issued in the network
+```
+
 **Super-Majority Approve**
 
 A ``positive turnout bias``, whereby a heavy super-majority of aye votes is required to carry at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
@@ -60,27 +72,20 @@ $${against \over \sqrt{voters}} < {approve \over \sqrt{electorate}}$$
 **Super-Majority Against**
 
 A ``negative turnout bias``, whereby a heavy super-majority of nay votes is required to reject at low turnouts, but as turnout increases towards 100%, it becomes a simple-majority-carriers as below.
-$${approve \over \sqrt{voters}} < {against \over \sqrt{electorate}}$$
+$${against \over \sqrt{electorate}} < {approve \over \sqrt{voters}}$$
 
 **Simple-Majority**
 
 Majority-carries, a simple comparison of votes, if there are more aye votes than nay, then the proposal is carried.
 $${approve} > {against}$$
 
-We need the following information to calculate the required voting thresholds of proposals:
+*To know more about where these above formulas come from, please read the [democracy module](https://github.com/paritytech/substrate/blob/master/srml/democracy/src/vote_threshold.rs)*.
 
 ```
-Approve - the number of aye votes
+Example:
 
-Against - the number of nay votes
+Assume we only have 1,500 DOTs tokens in total.
 
-Voters - the total number of voting tokens
-
-Electorate - the total number of DOTs tokens issued in the network
-```
-
-We use the public proposal as an example so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers. For simplicity, assume we only have 1,500 DOTs tokens in total.
-```
 John  - 500 DOTs
 Peter - 100 DOTs
 Lilly - 150 DOTs
@@ -92,6 +97,11 @@ John: Votes `Yes`for a 2 week lock period  => 500 * 1 = 500 Votes
 Peter: Votes `Yes` for a 2 week lock period => 100 * 1 = 100 Votes
 
 JJ: Votes `No` for a 6 week lock period => 150 * 3 = 450 Votes
+
+approve = 600
+against = 450
+voters = 1050
+electorate = 1500
 ```
 
 $${450 \over \sqrt{1050}} < {600 \over \sqrt{1500}}$$
