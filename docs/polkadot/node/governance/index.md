@@ -30,7 +30,7 @@ To better understand how council forms, please read [this section](#council).
 
 ### Voting for a proposal
 
-To vote, a voter must lock their tokens up for at least the enactment delay period beyond the end of the referenda. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. At the same time, holding only a small amount of DOT tokens does not mean that they cannot influence the referenda result, you can read more about the [Voluntary Locking](#voluntary-locking).
+To vote, a voter must lock their tokens up for at least the enactment delay period beyond the end of the referendum. This is in order to ensure that some minimal economic buy-in to the result is needed and to dissuade vote selling. At the same time, holding only a small amount of DOT tokens does not mean that they cannot influence the referendum result, you can read more about the [Voluntary Locking](#voluntary-locking).
 
 ```
 Example: 
