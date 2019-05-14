@@ -64,38 +64,54 @@ You can check the current highest block via [Telemetry](https://telemetry.polkad
  
 ## Create accounts
 
-To be a validator, you will need three separate accounts for managing your funds, namely `Stash`, `Controller` and `Session`. If you want to know more about it, please see [here](../../learn/staking.md#accounts).
+The first thing you will need to do is create three separate accounts for managing funds and operating the validator.
+
+These three keys are:
+
+- Stash
+- Controller
+- Session (**Must be `ed25519`**)
+
+If you would like to learn more about these three keys and why they are needed see [here](../../learn/keys.md).
 
 ![create account](../../../img/validator/polkadot-dashboard-create-account.jpg)
-First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) and click `Create account` tab.
 
-To make things simple and identify your accounts easily, make sure to use `Stash`, `Controller` and `Session` in the name your accounts. You can use `Raw seed` and save it. The seed of the `Session` account needs to be used later in this guide. Also, make sure to use `Edwards (ed25519)` as a `Key pair crypto type` in the `Advanced creation options`.
+On the Polkadot Dashboard to navigate to the [account](https://polkadot.js.org/apps/#/accounts) page and click the `Create account` tab.
 
-Input your password to encrypt the seed for this account and click on `Save`.
+To simplify everything and identify your accounts easily, it is recommended to use `Stash`, `Controller` and `Session` (or some variation like `1337_Stash`, `1337_Controller`, `1337_Session`) to name your accounts.
+
+For the stash and controller accounts, it is allowed to use the default `sr25519` cryptography for key derivation. **But**, when you create the **Session** key make sure to choose instead the `Edwards (ed25519)` option as a `Key pair crypto type` in the `Advanced creation options`. Also make sure to select `Raw seed` and save it somewhere, since we will be using it later as a command line flag when we start the validating node.
+
+For each account, input a password to encrypt the seed and click on `Save`.
 
 ![backup seed](../../../img/validator/polkadot-dashboard-backup-seed.jpg)
 
 On the following screen, choose *Create and backup account* to store your JSON key file on your computer. Together with your password, this is a way to recover each account.
-Reproduce those steps for all 3 accounts.
+
+Follow these steps for all 3 accounts. At the end of this section you should have three fresh accounts.
 
 ## Get testnet DOTs token
 
-To continue the following steps, you are required to get some testnet DOTs token for the `Stash` and `Controller` accounts in order to submit transactions and use these DOTs as stake. The `Session` account doesn't need any DOT. Note that your accounts (`Stash` and `Controller`) need to have (much) more than 100 milliDOTs as this is the minimum amount required for an account to exist. Having more allows you to pay for transactions fees.
+To continue the following steps, you will need to get some testnet DOTs for the `Stash` and `Controller` accounts in order to submit transactions and to stake. The `Session` account will not need any DOTs and it is recommended not to send any to it. Note that your accounts (`Stash` and `Controller`) need to have more than 100 mDOTs (i.e. 0.1 DOTs) as this is the minimum amount required for an account to exist. Having more allows you to pay for transactions fees.
 
-Please go to [Polkadot Watercooler - Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) channel, paste your account address to ask for testnet DOTs. You can paste one account and transfer some of the DOTs received to the other account.
+To get testnet DOTs, you have a few options.
+
+- [Polkadot Faucet](https://faucet.polkadot.chat) - Post a tweet with your address and request up to 300 mDOTs every 24 hours.
+- [Blockxlabs Faucet](https://faucets.blockxlabs.com/polkadot) - A faucet which requires email sign-in.
+
+If the above two methods do not work then you may ask in the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) channel on Riot, paste your account address and ask for testnet DOTs. You can paste one account and transfer some of the DOTs received to the other account.
  
-You can also get some small testnet DOTs on [Blockxlabs](https://faucets.blockxlabs.com/polkadot) as well ;)
-
 ## Bond DOTs
 
 It is now time to setup our validator. We will do the following:
+
 - Bond the DOTs of the `Stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
-- Select the `Controller` as.. the controller. This is the account that will decide when to start or stop validating.
-- Select the `Session` account as.. the session. This is the account whose seed will be used to run the node.
+- Select the `Controller`. This is the account that will decide when to start or stop validating.
+- Select the `Session`. This is the account whose seed will be used to run the node.
 
-First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) section, you should see all of your existing accounts.
+First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot Dashboard, you should see the accounts that you created earlier.
 
-Select your `Stash` account, in our case it has, 200 milliDOTs, and click on `Bond`. We will bound 100 milliDOTs.
+Select your `Stash` account, in our case it has, 200 mDOTs, and click on the `Bond Funds` button. We will bond 100 mDOTs.
 
 ![dashboard bonding](../../../img/validator/polkadot-dashboard-bonding.png)
 
@@ -103,7 +119,7 @@ Select your `Stash` account, in our case it has, 200 milliDOTs, and click on `Bo
 - **Value bonded** - how many DOTs from the `Stash` account you want to bond/stake. You can't use all of it as you will need to pay for the transaction fees. You can top up this amount and bound more DOTs later, however withdrawing any bounded amount requires the bounding duration period to be over (600 blocks at the time of writing).
 - **Payment destination** - where the rewards get sent. More info [here](../../learn/staking.md#reward-distribution).
 
-Once everything is filled properly, click `Bond` and sign the transaction (with your `Stash` account)
+Once everything is filled properly, click `Bond` and sign the transaction (with your `Stash` account).
 
 ## Setting session key
 
@@ -145,7 +161,7 @@ Then go to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after a few s
 
 ![telemetry monitor](../../../img/validator/telemetry_monitor.jpg)
 
-Go to [Staking apps](https://polkadot.js.org/apps/#/staking), select the "Staking Overview" tab, and you should see the list of active validators that are out there. At the top of the page, it shows how many validators slots are available and how many nodes are intending to be a validator.
+Go to [Staking apps](https://polkadot.js.org/apps/#/staking), select the "Staking Overview" tab, and you should see the list of active validators that are currently running. At the top of the page, it shows how many validators slots are available and how many nodes are intending to be a validator.
 
 ![staking queue](../../../img/validator/polkadot-dashboard-staking-queue.png)
 

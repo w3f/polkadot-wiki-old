@@ -3,17 +3,26 @@
 !!! info
     This article is the up-to-date version of the blog post: [Everything you Need to Know to Prepare for Polkadot](https://medium.com/polkadot-network/everything-you-need-to-know-to-prepare-for-polkadot-32d08b929735).
 
-@(Polkadot) is a networking protocol that reduces development time for blockchain developers. Launching and securing a new blockchain used to take years. With Polkadot it will take weeks or maybe even days.
+@(Polkadot) is a blockchain protocol with two goals: providing **shared security** among all connected parachains and allowing all connected chains to **interoperate** through [ICMP](../learn/interchain.md). With the advent of [PDKs](./pdk.md) like Parity Substrate and Cumulus, the time it takes to develop and launch a new chain has dropped significantly. Whereas before it would take years to launch a new chain, now it may only take weeks or even days.
 
 This guide will walk you through the steps you can take today to get started building your vision with Polkadot. It will explain the difference between a @(parachain) and a smart contract (and why one may be better suited for your application over the other). It will lay out the resources that are available now and the ones that are coming soon so that you can get started creating your application in anticipation of the Polkadot mainnet launch later this year.
 
 ## Where are we now?
 
-**What you need to know**: Polkadot is currently on the PoC-4 release with a running testnet named Alexander. This testnet has been live for 3 months through the entire PoC-3 release cycle. The PoC-4 release happened earlier this week and brought some new features. Polkadot is being built on Substrate, a blockchain development framework. Substrate can be employed by developers to create their own custom state transitions for their own chains. Substrate is nearing the first 1.0 stable release, which will settle its API.
+- Mainnet: **End of 2019**
+- Current PoC release: **PoC-4**
+- Current testnet: **Alexander**
+- Substrate: **1.0.0-rc**
+- Cumulus: **Not complete**
+- ink!: **Pre-Alpha**
 
-In summary, there hasn’t been a better time to get started preparing for Polkadot’s release. Before you jump into the code, you should understand the different paradigms that will be offered to developers interested in building on Polkadot.
+**What you need to know**: Polkadot is currently on the PoC-4 release with a running testnet named Alexander. The Alexander testnet has been live for longer than 3 months through the entire PoC-3 release cycle. Polkadot is being built with [implementations in various programming languages](../learn/implementations.md) ranging from Rust to JavaScript. Currently the leading implementation is built in Rust and using the Substrate framework for developing blockchains. Substrate is a library that allows developers to more easily develop entire blockchains by building from a base layer including a networking protocol, consensus, and a Wasm interpreter. An in-development extension to Substrate called Cumulus will allow any Substrate built chain to connect to Polkadot and become a parachain. Substrate is nearing its public 1.0.0 release which will settle its API.
 
-## The differences between building a parachain and a smart contract
+Substrate chains can have smart contracts by including the provided contracts runtime module from the SRML. The contracts module will allow smart contracts compiled to Wasm to be deployed on chain. To facilitate this, Parity has been developing an domain specific language called ink!.  
+
+Polkadot is planned to go live on mainnet at the end of 2019. Now that the tools have started to appear and stabilize, there has not been a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code, you should think about the kind of decentralized application you want to make and understand the different paradigms available to developers who want to build for Polkadot.
+
+## What is the difference between building a parachain and a smart contract?
 
 Polkadot provides two ways for you to deploy your application: as a smart contract on an existing parachain, or as your own parachain. There are trade-offs when working with either one of these and reading this section will help you understand them.
 
