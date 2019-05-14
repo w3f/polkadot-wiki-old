@@ -169,7 +169,7 @@ The above example shows that candidate C wins the election in round 1, while can
 |Kelvin|X|X|||
 |**Total**|4|4|1|1|
 
-For the top-N(say 4 in this example) runners-up, they can stay there and keep their votes persist until next election. After round 2, even though candidate A & B get the same votes in this round, candidate A gets elected because after adding the older unused approvals counter still higher than B.
+For the top-N (say 4 in this example) runners-up, they can remain and their votes persist until the next election. After round 2, even though candidates A & B get the same number of votes in this round, candidate A gets elected because after adding the older unused approvals, it is higher than B.
 
 This would be the tentative governance configuration for Polkadot in the initial genesis. It will be changed if any security loopholes have been found after third-party auditing.
 
