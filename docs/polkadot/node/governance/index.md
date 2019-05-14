@@ -108,7 +108,7 @@ Polkadot utilizes an idea called `Voluntary Locking` that allows token holders t
 Max votes = tokens * periods 
 ```
 
-Based on the current testnet setting, the maximum number of lock periods could NOT be more than 6.
+Based on the current testnet setting, the maximum number of lock periods is set to 6.
 
 **Each period takes 2 weeks, which means the longest lock period would be 12 weeks.**
 
