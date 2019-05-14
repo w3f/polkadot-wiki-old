@@ -22,7 +22,7 @@ We are not only providing technical resources for you, but we can have someone f
 
 - Love to deliver the vision of Web3 
 - Learn the bleeding-edge technology
-- Believe our technology stack is suitable for developers to build their applications
+- Believe the Web3 technology stack is suitable for developers to build their applications
 - Like to make connections
 
 ## How do hackathons differ from workshops?
