@@ -54,7 +54,7 @@ Depending on who are the entity proposed the proposal and whether all council me
 |Council (Complete agreement)|Negative Turnout Bias (Super-Majority Against)|
 |Council (Majority agreement)|Simple Majority|
 
-Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
+Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's use the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
 
 ```
 approve - the number of aye votes
