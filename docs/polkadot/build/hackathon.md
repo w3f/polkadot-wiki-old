@@ -21,7 +21,7 @@ We are not only providing technical resources for you, but we can have someone f
 ## Why you should host a hackathon?
 
 - Love to deliver the vision of Web3 
-- Learn the leading-edge technology
+- Learn the bleeding-edge technology
 - Believe our technology stack is suitable for developers to build their applications
 - Like to make connections
 
