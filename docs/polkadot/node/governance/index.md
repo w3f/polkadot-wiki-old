@@ -24,7 +24,7 @@ To better understand how council forms, please read [this section](#council).
 
 - **[Council](#council)**: 
 
-    Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referenda.
+    Unanimous Council - When all members of the council agrees on a proposal, it can be moved to a referendum.
 
     Majority Council - When agreement from only the simple majority of council members is needed. (More Aye votes to Nay votes for acceptance, more Nay votes to Aye votes for rejection.) 
 
