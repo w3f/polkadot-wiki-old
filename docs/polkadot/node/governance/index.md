@@ -46,13 +46,15 @@ According to the above scenario, even though combining both Logan and Kevin's DO
 
 ### Tallying
 
-Depending on who are the entity proposed the proposal and whether all council members voted yes, there are three different scenarios. 
+Depending on who are the entity proposed the proposal and whether all council members voted yes, there are three different scenarios. We can use following table for reference.
 
-We assume that a majority `council` agreement, with no veto, signals a sensible, perhaps an irregular state transition. For this, we use the `majority carries` metric. As an exception to this when there is **complete agreement** within the council we assume that is signals a largely technocratic and uncontroversial protocol change. For this reason we assert that the "burden of proof" should fall on those against the motion and thus we use the `negative turnout bias` metric.
+|**Entity**|**Metric**|
+|:----:|:----:|
+|Public|Positive Turnout Bias (Super-Majority Approve)|
+|Council (Complete agreement)|Negative Turnout Bias (Super-Majority Against)|
+|Council (Majority agreement)|Simple Majority|
 
-Publicly submitted referenda, being `public`, can easily include malevolent or ill-considered actions. Here the onus must be placed on the proponents and so we bias any abstention votes against the motion, in favor of the (assumed safe, since its functional enough to administer this vote) status quo and use a `positive turnout bias`.
-
-We need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
+Also, we need the following information and apply one of the formulas listed below to calculate the voting result. For example, let's the public proposal as an example, so `Super-Majority Approve` formula will be applied. There is no strict quorum, but super-majority required increases as turnout lowers.
 
 ```
 approve - the number of aye votes
