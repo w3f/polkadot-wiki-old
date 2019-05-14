@@ -102,7 +102,7 @@ Based on the above result, the proposal will be approved. In addition, only the 
 
 ## Voluntary Locking
 
-Polkadot utilize an idea called `Voluntary Locking` that lets the token holders increasing their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
+Polkadot utilizes an idea called `Voluntary Locking` that allows token holders to increase their voting power by declaring how long they are willing to lock-up their DOTs, hence, the maximum number of votes for each token holder will be calculated by the following formula:
 
 ```
 Max votes = tokens * periods 
