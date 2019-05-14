@@ -1,6 +1,6 @@
 # Hackathon
 
-As one of our objectives in the Web3 Foundation is pushing Web3 technology stack, we would like to support anyone/team who wants to organize a hackathon for getting more developers to understand about Polkadot/Substrate in your city.
+As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
 
 We are not only providing technical resources for you, but we also can have someone from our team to give a hands-on workshop/presentation about the technology to those participants get started hacking on it in a much quicker way.
 
