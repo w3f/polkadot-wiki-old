@@ -1,6 +1,11 @@
 # Hackathon
 
-## Ideas
+As one of our objectives in the Web3 Foundation is pushing Web3 technology stack, we would like to support anyone/team who wants to organize a hackathon for getting more developers to understand about Polkadot/Substrate in your city.
+
+We are not only providing technical resources for you, but we also can have someone from our team to give a hands-on workshop/presentation about the technology to those participants get started hacking on it in a much quicker way.
+
+## Ideas 
+
 - NFT
 - Bonded Tokens
 - New governance modules with different styles of voting & democracy
@@ -8,13 +13,45 @@
 - IPFS integration
 - Decentralized identity solutions
 - Oracle module
+- Implement Generalized State Channel/Plasma Chain
+- Decentralized Exchange
+- Tools for monitoring validator performance
+- dApps across different parachains
+
+## Why you should host a hackathon?
+
+- Love to deliver the vision of Web3 
+- Learn the leading-edge technology
+- Believe our technology stack is suitable for developers to build their applications
+- Like to make connections
+
+## How do hackathons differ from workshops?
+Hackathon is aiming for those participants to deliver their prototype to demonstrate their ideas to reality in a short period (few hours - one day), while the workshop is letting them get familiar with the tooling and knowing more about what are the resources currently available and how they can make use of it.
+
+## How can you run a hackathon in your city?
+1. Submit your application (Coming soon.)
+2. Review
+3. Decision
+4. Follow up
+
+## What we can help you?
+
+- Provide technical resources/materials. 
+- Find a venue.
+- Ensure the hackathon run smoothly.
 
 ## Upcoming hackathon events
-Coming soon!!!
+
+Coming soon.
 
 ## Template / Starter packs
-Coming soon!!!
+
+Coming soon.
 
 ## Resources
 
 - [Substrate Developer Hub](https://docs.substrate.dev)
+
+## Support / Contact
+
+If you have any questions regarding organizing a hackathon, please free feel to contact us by [email](mailto:events@web3.foundation) or ask us via [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
