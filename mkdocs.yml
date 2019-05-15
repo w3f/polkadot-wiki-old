@@ -99,9 +99,11 @@ extra:
       link: 'https://medium.com/@polkadotnetwork'
 
 markdown_extensions:
-     - admonition
-     - codehilite:
-         guess_lang: false
-     - toc:
-         permalink: true
-     - mdtooltips
+    - admonition
+    - codehilite:
+        guess_lang: false
+    - toc:
+        permalink: true
+    - mdtooltips
+
+  
