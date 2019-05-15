@@ -1,16 +1,34 @@
-# How does Polkadot compare to Cosmos?
+# Compare: Polkadot and Cosmos
 
-There is a lot of interest surrounding the comparison of Polkadot to Cosmos. Understandably so, since Cosmos as a blockchain interoperability protocol shares some of the same goals as Polkadot. However, there are a few key differences between the two protocols which should be understood before comparing them further.
+Polkadot and Cosmos share similar goals including interoperability among blockchains, and better security guarantees through use of a Byzantine tolerant finalization mechanism. ...
 
-## Hubs and Zones vs. Relay chain and parachains
+## Architecture
 
-In Cosmos, a chain is referred to as a _zone_ and each uses an individual instance of the Tendermint consensus algorithm. Interchain communication is handled via a master _hub_ chain and is limited to transfers of currencies rather than the communication of arbitrary information across chains (like Polkadot allows). The roughly synonymous terms to compare Cosmos to Polkadot is that a _zone_ maps to _parachain_ and _hub_ maps to _relay chain_ BUT these are only loose comparisons and do not have the exact same properties or functions. One thing to point out is that Polkadot assumes that there will be a single canonical relay chain, with the potential for parachains to be relay chains themselves, but overall connecting to the top level Polkadot relay chain. Cosmos, however allows open deployment of hubs and zones and makes no such requirement that they must be connected at all. 
+In rough terms we can compare the architecture of both protocols by relating the relay chain and parachains model to that of hubs and zones.
+
+### Polkadot: Relay chain and parachains
+
+The Polkadot network is composed of the relay chain and a number of (between 1 - 200+) connected parachains. Some of these parachains will  act as bridges to already established networks such as Bitcoin, Ethereum, or Tezos. All of the parachains that are connected to the relay chain will share in the security of the relay chain validator set. All state transitions of the parachains will be recorded on the relay chain and finalized using GRANDPA, the relay chain finality gadget. Eventually Polkadot will scale by becoming a relay chain of relay chains, by utilizing its parachain slots as kinds of relay chains which can connect to parachains of its own.
+
+### Cosmos: Hub and zones
+
+The Cosmos network consists of the Cosmos hub which acts as the central point of routing messages across the connected zones. Cosmos terminology uses _zone_ to mean a chain that is connected to the hub. The hubs and zones are all Tendermint consensus PoS chains with the quality of fast finality. Cosmos does not require that zones be connected to the Cosmos hub, and there are projects such as [Iris network][iris] which have built an alternative hub. This is an important distinction from Polkadot, where the relay chain will be the central pool of security for all the connected parachains.
 
 ## Consensus
 
-Cosmos uses the [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html#what-is-tendermint) consensus algorithm which is based on the practical Byzantine-Fault-Tolerant (PBFT) algorithm. For a general overview of PBFT, please see the overview [here](https://crushcrypto.com/what-is-practical-byzantine-fault-tolerance/). In general, it is a family of consensus protocols that can handle no more than 1/3 byzantine nodes (malicious or offline nodes). 
+Polkadot uses a trifecta of the GRANDPA finality gadget, BABE block production, and Nominated Proof-of-Stake (NPoS) validator selection as its consensus framework.
 
-Polkadot uses a combination of block production mechanism with a finality gadget, respectively termed BABE and GRANDPA. BABE is similar to Ouroboros Praos and GRANDPA is a finality gadget based on GHOST in the same vein as Casper FFG. It is **not** PBFT.
+Cosmos uses the [Tendermint][tendermint latest gossip] consensus algorithm with PoS validator selection. The Tendermint consensus algorithm is based on the practical Byzantine-Fault-Tolerant (PBFT) consensus with modifications to make it better suited to high-frequency gossip networks.  
+
+For those brave souls who want to know more about how each consensus mechanism compares, we've broken it down into a few sections below.
+
+### Finality
+
+Both the Polkadot relay chain and Cosmos hub will achieve finality under favorable network conditions with the assumption that > 2/3 of the validator set is available and honest. Once > 2/3 of the validator set has signed off on a block (or, in the case of GRANDPA a chain of blocks) those blocks are considered final and unable to be reverted. In comparison, Nakamoto consensus as used in most PoW blockchains can only guarantee probably finality at best.
+
+The time-to-finality of both GRANDPA and Tendermint are limited by the bandwidth limit and latency on the network. As the number of validators increases, so will the number of messages that must get sent between them thereby slowing down the finality mechanism. Both Polkadot and Cosmos are interested in moving to as large of a validator set as possible without horrendously slowing down the network. In practical terms, Cosmos launch with 100 validators and Polkadot will launch with 50 - 100 and quickly scale up to around 1000.
+
+One key difference between Tendermint and the consensus mechanism of Polkadot is how each protocol treats the act of block production. 
 
 ### Validity
 
@@ -84,31 +102,34 @@ Cosmos has written the [`cosmos-sdk`](https://github.com/cosmos/cosmos-sdk) in G
 
 ## FAQ
 
-Follows are responses to questions which are often brought up in the comparison of Cosmos and Polkadot.
-
 ### Do parachains need to connect to the relay chain or can they be sovereign chains like in Cosmos?
 
-The simple answer is _yes_, if a chain would like to benefit from the shared security and interchain communication enabled by Polkadot then it must become a parachain to the Polkadot relay chain. However, a chain built using Substrate does not need to connect to Polkadot if it does not want to share in these benefits and it can implement its own consensus and security just as each Cosmos zone does. The difference between them is that in Cosmos, there is no choice, a chain must have its own security and validator set running Tendermint consensus. While Polkadot/Substrate allows a chain to be sovereign with its own security by implementing one of the provided consensus algorithms or by developing a custom one. If the chain chooses it can make its consensus compatible with Polkadot and become a parachain.
+Parachains by definition must connect to the Polkadot relay chain to be considered a _parachain_. This is so that the parachain can benefit from the shared security and interoperability of ICMP. Similarly, in order for a Tendermint chain to take advantage of the interchain messages of Cosmos, it is recommended they connect to a hub such as the Cosmos or Iris hubs.
 
-### Is GRANDPA / BABE similar to PBFT?
+However, if a chain does not wish to take place in the benefits of connecting to the Polkadot relay chain then it is possible for them to use the same tools to create a standalone chain. Using Substrate, a development team can create their own blockchain and later decide if they would want to lease the security from Polkadot by becoming a parachain. In Cosmos, sovereign chains have no choice with regard to where their security comes from. Every chain on Cosmos must have their own validator set regardless of if they connect to a hub or not.
 
-No. This is a misunderstanding. GRANDPA, the finality gadget, and BABE, the block production mechanism, are novel developments in consensus and they are very far away from PBFT. GRANDPA is derived from GHOST similar to Ethereum's Casper and BABE is a block production mechanism similar to Ouroboros Praos. Neither of these technologies are based on PBFT. (This is not the case for Cosmos however, since Tendermint is based on a modified PBFT).
+### Is GRANDPA/BABE/NPoS similar to PBFT?
 
-### Is Polkadot only going to work with POS chains? How is it trust-less in comparison to Cosmos?
+No not really. PBFT is a consensus algorithm (but not a blockchain consensus algorithm) that dictates how messages are circulated through the network. It cannot act as a blockchain consensus by itself due to most notably being exploitable through the _nothing at stake_ problem. There exists some similarity between GRANDPA and Byzantine-fault-tolerant (BFT) algorithms in general since GRANDPA is designed as a Byzantine finality gadget. However, the overall consensus of Polkadot which is composed of the three pieces of GRANDPA, BABE, and NPoS cannot be claimed to be similar to PBFT as it would just cause confusion. Even in Tendermint, which is based on PBFT, the added PoS validator set selection algorithm is needed to make it into a full blockchain consensus mechanism.
 
-Polkadot is primarily designed to be a very efficient and minimal heterogeneous multi-chain platform. Bridges to preexisting or "foreign" chains are one potential use-case for it. Such bridges can be to either PoW or PoS chains and in terms of the Polkadot protocol it makes little difference (as it does in some protocols such as Bitcoin's Sidechains that works specifically with SHA256 PoW and Cosmos's Zones that works only with Tendermint PoS). Polkadot's parachain abstraction is neither PoS nor PoW specific. If you want to call it anything, it's "PoV" or Proof of Validity. As such Polkadot is entirely agnostic. As long as you can succinctly demonstrate that a block is "valid" under your chain's technology (basically this means being able to build a light client), then you can probably plug it into Polkadot one way or another.
+### Is Polkadot only going to work with PoS chains? How is it trustless in comparison to Cosmos?
+
+Polkadot is primarily designed to be a very efficient and minimal heterogeneous multi-chain platform. Bridges to pre-existing or "foreign" chains are one potential use-case for it. Such bridges can be to either PoW or PoS chains and in terms of the Polkadot protocol it makes little difference (as it does in some protocols such as Bitcoin's Sidechains that works specifically with SHA256 PoW and Cosmos's zones that works only with Tendermint PoS). Polkadot's parachain abstraction is neither PoS nor PoW specific. If you want to call it anything, it's "PoV" or Proof of Validity. As such Polkadot is entirely agnostic. As long as you can succinctly demonstrate that a block is "valid" under your chain's technology (basically this means being able to build a light client), then you can probably plug it into Polkadot one way or another.
 
 ## Quick Facts
 
 |   |Cosmos|Polkadot|
 |---|---|---|
-|Consensus|Tendermint (BFT)|GRANDPA/BABE|
-|Governance|Validator/Delegator Vote|Referendum and Council representing stakeholders|
-|Models|Hub and Zones|Relay chain and parachains|
-|Security|Each zone has its own security|Shared security|
+|Consensus|Tendermint (modified PBFT + PoS)|GRANDPA/BABE/NPoS|
+|Governance|Validator/Delegator Vote|Referendum and Council representing passive stakeholders|
+|Architecture|Hub and zones|Relay chain and parachains|
+|Security|Each zone needs own security|Shared security|
 |Native token|Atom|Dot|
 
 
 ## Further Reading
 
 https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introduction-part-1-d08a24a021b5
+
+[iris]: https://www.irisnetwork.cn
+[tendermint latest gossip]: https://arxiv.org/pdf/1807.04938.pdf
