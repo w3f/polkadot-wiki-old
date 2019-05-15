@@ -8,7 +8,7 @@ All changes to the protocol must be agreed upon by stake-weighted referenda; the
 
 ## Mechanism
 
-In order to make any changes to the network, the idea is to compose of active token holders and council together to administrate the network upgrade decision. No matter whether the proposal is proposed by the public(DOT holders) or council, it finally will have to go through the [referenda](../../learn/governance.md#referenda) to let all DOT holders make the decision.
+In order to make any changes to the network, the idea is to compose active token holders and council together to administrate the network upgrade decision. No matter whether the proposal is proposed by the public (DOT holders) or council, it finally will have to go through the [referenda](../../learn/governance.md#referenda) to let all DOT holders make the decision.
 
 The following steps are the governance procedure in the Polkadot network:
 
