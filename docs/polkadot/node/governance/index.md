@@ -16,7 +16,7 @@ The following steps are the governance procedure in the Polkadot network:
 - [Voting for a proposal](#voting-for-a-proposal) (Involved info: [Voluntary Locking](#voluntary-locking))
 - [Tallying](#tallying) (Involved info: [Adaptive Quorum Biasing](#adaptive-quorum-biasing))
 
-To better understand how council forms, please read [this section](#council).
+To better understand how the council is formed, please read [this section](#council).
 
 ### Proposing Referenda
 
