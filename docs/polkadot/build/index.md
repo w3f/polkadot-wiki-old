@@ -19,6 +19,7 @@ that is not available to be found elsewhere.
 
 - [Starter's Guide](./build-with-polkadot.md) - High level overview on choosing a parachain or smart contract, and what resources are available today to get started.
 - [Development Roadmap](./dev-roadmap.md)
+- [Parachain Development Kits](./pdk.md) - Learn about parachain development kits and create your own parachain.
 - [Smart Contracts](./smart-contracts.md) - Learn all about smart contracts on Polkadot and Substrate and how to get started today.
 
 ## Tools
@@ -34,6 +35,7 @@ that is not available to be found elsewhere.
 - [Rust Style Guide](./rust-style-guide.md)
 
 ## Hackathon
- - [Resources For Running a Hackathon](./hackathon.md)
 
-More coming soon.
+- [Resources For Running a Hackathon](./hackathon.md)
+
+_More coming soon._
