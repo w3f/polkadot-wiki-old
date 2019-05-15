@@ -46,7 +46,7 @@ According to the above scenario, even though combining both Logan and Kevin's DO
 
 ### Tallying
 
-Depending on who are the entity proposed the proposal and whether all council members voted yes, there are three different scenarios. We can use following table for reference.
+Depending on which entity proposed the proposal and whether all council members voted yes, there are three different scenarios. We can use following table for reference.
 
 |**Entity**|**Metric**|
 |:----:|:----:|
