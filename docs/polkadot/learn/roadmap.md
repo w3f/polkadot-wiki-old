@@ -1,8 +1,9 @@
 # Roadmap
 
-## Polkadot Mainnet
+## Polkadot release
 
-Mainnet is expected to go live in late 2019.
+We are targeting the end of 2019 for the initial release of Polkadot.
+
 
 ## Polkadot PoCs
 
