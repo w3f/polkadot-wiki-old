@@ -231,7 +231,15 @@ disincentivize
 api
 boolean
 rpc-provider
+hackathons
 unpermissioned
+pdks
+zk-snarks
+roll_up
+zk-snark
+rc
+pre-alpha
+mdots
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
