@@ -7,12 +7,13 @@ nav:
  - Home: index.md
  - Build:
    - Home: polkadot/build/index.md
-   - Cumulus: polkadot/build/cumulus.md
    - Building on Polkadot: polkadot/build/build-with-polkadot.md
+   - Cumulus: polkadot/build/cumulus.md
    - Deploy Parachains: polkadot/build/deploy-parachains.md
    - Examples: polkadot/build/examples/index.md
    - Extrinsic Format: polkadot/build/extrinsic-format.md
    - Networks: polkadot/build/networks.md
+   - Parachain Development Kits: polkadot/build/pdk.md
    - Rust Style Guide: polkadot/build/rust-style-guide.md
    - Smart Contracts: polkadot/build/smart-contracts.md
    - Tools: polkadot/build/tools/index.md

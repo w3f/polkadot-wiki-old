@@ -36,6 +36,10 @@ Parachains are operated and new blocks are authored by [collator nodes](../node/
 
 Parachain slots will be acquirable through auction, please see the [parachain slots](./auction.md) article.
 
+## Parachain Development Kits (PDKs)
+
+Parachain Development Kits are a set of tools that enable developers to create their own applications as parachains. For more info see [here](../build/pdk.md). 
+
 ## Deploying parachains
 
 Please see the builder's article on [deploying parachains](../build/deploy-parachains.md).
