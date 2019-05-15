@@ -20,7 +20,7 @@ To better understand how council forms, please read [this section](#council).
 
 ### Proposing Referenda
 
-- **Public**: Anyone can propose a referenda by depositing minimum value in a certain period (No. of Blocks). If someone likes the proposal, they could deposit the same amount of tokens to support it. The one with the highest number of supported proposal will be selected to be a referendum. Those tokens will be released once the proposal is tabled. At genesis, every two weeks will have a referendum on the most supported proposal.
+- **Public**: Anyone can propose a referenda by depositing the minimum amount of DOTs for a certain period (No. of Blocks). If someone likes the proposal, they may deposit the same amount of tokens to support it. The proposal with the highest number of support bond will be selected to be a referendum. The bonded tokens will be released once the proposal is tabled. At genesis, every two weeks there will be a referendum for the most supported proposal.
 
 - **[Council](#council)**: 
 
