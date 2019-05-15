@@ -12,6 +12,7 @@ nav:
    - Deploy Parachains: polkadot/build/deploy-parachains.md
    - Examples: polkadot/build/examples/index.md
    - Extrinsic Format: polkadot/build/extrinsic-format.md
+   - Hackathons: polkadot/build/hackathon.md
    - Networks: polkadot/build/networks.md
    - Parachain Development Kits: polkadot/build/pdk.md
    - Rust Style Guide: polkadot/build/rust-style-guide.md
