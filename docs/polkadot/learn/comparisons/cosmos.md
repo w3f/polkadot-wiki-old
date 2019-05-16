@@ -71,34 +71,46 @@ For a visualization of what we mean by GRANDPA comes to finality on "chains" rat
 <!-- right now this links to Rob's article but later will link to the wiki consensus page -->
 _For more on Polkadot consensus please see [here](https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introduction-part-1-d08a24a021b5)_
 
-## Shared Security
+## Shared security vs. sovereign security
 
-Polkadot is designed to share or _pool_ security through the relay chain validator set. This means that any chain which connects to the Polkadot network will not need to set up its own consensus or manage its own economic security, but will benefit from the strong economic security of the relay chain.
+The Polkadot architecture is designed so that the security of the network pools to the relay chain via the relay chain validator set. The relay chain can share its security to the connected parachains, once the parachain has bonded DOTs to lease a slot. The benefit is that any chain which connects to Polkadot will not need to set up its own economic security or have to worry at all about consensus. Paying out validators to secure a chain is expensive (usually paid by inflation or block reward), and it is anticipated that the parachain slot lease will be cheaper. Additionally, parachains only need to bond their DOTs and not pay them directly.
 
-This is remarkably different from Cosmos, since Cosmos posits that each chain is sovereign first and must run its own instance of Tendermint consensus with its own consensus algorithm. Cosmos now claims to have a notion of shared security similar to what is offered by Polkadot, but it is not implemented today and seems to be a recent addition.
+In Cosmos, all chains are sovereign and expected to maintain their own economic security. Each chain must run a "fast finality" consensus mechanism (which in practice will often be the Tendermint consensus) if it would like to benefit from connection to the Cosmos Hub. __Cosmos may have a notion of shared security and needs input from their team.__
 
 > Cosmos is a consensus bridge solution and **not** a validation bridge solution. There is no attempt in the Cosmos network to validate the sub-chains, and the hub can track all token transfers. Chains on Cosmos cannot trust each other since each is economically independent. The same Cosmos zone can spend resources on 2 other Cosmos zones and there would be no way for the zones to have information about this double spend unless they get it from the Cosmos hub.
 
-Polkadot has much stronger guarantees than Cosmos in ensuring the economic security over the global state of the relay chain and of the parachains. It also gives greater levels of flexibility to parachain developers to use their own consensus and custom interchain logic.
+Polkadot has a strong guarantee over the global state of the relay chain and all connected parachains since they all share the same economic security set. Cosmos does not have the same guarantee over the global state, since each chain maintains their own local security. What happens on one chain has no way of coordinating with what happens on another chain unless through some off-chain communications system.
 
-## Interchain Communication
 
-Cosmos uses the inter-blockchain communication (IBC) standard for the transmission of messages across its zones. The specification for IBS is in progress on [this pull request](https://github.com/cosmos/ics/pull/68) and is described in a series of tweets [here](https://twitter.com/cosmossdk/status/1107729527004762112).
+## Interoperability between chains
 
-It is difficult to describe the Cosmos IBC protocol with fairness since the specification provided is a work-in-progress and does not necessarily reflect what is implemented in the live Cosmos hub today. As far as we can tell, Cosmos IBC is limited to only the transfer of assets (tokens) across chains which are running Tendermint. They specify it is agnostic to chains as long as it fits the two properties of "fast finality" and "accumulator proofs" but as neither of these things are well-specified it must be assumed it only works with the Tendermint software (in other words, not truly agnostic). 
+Cosmos proposes the Inter-blockchain communication (IBC) standard for the transmission of messages across zones. Polkadot uses Interchain Message Passing (ICMP) for communication among the parachains. The designs and the goals of each standard are notably different due to the two worldviews of Cosmos and Polkadot.
 
-Previously believed that:
-```
-Cosmos IBC allows each of its zones to transfer assets to other zones granted they are connected to the _Cosmos Hub_. Notably, the interchain communication in Cosmos is limited **only to transfer of assets.**
-```
+### Inter-blockchain Communication (IBC)
 
-In comparison, Polkadot allows arbitrary messages to circulate among its parachains. Parachains are able to communicate with each other and validators only need enough data to verify that the interchain messages are being processed correctly. The messages of Polkadot's interchain system can encapsulate assets or more complicated functionality. They are strings of arbitrary bytes. In fact, Polkadot is so flexible in its interchain communication that it even allows parachains to parse the same message in different ways. Although this is a ridiculous thing for parachains to implement, it is allowed. The way that one parachain interprets a message is independent of how any other parachain interprets messages. Of course, the impact a message has on one parachain's state can not effect the state of another parachain (unless it sets off a domino effect of interchain messages by initiating the receiving parachain to send a new message to other parachains).
+The [IBC protocol][ibc architecture] is a standard by which various ledgers (blockchains) may communicate with each other. It is an infrastructure level protocol that handles data transport, reliability, and authentication. One of the use cases of IBC is to transfer assets via the Cosmos Hub, but it is not limited only to token transfers. The IBC protocol does not rely on the Cosmos Hub and zone model, and can be used for transmitting messages between chains arranged in a variety of network topologies.
 
-For more on parachain messaging in Polkadot please see the [interchain page](../interchain.md).
+<!-- Illustration of various network topologies such as Hub and spoke, hierarchical relay chain and parachains, two sovereign chains -->
 
-## Programming Language
+### Interchain Message Passing (ICMP)
 
-Cosmos has written the [`cosmos-sdk`](https://github.com/cosmos/cosmos-sdk) in Golang, and has not signaled any desire or plan to support other languages. This is okay if you are a skilled Go developer or are willing to hire Go programmers or learn the Go language, but not very helpful if otherwise. In comparison, Polkadot uses the language-agnostic WebAssembly standard (Wasm) as the compilation target of its runtime and parachain validation functions and runtimes. Many programming languages support Wasm compilation or will support Wasm compilation in the future. A non-exhaustive list of languages that support Wasm compilation are Rust, Go, C++, TypeScript (AssemblyScript), OCaml, Brainfuck, and [more](https://github.com/appcypher/awesome-wasm-langs).  To create a blockchain that will connect to the Polkadot network, it's possible to write your blockchain application in any of these languages. With Cosmos, you have no choice and must write in Go.
+The Polkadot ICMP is designed to work in the trustless environment of the relay chain via validator and collator nodes. ICMP allows for arbitrary messages to circulate between parachains and the messages to be guaranteed by the relay chain validator set. 
+
+Messages which pass between parachains are strings of arbitrary bytes. Standards will form, similar to the ERC-20 standard for tokens, for how parachains will interpret certain encoding of messages and this will bring some order to the system. Otherwise, parachains have no constraints on how they will receive, interpret, or execute the messages (just that they will execute it). This allows for ICMP to be transfers of assets or more complex functionality such as smart contract calls. 
+
+For fuller details on ICMP please see the [here][icmp].
+
+### Similarities and differences?
+
+Both protocols are designed for messaging between blockchains, but they do not really overlap since ICMP is reliant on the Polkadot architecture of relay chain and parachains while IBC is moving more toward a generic standard over chains with finality. <!-- Check <-- with Cosmos team --> 
+
+In the future both standards will work in harmony, allowing all blockchains to communicate with each other. The relay chain of Polkadot would be able to transmit messages to the Cosmos Hub and back.
+
+## Programming language
+
+Cosmos has been committed to writing their own software using the **Go** programming language. For example, the [`cosmos-sdk`][cosmos-sdk] which contains the `gaia`, the reference implementation of the Cosmos Hub, is written in Go. The IBC protocol should be agnostic to programming language, and it is still undetermined which language will be the first implementation.
+
+The Web3 Foundation has enlisted multiple teams to implement Polkadot [in several languages][implementations] ranging from Rust, C++, Go, and JavaScript. The leading implementation of the Polkadot runtime environment and the most advanced [parachain development kit][pdk] are written in Rust by [Parity Technologies][parity]. Compatibility with Polkadot only places the constraint on the programming language of choice that it must be able to compile to [**WebAssembly (Wasm)**][wasm]. To give an idea of the breadth of the Wasm ecosystem, a non-exhaustive list of languages that support Wasm compilation are Rust, Go, C++, TypeScript (AssemblyScript), OCaml, Brainfuck, and [more](https://github.com/appcypher/awesome-wasm-langs).  
 
 ## FAQ
 
@@ -122,9 +134,10 @@ Polkadot is primarily designed to be a very efficient and minimal heterogeneous 
 |---|---|---|
 |Consensus|Tendermint (modified PBFT + PoS)|GRANDPA/BABE/NPoS|
 |Governance|Validator/Delegator Vote|Referendum and Council representing passive stakeholders|
-|Architecture|Hub and zones|Relay chain and parachains|
-|Security|Each zone needs own security|Shared security|
-|Native token|Atom|Dot|
+|Interoperability|Inter-blockchain Communication (IBC)|Interchain Message Passing (ICMP)|
+|Security|Each zone needs own security|Shared security for parachains|
+|Topology|Hub and zones|Relay chain and parachains|
+|Token|Atom|Dot|
 
 
 ## Further Reading
@@ -133,3 +146,10 @@ https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introd
 
 [iris]: https://www.irisnetwork.cn
 [tendermint latest gossip]: https://arxiv.org/pdf/1807.04938.pdf
+[ibc architecture]: https://github.com/cosmos/ics/blob/master/ibc/1_IBC_ARCHITECTURE.md
+[icmp]: ../interchain.md
+[cosmos-sdk]: https://github.com/cosmos/cosmos-sdk
+[implementations]: ../implementations.md
+[pdk]: ../../build/pdk.md
+[parity]: https://parity.io
+[wasm]: https://webassembly.org
