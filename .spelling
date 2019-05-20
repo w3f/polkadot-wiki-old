@@ -243,6 +243,7 @@ mdots
 serverless
 failover
 web3.0
+polkadot.network
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
