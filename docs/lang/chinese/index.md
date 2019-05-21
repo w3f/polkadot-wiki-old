@@ -10,6 +10,8 @@
 
 [Governance - 治理](https://mp.weixin.qq.com/s/yyPaHsU7Nf7sUBVGIq1jbw)
 
+## Polkadot与其它区块链的分别
+[以太坊](./learn/comparisons.md)
 
 ## Parachain 平行链资料
 [開發者快速入门指南](./build/build-with-polkadot.md) 
