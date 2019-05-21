@@ -13,7 +13,7 @@
 
 ### 以太坊2.0
 
-以太坊2.0是指计划中的分片链，目前正在开发中（[现有设计规格](https://github.com/ethereum/eth2.0-specs/tree/0.4.0)。
+以太坊2.0是指计划中的分片链，目前正在开发中([现有设计规格](https://github.com/ethereum/eth2.0-specs/tree/0.4.0))。
 
 表面上看Eth2.0的信标链和分片链与Polkadot的中继链和平行链是可比的，但是最主要分别Eth2.0分片是homogeneous，而Polkadot平行链是heterogeneous，意味着在Polkadot中的链逻辑上有更大的弹性，还可以与整个网络共享安全，而Eth2.0分片都是相同的逻辑。
 
