@@ -243,6 +243,7 @@ mdots
 serverless
 failover
 web3.0
+BlockX
 polkadot.network
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
