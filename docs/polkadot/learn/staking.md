@@ -7,7 +7,7 @@ Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the
 ### 1. Identifying which role you are
 
 In staking, you can be either a [nominator or a validator](#validators-and-nominators). As a nominator,
-you can nominate multiple validator candidates that you trust to help you earn rewards. You can take a look at the [nominator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-nominate/) to understand what you are required to do when the mainnet launches. Meanwhile, a validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [validator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/) if you want to run a validator in the current testnet.
+you can nominate multiple validator candidates that you trust to help you earn rewards in DOTs. You can take a look at the [nominator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-nominate/) to understand what you are required to do when the mainnet launches. Meanwhile, a validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [validator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/) if you want to run a validator in the current testnet.
 
 ### 2.  Nomination period
 
