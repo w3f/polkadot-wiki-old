@@ -18,6 +18,8 @@
 
 [部署平行链](./build/deploy-parachains.md) 
 
+## [如何在POC-4运行验证人节点](./node/guides/how-to-validate.md)
+
 ## Substrate
 
 Overview - 簡介
