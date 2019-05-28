@@ -1,10 +1,65 @@
 # Staking
 
-Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. Polkadot will have a limited amount of slots available at genesis for those who are interested in running a validator to maintain the network. NPoS is designed to optimize nominator/validator for maximum chain security. Basically, DOT holders get paid more for nominating multiple validators to ensure the network will not be heavily centralized on only a few validators. Validators take the role of both validating blocks and guaranteeing the finality of the chain, while nominator will choose a set of potential validators candidate by indicating their DOTs as weight. Both validators and nominators will earn rewards proportional to the amount that they stake, with validators having the ability to set payment preferences.
+Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors who are interested in maintaining the network can run a validator node. At genesis, Polkadot will have a limited amount of slots available for these validators, but this number will grow over time to over one thousand. The system also encourages an unlimited number of DOT holders to participate as nominators, where a nominator backs the election of one or more trusted validator candidates, to ensure the network will not be heavily centralized on only a few validators. Validators take the role of both validating blocks and guaranteeing the finality of the chain, while nominators will have the power to choose the set of validators by indicating their support weighted by DOTs. Both validators and nominators will earn rewards proportional to the amount that they stake, with validators having the ability to set some payment preferences.
 
-Any potential validators can indicate their intention to be a validator candidate. Validators who signal intention will be added to a waiting queue for nominators to elect and become active in the next era if a validator get enough nomination support.      
+## How does staking work in Polkadot?
 
-![staking](../../img/NPoS/article-1.png)
+### 1. Identifying which role you are
+
+In staking, you can be either a [nominator or a validator](#validators-and-nominators). As a nominator,
+you can nominate multiple validator candidates that you trust to help you earn rewards in DOTs. You can take a look at the [nominator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-nominate/) to understand what you are required to do when the mainnet launches. Meanwhile, a validator node is required to be responsive 24/7, perform its expected duties in a timely manner, and avoid any slashable behavior. You can follow our [validator guide](http://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/) if you want to run a validator in the current testnet.
+
+### 2.  Nomination period
+
+Any potential validators can indicate their intention to be a validator candidate. Their candidacies are made public to all nominators, and a nominator in turn submits a list of any number of candidates that it supports. In the next epoch (lasting several hours), a certain number of validators having the most DOT backing get elected and become active. There are no particular requirements for a DOT holder to become a nominator, though we expect each nominator to carefully track the performance and reputation of validators.
+
+Once the nomination period ends, the NPoS election mechanism takes the nominators and their associated votes as input, and outputs a set of validators of the required size, that maximizes the stake backing of any validator, and that makes the stakes backing validators as evenly distributed as possible. The objectives of this election mechanism are to maximize the security of the network, and achieve fair representation of the nominators. If you want to know more about how NPoS works (e.g. election, running time complexity, etc.), please read [here](http://research.web3.foundation/en/latest/polkadot/NPoS/).
+
+### 3. Staking Rewards Distribution
+
+To explain how rewards are paid to validators and nominators, we need to consider **validator pools**, where a validator pool consists of an elected validator together with the nominators backing it. (Note: if a nominator n with stake s backs several elected validators, say k, the NPoS election mechanism will split its stakes into pieces s_1, s_2, …, s_k, so that it backs validator i with stake s_i. In that case, nominator n will be rewarded the same as if there were k nominators in different pools, each backing a single validator i with stake s_i). For each validator pool, we keep a list of nominators with the associated stakes.
+
+The general rule for rewards across validator pools is that two validator pools get paid the **same amount of DOTs** for equal work, i.e. they are NOT paid proportional the stakes in each pool. Within a validator pool, a part of the reward goes to pay the validator’s commission fees, and the remainder is paid **pro-rata** (i.e. proportional to stake) to the nominators and validator. Notice in particular that the validator is rewarded twice: once as commission fees for validating, and once for nominating itself with stake.
+
+To estimate the inflation rate and how many DOTs you can get each month as a nominator or validator, you can use this [Excel sheet](https://docs.google.com/spreadsheets/d/1-9Hc3kZ23EhZC3X6feRUKSTv6gj4xR7cvUbJD2zUEZk/edit?usp=sharing) as a reference and play around with it by changing some parameters (e.g. validator pools, total supply, commission fees, etc.) to have a better estimate. Even though it may not be entirely accurate since staking participation is changing dynamically, it works well as an indicator.
+
+### 4. Rewards Mechanism
+
+We highlight two features of this payment scheme. The first is that since validator pools are paid the same, pools with less stake will pay more to nominators per-DOT than pools with more stake. We thus give nominators an economic incentive to gradually shift their preferences to lower staked validators that gain a sufficient amount of reputation. The reason for this is that we want the stake across validator pools to be as evenly distributed as possible, to avoid a concentration of power among a few validators. In the long term, we expect all validator pools to have similar levels of stake, with the stake being higher for higher reputation validators (meaning that a nominator that is willing to risk more by backing a validator with a low reputation will get paid more, which is reasonable). 
+
+Let's take a look at the following example.
+
+For simplicity, we have the following assumptions.
+
+* These validators do not have a stake of their own.
+* They do NOT charge any commission fees (although they can)
+* Rewards amount is 100 DOT tokens
+* The least amount of DOTs to be a validator is 350
+
+
+||**A - Validator Pool**|||
+|:----:|:----:|:----:|:----:|
+|Nominator (4) | Stake (600) | Fraction of the Total Stake | Rewards|
+|Jin| 100 | 0.167 | 16.7|
+|**Sam**| 50 | 0.083 | 8.3|
+|Anson| 250 | 0.417 | 41.7|
+|Bobby | 200 | 0.333 | 33.3|
+
+||**B - Validator Pool**|||
+|:----:|:----:|:----:|:----:|
+|Nominator (4) | Stake (400) | Fraction of the Total Stake | Rewards|
+|Alice | 100 | 0.25 | 25|
+|Peter | 100 | 0.25 | 25|
+|John | 150 | 0.375 | 37.5|
+|**Kitty** | 50 | 0.125 | 12.5|
+
+_Both validator pools A & B have 4 nominators with the total stake 600 and 400 respectively._
+
+Based on the above rewards distribution, nominators in validator pool B get more rewards per DOT than those in pool A because pool A has more overall stake. Sam has staked 50 DOTs in pool A, but he only gets 8.3 in return, whereas Kitty gets 12.5 with the same amount of stake.
+
+We also remark that when the network slashes a validator slot for a misbehavior (e.g. validator offline, validating an invalid block, etc.) the slashed amount is a fixed percentage (and NOT a fixed amount of DOTs), which means that validator pools with more stake get slashed more DOTs. Again, this is done to provide nominators with an economic incentive to shift their preferences and back less popular validators whom they consider to be trustworthy.
+
+The second point we want to highlight is that each validator candidate is free to name their desired commission fee (as a percentage of the reward) to cover operational costs. Since validator pools are paid the same, pools with lower commission fees pay more to nominators than pools with higher fees. Thus, each validator can choose between increasing their fees to earn more DOTs, or decreasing their fees to attract more nominators and increase their chances of being elected. We will let the market regulate itself in this regard. In the long term, we expect that all validators will need to be cost efficient to remain competitive, and that validators with higher reputation will be able to charge slightly higher commission fees (which is fair).
 
 ## Accounts
 
