@@ -141,7 +141,7 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 
 按下 `Stake`
 
-打开终端(Terminal)，如果你的节点经已完全同步，利用`Session`帐号的种子和执行以下指令。
+打开终端(Terminal)，如果你的节点经已完全同步，利用`Session`帐号的Seed和执行以下指令。
 
 ```bash
 polkadot \
