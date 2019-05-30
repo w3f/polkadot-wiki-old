@@ -21,7 +21,7 @@ Examples are helpful to demonstrate patterns of development. In this repository 
     - [Bellman-substrate (zksnarks on substrate) Repo](https://github.com/LayerXcom/bellman-substrate)
 - Starlog, IPFS metadata on substrate. [Repo](https://github.com/PACTCare/Starlog)
 - An example "Apple Store" to sell apples using Substrate. [Repo](https://github.com/osuketh/apple-store-substrate)
-- Landchain, a cross-chain gaming platform. [Repo](https://github.com/evolutionlandorg/land-chain)
+- Darwinia, a cross-chain gaming platform. [Repo](https://github.com/darwinia-network/darwinia)
 - Joystream, a user governed video platform. [Repo](https://github.com/Joystream/substrate-node-joystream)
 - IPFS browser. [Repo](https://github.com/Polygos/substrate-node-ipfsbrowser)
 - Substrate multisig. [Repo](https://github.com/mixbytes/substrate-module-multisig)
