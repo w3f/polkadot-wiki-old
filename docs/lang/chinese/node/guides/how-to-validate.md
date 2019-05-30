@@ -7,10 +7,10 @@
 
 - 拥有DOTs作抵押(**基本要求**）
 - 确保节点运行最新版本
-- 拥有网络保安知识
-- 使用HSM保护私钥(**推荐**）
+- 拥有网络安全知识
+- 使用HSM(硬件保护模块)保护私钥(**推荐**）
 
-如果你有DOT但是没有足够技术知识，你最好也不要当验证人，反而提议把你的DOTs提名到其它你信任的验证人身上去帮你做这个工作。
+如果你有DOT但是没有足够技术知识，你最好不要当验证人，更建议把你的DOTs提名到其它你信任的验证人身上去帮你做这个工作。
 
 你仍然能成为提名人提名多个验证人从而获得奖励。你可以在[这裹](../../../../../polkadot/node/nominator/)了解更多关于提名人的操作。
 
@@ -66,13 +66,13 @@ polkadot --chain alex
 - Controller
 - Session (必须是 ed25519)
 
-请看[这裹](../../../../polkadot/learn/keys.md)如果你想了解更多关于以上三个分别和为什么需要它们。
+请看[这裹](../../../../polkadot/learn/keys.md)如果你想了解更多关于以上三个区别和为什么需要它们。
 
 ![create account](../../../../img/validator/polkadot-dashboard-create-account.jpg)
 
 在PolkadotJS区块浏览器选择 [`Accounts`](https://polkadot.js.org/apps/#/accounts)，再按下`Create account`。
 
-为了简单容易识别帐号起见，见议大家把`Stash`、`Controller`和`Session`名为(`1337_Stash`, `1337_Controller`, `1337_Session`)。
+为了简单容易识别帐号起见，建议大家把`Stash`、`Controller`和`Session`命名为(`1337_Stash`, `1337_Controller`, `1337_Session`)。
 
 Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當创建**Session**密钥時，你必须在`Advanced creation options`选择`ed25519`加密算法作为`Key pair crypto type`。另外确保你选择`Raw Seed`并储存在本地某个地方，因为当你运行验证人时，那个指令需要使用到它。
 
@@ -86,7 +86,7 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 
 ## 获取测试币
 
-接下来`Stash`和`Controller`帐号也需要有测试币才能提交交易和参与抵押。而`Session`帐号不需要有DOTs及不建议发送任何币到`Session`，而`Stash`和`Controller`需要有最少100 mDOTs(即0.1 DOTs)的最低金额，另外有多些DOTs允许你作支付交易费用。
+接下来`Stash`和`Controller`帐号也需要有测试币才能提交交易和参与抵押。而`Session`帐号不需要有DOTs及不建议发送任何币到`Session`，而`Stash`和`Controller`需要有最少100 mDOTs(即0.1 DOTs)的最低金额，另外有多些DOTs允许你可以支付交易费用。
 
 现在有二个方法你可以获取测试币。
 
@@ -112,7 +112,7 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 ![dashboard bonding](../../../../img/validator/polkadot-dashboard-bonding.png)
 
 - **Controller account** - 选择你之前创建的`Controller`帐号。
-- **Value bonded** - 选择从`Stash`帐号绑定/抵押DOTs数量，因为你需要支付交易费，所以不能够使用全部DOTs作押抵，你之后还可以充值更多，但是提取经已绑定了的DOTs是需要等待一段时间（现在是600个区块）。
+- **Value bonded** - 选择从`Stash`帐号绑定/抵押DOTs数量，因为你需要支付交易费，所以不能够使用全部DOTs作押抵，你之后还可以充值更多，但是提取已经绑定了的DOTs是需要等待一段时间（现在是600个区块）。
 - **Payment destination** - 把奖励发送到那个帐号，详情请看[这里](../../../../polkadot/learn/staking.md#reward-distribution).
 
 当所有资料填写好后，利用`Stash`帐号按`Bond`并签署交易。
@@ -136,8 +136,8 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 ![dashboard validate](../../../../img/validator/polkadot-dashboard-validate.png)
 ![dashboard validate](../../../../img/validator/polkadot-dashboard-staking.jpg)
 
-- **Unstake threshold** - 你想被发现多少次离线后，取消验証人资格。
-- **Payment preferences** - 验证人会先取下这里设定的奖励，余下那些将会跟提名你的人分享。
+- **Unstake threshold** - 设置被发现多少次离线后，取消验証人资格。
+- **Payment preferences** - 验证人会先获得这里设定的奖励，余下那些将会跟提名你的人分享。
 
 按下 `Stake`
 
@@ -166,7 +166,7 @@ polkadot \
 
 > 如果你想把你验证人程序变成系统程序，你可以看[这个](../../../../polkadot/node/guides/how-to-systemd.md)教学。
 
-**注意:** 当主网愈近，你可以预计将会有更多验证人位置给大家参与测试。
+**注意:** 当主网愈近，预计将会有更多验证人位置给大家参与测试。
 
 ## VPS 服务器
 
