@@ -72,7 +72,7 @@ polkadot --chain alex
 
 在PolkadotJS区块浏览器选择 [`Accounts`](https://polkadot.js.org/apps/#/accounts)，再按下`Create account`。
 
-为了简单容易识别帐号起见，见议大家把`Stash`、`Controller`和`Session`名为(`1337_Stash`, `1337_Controller`, `1337_Session`)。
+为了简单容易识别帐号起见，建议大家把`Stash`、`Controller`和`Session`命名为(`1337_Stash`, `1337_Controller`, `1337_Session`)。
 
 Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當创建**Session**密钥時，你必须在`Advanced creation options`选择`ed25519`加密算法作为`Key pair crypto type`。另外确保你选择`Raw Seed`并储存在本地某个地方，因为当你运行验证人时，那个指令需要使用到它。
 
@@ -136,7 +136,7 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 ![dashboard validate](../../../../img/validator/polkadot-dashboard-validate.png)
 ![dashboard validate](../../../../img/validator/polkadot-dashboard-staking.jpg)
 
-- **Unstake threshold** - 你想被发现多少次离线后，取消验証人资格。
+- **Unstake threshold** - 设置被发现多少次离线后，取消验証人资格。
 - **Payment preferences** - 验证人会先取下这里设定的奖励，余下那些将会跟提名你的人分享。
 
 按下 `Stake`
