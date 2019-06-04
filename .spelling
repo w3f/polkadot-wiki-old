@@ -244,6 +244,13 @@ serverless
 failover
 web3.0
 pre-existing
+v1.0
+v2.0.
+multichain
+tcp-like
+protip
+stakers
+cosmos-sdk
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
