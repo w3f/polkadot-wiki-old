@@ -1,5 +1,5 @@
 site_name: Polkadot Wiki
-site_description: Information on Polkadot
+site_description: The Polkadot knowledge base
 site_author: 'Web3 Foundation'
 site_url: https://wiki.polkadot.network
 
@@ -73,7 +73,7 @@ theme:
     text: 'PT Sans'
     code: 'Ubuntu Mono'
   favicon: 'img/favicon.ico'
-  logo: 'img/logo.svg'
+  logo: 'img/Polkadot_symbol_white.svg'
   feature:
     tabs: false
 

@@ -1,6 +1,6 @@
-# Polkadot Wiki
+![Polkadot Logo](./img/Polkadot_logotype_color.svg)
 
-<img class ="polkadot-logo" src="./img/logo.svg"></img>
+# Polkadot Wiki
 
 Welcome to the Polkadot wiki, the hub for those interested in learning, building, or running a node on the Polkadot protocol.
 
