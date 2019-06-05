@@ -109,7 +109,7 @@ It is now time to setup our validator. We will do the following:
 - Select the `Controller`. This is the account that will decide when to start or stop validating.
 - Select the `Session`. This is the account whose seed will be used to run the node.
 
-First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot Dashboard, you should see the accounts that you created earlier.
+First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot Dashboard, and click on `Account Actions` at the top of the page.  You should see the accounts that you created earlier.
 
 Select your `Stash` account, in our case it has, 200 mDOTs, and click on the `Bond Funds` button. We will bond 100 mDOTs.
 
@@ -144,7 +144,7 @@ Click on `Validate`.
 - **Unstake threshold** - how often you want to be reported offline (and slashed) before being removed from the validator set.
 - **Payment preferences** - rewards you will keep, the rest will be shared among you and your nominators.
 
-Click `Stake`
+Click `Validate`
 
 Open your terminal, if your node is fully synchronized, run your validator with the seed from the `Session` account.
 
