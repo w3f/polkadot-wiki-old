@@ -35,5 +35,5 @@ Charlie通过平行链A里的智能合约发起一个新跨链信息到在平行
 
 ## 资源
 
-[ICMP方案](https://research.web3.foundation/en/latest/polkadot/ICMP/) - 完整的技术描述在Web3基金会研究网页
+[ICMP方案](https://research.web3.foundation/en/latest/polkadot/ICMP/) - 在Web3基金会研究网页上完整的技术描述
 
