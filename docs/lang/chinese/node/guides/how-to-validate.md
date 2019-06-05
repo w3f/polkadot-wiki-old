@@ -90,7 +90,7 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 
 现在有二个方法你可以获取测试币。
 
-- [Polkadot Faucet](https://faucet.polkadot.chat) - 在推特发布Tweet附带你的地址，注意每24小时最多能获取300 mDOTs。
+- [Polkadot Faucet](https://faucet.polkadot.network) - 在推特发布Tweet附带你的地址，注意每24小时最多能获取300 mDOTs。
 - [Blockxlabs Faucet](https://faucets.blockxlabs.com/polkadot) - 需要电邮登录。
 
 如果以上二个方法不行，你需要在[Polkadot Watercooler聊天室](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)贴下你的地址并请求其它人发给你。只需要贴下一个地址并将接收回来的DOTs发送到其它帐号。

@@ -96,7 +96,7 @@ To continue the following steps, you will need to get some testnet DOTs for the 
 
 To get testnet DOTs, you have a few options.
 
-- [Polkadot Faucet](https://faucet.polkadot.chat) - Post a tweet with your address and request up to 300 mDOTs every 24 hours.
+- [Polkadot Faucet](https://faucet.polkadot.network) - Post a tweet with your address and request up to 300 mDOTs every 24 hours.
 - [Blockxlabs Faucet](https://faucets.blockxlabs.com/polkadot) - A faucet which requires email sign-in.
 
 If the above two methods do not work then you may ask in the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) channel on Riot, paste your account address and ask for testnet DOTs. You can paste one account and transfer some of the DOTs received to the other account.
