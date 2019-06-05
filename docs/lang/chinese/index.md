@@ -10,15 +10,21 @@
 
 [Governance - 治理](https://mp.weixin.qq.com/s/yyPaHsU7Nf7sUBVGIq1jbw)
 
-## Polkadot与其它区块链的分别
+## 学习资源
+
+
+#### Polkadot与其它区块链的分别
 [以太坊](./learn/comparisons.md)
 
-## Parachain 平行链资料
+#### Parachain 平行链资料
 [開發者快速入门指南](./build/build-with-polkadot.md) 
 
 [部署平行链](./build/deploy-parachains.md) 
 
-## [如何在POC-4运行验证人节点](./node/guides/how-to-validate.md)
+#### 跨链
+[ICMP 跨链信息传递](./learn/interchain.md)
+
+### [如何在POC-4运行验证人节点](./node/guides/how-to-validate.md)
 
 ## Substrate
 
