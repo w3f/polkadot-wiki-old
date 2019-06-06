@@ -1,0 +1,112 @@
+site_name: Polkadot Wiki in Korean
+site_description: Information on Polkadot
+site_author: 'Web3 Foundation'
+site_url: https://wiki.polkadot.network
+
+nav:
+ - Home: index_KR.md
+ - Build:
+   - Home: polkadot/build/index_KR.md
+   - Building on Polkadot: polkadot/build/build-with-polkadot_KR.md
+   - Cumulus: polkadot/build/cumulus_KR.md
+   - Deploy Parachains: polkadot/build/deploy-parachains_KR.md
+   - Examples: polkadot/build/examples/index_KR.md
+   - Extrinsic Format: polkadot/build/extrinsic-format_KR.md
+   - Hackathons: polkadot/build/hackathon_KR.md
+   - Networks: polkadot/build/networks_KR.md
+   - Parachain Development Kits: polkadot/build/pdk_KR.md
+   - Rust Style Guide: polkadot/build/rust-style-guide_KR.md
+   - Smart Contracts: polkadot/build/smart-contracts_KR.md
+   - Tools: polkadot/build/tools/index_KR.md
+ - Learn:
+   - Home: polkadot/learn/index_KR.md
+   - Bridges: polkadot/learn/bridges/
+   - Comparisons:
+     - Cosmos: polkadot/learn/comparisons/cosmos_KR.md
+     - Ethereum: polkadot/learn/comparisons_KR.md
+     - Tezos: polkadot/learn/comparisons_KR.md
+   - Consensus: polkadot/learn/consensus_KR.md 
+   - Cryptography: polkadot/learn/cryptography_KR.md
+   - DOT: polkadot/learn/DOT_KR.md
+   - FAQ: polkadot/learn/faq_KR.md
+   - Governance: polkadot/learn/governance_KR.md
+   - Glossary: glossary_KR.md
+   - GRANDPA: polkadot/learn/consensus_KR.md
+   - ICMP: polkadot/learn/interchain_KR.md
+   - Implementations: polkadot/learn/implementations_KR.md
+   - Keys: polkadot/learn/keys_KR.md
+   - Phragmen: polkadot/learn/phragmen_KR.md
+   - Roadmap: polkadot/learn/roadmap_KR.md
+   - Security: polkadot/learn/security_KR.md
+   - SPREE: polkadot/learn/spree_KR.md
+   - Staking: polkadot/learn/staking_KR.md
+   - Randomness: polkadot/learn/randomness_KR.md
+   - Relevant Links: polkadot/learn/relevant-links_KR.md
+   - Parachains: polkadot/learn/parachains_KR.md
+   - Parachain Slots: polkadot/learn/auction_KR.md
+   - Polkadot Runtime Environment: polkadot/learn/PRE_KR.md
+   - Polkadot UI: polkadot/learn/UI_KR.md
+ - Run the Network:
+   - Home: polkadot/node/index_KR.md
+   - Collator: polkadot/node/collator_KR.md
+   - Nominator: polkadot/node/nominator_KR.md
+   - Validator: polkadot/node/node-operator_KR.md
+   - Guides:
+     - How to nominate: polkadot/node/guides/how-to-nominate_KR.md
+     - How to validate: polkadot/node/guides/how-to-validate_KR.md
+     - How to systemd: polkadot/node/guides/how-to-systemd_KR.md
+   - Governance: polkadot/node/governance/index_KR.md
+ - Other Languages:
+   - Chinese: lang/chinese/index.md
+   - Japanese: lang/japanese.md
+   - Korean : lang/Korean.md
+ - News: news_KR.md
+
+# Configuration for the Material theme
+theme:
+  name: null
+  custom_dir: 'mkdocs-material/material'
+  language: 'en'
+  palette:
+    primary: 'grey'
+    accent: 'pink'
+  font: 
+    text: 'PT Sans'
+    code: 'Ubuntu Mono'
+  favicon: 'img/favicon.ico'
+  logo: 'img/logo.svg'
+  feature:
+    tabs: false
+
+# Extra css for further customization 
+extra_css:
+  - 'stylesheets/extra.css'
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://research.web3.foundation/en/latest/mathjax-config.js
+
+# Repository that houses the source code for this site. This
+# is needed to render the nice GH link on the top right.
+repo_name: 'w3f/polkadot-wiki'
+repo_url: 'https://github.com/w3f/polkadot-wiki'
+
+# Social links
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/paritytech/polkadot'
+    - type: 'twitter'
+      link: 'https://twitter.com/polkadotnetwork'
+    - type: 'medium'
+      link: 'https://medium.com/@polkadotnetwork'
+
+markdown_extensions:
+    - admonition
+    - codehilite:
+        guess_lang: false
+    - toc:
+        permalink: true
+    - mdtooltips
+
+  
