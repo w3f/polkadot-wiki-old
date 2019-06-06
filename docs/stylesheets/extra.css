@@ -19,12 +19,28 @@
     color: #635F5F;
 }
 
+.md-icon {
+	color: #e6007a;
+}
+
 .md-icon.md-search__icon {
     color: #e6007a;
 }
 
 .md-icon.md-icon--menu.md-header-nav__button {
     color: #e6007a;
+}
+
+.md-search__icon {
+	color: #e6007a;
+}
+
+.md-nav__link:hover {
+    color: #e6007a;
+}
+
+a:hover {
+	color: #e6007a;
 }
 
 .grandpa-img {

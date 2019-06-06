@@ -203,7 +203,7 @@ dappchain
 speckleos
 tawaran
 shasper
-landchain
+darwinia
 inherents
 cidchain
 cryptosystems
@@ -243,6 +243,15 @@ mdots
 serverless
 failover
 web3.0
+s_1
+s_2
+s_k
+s_i
+Anson
+Jin
+slashable
+BlockX
+polkadot.network
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
@@ -278,3 +287,6 @@ upgradeability
  - docs/polkadot/build/hackathon.md
 Hackathon
 hackathon
+ - docs/polkadot/learn/spree.md
+gavofyork's
+RelayChain

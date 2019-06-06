@@ -46,6 +46,15 @@ economics. Parachains need collators to continue to progress, so it wouldn't be
 unreasonable to see them incent collator nodes in some way but it is completely
 up to parachain implementers.
 
+
+### Can I buy or transfer DOT tokens?
+
+Testnet DOT tokens are freely available from a variety of sources - see the [DOT page](./DOT.md) for details.
+
+Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch later this year (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Project Founder Gavin Wood said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+
+Mainnet DOT tokens are not transferrable until mainnet launch, expected late 2019. Therefore any transfers of mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch.
+
 ## Answered by Gav series
 
 The "Answered by Gav" series is a collection of posts uploaded to Reddit of questions that have been asked in the Polkadot Watercooler Riot channel and answered by Polkadot founder Gavin Wood.
