@@ -50,4 +50,4 @@ DOTs are required to make transactions on the Polkadot network. Testnet DOTs do 
 
 You can request DOTs from the [Polkadot faucet](https://faucet.polkadot.network/), the [BlockX Labs faucet](https://faucets.blockxlabs.com/) or ask someone to send you DOTs on the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
 
-You can make your own DOTs by [becoming a validator](https://github.com/paritytech/polkadot/wiki/Validating-on-PoC-2).
+You can make your own DOTs by [becoming a validator](https://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/).
