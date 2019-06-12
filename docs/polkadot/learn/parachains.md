@@ -30,6 +30,14 @@ By connecting to Polkadot a parachain gains two major advantages over an indepen
 
 Parachains are operated and new blocks are authored by [collator nodes](../node/collator.md) that maintain "full-nodes" of a particular parachain. They retain all necessary information to be able to propose new blocks and execute transactions in a similar way as miners do in traditional PoW blockchains. A block proposed by a collator node will be checked by the validator node before it is accepted as a canonical state transition by the relay-chain.
 
+## Parachain economies
+
+Parachains may have their own economies with their own native tokens. Schemes such as Proof-of-Stake are usually used to select the validator set in order to handle validation and finalization; parachains will not be required to do either of those things. However, since Polkadot is general over what the parachain can implement, it may be the choice of the parachain to implement a staking token, but it's not generally necessary.
+
+Collators may be incentivized through inflation or transaction fees of a native parachain token. There may be other ways to incentivize the collator nodes which do not involve inflating the native parachain token.
+
+Parachains are not required to have their own token and if they do it is up to the parachain to make the economic case for their token, not Polkadot.
+
 ## FAQ
 
 ### What is "parachain consensus"?
