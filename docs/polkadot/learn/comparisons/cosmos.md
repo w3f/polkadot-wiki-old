@@ -44,7 +44,7 @@ Polkadot depends on the complete validator set in cases where the subset of vali
 
 The entire validator set must resolve a conflict if it so happens that the supermajority of the validators which are assigned to a parachain shard become dishonest (or Byzantine, a word to refer nodes which have failed in some fashion-- whether this means they have gone offline or become malicious).
 
-Cosmos does not operate under the assumption that all the connected chains have shared state, so in this way each chain is independent and responsible for incentivizing their own security. The Cosmos IBC design does not make additionally security guarantees on of any of the interchain messaging. If a user decided to send a message from one Cosmos Tendermint chain to another, and later that second chain is corrupted because it had much lower security, it could have an indirect effect on the original chain. Cosmos' model is only as secure as the least secure of the bridged chains that the user uses. It is expected that the security will vary widely between each chain on Cosmos and users of the chains should know and understand this. This is different from Polkadot which is designed to distribute security as a blanket over all parachains through the shared-state model.
+Cosmos does not operate under the assumption that all the connected chains have shared state, so in this way each chain is independent and responsible for incentivizing their own security. The Cosmos IBC design does not make additional security guarantees on any of the interchain messaging. If a user decided to send a message from one Cosmos Tendermint chain to another, and later that second chain is corrupted because it had much lower security, it could have an indirect effect on the original chain. Cosmos' model is only as secure as the least secure of the bridged chains that the user uses. It is expected that the security will vary widely between each chain on Cosmos and users of the chains should know and understand this. This is different from Polkadot which is designed to distribute security as a blanket over all parachains through the shared-state model.
 
 ## Interoperability 
 
@@ -54,7 +54,7 @@ Polkadot uses the Interchain Message Passing (ICMP) protocol to send messages be
 
 Cosmos's work in this regard is currently focused on Inter-Blockchain Communication (IBC). IBC resembles TCP in the legacy world of networking because it treats each blockchain as its own separate process with its own security assumptions. 
 
-Both ICMP and IBC require consensus verification, but ICMP provides state machine verification while IBC leaves this up to aspect up to the user.
+Both ICMP and IBC require consensus verification, but ICMP provides state machine verification while IBC leaves this aspect up to the user.
 
 > Protip: For more on SPREE see [here](https://wiki.polkadot.network/en/latest/polkadot/learn/spree/).
 
@@ -62,7 +62,7 @@ Both ICMP and IBC require consensus verification, but ICMP provides state machin
 
 The astute reader will notice that the two interoperability protocols used respectively by Polkadot and Cosmos have different formats and try to achieve different goals. While Polkadot wants to enable trustless data transmission among the parachains, Cosmos wants to be able to send packet-like messages from one blockchain with finality to another.
 
-Since the Polkadot relay-chain comes to finality by using the GRANDPA finality gadget, the IBC scheme proposed by Cosmos should be made to work with Polkadot (more on finality in the [section below](#finality)).
+Since the Polkadot relay-chain comes to finality by using the GRANDPA finality gadget, the IBC scheme proposed by Cosmos should be able to work with Polkadot (more on finality in the [section below](#finality)).
 
 There does not need to be any tweaks made to the design of either of the protocols, but an interpreter for IBC packets would need to occupy a parachain slot on Polkadot. This is so that this slot could serve as a Tendermint light client and consensus interpreter and be able to verify which blocks have been signed with finality. On the Cosmos side they would watch for the headers of this interpreter which would be included in the relay-chain blocks.
 
@@ -90,7 +90,7 @@ Polkadot's GRANDPA finality gadget comes to finality on _chains of blocks_ rathe
 
 ### Liveness
 
-Polkadot has stronger liveness than Cosmos' Tendermint.
+Polkadot has stronger liveness than Cosmos' Tendermint, which prioritizes safety over liveness.
 
 In Tendermint, block production will stop along with the finality, once more than 1/3 of the validator set has become Byzantine. 
 
