@@ -32,9 +32,9 @@ There is not a center in the Cosmos universe, where in true decentralized fashio
 
 Cosmos does not attempt to create an environment of shared security among the chains connected by the bridge _zones_ and hubs. Instead they take a sovereign-first approach and strictly require chains to maintain their own validator set and economic security.
 
-Cosmos connects to external chains through the use of what are called _peg zones_ which provide a kind of specialized bridge that can understand the external consensus. For all chains that run the "fast finality" algorithm, Tendermint, their interoperability protocol (known as IBC, more on that below) should work without the need of this special peg.
+Cosmos connects to external chains through the use of what are called _peg zones_ which provide a kind of specialized bridge that can understand the external consensus. For all chains that satisfy [consensus requirements](https://github.com/cosmos/ics/tree/master/spec/ics-002-consensus-verification), their interoperability protocol (known as IBC, more on that below) will work without the need of this special peg.
 
-The Cosmos hub uses a Proof-of-Stake algorithm that weighs validators by the amount of tokens backing them. It also allows smaller holders to delegate their tokens to one of its 100 validators. However, other zones in Cosmos may implement variants of this Proof-of-Stake scheme.
+The Cosmos hub uses a Proof-of-Stake algorithm that weighs validators by the amount of tokens backing them. It also allows smaller holders to delegate their tokens to one of its validators (currently 100, but there are plans to increase this number to >300). However, other zones in Cosmos may implement variants of this Proof-of-Stake scheme.
 
 ## Trust model
 
@@ -48,7 +48,7 @@ Cosmos does not operate under the assumption that all the connected chains have 
 
 ## Interoperability 
 
-Polkadot and Cosmos both claim blockchain interoperability.
+Polkadot and Cosmos are both working on blockchain interoperability protocols.
 
 Polkadot uses the Interchain Message Passing (ICMP) protocol to send messages between parachains. The messages which are passed can be any arbitrary string of bytes, meaning they could be encoded to be asset transfers or more complex cross-chain calls. ICMP is trustless because it is verified by the validator as part of the validity check of each new parachain block that the messages will be included. Validators only accept new parachain blocks if they've included all of the incoming messages from other parachains (given a one or two blocks buffer). Additionally, the Shared Protected Runtime Execution Environment (SPREE) gives even stronger guarantees that the messages will trigger the same exact code across parachains.
 
@@ -90,7 +90,7 @@ Polkadot's GRANDPA finality gadget comes to finality on _chains of blocks_ rathe
 
 ### Liveness
 
-Polkadot has stronger liveness than Cosmos' Tendermint, which prioritizes safety over liveness.
+Polkadot's design has stronger liveness guarantees than Cosmos' Tendermint, which prioritizes the safety.
 
 In Tendermint, block production will stop along with the finality, once more than 1/3 of the validator set has become Byzantine. 
 
