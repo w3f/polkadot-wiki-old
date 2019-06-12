@@ -34,7 +34,9 @@ Parachains are operated and new blocks are authored by [collator nodes](../node/
 
 Parachains may have their own economies with their own native tokens. Schemes such as Proof-of-Stake are usually used to select the validator set in order to handle validation and finalization; parachains will not be required to do either of those things. However, since Polkadot is general over what the parachain can implement, it may be the choice of the parachain to implement a staking token, but it's not generally necessary.
 
-Collators may be incentivized through inflation or transaction fees of a native parachain token. There may be other ways to incentivize the collator nodes which do not involve inflating the native parachain token.
+Collators may be incentivized through inflation of a native parachain token. There may be other ways to incentivize the collator nodes which do not involve inflating the native parachain token.
+
+Transaction fees in a native parachain token can also be an implementation choice of parachains. Polkadot makes no hard and fast rules for how the parachains decide on original validity of transactions. For example, a parachain may be implemented so that transactions must pay a minimum fee to collators to be valid. The relay chain will enforce this validity. Similarly, a parachain could not include that in their implementation and Polkadot would still enforce its validity.
 
 Parachains are not required to have their own token and if they do it is up to the parachain to make the economic case for their token, not Polkadot.
 
