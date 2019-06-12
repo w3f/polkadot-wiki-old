@@ -252,6 +252,8 @@ Jin
 slashable
 BlockX
 polkadot.network
+multichain
+xclaim
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall

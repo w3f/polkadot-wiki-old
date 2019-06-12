@@ -2,7 +2,9 @@
 
 ## What is a parachain?
 
-Parachains take their name from the concept of "parallelized" chains which share in the security of the Polkadot relay chain. Parachains are _validatable, globally-coherent dynamic data-structures_ which can connect into the Polkadot network and although most commonly will resemble independent blockchains, there is no specific need for them to be blockchain in nature.
+Parachains take their name from the concept of "parallelized" chains which are connected to and share in the security of the Polkadot relay-chain. Parachains are validatable, globally-coherent dynamic data-structures. Most commonly they will resemble blockchains but there is no specific need for them to be blockchain in nature.
+
+The only constraints on what type of logic can be implemented for a parachain is that must be able to be bundled in a proof (known as a Proof-of-Verification block) and submitted to validators to be checked.
 
 Rob Habermeier, a co-founder of Polkadot, [described parachains in the following way](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a):
 
@@ -12,34 +14,36 @@ The Polkadot architecture allows for the state transitions performed on the para
 
 ## Benefits of parachains
 
-By connecting to Polkadot a parachain gains two major advantages over an independent _sovereign chain:_
+By connecting to Polkadot a parachain gains two major advantages over an independent chain:
 
 - [Shared security](./security.md)
-- [Trust-free interchain transactability](./interchain.md)
+- [Trust-free interchain data transmission](./interchain.md)
 
 ## Examples
 
-- Encrypted Consortium Chains
-- High Frequency Chains
-- Privacy Chains
-- Smart Contract Chains
+- **Encrypted Consortium Chains** - These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the ICMP protocol. 
+- **High Frequency Chains** - These are chains which can compute many transactions in a short amount of time by taking certain trade-offs or making optimizations. 
+- **Privacy Chains** - These are chains which do not leak any information to the public through use of novel cryptography.
+- **Smart Contract Chains** - These are chains which can have additional logic implemented on them through the deployment of code known as _smart contracts_.
 
 ## Collators
 
-Parachains are operated and new blocks are authored by [collator nodes](../node/collator.md) that maintain "full-nodes" of a particular parachain. They retain all necessary information to be able to propose new blocks and execute transactions in a similar way as miners do in traditional PoW blockchains. A block proposed by a collator node will be checked by the validator node before it is accepted as a canonical state transition by the relay chain.
+Parachains are operated and new blocks are authored by [collator nodes](../node/collator.md) that maintain "full-nodes" of a particular parachain. They retain all necessary information to be able to propose new blocks and execute transactions in a similar way as miners do in traditional PoW blockchains. A block proposed by a collator node will be checked by the validator node before it is accepted as a canonical state transition by the relay-chain.
 
-## What is "parachain consensus"?
+## FAQ
+
+### What is "parachain consensus"?
 
 "Parachain consensus" is special in that it will follow the Polkadot relay chain. Parachains cannot use other consensus algorithms that provide their own finality, and if they do will be sovereign chains that must bridge to the relay chain. Parachains have control over how blocks are authored and by who.
 
-## How will parachain slots be distributed?
+### How will parachain slots be distributed?
 
 Parachain slots will be acquirable through auction, please see the [parachain slots](./auction.md) article.
 
-## Parachain Development Kits (PDKs)
+### Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own applications as parachains. For more info see [here](../build/pdk.md). 
 
-## Deploying parachains
+### Deploying parachains
 
 Please see the builder's article on [deploying parachains](../build/deploy-parachains.md).

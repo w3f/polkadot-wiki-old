@@ -20,8 +20,4 @@ blockchain protocol which unlike internet messaging protocols (e.g. TCP/IP) also
 of the messages between the chains. This interoperability also allows the additional benefit of scalability by creating
 a general environment for multiple state machines.
 
-## Polkadot Architecture
-
-For a video overview of the architecture of Polkadot watch the video below for the whiteboard interview with W3F researcher Alistair Stewart:
-
- <iframe width="560" height="315" src="https://www.youtube.com/embed/xBfC6uTjvbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## [Polkadot Architecture](./architecture.md)
