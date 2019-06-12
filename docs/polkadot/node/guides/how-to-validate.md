@@ -10,12 +10,12 @@ To be a good validator, you should
 - Have enough knowledge of network security to create a robust network
 - Use HSM (Hardware Security Module) to protect your key (**Highly Recommended**)
 
-You should **NOT** run a validator if you have DOTs, but you do not have enough technical knowledge to set up a validator. It is recommended to delegate/nominate your DOTs to someone you trust for helping you to do this kind of work. 
+You should **NOT** run a validator if you have DOTs, but you do not have enough technical knowledge to set up a validator. It is recommended to delegate/nominate your DOTs to someone you trust for helping you to do this kind of work.
 
 As a nominator, you can still get the rewards by nominating multiple validators. If you want to know more about nominator, please see [here](../nominator.md).
 
 For this tutorial, we use Ubuntu 18.04 and will be running on PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a lot of [VPS](#vps-list) choice out there, feel free to pick one you like.
- 
+
 !!! attention
     _Please make sure that you do **NOT** use this setup & configuration on mainnet. This guide simply walks you through step-by-step how to set up & run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDOS protection and high availability._
 
@@ -61,7 +61,7 @@ polkadot --chain alex
 It should take at least a few hours.
 
 You can check the current highest block via [Telemetry](https://telemetry.polkadot.io/#/Alexander) or [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer)
- 
+
 ## Create accounts
 
 The first thing you will need to do is create three separate accounts for managing funds and operating the validator.
@@ -80,7 +80,7 @@ On the Polkadot Dashboard to navigate to the [account](https://polkadot.js.org/a
 
 To simplify everything and identify your accounts easily, it is recommended to use `Stash`, `Controller` and `Session` (or some variation like `1337_Stash`, `1337_Controller`, `1337_Session`) to name your accounts.
 
-For the stash and controller accounts, it is allowed to use the default `sr25519` cryptography for key derivation. **But**, when you create the **Session** key make sure to choose instead the `Edwards (ed25519)` option as a `Key pair crypto type` in the `Advanced creation options`. Also make sure to select `Raw seed` and save it somewhere, since we will be using it later as a command line flag when we start the validating node.
+For the stash and controller accounts, it is allowed to use the default `sr25519` cryptography for key derivation. **But**, when you create the **Session** key make sure to choose instead the `Edwards (ed25519)` option as a `Key pair crypto type` in the `Advanced creation options`. Also make sure to save the mnemonic phrase and save it somewhere, since we will be using it later as a command line flag when we start the validating node.
 
 For each account, input a password to encrypt the seed and click on `Save`.
 
@@ -100,7 +100,7 @@ To get testnet DOTs, you have a few options.
 - [Blockxlabs Faucet](https://faucets.blockxlabs.com/polkadot) - A faucet which requires email sign-in.
 
 If the above two methods do not work then you may ask in the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) channel on Riot, paste your account address and ask for testnet DOTs. You can paste one account and transfer some of the DOTs received to the other account.
- 
+
 ## Bond DOTs
 
 It is now time to setup our validator. We will do the following:
@@ -127,7 +127,7 @@ You should now see the `Controller` account has `Set Session Key` and `Nominate`
 
 ![dashboard validate](../../../img/validator/polkadot-dashboard-set-session-key.jpg)
 
-Select `Set Session Key`. 
+Select `Set Session Key`.
 
 ![dashboard staking](../../../img/validator/polkadot-dashboard-set-session-key-modal.jpg)
 
@@ -146,13 +146,13 @@ Click on `Validate`.
 
 Click `Validate`
 
-Open your terminal, if your node is fully synchronized, run your validator with the seed from the `Session` account.
+Open your terminal, if your node is fully synchronized, run your validator with the seed from the `Session` account.  You may use the mnemonic phrase (recommended) or the legacy raw seed.
 
 ```bash
 polkadot \
 --chain alex \
 --validator \
---key <SESSION_ACCOUNT_SEED> \
+--key <SESSION_ACCOUNT_PHRASE_OR_SEED> \
 --name <VALIDATOR_NAME_ON_TELEMETRY> \
 --telemetry-url ws://telemetry.polkadot.io:1024
 ```
@@ -165,7 +165,7 @@ Go to [Staking apps](https://polkadot.js.org/apps/#/staking), select the "Stakin
 
 ![staking queue](../../../img/validator/polkadot-dashboard-staking-queue.png)
 
-Your node will be shown on the *next up* queue. In the next era (up to 1 hour), if there is a slot available, your node will become an active validator. 
+Your node will be shown on the *next up* queue. In the next era (up to 1 hour), if there is a slot available, your node will become an active validator.
 
 **Congratulations!**
 
