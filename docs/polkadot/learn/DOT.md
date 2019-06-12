@@ -34,12 +34,20 @@ DOTs will be used to facilitate the consensus mechanism that underpins Polkadot.
 
 DOTs will have the ability to be bonded for a duration of time in order to add a new parachain to the network. The DOTs will be locked during their bonding period and will be released back to the account that bonded them after the duration of the bond has elapsed and the parachain is removed.
 
+## Mainnet DOTs
+
+Web3 Foundation will distribute up to 20% of mainnet DOTs prior to network launch later this year (see [Light Paper](https://polkadot.network/Polkadot-lightpaper.pdf) or the [Polkadot Network FAQ](https://polkadot.network/faq/)). As Project Founder Gavin Wood said in his year-end recap, there may be a generally available public sale for some portion of that amount at some point this year. Subscribe to the Polkadot newsletter on [polkadot.network](https://polkadot.network/) for further updates.
+
+_Warning: Mainnet DOT tokens are not transferrable until mainnet launch, expected late 2019. Therefore any transfers of Mainnet DOTs are illegitimate and unauthorized. DOTs can not be moved from a current allocation address. Individuals with an allocation of DOTs who transfer their DOT address to someone else can always keep a copy of their private key, therefore there is extreme risk for individuals participating in transfers of DOTs before mainnet launch._
+
+Testnet dots are freely available now - see below for various ways to obtain them.
+
 ## Testnet DOTs
 
 DOTs are required to make transactions on the Polkadot network. Testnet DOTs do not have any value beside allowing you to experiment with the network.
 
 ### Getting testnet DOTs
 
-You can request DOTs from the [faucet](https://faucets.blockxlabs.com/) ask someone to send you DOTs on the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
+You can request DOTs from the [Polkadot faucet](https://faucet.polkadot.network/), the [BlockX Labs faucet](https://faucets.blockxlabs.com/) or ask someone to send you DOTs on the [Polkadot Watercooler](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org).
 
-You can make your own DOTs by [becoming a validator](https://github.com/paritytech/polkadot/wiki/Validating-on-PoC-2).
+You can make your own DOTs by [becoming a validator](https://wiki.polkadot.network/en/latest/polkadot/node/guides/how-to-validate/).

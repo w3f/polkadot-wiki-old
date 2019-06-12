@@ -203,7 +203,7 @@ dappchain
 speckleos
 tawaran
 shasper
-landchain
+darwinia
 inherents
 cidchain
 cryptosystems
@@ -251,6 +251,15 @@ tcp-like
 protip
 stakers
 cosmos-sdk
+s_1
+s_2
+s_k
+s_i
+Anson
+Jin
+slashable
+BlockX
+polkadot.network
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
