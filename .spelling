@@ -245,6 +245,14 @@ mdots
 serverless
 failover
 web3.0
+pre-existing
+v1.0
+v2.0.
+multichain
+tcp-like
+protip
+stakers
+cosmos-sdk
 s_1
 s_2
 s_k
@@ -289,6 +297,10 @@ upgradeability
  - docs/polkadot/build/hackathon.md
 Hackathon
 hackathon
+ - docs/polkadot/learn/comparisons/cosmos.md
+polychain
+multichains
+bitfield
  - docs/polkadot/learn/spree.md
 gavofyork's
 RelayChain
