@@ -10,12 +10,12 @@ To be a good validator, you should
 - Have enough knowledge of network security to create a robust network
 - Use HSM (Hardware Security Module) to protect your key (**Highly Recommended**)
 
-You should **NOT** run a validator if you have DOTs, but you do not have enough technical knowledge to set up a validator. It is recommended to delegate/nominate your DOTs to someone you trust for helping you to do this kind of work. 
+You should **NOT** run a validator if you have DOTs, but you do not have enough technical knowledge to set up a validator. It is recommended to delegate/nominate your DOTs to someone you trust for helping you to do this kind of work.
 
 As a nominator, you can still get the rewards by nominating multiple validators. If you want to know more about nominator, please see [here](../nominator.md).
 
 For this tutorial, we use Ubuntu 18.04 and will be running on PoC-4 Alexander testnet. No matter what operating system you are using, setup should not be too much difference. There is a lot of [VPS](#vps-list) choice out there, feel free to pick the one you like.
- 
+
 !!! attention
     _Please make sure that you do **NOT** use this setup & configuration on mainnet. This guide simply walks you through step-by-step how to set up & run a validator node. If you would like to run a validator seriously when mainnet is live, you have to be REALLY careful on some areas like key management, DDOS protection and high availability._
 
@@ -61,12 +61,12 @@ polkadot --chain alex
 It should take at least a few hours.
 
 You can check the current highest block via [Telemetry](https://telemetry.polkadot.io/#/Alexander) or [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer)
- 
+
 ## Create accounts
 
 To be a validator, you will need three separate accounts for managing your funds, namely `Stash`, `Controller` and `Session`. If you want to know more about it, please see [here](../../learn/staking.md#accounts).
 
-![create account](../../../img/validator/polkadot-dashboard-create-account.jpg)
+![create account](../../../img/guides/how-to-validate/polkadot-dashboard-create-account.jpg)
 First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) and click on the `add account` button.
 
 To help you identify your accounts easily later on, make sure to use `Stash`, `Controller` and `Session` in the name your accounts. A mnemonic seed phrase is given to you. You can save it in a safe place, offline, or you can choose to save your account using a JSON key File that will be generated automatically when clicking on `Save`. The password that is required to create an account will be used to sign any transaction made for each account. It will also be used to encrypt the JSON key file and will be required if you wish to restore your account using this file.
@@ -78,7 +78,7 @@ On the following screen, choose *Create and backup account* to store your JSON k
 
 Once all accounts have been created, the overview should show you something like this. Note that the session account has ed25529`
 
-![backup seed](../../../img/validator/polkadot-overview.jpg)
+![backup seed](../../../img/guides/how-to-validate/polkadot-overview.jpg)
 
 ## Get testnet DOTs token
 
@@ -95,7 +95,7 @@ It is now time to setup our validator. We will do the following:
 
 First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
 
-![dashboard bonding](../../../img/validator/polkadot-dashboard-bonding.jpg)
+![dashboard bonding](../../../img/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
 
 - **Stash account** - Select your `Stash` account, we will bound 100mili Dots, make sure it has this amount of funds.
@@ -109,7 +109,7 @@ Once everything is filled properly, click `Bond` and sign the transaction (with 
 
 You should now see a new card with all your accounts. The bonded amount on the right corresponds to the funds bonded by the `Stash` account.
 
-![dashboard validate](../../../img/validator/polkadot-dashboard-set-session-key.jpg)
+![dashboard validate](../../../img/guides/how-to-validate/polkadot-dashboard-set-session-key.jpg)
 
 Select `Set Session Key`. Select the `Session` account created previously and click on `Set Session Key`.
 
@@ -123,15 +123,14 @@ polkadot --validator --key="SESSION_ACCOUNT_SEED" --name NAME_ON_TELEMETRY
 
 Make sure that the address generated from the seed corresponds to your `Session` account's address. Don't worry if the last characters diverge, it's just the checksum that has recently changed.
 
-![terminal session key verification](../../../img/validator/polkadot-node-seed.jpg)
+![terminal session key verification](../../../img/guides/how-to-validate/polkadot-node-seed.jpg)
 
 To verify that your node is live and in sync, head to [Telemetry](https://telemetry.polkadot.io/#/Alexander), after a few seconds, your node information will be shown.
-![telemetry monitor](../../../img/validator/telemetry_monitor.jpg)
 
 If everything looks good, go ahead and click on `Validate` in Polkadot UI.
 
-![dashboard validate](../../../img/validator/polkadot-dashboard-validate.jpg)
-![dashboard validate](../../../img/validator/polkadot-dashboard-validate-modal.jpg)
+![dashboard validate](../../../img/guides/how-to-validate/polkadot-dashboard-validate.jpg)
+![dashboard validate](../../../img/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
 - **Unstake threshold** - how often you want to be reported offline (and slashed) before being removed from the validator set.
 - **Payment preferences** - rewards you will keep, the rest will be shared among you and your nominators.
@@ -140,7 +139,7 @@ Click `Validate`
 
 Go to Staking tab, you should see a list of active validators out there. At the top of the page, it shows how many validators slots are available and how many nodes are intended to be a validator.
 
-![staking queue](../../../img/validator/polkadot-dashboard-staking-queue.jpg)
+![staking queue](../../../img/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
 
 Your node will be shown on the *next up* queue. In the next era (up to 1 hour), if there is a slot available, your node will become an active validator. 
 
