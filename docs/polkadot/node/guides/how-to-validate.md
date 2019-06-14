@@ -117,7 +117,7 @@ Select the `session` account created previously and click on `Set Session Key`.
 You should now be able to see both `Validate` and `Nominate` buttons.
 At this point and before validating, you should make sure your node is ready to validate. Open your terminal, if your node is fully synchronized, run your validator with the seed or the mnemonic from the `session` account, e.g: 
 ```bash
-polkadot --validator --key="SESSION_ACCOUNT_SEED" --name NAME_ON_TELEMETRY
+polkadot --chain alex --validator --key="SESSION_ACCOUNT_SEED" --name NAME_ON_TELEMETRY
 ```
 
 Make sure that the address generated from the seed corresponds to your `session` account's address. Don't worry if the last characters diverge, it's just the checksum that has recently changed.
