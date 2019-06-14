@@ -12,7 +12,7 @@ The first step is to create two accounts by going to the *Accounts* tab on the P
 
 ![Creating an account](../../../img/guides/how-to-nominate/polkadot-dashboard-create-account.jpg)
 
-Once you've created your accounts you will need to acquire some DOTs. See the [DOTs page](../../learn/DOT.md#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milli-DOTs to cover the existential deposit and transaction fees.
+Once you've created your accounts you will need to acquire some DOTs. See the [DOTs page](../../learn/DOT.md#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milliDOTs to cover the existential deposit and transaction fees.
 
 ## Nominating
 
