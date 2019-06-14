@@ -158,7 +158,7 @@ polkadot \
 
 前往 [Staking apps](https://polkadot.js.org/apps/#/staking) 选择 "Staking Overview"，你应该看到所有运行中的验证人。在最顶部份，你会看到有多少验证人位置空缺和有多少人有意成为验证人。
 
-![staking queue](../../../../img/validator/polkadot-dashboard-staking-queue.png)
+![staking queue](../../../../img/validator/polkadot-dashboard-staking-queue.jpg)
 
 有意成为验证人的节点将会在*next up*队列显示，每过一小时后，如果有位置空缺或你背后支持的抵押大过排最后那一位验证人，你的节点将会成为验证人。
 
