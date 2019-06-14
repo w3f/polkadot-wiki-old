@@ -72,7 +72,7 @@ First, go to [PolkadotJS => Account](https://polkadot.js.org/apps/#/accounts) an
 To help you identify your accounts easily later on, make sure to use `stash`, `controller` and `session` in the name your accounts. A mnemonic seed phrase is given to you. You can save it in a safe place, offline, or you can choose to save your account using a JSON keyfile that will be generated automatically when clicking on `Save`. The password that is required to create an account will be used to sign any transaction made for each account. It will also be used to encrypt the JSON keyfile and will be required if you wish to restore your account using this file.
 
 The mnemonic phrase for the `session` account needs to be used later in this guide to validate. Make sure you save it safely.
-Another particularity you need to be aware of: both `stash` and `controller` account can use the `Schnorrkel (sr25519)` as keypair crypto type in the `Advanced creation options`, however, you must use `Edwards (ed25519)` for the session account.
+Another particularity you need to be aware of: both `stash` and `controller` account can use the `Schnorrkel (sr25519)` as keypair crypto type in the `Advanced creation options`, however, **you must use `Edwards (ed25519)` for the session account.**
 
 On the following screen, choose *Create and backup account* to store your JSON key file on your computer. Together with your password, this is a way to recover each account.
 
