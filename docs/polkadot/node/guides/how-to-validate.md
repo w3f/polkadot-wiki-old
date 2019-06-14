@@ -89,7 +89,7 @@ To continue the following steps, you are required to get some testnet DOTs token
 It is now time to setup our validator. We will do the following:
 - Bound the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
 - Select the `controller`. This is the account that will decide when to start or stop validating.
-- Select the `session` account as.. the session. This is the account whose seed will be used to run the node.
+- Select the `session` account. This is the account whose seed will be used to run the node.
 
 First, go to [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
 
