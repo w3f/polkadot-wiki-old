@@ -82,7 +82,7 @@ Once all accounts have been created, the overview should show you something like
 
 ## Get testnet DOTs token
 
-To continue the following steps, you are required to get some testnet DOTs token for the `stash` and `controller` accounts in order to submit transactions and use these DOTs as stake. The `session` account doesn't need any DOT. See the [DOTs page](../../learn/DOT.md#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milli-DOTs to cover the existential deposit and transaction fees.
+To continue the following steps, you are required to get some testnet DOTs token for the `stash` and `controller` accounts in order to submit transactions and use these DOTs as stake. The `session` account doesn't need any DOT. See the [DOTs page](../../learn/DOT.md#getting-testnet-dots) for recommendations on getting testnet DOTs. Each of your accounts should have at least 150 milliDOTs to cover the existential deposit and transaction fees.
 
 ## Bond DOTs
 
