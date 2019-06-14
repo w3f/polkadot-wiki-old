@@ -24,7 +24,7 @@ First, go to [Staking > Account actions](https://polkadot.js.org/apps/#/staking/
 
 ![dashboard bonding](../../../img/guides/how-to-nominate/polkadot-dashboard-bonding.jpg)
 
-- **Stash account** - Select your `stash` account, we will bound 100mili Dots, make sure it has this amount of funds.
+- **Stash account** - Select your `stash` account, we will bound 100 milliDOTs, make sure it has this amount of funds.
 - **Controller account** - select the `controller` account created earlier.
 - **Value bonded** - how many DOTs from the `stash` account you want to bond/stake. You can top up this amount and bound more DOTs later, however, withdrawing any bounded amount requires the bounding duration period to be over (several months at the time of writing).
 - **Payment destination** - where the rewards get sent. More info [here](../../learn/staking.md#reward-distribution).
