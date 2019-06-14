@@ -29,17 +29,17 @@ First, go to [Staking > Account actions](https://polkadot.js.org/apps/#/staking/
 - **Value bonded** - how many DOTs from the `stash` account you want to bond/stake. You can top up this amount and bound more DOTs later, however, withdrawing any bounded amount requires the bounding duration period to be over (several months at the time of writing).
 - **Payment destination** - where the rewards get sent. More info [here](../../learn/staking.md#reward-distribution).
 
-Once everything is filled properly, click `Bond` and sign the transaction (with your `stash` account).
+Once everything is filled properly, click `Bond` and sign the transaction (with your `stash` account). You will then see the following. You can ignore the `Set Session Key` button, it is only useful if you want to validate and we will not need it in this tutorial.
 
 ![dashboard overview](../../../img/guides/how-to-nominate/polkadot-dashboard-set-session-key.jpg)
 
 ## Nominating a validator
 
-Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. On the left side you will see a list of validators (on the right side are validators who have signaled intention to join the validator set and you can ignore them for now). From this list of validators, find one that you would like to nominate and copy its address (by clicking on the identicon).
+Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. On the left side, you will see a list of validators (on the right side are validators who have signalled their intention to join the validator set and you can ignore them for now). From this list of validators, find ones that you would like to nominate and copy their address (by clicking on the identicon) or better, add them to your Address book.
 
 ![Validators](../../../img/guides/how-to-nominate/validators.png)
 
-Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction the two buttons should turn into one that says `Stop Nominating` and you should see the `stash` accounts you are nominating showing up as `Nominating`. Your nomination will be effective in the next era (this can take up to 1h).
+Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to 1h).
 
 ![Nominating](../../../img/guides/how-to-nominate/nominating.jpg)
 
