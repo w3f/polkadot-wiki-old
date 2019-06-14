@@ -39,7 +39,7 @@ Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. 
 
 ![Validators](../../../img/guides/how-to-nominate/validators.png)
 
-Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to 1h).
+Go back to the *Account Actions* tab and click the `Nominate` button. Fill in the blank field with the address of the validators you have chosen to nominate. After signing and submitting your transaction you should see the button `Stop Nominating` and you should see the accounts you are nominating showing up under the `Nominating` section. Your nomination will be effective in the next era (this can take up to one hour).
 
 ![Nominating](../../../img/guides/how-to-nominate/nominating.jpg)
 
