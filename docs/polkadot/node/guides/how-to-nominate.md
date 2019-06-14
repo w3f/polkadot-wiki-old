@@ -18,7 +18,7 @@ Once you've created your accounts you will need to acquire some DOTs. See the [D
 
 It is now time to setup our nominator. We will do the following:
 - Bound the DOTs of the `stash` account. These DOTs will be put at stake for the security of the network and can be slashed.
-- Select the `controller` as.. the controller. This is the account that will decide when to start or stop nominating.
+- Select the `controller`. This is the account that will decide when to start or stop nominating.
 
 First, go to [Staking > Account actions](https://polkadot.js.org/apps/#/staking/actions) section. Click on the "New stake" button.
 
