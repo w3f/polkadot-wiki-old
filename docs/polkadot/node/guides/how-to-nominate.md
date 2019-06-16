@@ -35,7 +35,7 @@ Once everything is filled properly, click `Bond` and sign the transaction (with 
 
 ## Nominating a validator
 
-Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. On the left side, you will see a list of validators (on the right side are validators who have signalled their intention to join the validator set and you can ignore them for now). From this list of validators, find ones that you would like to nominate and copy their address (by clicking on the identicon) or better, add them to your Address book.
+Go to the *Staking Overview* tab on the staking page of the Polkadot Dashboard. On the left side, you will see a list of validators (on the right side are validators who have signaled their intention to join the validator set and you can ignore them for now). From this list of validators, find ones that you would like to nominate and copy their address (by clicking on the identicon) or better, add them to your Address book.
 
 ![Validators](../../../img/guides/how-to-nominate/validators.png)
 

@@ -76,7 +76,7 @@ Another particularity you need to be aware of: both `stash` and `controller` acc
 
 On the following screen, choose *Create and backup account* to store your JSON key file on your computer. Together with your password, this is a way to recover each account.
 
-Once all accounts have been created, the overview should show you something like this. Note that the session account has ed25529`
+Once all accounts have been created, the overview should show you something like this. Note that the session account must be `ed25519`.
 
 ![backup seed](../../../img/guides/how-to-validate/polkadot-overview.jpg)
 
