@@ -262,6 +262,9 @@ Jin
 slashable
 BlockX
 polkadot.network
+identicon
+keyfile
+keypair
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
