@@ -1,7 +1,7 @@
-# Networks
+# 네트워크
 
 The following commands can be used to connect to the different networks.
-
+다음 커맨드들은 다른 네트워크에 연
 ## Development
 
 Install Polkadot and have a `polkadot` binary install to your `PATH` with:

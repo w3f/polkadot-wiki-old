@@ -1,8 +1,8 @@
-# Hackathon
+# 해커톤 (Hackathon)
 
-As one of our objectives in the Web3 Foundation is pushing the [Web3 technology stack](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/), we would like to support any individual or team who wants to organize a hackathon that gets more developers to understand Polkadot/Substrate in your city.
+Web3 Foundation의 목표 중 하나인 [Web3 기술 스택](http://wiki.web3.foundation/en/latest/tech_stack/tech_stack_overview/)을 추진함에 따라 우리는 당신의 도시에있는 Polkadot/Substrate를 더 많은 개발자들이 이해할 수 있도록 해커톤을 진행 할 개인이나 팀을 지원하고자합니다.
 
-We are not only providing technical resources for you, but we can have someone from our team give a hands-on workshop/presentation about the technology to help participants get started hacking on it more quickly.
+우리는 기술 리소스를 제공하는 것뿐만 아니라 우리 팀 중 누군가가 기술에 대한 핸즈 온(hands-on)워크숍 /프레젠테이션을 진행해서 이를 통해 참가자가 해커톤을 더 빨리 시작할 수 있도록 할 수 있습니다.
 
 ## Ideas 
 
@@ -13,9 +13,9 @@ We are not only providing technical resources for you, but we can have someone f
 - IPFS integration
 - Decentralized identity solutions
 - Oracle module
-- Implement Generalized State Channel/Plasma Chain
-- Decentralized Exchange
-- Tools for monitoring validator performance
+- 제네럴 스테이트 체널/플라즈마 체인의 구현 (Implement Generalized State Channel/Plasma Chain)
+- DeX (Decentralized Exchange)
+- 밸리데이터 퍼포먼스 모니터링 툴 (Tools for monitoring validator performance)
 - dApps across different parachains
 
 ## Why you should host a hackathon?
@@ -25,32 +25,34 @@ We are not only providing technical resources for you, but we can have someone f
 - Believe the Web3 technology stack is suitable for developers to build their applications
 - Like to make connections
 
-## How do hackathons differ from workshops?
+## 워크샵과 해커톤은 어떻게 다른가요?
+
 Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas to reality in a short period (few hours - one day). Workshops are more for getting developers familiar with the tooling and understanding more about what are the resources currently available and how they can make use of it.
 
-## How can you run a hackathon in your city?
-1. Submit your application (Coming soon.)
-2. Review
-3. Decision
-4. Follow up
+## 어떻게 당신의 도시에서 해커톤을 열 수 있나요?
 
-## How we can help you
+1. 해커톤 지원서를 제출합니다  (Coming soon.)
+2. 리뷰하고
+3. 결정한 뒤
+4. 진행합니다.
+
+## 어떻게 당신을 도와드릴 수 있을까요?
 
 - Provide technical resources/materials. 
 - Find a venue.
 - Ensure the hackathon run smoothly.
 
-## Upcoming hackathon events
+## 앞으로 다가올 해커톤 이벤트
 
 Coming soon.
 
-## Template / Starter packs
+## 템플릿 / 스티터 팩
 
 Coming soon.
 
-## Resources
+## 참고 자료들
 
-- [Substrate Developer Hub](https://docs.substrate.dev)
+- [섭스트레이트 개발자 허브](https://docs.substrate.dev)
 
 ## Support / Contact
 

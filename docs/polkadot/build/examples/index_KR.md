@@ -7,7 +7,7 @@
 
 ### Parity
 
-- [Shasper](https://github.com/paritytech/shasper)- 서브스트레이트 런타임 으로 구현된 이더리움 2.0.
+- [Shasper](https://github.com/paritytech/shasper)- 섭스트레이트 런타임 으로 구현된 이더리움 2.0.
 - [Substrate TCR](https://github.com/parity-samples/substrate-tcr)-  런타임 모듈로 구현된 토큰 큐레이트 레지스트리(Token curated registry).
 - [Substrate ERC20](https://github.com/parity-samples/substrate-erc20) - 서브스트레이트에 구현된 ERC20 토큰 표준 (Token standard) .
 
@@ -15,13 +15,13 @@
 
 - AdEx 페이먼트 채널은 섭스트레이트를 사용합니다.[Video](https://www.youtube.com/watch?v=1CeI6Oa1BnU). [Repo](https://github.com/AdExNetwork/adex-protocol-substrate).
 - ROS 와 통합된 로보노믹스 모듈(Robonomics modules for integrating with ROS). [Repo](https://github.com/airalab/substrate-node-robonomics)
-- Staked Technologies의 서브스트레이트(Substrate) 위에서 플라즈마(Plasma)구현. [Repo](https://github.com/stakedtechnologies/Plasm)
+- Staked Technologies의 섭스트레이트(Substrate) 위에서 플라즈마(Plasma)구현. [Repo](https://github.com/stakedtechnologies/Plasm)
 - 엣지웨어(Edgeware). [Repo](https://github.com/hicommonwealth/edgeware-node)
 - 프라이버시에 중점을 둔 런타임 모듈인 제로체인 (Zerochain privacy-focused runtime module).
     - [Zero-chain Repo](https://github.com/LayerXcom/zero-chain)
     - [Bellman-substrate (섭스트레이트 위애서 zksnark 구현) Repo](https://github.com/LayerXcom/bellman-substrate)
 - 섭스트레이트 위에서 IPFS 메타데이터를 구현한 Starlog. [Repo](https://github.com/PACTCare/Starlog)
-- 섭스트레이트를 사용해서 사과를 파는 "애플 스토어" 구현 예제 (An example "Apple Store" to sell apples using Substrate). [Repo](https://github.com/osuketh/apple-store-substrate)
+- 섭스트레이트를 사용해서 사과를 파는 "애플 스토어" 구현 예제 (섭스트레이트를 사용해서 사과를 파는 "애플 스토어" 예시 ). [Repo](https://github.com/osuketh/apple-store-substrate)
 - 랜드체인(Landchain), 크로스체인 게이밍 플랫폼(cross-chain gaming platform). [Repo](https://github.com/evolutionlandorg/land-chain)
 - 조이스트림(Joystream),  유저 중심의 비디로 플랫폼 (user governed video platform). [Repo](https://github.com/Joystream/substrate-node-joystream)
 - IPFS 브라우저(IPFS browser). [Repo](https://github.com/Polygos/substrate-node-ipfsbrowser)
