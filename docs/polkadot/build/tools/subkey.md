@@ -1,8 +1,8 @@
 # Subkey
 
-Subkey is a commandline utility included with Substrate that generates or restores Substrate keys. 
+Subkey is a commandline utility included with Substrate that generates or restores Substrate keys.
 
-`subkey` will use the [sr25519](http://wiki.polkadot.network/en/latest/polkadot/learn/cryptography/#keypairs-and-signing) cryptography by default. If you need to use the older ed25519 cryptography to generate or restore your key pass the `--ed25519` flag to any of the commands.
+`subkey` will use [sr25519](http://wiki.polkadot.network/en/latest/polkadot/learn/cryptography/#keypairs-and-signing) cryptography by default. If you need to use the older ed25519 cryptography to generate or restore your key, or to generate a session key for use by validators, pass the `--ed25519` flag to any of the commands.
 
 ## Usage
 
@@ -13,6 +13,8 @@ subkey generate
 ```
 
 Will output a mnemonic phrase and give you the seed, public key, and address of a new account. DO NOT SHARE your mnemonic or seed with ANYONE it will give them access to your funds. If someone is making a transfer to you they will only need your **Address**.
+
+Note that the mnemonic phrase will allow you to generate the raw seed.  Use of the mnemonic phrase is recommended, as the raw seed is deprecated for use by end users.  The mnemonic phrase also gives you benefit of a checksum and reduced likelihood of typos.
 
 ### Inspecting a key
 

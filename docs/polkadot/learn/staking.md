@@ -25,7 +25,7 @@ To estimate the inflation rate and how many DOTs you can get each month as a nom
 
 ### 4. Rewards Mechanism
 
-We highlight two features of this payment scheme. The first is that since validator pools are paid the same, pools with less stake will pay more to nominators per-DOT than pools with more stake. We thus give nominators an economic incentive to gradually shift their preferences to lower staked validators that gain a sufficient amount of reputation. The reason for this is that we want the stake across validator pools to be as evenly distributed as possible, to avoid a concentration of power among a few validators. In the long term, we expect all validator pools to have similar levels of stake, with the stake being higher for higher reputation validators (meaning that a nominator that is willing to risk more by backing a validator with a low reputation will get paid more, which is reasonable). 
+We highlight two features of this payment scheme. The first is that since validator pools are paid the same, pools with less stake will pay more to nominators per-DOT than pools with more stake. We thus give nominators an economic incentive to gradually shift their preferences to lower staked validators that gain a sufficient amount of reputation. The reason for this is that we want the stake across validator pools to be as evenly distributed as possible, to avoid a concentration of power among a few validators. In the long term, we expect all validator pools to have similar levels of stake, with the stake being higher for higher reputation validators (meaning that a nominator that is willing to risk more by backing a validator with a low reputation will get paid more, which is reasonable).
 
 Let's take a look at the following example.
 
@@ -63,13 +63,13 @@ The second point we want to highlight is that each validator candidate is free t
 
 ## Accounts
 
-There are three different accounts for managing your funds: `Stash`, `Controller` and `Session` accounts. 
+There are three different accounts for managing your funds: `Stash`, `Controller` and `Session` accounts.
 
 ![staking](../../img/NPoS/staking-keys.png)
 
 - **Stash:** This is the primary account that holds the funds and has a portion bonded for participation; The funds can be kept in a cold wallet; All bonded DOTs are locked. After unbonding, users must wait a certain amount of time in order to access the locked funds (600 blocks at the time of writing).
-- **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken). 
-- **Session** The seed of this account should be passed to the node using the `--key` parameter. The session account does not need to have funds as it does not need to send any transaction. The best practice is to create a dedicated account to be used as session account. Although a single account can theoretically be used as both `session` and `controller`, it is not recommended to do so. Having a dedicated `session` account would prevent the theft of funds should the validator node be compromised and the `--key` leaked.
+- **Controller** This is used to control the operation of the validator or nominator, switching between validating, nominating and idle; (It only needs enough funds to send transactions when actions are taken).
+- **Session** The seed of this account should be passed to the node using the `--key` parameter. You may pass in either a mnemonic (recommended) or a legacy raw seed for the key parameter. The session account does not need to have funds as it does not need to send any transaction. The best practice is to create a dedicated account to be used as session account. Although a single account can theoretically be used as both `session` and `controller`, it is not recommended to do so. Having a dedicated `session` account would prevent the theft of funds should the validator node be compromised and the `--key` leaked.  Note that Session keys should always be of crypto type `Edwards (Ed25519)`, not the default `Schnorrkel (sr25519)`.
 
 For more on how keys are used in Polkadot and the cryptography behind it [see here](./keys.md).
 
@@ -86,7 +86,7 @@ Since validator slots will be limited, most of those who wish to stake their DOT
 
 ## Slashing
 
-Slashing will be applied if a validator has been reported to be offline for a number of times. Essentially, there are two parameters that will be taken into account whether the slashing will happen or not, these are `Offline Slash Grace` & `Unstake Threshold`. 
+Slashing will be applied if a validator has been reported to be offline for a number of times. Essentially, there are two parameters that will be taken into account whether the slashing will happen or not, these are `Offline Slash Grace` & `Unstake Threshold`.
 `Offline Slash Grace` is configured by the network, and the current testnet configuration is set to `4`, whereas `Unstake Threshold` is decided by the validator. However,the maximum number of `Unstake threshold` is NOT allowed to be set greater than 10 in the current setting.
 
 In short, validators will be slashed if they have been reported offline more than `Offline Slash Grace + Unstake Threshold` times.
@@ -95,7 +95,7 @@ At the same time, once slashing is determined, a value will be deducted from the
 
 !!! info
     **Example:**
- 
+
     Offline Slash Grace = 4 (Network define)
 
     Unstake Threshold   = 5 (Validator define)
@@ -105,7 +105,7 @@ At the same time, once slashing is determined, a value will be deducted from the
 
 ## Reward Distribution
 
-Based on the the current configuration in the Alexander testnet, rewards are recorded per session that is roughly 5 minutes and paid per era. It takes 1 hour to finish an era; that means rewards will be distributed to the validators and nominators per hour. 
+Based on the the current configuration in the Alexander testnet, rewards are recorded per session that is roughly 5 minutes and paid per era. It takes 1 hour to finish an era; that means rewards will be distributed to the validators and nominators per hour.
 
 !!! info
     **Example:**
@@ -141,14 +141,14 @@ It will be closed to 10% in the first year. Each validator will get 1,000 - 2,00
 
 The above chart shows the inflation model of the network. Depending on the staking participation, the inflation rate will be dynamically changed to incentivize / disincentivize token holders to participate in staking. For instance, inflation would be 10% if there is 50% of DOTs being staked to the network.
 
-Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees we want and to avoid illiquidity on the market. 
+Determining the ideal staking rate is not an easy task as the network requires enough DOTs to be staked to provide the security guarantees we want and to avoid illiquidity on the market.
 
 For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/Token%20Economics/).
 
 ## Why stake?
 
 - 10% inflation/year when the network launches
-- 50% targeted active staking 
+- 50% targeted active staking
 - ~20% annual return
 
 ## Why not stake?
