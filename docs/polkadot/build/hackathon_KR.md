@@ -11,23 +11,25 @@ Web3 Foundation의 목표 중 하나인 [Web3 기술 스택](http://wiki.web3.fo
 - New governance modules with different styles of voting & democracy
 - Upgrade the TCR module
 - IPFS integration
-- Decentralized identity solutions
-- Oracle module
+- 분산화된 신원 인증 솔루션 (Decentralized identity solutions)
+- 오라클 모듈 (Oracle module)
 - 제네럴 스테이트 체널/플라즈마 체인의 구현 (Implement Generalized State Channel/Plasma Chain)
 - DeX (Decentralized Exchange)
 - 밸리데이터 퍼포먼스 모니터링 툴 (Tools for monitoring validator performance)
 - dApps across different parachains
 
-## Why you should host a hackathon?
+## 왜 해커톤을 해야만 할까요?
 
 - Love to deliver the vision of Web3 
 - Learn the bleeding-edge technology
-- Believe the Web3 technology stack is suitable for developers to build their applications
-- Like to make connections
+- 최신 기술을 배우기 위해서
+- 개발자들이 어플리케이션을 만들기 위해 Web3 기술 스택이 알맞다는 것을 믿으니까
+- 사람들과 만나는 것을 좋아하니까
 
 ## 워크샵과 해커톤은 어떻게 다른가요?
 
-Hackathon is aimed at participants who want to deliver their prototype and demonstrate their ideas to reality in a short period (few hours - one day). Workshops are more for getting developers familiar with the tooling and understanding more about what are the resources currently available and how they can make use of it.
+
+해커톤은 짧은 시간 (몇 시간 ~ 하루) 동안 프로토타입을 보여주고 아이디어를 현실로 구현하기를 원하는 참가자를 대상으로 합니다. 워크샵은 개발자가 현재 사용할 수있는 리소스가 무엇인지, 리소스를 사용하는 방법에 대해 툴링(tooling)하고 이해하는 것에 익숙해 지도록 합니다.
 
 ## 어떻게 당신의 도시에서 해커톤을 열 수 있나요?
 
@@ -38,9 +40,9 @@ Hackathon is aimed at participants who want to deliver their prototype and demon
 
 ## 어떻게 당신을 도와드릴 수 있을까요?
 
-- Provide technical resources/materials. 
-- Find a venue.
-- Ensure the hackathon run smoothly.
+- 기술적인 리소스나 자료들을 제공하고.
+- 장소를 찾아보고.
+- 원활한 해커톤 진행을 할 수 있도록 합니다.
 
 ## 앞으로 다가올 해커톤 이벤트
 
@@ -56,4 +58,4 @@ Coming soon.
 
 ## Support / Contact
 
-If you have any questions regarding organizing a hackathon, please free feel to contact us by [email](mailto:events@web3.foundation) or ask us via [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org) chat.
+해커톤을 여는데 질문이 있으시다면 [이메일]((mailto:events@web3.foundation))이나 [Riot](https://riot.im/app/#/room/#polkadot-watercooler:matrix.org)으로 연락해 주세요.
