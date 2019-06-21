@@ -108,7 +108,7 @@ Even though the Proof-of-Stake models in both projects differ, they are both bas
 
 Cosmos favors the Go programming language and has currently constructed the Cosmos-SDK in Golang. However, the Tendermint consensus engine implements a binary wire protocol called ABCI, and has libraries for interacting with it in [roughly a dozen languages](https://tendermint.com/ecosystem). It is not a direct comparison to Polkadot since the Cosmos Hub only currently has a single implementation in Golang.
 
-In comparison, Polkadot currently has 5 in progress implementations in the languages: Rust, Golang, JavaScript, Golang (there are two), and C++. Additionally, Polkadot is made to use Web Assembly for its runtime compilation target, which means that any language that can compile to Wasm could be used to construct a parachain or write a smart contract for a Polkadot parachain.
+In comparison, Polkadot currently has 5 in progress implementations in the languages: Rust, Golang, JavaScript, Golang (there are two), and C++. Additionally, Polkadot is made to use Web Assembly for its runtime compilation target, which means that any language that can compile to Wasm could be used to construct a parachain or write a smart contract for a Polkadot parachain. Until more frameworks for creating parachains is developed, only Substrate and Rust are available to be used.
 
 ## Conclusion
 
