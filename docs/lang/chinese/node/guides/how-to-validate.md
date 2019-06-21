@@ -68,7 +68,7 @@ polkadot --chain alex
 
 请看[这裹](../../../../polkadot/learn/keys.md)如果你想了解更多关于以上三个分别和为什么需要它们。
 
-![create account](../../../../img/validator/polkadot-dashboard-create-account.jpg)
+![create account](../../../../img/guides/how-to-validate/polkadot-dashboard-create-account.jpg)
 
 在PolkadotJS区块浏览器选择 [`Accounts`](https://polkadot.js.org/apps/#/accounts)，再按下`Create account`。
 
@@ -77,8 +77,6 @@ polkadot --chain alex
 Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當创建**Session**密钥時，你必须在`Advanced creation options`选择`ed25519`加密算法作为`Key pair crypto type`。另外确保你选择`Raw Seed`并储存在本地某个地方，因为当你运行验证人时，那个指令需要使用到它。
 
 每个帐号，输入密码加密种子(Seed)并按下`Save`。
-
-![backup seed](../../../../img/validator/polkadot-dashboard-backup-seed.jpg)
 
 接下来选择*Create and backup account*储存你的密匙为JSON格式。连同密码一起，这是能够恢复帐户的方法。
 
@@ -109,7 +107,7 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 
 选择 `Stash` 帐号，应该有200 mDOTs，之后按`Bond Funds`，我们选择绑定100 mDOTs。
 
-![dashboard bonding](../../../../img/validator/polkadot-dashboard-bonding.png)
+![dashboard bonding](../../../../img/guides/how-to-validate/polkadot-dashboard-bonding.jpg)
 
 - **Controller account** - 选择你之前创建的`Controller`帐号。
 - **Value bonded** - 选择从`Stash`帐号绑定/抵押DOTs数量，因为你需要支付交易费，所以不能够使用全部DOTs作押抵，你之后还可以充值更多，但是提取经已绑定了的DOTs是需要等待一段时间（现在是600个区块）。
@@ -121,11 +119,11 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 
 现在你应该看到 `Controller` 帐号有 `Set Session Key` 和 `Nominate` 选项。
 
-![dashboard validate](../../../../img/validator/polkadot-dashboard-set-session-key.jpg)
+![dashboard validate](../../../../img/guides/how-to-validate/polkadot-dashboard-set-session-key.jpg)
 
 选择 `Set Session Key`。
 
-![dashboard staking](../../../../img/validator/polkadot-dashboard-set-session-key-modal.jpg)
+![dashboard staking](../../../../img/guides/how-to-validate/polkadot-dashboard-set-session-key-modal.jpg)
 
 选择之前建立的 `Session` 帐号并按下 `Set Session Key`。
 
@@ -133,8 +131,8 @@ Stash和Controller帐号可以使用预设的`sr25519`加密算法，但是當�
 
 现在你应该看到`Controller`帐号有`Validate`和`Nominate`选项，按下`Validate`。
 
-![dashboard validate](../../../../img/validator/polkadot-dashboard-validate.png)
-![dashboard validate](../../../../img/validator/polkadot-dashboard-staking.jpg)
+![dashboard validate](../../../../img/guides/how-to-validate/polkadot-dashboard-validate.jpg)
+![dashboard validate](../../../../img/guides/how-to-validate/polkadot-dashboard-validate-modal.jpg)
 
 - **Unstake threshold** - 设置被发现多少次离线后，取消验証人资格。
 - **Payment preferences** - 验证人会先取下这里设定的奖励，余下那些将会跟提名你的人分享。
@@ -154,11 +152,9 @@ polkadot \
 
 之后前往 [Telemetry](https://telemetry.polkadot.io/#/Alexander)，经过数秒后，你的节点资料将会显示出来。
 
-![telemetry monitor](../../../../img/validator/telemetry_monitor.jpg)
-
 前往 [Staking apps](https://polkadot.js.org/apps/#/staking) 选择 "Staking Overview"，你应该看到所有运行中的验证人。在最顶部份，你会看到有多少验证人位置空缺和有多少人有意成为验证人。
 
-![staking queue](../../../../img/validator/polkadot-dashboard-staking-queue.png)
+![staking queue](../../../../img/guides/how-to-validate/polkadot-dashboard-staking-queue.jpg)
 
 有意成为验证人的节点将会在*next up*队列显示，每过一小时后，如果有位置空缺或你背后支持的抵押大过排最后那一位验证人，你的节点将会成为验证人。
 
