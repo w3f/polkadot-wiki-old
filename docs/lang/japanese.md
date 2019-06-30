@@ -18,6 +18,8 @@
 
 [Polkadot Governance / Polkadotガバナンス解説](https://medium.com/unchained-tokyo/polkadot-governance-9853279f4a76)
 
+[Polkadotガバナンススライド](https://speakerdeck.com/masakiminamide/polkadot-governance)
+
 ## Substrate
 
 [What is Substrate? / Substrateとは？](https://alis.to/riorio/articles/365p7QP7De4Z)
@@ -35,8 +37,6 @@
 [Substrateの根本技術libp2p](https://speakerdeck.com/wshino/libp2p)
 
 [Plasm、Substrateに追加するPlasma機能](https://medium.com/@satelliteye/release-of-plasm-ver0-2-0-plasma-on-substrate-6dfcf306752f?_branch_match_id=490212810271783932)
-
-[Polkadotガバナンススライド](https://speakerdeck.com/masakiminamide/polkadot-governance)
 
 ## カスタマイズ
 
