@@ -104,7 +104,7 @@ extra:
       link: 'https://medium.com/@polkadotnetwork'
 
 footer:
-    logo: '/img/Polkadot_Logotype_white.png'
+  logo: 'img/Polkadot_Logotype_white.png'
 
 markdown_extensions:
     - admonition
