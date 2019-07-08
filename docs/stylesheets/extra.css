@@ -28,6 +28,10 @@
 	color: black;
 }
 
+.md-footer-logo {
+	margin-left: -1.5%;
+}
+
 div.md-footer-nav {
 	background-color: #EEEEEE;
 }
