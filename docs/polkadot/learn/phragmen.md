@@ -4,7 +4,7 @@
 
 The sequential Phragmen method is a multi-winner election method introduce by Edvard Phragmen in the 1890s.
 
-> The problem that Phragm ́en’s methods try to solve is that of electing a set of a given numbers of persons from a larger set of candidates. Phragm ́en discussed this in the context of a parliamentary election in a multi-member constituency; the same problem can, of course, also occur in local elections, but also in many other situations such as electing a board or a committee in an organization.
+> The problem that Phragmen’s methods try to solve is that of electing a set of a given numbers of persons from a larger set of candidates. Phragmen discussed this in the context of a parliamentary election in a multi-member constituency; the same problem can, of course, also occur in local elections, but also in many other situations such as electing a board or a committee in an organization.
 
 Phragmen's sequential method is used in the NPoS algorithm of Polkadot to elect validators based on the weight (amount staked to them by nominators). It also handles equalization of weights among validators after each round. Equalization happens in order to spread nominated DOTs among the wider set of validators and enforce stronger decentralization properties to the network.
 
