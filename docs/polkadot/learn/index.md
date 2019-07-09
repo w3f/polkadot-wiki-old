@@ -5,6 +5,7 @@
 
 ## Digging deeper
 
+- [Architecture](./architecture.md) - Overview of the Polkadot architecture.
 - [Bridges](./bridges.md) - Overview of bridges.
 - [Cryptography](./cryptography.md) - Describes the cryptography used in Polkadot and where in the protocol it's employed.
 - [Consensus](./consensus.md) - What is the consensus used in the Polkadot protocol and how does it compare to other consensus protocols?
