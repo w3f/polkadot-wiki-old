@@ -73,7 +73,7 @@ theme:
     text: 'PT Sans'
     code: 'Ubuntu Mono'
   favicon: 'img/favicon.ico'
-  logo: 'img/Polkadot_symbol_white.svg'
+  logo: 'img/Polkadot_symbol_color.png'
   feature:
     tabs: false
 
@@ -94,11 +94,17 @@ repo_url: 'https://github.com/w3f/polkadot-wiki'
 extra:
   social:
     - type: 'github'
+      size: 'lg'
       link: 'https://github.com/paritytech/polkadot'
     - type: 'twitter'
+      size: 'lg'
       link: 'https://twitter.com/polkadotnetwork'
     - type: 'medium'
+      size: 'lg'
       link: 'https://medium.com/@polkadotnetwork'
+
+footer:
+  logo: 'img/Polkadot_Logotype_white.png'
 
 markdown_extensions:
     - admonition
