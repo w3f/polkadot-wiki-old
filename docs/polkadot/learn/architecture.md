@@ -8,7 +8,7 @@ The relay-chain is the central chain of Polkadot. All validators of Polkadot are
 
 ## [Parachains](./parachains.md)
 
-Most of the computation that takes across the Polkadot network as a whole will be delegated to specific parachain implementations which will handle various use cases. Polkadot places no constraints over what parachains are able to do besides that they must be able to generate a succinct proof
+Most of the computation that happens across the Polkadot network as a whole will be delegated to specific parachain implementations that handle various use cases. Polkadot places no constraints over what parachains are able to do besides that they must be able to generate a proof that can be validated by the validators assigned to the parachain. Some parachains may be DApp specific, others may focus on specific features like privacy or scalability -- still others might be experimental architectures that are not necessarily blockchain in nature.
 
 ## Shared state
 

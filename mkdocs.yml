@@ -20,6 +20,7 @@ nav:
    - Tools: polkadot/build/tools/index.md
  - Learn:
    - Home: polkadot/learn/index.md
+   - Architecture: polkadot/learn/architecture.md
    - Bridges: polkadot/learn/bridges/
    - Comparisons:
      - Cosmos: polkadot/learn/comparisons/cosmos.md
