@@ -25,27 +25,27 @@ nav:
      - Cosmos: polkadot/learn/comparisons/cosmos.md
      - Ethereum: polkadot/learn/comparisons.md
      - Tezos: polkadot/learn/comparisons.md
-   - Consensus: polkadot/learn/consensus.md 
+   - Consensus: polkadot/learn/consensus.md
    - Cryptography: polkadot/learn/cryptography.md
    - DOT: polkadot/learn/DOT.md
    - FAQ: polkadot/learn/faq.md
-   - Governance: polkadot/learn/governance.md
-   - Glossary: glossary.md
    - GRANDPA: polkadot/learn/consensus.md
+   - Glossary: glossary.md
+   - Governance: polkadot/learn/governance.md
    - ICMP: polkadot/learn/interchain.md
    - Implementations: polkadot/learn/implementations.md
    - Keys: polkadot/learn/keys.md
-   - Phragmen: polkadot/learn/phragmen.md
-   - Roadmap: polkadot/learn/roadmap.md
-   - Security: polkadot/learn/security.md
-   - SPREE: polkadot/learn/spree.md
-   - Staking: polkadot/learn/staking.md
-   - Randomness: polkadot/learn/randomness.md
-   - Relevant Links: polkadot/learn/relevant-links.md
-   - Parachains: polkadot/learn/parachains.md
    - Parachain Slots: polkadot/learn/auction.md
+   - Parachains: polkadot/learn/parachains.md
+   - Phragmen: polkadot/learn/phragmen.md
    - Polkadot Runtime Environment: polkadot/learn/PRE.md
    - Polkadot UI: polkadot/learn/UI.md
+   - Randomness: polkadot/learn/randomness.md
+   - Relevant Links: polkadot/learn/relevant-links.md
+   - Roadmap: polkadot/learn/roadmap.md
+   - SPREE: polkadot/learn/spree.md
+   - Security: polkadot/learn/security.md
+   - Staking: polkadot/learn/staking.md
  - Run the Network:
    - Home: polkadot/node/index.md
    - Collator: polkadot/node/collator.md
@@ -54,7 +54,7 @@ nav:
    - Guides:
      - How to nominate: polkadot/node/guides/how-to-nominate.md
      - How to validate: polkadot/node/guides/how-to-validate.md
-     - How to systemd: polkadot/node/guides/how-to-systemd.md
+     - How to use systemd: polkadot/node/guides/how-to-systemd.md
    - Governance: polkadot/node/governance/index.md
  - Other Languages:
    - Chinese: lang/chinese/index.md
@@ -69,7 +69,7 @@ theme:
   palette:
     primary: 'grey'
     accent: 'pink'
-  font: 
+  font:
     text: 'PT Sans'
     code: 'Ubuntu Mono'
   favicon: 'img/favicon.ico'
@@ -77,7 +77,7 @@ theme:
   feature:
     tabs: false
 
-# Extra css for further customization 
+# Extra css for further customization
 extra_css:
   - 'stylesheets/extra.css'
 
@@ -113,5 +113,3 @@ markdown_extensions:
     - toc:
         permalink: true
     - mdtooltips
-
-  
