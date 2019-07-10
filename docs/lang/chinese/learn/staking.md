@@ -89,7 +89,7 @@ _验证人池 A 和 B 均拥有 4 名提名人，分别持有 600 和 400 的权
 
 当验证人被报告离线多次时，系统将进行削减操作。是否削减本质上取决于两个参数，即`Offline Slash Grace`和`Unstake Threshold`。`Offline Slash Grace`由本网络进行配置，当前测试网配置设为 `4`，而`Unstake Threshold`则由验证人决定。不过在当前设置中，`Unstake threshold`的最大值不得超过 10。
 
-简言之，当验证人被报告离线的次数超过 `Offline Slash Grace + Unstake threshold` 次数，将触发削减。
+简言之，当验证人被报告离线的次数超过 `Offline Slash Grace + Unstake threshold` 次数，将触发Slash惩罚。
 
 此外，Slash惩罚一旦确定，系统将从验证人的余额以及所有投票给该验证人的提名人的余额中扣除相应DOT。
 
