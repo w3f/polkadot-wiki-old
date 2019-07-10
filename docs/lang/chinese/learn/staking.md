@@ -85,7 +85,7 @@ _验证人池 A 和 B 均拥有 4 名提名人，分别持有 600 和 400 的权
 - [提名人指南](../../../polkadot/node/guides/how-to-nominate.md) - 成为 Alexander 测试网的提名人。
 - [验证人指南](../node/guides/how-to-validate.md) - 成为 Alexander 测试网的验证人。
 
-## 削减
+## Slash惩罚
 
 当验证人被报告离线多次时，系统将进行削减操作。是否削减本质上取决于两个参数，即`Offline Slash Grace`和`Unstake Threshold`。`Offline Slash Grace`由本网络进行配置，当前测试网配置设为 `4`，而`Unstake Threshold`则由验证人决定。不过在当前设置中，`Unstake threshold`的最大值不得超过 10。
 
