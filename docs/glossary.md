@@ -68,8 +68,6 @@ The process of determining what changes to the network are permissible, such as 
 
 An on-chain entity which consists of several on-chain accounts (starting at 6, eventually moving to the final value of 24) which can act as a representative for "passive" (non-voting) stakeholders.  Council members have two main tasks: proposing referenda for the overall stakeholder group to vote on and cancelling malicious referenda.
 
-## Hybrid Consensus
-
 ## LIBP2P
 
 An open-source library for encrypted peer-to-peer communications and other networking functionality.  More information at: [https://libp2p.io/](https://libp2p.io/)
@@ -102,7 +100,7 @@ A blockchain which meets several characteristics which allow it work within the 
 
 A relatively simple database-like construct that holds both static and dynamic information on each chain.
 
-## Parity
+## Parity Technologies
 
 A company, founded by Dr. Gavin Wood, which is developing Substrate.  It has also released several other projects including Parity Ethereum and Parity Wasm.
 
