@@ -1,4 +1,4 @@
-# Polkadot 트랜잭션 포맷 (Polkadot Extrinsic Format aka Transaction Format)
+# 폴카닷 트랜잭션 포맷 (Polkadot Extrinsic Format aka Transaction Format)
 
 ## 이전 포맷
 
@@ -10,7 +10,7 @@
 
 ## 현재 포맷
 
-Polkadot 트랜잭션 포맷은 아래와 같습니다.:
+폴카닷(Polkadot) 트랜잭션 포맷은 아래와 같습니다.:
 
 ```
 [ address (1/3/5/9/33-bytes, 첫번째 바이트에 따라 다름), index (4-bytes), call (dynamic-length), *오리지널* 필드에 서명함 (64 bytes) ]

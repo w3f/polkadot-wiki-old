@@ -4,7 +4,7 @@
 
 현재 Polkadot 에서는 아래오 같은 세가지 다른 종류의 브릿징(bridging)이 있습니다.
 
-* _브릿징 컨트랙트_(_Bridge contracts_) -Polkadot과 외부 블록체인 간 브릿지로 배포된 스마트 컨트랙트.
+* _브릿지 컨트랙트_(_Bridge contracts_) -Polkadot과 외부 블록체인 간 브릿지로 배포된 스마트 컨트랙트.
 
 * _크로스-패러체인 통신_(_Cross-parachain communication_) - 컨트랙트가 필요 없음.
 

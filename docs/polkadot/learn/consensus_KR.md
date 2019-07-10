@@ -28,7 +28,7 @@ Polkadot의 합의 프로토콜에 관해 이야기 할 때 사용하는 GRANDPA
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement)는 Polkadot relay chain을 위해 구현된 Finality 도구입니다.
 
-노드의 2/3이 네트워크에 대해 정직하고 20%(1/5)의 비잔틴 노드를 비동기 세팅에서 대처 할 수있는 부분 동기식 네트워크 모델(partially synchronous network model)에서 작동합니다.
+노드의 2/3가 네트워크에 대해 정직하고 20%(1/5)의 비잔틴 노드를 비동기 세팅에서 대처 할 수있는 부분 동기식 네트워크 모델(partially synchronous network model)에서 작동합니다.
 눈에 띄는 차이점은 GRANDPA가 블록이 아닌 체인에 대한 합의에 도달한다는 것입니다.
 
 GRANDPA에 대한 자세한 내용은 W3F Research 페이지의 [GRANDPA 링크](http://research.web3.foundation/en/latest/polkadot/GRANDPA/)를 참조하세요.
