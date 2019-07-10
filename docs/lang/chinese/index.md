@@ -24,7 +24,10 @@
 #### 跨链
 [ICMP 跨链信息传递](./learn/interchain.md)
 
-### [如何在POC-4运行验证人节点](./node/guides/how-to-validate.md)
+#### 抵押
+[了解Polkadot抵押运作](./learn/staking.md)
+
+[如何在POC-4运行验证人节点](./node/guides/how-to-validate.md)
 
 ## Substrate
 
