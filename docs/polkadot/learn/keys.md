@@ -9,7 +9,11 @@ Account keys can be either:
 - The vanilla implementation `ed25519` using Schnorr signatures.
 - The Schnorrkel/Ristretto variant `sr25519` using Schnorr signatures.
 
-For reasons outlined above, the `sr25519` is superior for implementing complex protocols. As account keys only need to provide signature capabilities, it will likely be the case that the more common `ed25519` will continue to be supported in Polkadot. The ecosystem around `ed25519` is much larger as well, with things like HSMs available for it and other projects actively using it, while `sr25519` is a variant created especially to handle Polkadot use cases and is later on adoption. 
+There are no difference in security between `ed25519` and `sr25519` for simple signatures.
+
+We expect `ed25519` to be much better supported by commercial HSMs for the foreseeable future.  There is better support for `ed25519` on personal hardware wallets for now. 
+
+At the same time, `sr25519` makes implememnting more complex protocols safer.  In particular, `sr25519` comes with safer version of many protocols like HDKD common in the Bitcoin and Ethereum ecosystem.
 
 ### "Controller" and "Stash" keys
 
