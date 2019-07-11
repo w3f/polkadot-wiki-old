@@ -13,7 +13,7 @@ There are no difference in security between `ed25519` and `sr25519` for simple s
 
 We expect `ed25519` to be much better supported by commercial HSMs for the foreseeable future.  There is better support for `ed25519` on personal hardware wallets for now. 
 
-At the same time, `sr25519` makes implememnting more complex protocols safer.  In particular, `sr25519` comes with safer version of many protocols like HDKD common in the Bitcoin and Ethereum ecosystem.
+At the same time, `sr25519` makes implementing more complex protocols safer.  In particular, `sr25519` comes with safer version of many protocols like HDKD common in the Bitcoin and Ethereum ecosystem.
 
 ### "Controller" and "Stash" keys
 
