@@ -268,6 +268,8 @@ incentivized
 identicon
 keyfile
 keypair
+codec
+kusama
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
@@ -310,3 +312,23 @@ bitfield
  - docs/polkadot/learn/spree.md
 gavofyork's
 RelayChain
+ - docs/polkadot/build/exchange-integration.md
+finalised
+32-byte
+generalisation
+se
+256-bit
+AccountId
+Check58
+cryptographies
+base-58
+subformats
+commbinations
+Blake2-256
+th
+128-bit
+Millidot
+25519-family
+struct
+nonces
+learnt
