@@ -29,6 +29,7 @@ that is not available to be found elsewhere.
 
 ## Resources
 
+- [Exchange Integration](./exchange-integration.md)
 - [Extrinsics Format](./extrinsic-format.md)
 - [Networks](./networks.md)
 - [Examples](./examples/index.md)

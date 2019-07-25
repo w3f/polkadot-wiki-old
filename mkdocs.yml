@@ -11,6 +11,7 @@ nav:
    - Cumulus: polkadot/build/cumulus.md
    - Deploy Parachains: polkadot/build/deploy-parachains.md
    - Examples: polkadot/build/examples/index.md
+   - Exchange Integration: polkadot/build/exchange-integration.md
    - Extrinsic Format: polkadot/build/extrinsic-format.md
    - Hackathons: polkadot/build/hackathon.md
    - Networks: polkadot/build/networks.md
