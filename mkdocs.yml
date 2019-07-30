@@ -48,7 +48,7 @@ nav:
    - SPREE: polkadot/learn/spree.md
    - Security: polkadot/learn/security.md
    - Staking: polkadot/learn/staking.md
- - Run the Network:
+ - Maintainers:
    - Home: polkadot/node/index.md
    - Collator: polkadot/node/collator.md
    - Nominator: polkadot/node/nominator.md
