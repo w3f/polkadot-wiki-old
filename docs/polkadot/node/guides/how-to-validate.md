@@ -36,6 +36,16 @@ If you have installed rust already, run this command to check whether there is a
 
 Until support for the one-line installer is back up for PoC-4, you will need to build `polkadot` from source.
 
+**You must use a specific version of nightly to install PoC-4.** Follow the directions below:
+
+```
+rustup toolchain install nightly-2019-07-14
+rustup default nightly-2019-07-14  
+rustup target add wasm32-unknown-unknown --toolchain nightly-2019-07-14 
+```
+
+After switch to `nightly-2019-07-14` as the default toolchain the below directions should work as written.
+
 ```bash
 git clone https://github.com/paritytech/polkadot.git
 # To update your node. Run from this step.
