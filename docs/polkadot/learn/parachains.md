@@ -1,34 +1,14 @@
 # Parachains
 
+![One parachain](../../img/network/one_parachain.png)
+
 ## What is a parachain?
 
-Parachains take their name from the concept of "parallelized" chains which are connected to and share in the security of the Polkadot relay-chain. Parachains are validatable, globally-coherent dynamic data-structures. Most commonly they will resemble blockchains but there is no specific need for them to be blockchain in nature.
+A parachain is an application specific data structure that is globally coherent and validatable by the validators of the Polkadot relay chain. Most commonly a parachain will take the form of a blockchain, but there is no specific need for them to be blockchain in nature. They take their name from the concept of parallelized chains that run parallel to the relay chain. Due to their parallel nature, they are able to parallelize transaction processing and achieve scalability of the Polkadot system. They [share in the security](./security.md) of the entire Polkadot network and communicate with other parachains through [ICMP](./interchain.md).
 
-The only constraints on what type of logic can be implemented for a parachain is that must be able to be bundled in a proof (known as a Proof-of-Verification block) and submitted to validators to be checked.
+Parachains are maintained by a network maintainer known as a [collator](../node/collator.md). The role of the collator node is to maintain a full-node of the parachain, retain all necessary information of the parachain, and produce new block candidates to pass to the relay chain validators for verification and inclusion in the shared state of Polkadot. The incentivization of a collator node is an implementation detail of the parachain (see [parachain economies](#parachain-economies)) and they are not required to be staked on the relay chain or own DOT token unless stipulated to do so by the parachain implementation.
 
-Rob Habermeier, a co-founder of Polkadot, [described parachains in the following way](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a):
-
-> A parachain (parallelizable chain) is a simpler form of blockchain, which attaches to the security provided by a ‘relay chain’ rather than providing its own. The relay chain provides security to attached parachains, but also provides a guarantee of secure message-passing between them.
-
-The Polkadot architecture allows for the state transitions performed on the parachain to be specified as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated against the registered state transition function (STF) by validators before the state transition can take place.
-
-## Benefits of parachains
-
-By connecting to Polkadot a parachain gains two major advantages over an independent chain:
-
-- [Shared security](./security.md)
-- [Trust-free interchain data transmission](./interchain.md)
-
-## Examples
-
-- **Encrypted Consortium Chains** - These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the ICMP protocol. 
-- **High Frequency Chains** - These are chains which can compute many transactions in a short amount of time by taking certain trade-offs or making optimizations. 
-- **Privacy Chains** - These are chains which do not leak any information to the public through use of novel cryptography.
-- **Smart Contract Chains** - These are chains which can have additional logic implemented on them through the deployment of code known as _smart contracts_.
-
-## Collators
-
-Parachains are operated and new blocks are authored by [collator nodes](../node/collator.md) that maintain "full-nodes" of a particular parachain. They retain all necessary information to be able to propose new blocks and execute transactions in a similar way as miners do in traditional PoW blockchains. A block proposed by a collator node will be checked by the validator node before it is accepted as a canonical state transition by the relay-chain.
+The Polkadot runtime environment (PRE) allows for the state transitions performed on parachains to be specified as a Wasm executable. Proofs of new state transitions that occur on a parachain must be validated against the registered state transition function (STF) that is stored on the relay chain by the validators before Polkadot acknowledges a state transition has occurred on a parachain. The only constraint to the logic that a parachain is allowed to implement is that it must be verifiable by the relay chain validators. Verification most commonly takes the form a  bundled proof of a state transition known as a Proof-of-Verification (PoV) block, which is submitted to the validators from one or more of the parachain collators to be checked.
 
 ## Parachain economies
 
@@ -39,6 +19,15 @@ Collators may be incentivized through inflation of a native parachain token. The
 Transaction fees in a native parachain token can also be an implementation choice of parachains. Polkadot makes no hard and fast rules for how the parachains decide on original validity of transactions. For example, a parachain may be implemented so that transactions must pay a minimum fee to collators to be valid. The relay chain will enforce this validity. Similarly, a parachain could not include that in their implementation and Polkadot would still enforce its validity.
 
 Parachains are not required to have their own token and if they do it is up to the parachain to make the economic case for their token, not Polkadot.
+
+## Examples
+
+Some examples of parachains:
+
+- **Encrypted Consortium Chains** - These are possibly private chains that do not leak any information to the public, but still can be interacted with trustlessly due to the nature of the ICMP protocol. 
+- **High Frequency Chains** - These are chains which can compute many transactions in a short amount of time by taking certain trade-offs or making optimizations. 
+- **Privacy Chains** - These are chains which do not leak any information to the public through use of novel cryptography.
+- **Smart Contract Chains** - These are chains which can have additional logic implemented on them through the deployment of code known as _smart contracts_.
 
 ## FAQ
 
@@ -57,3 +46,7 @@ Parachain Development Kits are a set of tools that enable developers to create t
 ### Deploying parachains
 
 Please see the builder's article on [deploying parachains](../build/deploy-parachains.md).
+
+## Resources
+
+- [Polkadot: The Parachain](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) - Blog post by Polkadot co-founder Rob Habermeier that introduced parachains in 2017 as "a simpler form of blockchain, which attaches to the security provided by a ‘relay chain’ rather than providing its own. The relay chain provides security to attached parachains, but also provides a guarantee of secure message-passing between them."
