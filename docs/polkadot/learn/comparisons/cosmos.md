@@ -94,13 +94,13 @@ Polkadot's design has stronger liveness guarantees than Cosmos' Tendermint, whic
 
 In Tendermint, block production will stop along with the finality, once more than 1/3 of the validator set has become Byzantine. 
 
+Tendermint uses a weight-based proof-of-stake algorithm which gives validators voting power based on the amount of ATOM tokens they hold (or are delegated). Currently only 5 out of 100 validators control 1/3 of the stake and thus could halt the finalization procedure of the network. In Polkadot, the number of validators will always be 33% of the total (so with 100 validators, 33). 
+
 While Polkadot's GRANDPA will also stop finalizing blocks once more than 1/3 of the validator set is Byzantine, BABE will continue to produce blocks. Once the validator set has been restored by either kicking out the unresponsive validators or validators coming back online, GRANDPA will start to finalize on all the blocks BABE has produced in the meantime.
 
 ### Validator selection (PoS)
 
 Polkadot uses a nominated Proof-of-Stake (NPoS) scheme to elect its validator set. Since the NPoS algorithm gives equal voting weights to each validator, an equalizing algorithm known as Phragmen's method is used to distribute the nominated DOTs equally among all validators as evenly as possible.
-
-Tendermint uses a weight-based proof-of-stake algorithm which gives validators voting power based on the amount of ATOM tokens they hold (or are delegated). Currently only 5 out of 100 validators control 1/3 of the stake and thus could halt the finalization procedure of the network. In Polkadot, the number of validators will always be 33% of the total (so with 100 validators, 33). 
 
 Even though the Proof-of-Stake models in both projects differ, they are both based on the idea of economic sybil resistance. While Cosmos validators are observed to be a power law relationship (something that is much more resisted in Polkadot's NPoS equalization algorithm known as the Phragmen method), it is possible that in Polkadot large actors simply maintain more than one validator. Even if this becomes the case, Polkadot slashes coordinated faults more strongly than uncoordinated faults. This means that there is greater pressure for the network to be decentralized even if more than one validator is ran by a single actor.
 
