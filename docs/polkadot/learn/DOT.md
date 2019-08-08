@@ -5,7 +5,9 @@
 DOT is the native token of the Polkadot network in a similar way that BTC is the native
 token of Bitcoin or Ether is the native token of the Ethereum Blockchain.
 
-Currently, DOTs have 15 decimal places, while the smallest unit is called the Femto-DOT. You can compare the Femto-DOT to Satoshis or Wei, while the DOT is like a bitcoin or an ether.
+Currently, DOTs have 15 decimal places, while the smallest unit is called the Planck. You can compare the Planck to Satoshis or Wei, while the DOT is like a bitcoin or an ether.
+
+**The table show as below is the old version.**
 
 |Unit |Decimal Places|
 |-----|--------|
@@ -15,6 +17,17 @@ Currently, DOTs have 15 decimal places, while the smallest unit is called the Fe
 |Micro| 9  |
 |Milli| 12 |
 |DOT  | 15 |
+
+**New Version**
+
+|Unit |Decimal Places|
+| --- | --- |
+Planck| 1
+Point | 3
+Microdot (UDOT)| 6
+Millidot (MDOT)| 9 
+Dot (DOT) | 12
+Blob | 15
 
 ## What are the uses of DOTs?
 
