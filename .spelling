@@ -270,6 +270,7 @@ keyfile
 keypair
 codec
 kusama
+toolchain
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
