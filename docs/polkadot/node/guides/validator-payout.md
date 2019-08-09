@@ -67,4 +67,4 @@ Your payout = (p / v) * 1 = (8 / 4) * 0 = 0
 
 In this era, you received no payout, since none of your validators were in the validator set.
 
-It is anticipated that this will be a dynamic equilibrium.  Potential validators will run different numbers of validators and apply different amounts of stake to them as time goes on, and in response to the actions of other validators on the network.
+The incentives of the system favor validators each having similar amounts of stake.  However, this will most likely be a dynamic, rather than static, equilibrium.  Potential validators will run different numbers of validators and apply different amounts of stake to them as time goes on, and in response to the actions of other validators on the network.
