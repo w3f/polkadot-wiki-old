@@ -24,7 +24,7 @@ The initial goal of the Kusama network is to have 50 - 100 validators after the 
 
 ## Running Multiple Validators
 
-It is possible for a single entity to run multiple validators.  It is explicity encouraged by the protocol, as some examples will show.  Assuming you have enough DOTs, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will often result in a higher return than running a single validator.
+It is possible for a single entity to run multiple validators.  It is explicitly encouraged by the protocol, as some examples will show.  Assuming you have enough DOTs, or enough stake nominates your validator, to ensure that your validators remain in the validator set, running multiple validators will often result in a higher return than running a single validator.
 
 Assume you have 20 DOTs to stake - for simplicity's sake, we will ignore nominators for now.  Running a single validator, as in the example above, would net you 2 DOTs in this era.
 
@@ -52,7 +52,7 @@ Payout (p): 8 DOTs
 Your payout = (p / v) * 1 = (8 / 4) * 2 = 4
 ```
 
-You may now think, if two validators are good, perhaps three would be better?  However, if you continue to split your stake equally, you will soon find yourself without enough stake to keep yourself in the validator set.  In the following example, assume that there are other potential validators with 6.5 DOTs staked.  If you split your stake equally amongst all three of your validators (18 / 3 = 6 DOTs), none of your validators can make it into the validator set.  The original `v4`, who had 7 DOTs staked, and another validator who has 6.5 DOTs staked, enter the validator set and none of your validators join.
+You may now think, if two validators are good, perhaps three would be better?  However, if you continue to split your stake equally, you will soon find yourself without enough stake to keep yourself in the validator set.  In the following example, assume that there are other potential validators with 6.5 DOTs staked.  If you split your stake equally among all three of your validators (18 / 3 = 6 DOTs), none of your validators can make it into the validator set.  The original `v4`, who had 7 DOTs staked, and another validator who has 6.5 DOTs staked, enter the validator set and none of your validators join.
 
 ```
 Validator Set Size (v): 4
