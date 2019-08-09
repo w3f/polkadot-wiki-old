@@ -57,6 +57,7 @@ nav:
      - How to nominate: polkadot/node/guides/how-to-nominate.md
      - How to validate: polkadot/node/guides/how-to-validate.md
      - How to use systemd: polkadot/node/guides/how-to-systemd.md
+     - Validator Payout Overview: polkadot/node/guides/validator-payout.md
    - Governance: polkadot/node/governance/index.md
  - Other Languages:
    - Chinese: lang/chinese/index.md

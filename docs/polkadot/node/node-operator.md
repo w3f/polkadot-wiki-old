@@ -7,7 +7,7 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
 ## Guides
 
 - [How to validate on PoC-4](./guides/how-to-validate.md) - Guide on how to set up a validator for PoC-4 and the Alexander testnet.
-- [Validator Payout Mechanism Overview](./guides/validator-payout.md) - A short overview on how the validator payout mechanism works
+- [Validator Payout Overview](./guides/validator-payout.md) - A short overview on how the validator payout mechanism works
 - [How to run your validator as a systemd process](./guides/how-to-systemd.md) - Guide on running your validator as a `systemd` process so that it will run in the background and start automatically on reboots.
 
 ## Other References
