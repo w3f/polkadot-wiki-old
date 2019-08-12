@@ -58,7 +58,7 @@ The incentives of the system favor equally-staked validators. This will most lik
 
 Although rewards are paid equally, slashes are relative to a validator's stake. Therefore, if you do have enough DOTs to run multiple validators, it is in your best interest to do so. A slash of 30% will, of course, be more DOTs for a validator with 18 DOTs staked than one with 9 DOTs staked.
 
-Running multiple validators does not absolve you of the consequences of misbehavior. Polkadot punishes attacks that appear coordinated more severly than individual attacks. You should not, for example, run multiple validators hosted on the same infrastructure. A proper multi-validator configuration would ensure that they do not fail simultaneously.
+Running multiple validators does not absolve you of the consequences of misbehavior. Polkadot punishes attacks that appear coordinated more severely than individual attacks. You should not, for example, run multiple validators hosted on the same infrastructure. A proper multi-validator configuration would ensure that they do not fail simultaneously.
 
 Nominators have the incentive to nominate the lowest-staked validator, as this will result in the lowest risk and highest reward.
 
