@@ -66,7 +66,7 @@ Nominators have the incentive to nominate the lowest-staked validator, as this w
 
 Nominated stake allows you to "vote" for validators and share in the rewards (and slashing) without running a validator node yourself. Validators can choose to keep part of their rewards to "reimburse" themselves for the cost of running a validator node. Other than that, all rewards are shared based on the stake behind each validator. This includes the stake of the validator itself, plus any stake bonded by nominators.
 
-> **NOTE:** A validator sets his preference in DOTs, _not_ a percentage of the reward. Polkadot's block reward is based on the _total_ amount at stake, with the reward peaking at 50%. This means that in periods of lower reward, the validator's payout preference could mean that there is zero left over for nominators.
+> **NOTE:** Validators set their preference in DOTs, _not_ as a percentage of the reward. Polkadot's block reward is based on the _total_ amount at stake, with the reward peaking when the amount staked is at 50% of the total supply. In periods when there is a lower amount staked, and therefore lower rewards, the validator's payout preference could mean that there is zero left over for nominators.
 
 In the following examples, we can see the results of several different validator payment schemes and split between nominator and validator stake. We will assume a single nominator for each validator. However, there can be numerous nominators for each validator. Rewards are still distributed proportionally - for example, if the total rewards to be given to nominators is 2 DOTs, and there are four nominators with equal stake bonded, each will receive 0.5 DOTs. Note also that a single nominator may stake different validators.
 
