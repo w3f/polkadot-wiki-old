@@ -1,10 +1,10 @@
 # Parathreads
 
-Parathreads are an idea for parachains to temporarily participate in Polkadot security without needing to lease a dedicated parachain slot. This is done through economically sharing the scarce resource of a _parachain slot_ among a number of competing resources (parachains). This enables parachains which otherwise would not be able to acquire a full parachain slot to still participate in Polkadot's shared security -- albeit to a lesser extent.
+Parathreads are an idea for parachains to temporarily participate in Polkadot security without needing to lease a dedicated parachain slot. This is done through economically sharing the scarce resource of a _parachain slot_ among a number of competing resources (parathread block candidates). This enables chains that otherwise would not be able to acquire a full parachain slot to still participate in Polkadot's shared security -- albeit with an associated fee per block.
 
 ## Origin
 
-According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu, the origin of the idea came from similar notions in the limited resource of memory on early personal computers of the late '80s and '90s. Since computers have a limited amount of physical memory, in the case that an application needs more, it's possible to create virtual memory by using _swap space_ on a hard disk.
+According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu, the origin of the idea came from similar notions in the limited resource of memory on early personal computers of the late '80s and '90s. Since computers have a limited amount of physical memory, when an application needs more, the computer can create virtual memory by using _swap space_ on a hard disk. Swap space allows the capacity of a computer's memory to expand and for more processes to run concurrently with the trade-off that some processes will take longer to progress.
 
 ## Parachain vs. Parathread
 
@@ -18,7 +18,21 @@ Registration of the parathread does not guarantee anything more than the registr
 
 There are two interesting observations to make about parathreads. One, since they compete on a per-block basis it is similar to how transactions are included in Bitcoin or Ethereum and a similar [fee market]() will likely develop which means that busier times will drive the price of parathread inclusion up while times of low activity will require lower fees. Two, this mechanism is markedly different from the parachain one which guarantees inclusion as long as a parachain slot is held; parathread registration grants no such right to the parathread.
 
-## How Will Parachains be Registered?
+## How Will Parathreads be Operated?
 
-A portion of the parachain slots will be designated as part of the parathread pool. In other words, some parachain slots will have no parachain attached to them
+A portion of the parachain slots will be designated as part of the parathread pool. In other words, some parachain slots will have no parachain attached to them and rather will be used as a space for which the winner(s) of the block-by-block parathread fee auction can have their block candidate included. 
 
+Collators will offer a bid designated in DOTs for inclusion of a parathread block candidate.
+The relay chain block author is able to select from these bids to include a parathread block. The obvious incentive is for them to accept the block candidate with the highest bids, which would bring them the most profit. The tokens from the parathread bids will likely be split 80-20 meaning that 80% goes into Polkadot treasury and 20% goes to the block author. This is the same split that applies also to transaction fees and like many other parameters in Polkadot can be changed through a governance mechanism.
+
+## Parathread Economics
+
+There are two sources of compensation for collators:
+1) Assuming a parathread has its own local token system, it pays the collators from the transaction fees in its local token. If the parathread does not implement a local token, then it can use DOTs.
+2) Parathread protocol subsidy. A parathread can mint new tokens in order to provide additional incentives for the collator. Probably, the amount of local tokens to mint for the parathread would be a function of time, the more time that passes between parathread blocks that are included in the relay chain, the more tokens the parathread is willing to subsidize in order to be considered for inclusion. The exact implementation of this minting process could be through local parathread inflation or via a stockpile of funds like a treasury.
+
+Collators may be paid in local parathread currency. However, the relay chain transacts with the Polkadot universal currency the DOT only. Collators must then submit block candidates with an associated bid in DOT. This means that if the parathread offers a local currency, the collator will need to understand the exchange rate between this currency and DOT in order to place a proper DOT bid on the relay chain and ensure that they make a profit.
+
+## Parachain Slot Swaps
+
+It will be possible for a parachain that holds a parachain slot to swap this slot with a parathread so that the parathread "upgrades" to a full parachain and the parachain becomes a parathread. Similarly, this provides a graceful off-ramp for parachains that have reached the end of their lease and do not have sufficient usage to justify renewal; they can remain registered on the relay chain but only produce new blocks when they need to. Parathreads help ease the sharp stop of the parachain slot term by allowing parachains that are still doing something useful to produce blocks.
