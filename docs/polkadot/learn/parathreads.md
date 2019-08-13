@@ -1,6 +1,6 @@
 # Parathreads
 
-Parathreads are an idea for parachains to temporarily participate in Polkadot security without needing to lease a dedicated parachain slot. This is done through economically sharing the scarce resource of a _parachain slot_ among a number of competing resources (parathread block candidates). This enables chains that otherwise would not be able to acquire a full parachain slot to still participate in Polkadot's shared security -- albeit with an associated fee per block.
+Parathreads are an idea for parachains to temporarily participate in Polkadot security without needing to lease a dedicated parachain slot. This is done through economically sharing the scarce resource of a _parachain slot_ among a number of competing resources (parathreads). Chains that otherwise would not be able to acquire a full parachain slot are enabled to still participate in Polkadot's shared security -- albeit with an associated fee per block. It also offers a graceful off-ramp to parachains.
 
 ## Origin
 
@@ -8,7 +8,7 @@ According to [this talk](https://v.douyu.com/show/a4Jj7llO5q47Dk01) in Chengdu, 
 
 ## Parachain vs. Parathread
 
-Parachains and parathreads are very similar from a development perspective. One can imagine that a chain developed with Substrate can at different points in its lifetime assume one of three states: 1) independent chain, 2) parachain, or 3) parathread. It can switch between these states with relatively minimal effort on behalf of developers since the difference is more of an economical distinction than a technological one.
+Parachains and parathreads are very similar from a development perspective. One can imagine that a chain developed with Substrate can at different points in its lifetime assume one of three states: 1) independent chain with secured bridge, 2) parachain, or 3) parathread. It can switch between these last two states with relatively minimal effort on behalf of developers since the difference is more of an economical distinction than a technological one.
 
 Parathreads have the exact same benefits for connecting to Polkadot that a full parachain would. Namely, it is able to send messages to other para{chain,threads} through ICMP and it is secured under the full economic security of Polkadot's validator set. 
 
@@ -24,6 +24,8 @@ A portion of the parachain slots will be designated as part of the parathread po
 
 Collators will offer a bid designated in DOTs for inclusion of a parathread block candidate.
 The relay chain block author is able to select from these bids to include a parathread block. The obvious incentive is for them to accept the block candidate with the highest bids, which would bring them the most profit. The tokens from the parathread bids will likely be split 80-20 meaning that 80% goes into Polkadot treasury and 20% goes to the block author. This is the same split that applies also to transaction fees and like many other parameters in Polkadot can be changed through a governance mechanism.
+
+For a precise description of the parathread protocol, see [here](https://hackmd.io/UcOOzoyDR9WJpQBZICtg3Q?both#Parathread-Protocol).
 
 ## Parathread Economics
 
