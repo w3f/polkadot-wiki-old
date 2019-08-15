@@ -39,6 +39,7 @@ nav:
    - Keys: polkadot/learn/keys.md
    - Parachain Slots: polkadot/learn/auction.md
    - Parachains: polkadot/learn/parachains.md
+   - Parathreads: polkadot/learn/parathreads.md
    - Phragmen: polkadot/learn/phragmen.md
    - Polkadot Runtime Environment: polkadot/learn/PRE.md
    - Polkadot UI: polkadot/learn/UI.md
