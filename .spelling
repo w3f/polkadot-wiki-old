@@ -335,6 +335,7 @@ Millidot
 struct
 nonces
 learnt
+DDoS
  - docs/polkadot/learn/parathreads.md
 80s
 90s
