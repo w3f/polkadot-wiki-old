@@ -66,7 +66,7 @@ The Decaf paper approach by the [Ristretto Group](https://ristretto.group/) was 
 
 The Web3 Foundation has implemented a Schnorr signature library using the more secure Ristretto compression over the Curve25519 in the [Schnorrkel](https://github.com/w3f/schnorrkel) repository. Schnorrkel implements related protocols on top of this curve compression such as HDKD, MuSig, and a verifiable random function (VRF). It also includes various minor improvements such as the hashing scheme STROBE that can theoretically process huge amounts of data with only one call across the Wasm boundary.
 
-The implementation of Schnorr signatures that is used in Polkadot and implements the Schnorrkel protocols over the Ristretto compression of the Curve25519 is known as **SR25519** or otherwise, Schnorrkel-Ristretto-25519. 
+The implementation of Schnorr signatures that is used in Polkadot and implements the Schnorrkel protocols over the Ristretto compression of the Curve25519 is known as **sr25519**.
 
 ### Are BLS signatures used in Polkadot?
 
