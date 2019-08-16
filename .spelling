@@ -271,6 +271,8 @@ keypair
 codec
 kusama
 toolchain
+parathreads
+parathread
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
@@ -334,3 +336,6 @@ struct
 nonces
 learnt
 DDoS
+ - docs/polkadot/learn/parathreads.md
+80s
+90s

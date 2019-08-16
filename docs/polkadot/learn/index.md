@@ -14,6 +14,7 @@
 - [Interchain Communication](./interchain.md) - Information regarding how interchain messaging works.
 - [Parachains](./parachains.md) - Overview of parachains.
 - [Parachain Auctions](./auction.md) - Describes the mechanism for the auctioning of parachain slots.
+- [Parathreads](./parathreads.md) - A parathread is a way to share the scarce resource of a parachain slot among many parachain-"threads".
 - [Phragmen](./phragmen.md) - Information on the Phragmen method.
 - [Polkadot Runtime Environment](./PRE.md) - Gives general information on the Polkadot Runtime Environment.
 - [Randomness](./randomness.md) - What does Polkadot use for randomness and how?
