@@ -19,7 +19,6 @@ Proposals may consist of (but are not limited to):
  - Software development (wallets and wallet integration, clients and client upgrades).
 
 The treasury is ultimately controlled by the stakeholders, and how the funds will be spent is up to their judgment. 
-spent.
 
 ## Resources
 
