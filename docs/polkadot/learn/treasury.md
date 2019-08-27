@@ -9,7 +9,7 @@ of its funds, it suffers a burn of small percentage of its funds -- thereby caus
 When a stakeholder wishes to propose a spend from the treasury, they must reserve a deposit totaling 5% of the proposed
 spend. This deposit will be slashed if the proposal is rejected, and returned if the proposal was accepted.
 
-Proposals may consist of (but not limited to):
+Proposals may consist of (but are not limited to):
 
  - Infrastructure deployment and continued operation.
  - Network security operations (monitoring services, continuous auditing).
