@@ -273,6 +273,10 @@ kusama
 toolchain
 parathreads
 parathread
+katal
+permissioned
+hackerspaces
+rollout
  - docs/polkadot/build/extrinsic-format.md
 33-bytes
 PrivCall
