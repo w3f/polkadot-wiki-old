@@ -5,6 +5,7 @@
 
 ## Digging deeper
 
+- [Architecture](./architecture.md) - Overview of the Polkadot architecture.
 - [Bridges](./bridges.md) - Overview of bridges.
 - [Cryptography](./cryptography.md) - Describes the cryptography used in Polkadot and where in the protocol it's employed.
 - [Consensus](./consensus.md) - What is the consensus used in the Polkadot protocol and how does it compare to other consensus protocols?
@@ -13,12 +14,14 @@
 - [Interchain Communication](./interchain.md) - Information regarding how interchain messaging works.
 - [Parachains](./parachains.md) - Overview of parachains.
 - [Parachain Auctions](./auction.md) - Describes the mechanism for the auctioning of parachain slots.
+- [Parathreads](./parathreads.md) - A parathread is a way to share the scarce resource of a parachain slot among many parachain-"threads".
 - [Phragmen](./phragmen.md) - Information on the Phragmen method.
 - [Polkadot Runtime Environment](./PRE.md) - Gives general information on the Polkadot Runtime Environment.
 - [Randomness](./randomness.md) - What does Polkadot use for randomness and how?
 - [Security](./security.md) - How does the Polkadot network remain secure?
 - [SPREE](./spree.md) - Shared Protected Runtime Execution Environments,
 - [Staking](./staking.md) - How does staking work in Polkadot?
+- [Treasury](./treasury.md) - Making spending proposals on Polkadot and Kusama.
 - [WebAssembly](./wasm.md) - What is WebAssembly and how is it used in Polkadot?
 
 ## Resources

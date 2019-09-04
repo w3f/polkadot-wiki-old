@@ -11,6 +11,7 @@ nav:
    - Cumulus: polkadot/build/cumulus.md
    - Deploy Parachains: polkadot/build/deploy-parachains.md
    - Examples: polkadot/build/examples/index.md
+   - Exchange Integration: polkadot/build/exchange-integration.md
    - Extrinsic Format: polkadot/build/extrinsic-format.md
    - Hackathons: polkadot/build/hackathon.md
    - Networks: polkadot/build/networks.md
@@ -20,33 +21,36 @@ nav:
    - Tools: polkadot/build/tools/index.md
  - Learn:
    - Home: polkadot/learn/index.md
+   - Architecture: polkadot/learn/architecture.md
    - Bridges: polkadot/learn/bridges/
    - Comparisons:
      - Cosmos: polkadot/learn/comparisons/cosmos.md
      - Ethereum: polkadot/learn/comparisons.md
      - Tezos: polkadot/learn/comparisons.md
-   - Consensus: polkadot/learn/consensus.md 
+   - Consensus: polkadot/learn/consensus.md
    - Cryptography: polkadot/learn/cryptography.md
    - DOT: polkadot/learn/DOT.md
    - FAQ: polkadot/learn/faq.md
-   - Governance: polkadot/learn/governance.md
-   - Glossary: glossary.md
    - GRANDPA: polkadot/learn/consensus.md
+   - Glossary: glossary.md
+   - Governance: polkadot/learn/governance.md
    - ICMP: polkadot/learn/interchain.md
    - Implementations: polkadot/learn/implementations.md
    - Keys: polkadot/learn/keys.md
-   - Phragmen: polkadot/learn/phragmen.md
-   - Roadmap: polkadot/learn/roadmap.md
-   - Security: polkadot/learn/security.md
-   - SPREE: polkadot/learn/spree.md
-   - Staking: polkadot/learn/staking.md
-   - Randomness: polkadot/learn/randomness.md
-   - Relevant Links: polkadot/learn/relevant-links.md
-   - Parachains: polkadot/learn/parachains.md
    - Parachain Slots: polkadot/learn/auction.md
+   - Parachains: polkadot/learn/parachains.md
+   - Parathreads: polkadot/learn/parathreads.md
+   - Phragmen: polkadot/learn/phragmen.md
    - Polkadot Runtime Environment: polkadot/learn/PRE.md
    - Polkadot UI: polkadot/learn/UI.md
- - Run the Network:
+   - Randomness: polkadot/learn/randomness.md
+   - Relevant Links: polkadot/learn/relevant-links.md
+   - Roadmap: polkadot/learn/roadmap.md
+   - SPREE: polkadot/learn/spree.md
+   - Security: polkadot/learn/security.md
+   - Staking: polkadot/learn/staking.md
+   - Treasury: polkadot/learn/treasury.md
+ - Maintainers:
    - Home: polkadot/node/index.md
    - Collator: polkadot/node/collator.md
    - Nominator: polkadot/node/nominator.md
@@ -54,7 +58,8 @@ nav:
    - Guides:
      - How to nominate: polkadot/node/guides/how-to-nominate.md
      - How to validate: polkadot/node/guides/how-to-validate.md
-     - How to systemd: polkadot/node/guides/how-to-systemd.md
+     - How to use systemd: polkadot/node/guides/how-to-systemd.md
+     - Validator Payout Overview: polkadot/node/guides/validator-payout.md
    - Governance: polkadot/node/governance/index.md
  - Other Languages:
    - Chinese: lang/chinese/index.md
@@ -69,15 +74,15 @@ theme:
   palette:
     primary: 'grey'
     accent: 'pink'
-  font: 
+  font:
     text: 'PT Sans'
     code: 'Ubuntu Mono'
   favicon: 'img/favicon.ico'
-  logo: 'img/Polkadot_symbol_white.svg'
+  logo: 'img/Polkadot_symbol_color.png'
   feature:
     tabs: false
 
-# Extra css for further customization 
+# Extra css for further customization
 extra_css:
   - 'stylesheets/extra.css'
 
@@ -94,11 +99,17 @@ repo_url: 'https://github.com/w3f/polkadot-wiki'
 extra:
   social:
     - type: 'github'
+      size: 'lg'
       link: 'https://github.com/paritytech/polkadot'
     - type: 'twitter'
+      size: 'lg'
       link: 'https://twitter.com/polkadotnetwork'
     - type: 'medium'
+      size: 'lg'
       link: 'https://medium.com/@polkadotnetwork'
+
+footer:
+  logo: 'img/Polkadot_Logotype_white.png'
 
 markdown_extensions:
     - admonition
@@ -107,5 +118,3 @@ markdown_extensions:
     - toc:
         permalink: true
     - mdtooltips
-
-  

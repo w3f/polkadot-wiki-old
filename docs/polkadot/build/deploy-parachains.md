@@ -16,10 +16,12 @@ The `adder` parachain is a simple parachain which will keep a value in storage a
 
 ### Building the code
 
-The first step is to download locally the Polkadot code.
+The first step is to download locally the Polkadot code and switch to the `v0.4` branch.
 
 ```bash
 git clone https://github.com/paritytech/polkadot.git
+cd polkadot
+git checkout v0.4
 ```
 
 Now make sure you have Rust installed.
@@ -33,7 +35,7 @@ rustup update
 Now navigate to the `test-parachains` folder in the Polkadot code repository and run the build script.
 
 ```bash
-cd polkadot/test-parachains
+cd test-parachains
 ./build.sh
 ```
 

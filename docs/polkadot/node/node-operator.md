@@ -7,12 +7,13 @@ These participants will play a crucial role in adding new blocks to the Relay Ch
 ## Guides
 
 - [How to validate on PoC-4](./guides/how-to-validate.md) - Guide on how to set up a validator for PoC-4 and the Alexander testnet.
+- [Validator Payout Overview](./guides/validator-payout.md) - A short overview on how the validator payout mechanism works
 - [How to run your validator as a systemd process](./guides/how-to-systemd.md) - Guide on running your validator as a `systemd` process so that it will run in the background and start automatically on reboots.
 
 ## Other References
 
 - [How to run a Polkadot node (Docker)](https://medium.com/@acvlls/setting-up-a-polkadot-node-the-easy-way-3a885283091f)
-- [A Serverless Failover Solution for Web3.0 Validator Nodes](https://hackernoon.com/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
+- [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
 - [Getting Testnet DOTs](../learn/DOT.md#getting-testnet-dots)
 - [VPS list](./guides/how-to-validate.md#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A place to chat about being a validator.

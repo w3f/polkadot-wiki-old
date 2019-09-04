@@ -9,7 +9,7 @@ This guide will walk you through the steps you can take today to get started bui
 
 ## Where are we now?
 
-- Mainnet: **End of 2019**
+- Initial release: **End of 2019**
 - Current PoC release: **PoC-4**
 - Current testnet: **Alexander**
 - Substrate: **1.0.0-rc**
@@ -20,7 +20,7 @@ This guide will walk you through the steps you can take today to get started bui
 
 Substrate chains can have smart contracts by including the provided contracts runtime module from the SRML. The contracts module will allow smart contracts compiled to Wasm to be deployed on chain. To facilitate this, Parity has been developing an domain specific language called ink!.  
 
-Polkadot is planned to go live on mainnet at the end of 2019. Now that the tools have started to appear and stabilize, there has not been a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code, you should think about the kind of decentralized application you want to make and understand the different paradigms available to developers who want to build for Polkadot.
+Polkadot is planned to go live with an initial release at the end of 2019, depending on security audits and launch provisions outside of control of the team. Now that the tools have started to appear and stabilize, there has not been a better time to get your feet wet and start preparing for launch. But wait! Before you jump head-first into the code, you should think about the kind of decentralized application you want to make and understand the different paradigms available to developers who want to build for Polkadot.
 
 ## What is the difference between building a parachain and a smart contract?
 
@@ -114,7 +114,7 @@ will be parachains that do.
 
 Already Parity Technologies has laid much of the groundwork for an
 out-of-the-box solution for parachains that want to include smart contract
-functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/srml/contract)
+functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/srml/contracts)
 module in the core SRML will support smart contracts that are compiled
 to Wasm. 
 
