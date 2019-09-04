@@ -4,51 +4,51 @@
 
 ## 区块资源管理器
 
-- [Polka.io](https://polka.io)——用于Polkadot的区块链资源管理器。
-- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer)——Polkadot仪表板区块资源管理器。当前默认连接到Alexander测试网，您可以自行配置以连接到其它远程或本地端点。
+- [Polka.io](https://polka.io) - 用于Polkadot的区块链资源管理器。
+- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot仪表板区块资源管理器。当前默认连接到Alexander测试网，您可以自行配置以连接到其它远程或本地端点。
 - Polkascan——用于Polkadot的区块链资源管理器。**目前下线**
 
 ## 钱包
 
 - [Polkadot-JS Apps——账户](https://polkadot.js.org/apps/#/accounts)
-- [Bonds oo7 Polkadot UI](https://github.com/paritytech/substrate-ui)——使用Bonds oo7库构建。
-- [Polkawallet](https://polkawallet.io/)——Polkadot在iOs和Android上使用的移动钱包。目前仍在开发之中，但测试版已经可以下载。关注GitHub上的开发进度。
-- [SpeckleOS](https://www.speckleos.io/)——浏览器扩展钱包，目前仍在开发之中。关注[GitHub]()上的开发进度。
-- [ImageWallet](https://www.reddit.com/r/dot/comments/ah3py1/introducing_alpha_version_of_httpsimagewalletio/)——可视化跨链钱包。目前仍在开发之中。**计划支持 Polkadot和所有Substrate链**。
+- [Bonds oo7 Polkadot UI](https://github.com/paritytech/substrate-ui) - 使用Bonds oo7库构建。
+- [Polkawallet](https://polkawallet.io/) - Polkadot在iOs和Android上使用的移动钱包。目前仍在开发之中，但测试版已经可以下载。关注GitHub上的开发进度。
+- [SpeckleOS](https://www.speckleos.io/) - 浏览器扩展钱包，目前仍在开发之中。关注[GitHub]()上的开发进度。
+- [ImageWallet](https://www.reddit.com/r/dot/comments/ah3py1/introducing_alpha_version_of_httpsimagewalletio/) - 可视化跨链钱包。目前仍在开发之中。**计划支持 Polkadot和所有Substrate链**。
 
  
 
 ## 网络监控与报告
 
-- [Polkadot遥测服务](https://telemetry.polkadot.io/)——提供网络信息，包括当前正在运行链的节点、节点正在运行的软件版本、同步状态，以及显示节点位置的地图。
+- [Polkadot遥测服务](https://telemetry.polkadot.io/) - 提供网络信息，包括当前正在运行链的节点、节点正在运行的软件版本、同步状态，以及显示节点位置的地图。
 - Polkabot——Polkadot使用Riot聊天来进行网络监控和报告，用户可以自定义创建bot插件。[博文](https://medium.com/polkadot-network/polkabot-a3dba18c20c8)，[Github仓库](https://gitlab.com/Polkabot/polkabot)
 
 ## Rust
 
 ### 客户端
 
-- [Polkadot](https://github.com/paritytech/polkadot)——Polkadot运行时环境的Rust实现。
+- [Polkadot](https://github.com/paritytech/polkadot) - Polkadot运行时环境的Rust实现。
 
 ### 工具
 
-- [Substrate](https://github.com/paritytech/substrate)——区块链开发平台用Rust进行编写，Polkadot建立于Substrate之上。
+- [Substrate](https://github.com/paritytech/substrate) - 区块链开发平台用Rust进行编写，Polkadot建立于Substrate之上。
 
-- [Substrate开发中心](https://docs.substrate.dev)——有关使用Substrate构建区块链的全面文档和教程。
+- [Substrate开发中心](https://docs.substrate.dev) - 有关使用Substrate构建区块链的全面文档和教程。
 
 ## C++
 
-- [Kagome](https://github.com/soramitsu/kagome)——由[Soramitsu](https://github.com/soramitsu)开发的C++ Polkadot客户端。
+- [Kagome](https://github.com/soramitsu/kagome) - 由[Soramitsu](https://github.com/soramitsu)开发的C++ Polkadot客户端。
 
 ## Go
 
-- [Gossamer](https://github.com/ChainSafe/gossamer)——Polkadot运行时环境的Go实现。
-- [Golkadot](https://github.com/opennetsys/golkadot)——Polkadot Substrate的Go实现。
+- [Gossamer](https://github.com/ChainSafe/gossamer) - Polkadot运行时环境的Go实现。
+- [Golkadot](https://github.com/opennetsys/golkadot) - Polkadot Substrate的Go实现。
 
 ## JS
 
 ### 客户端
 
-- [Polkadot-JS客户端](https://github.com/polkadot-js/client)——JavaScript爱好者的备选客户端。
+- [Polkadot-JS客户端](https://github.com/polkadot-js/client) - JavaScript爱好者的备选客户端。
 
 在深入研究[Polkadot-JS](https://polkadot.js.org)之前，您可以先浏览相关文档。
 
@@ -73,10 +73,10 @@ Polkadot-JS Common提供各种实用型效用函数，便于在@polkadot namespa
 ### 命令行工具
 
 - [@polkadot/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli)用于Polkadot API的简易命令行界面。[文档](https://polkadot.js.org/api/api/)
-- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc)用于Polkadot的简易RPC监控。更多信息，请参阅下下文的RPC工具。
+- [@polkadot/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc)用于 Polkadot 的简易 RPC 监控。更多信息，请参阅下下文的RPC工具。
 
 
 ### RPC工具
 
-- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider)——说明JS工具如何通过RPC与节点交互。
-- [RPC文档](https://polkadot.js.org/api/METHODS_RPC.html)——介绍Substrate RPC端点。
+- [@polkadot/api/rpc-provider](https://github.com/polkadot-js/api/tree/master/packages/rpc-provider) - 说明 JS 工具如何通过RPC与节点交互。
+- [RPC文档](https://polkadot.js.org/api/METHODS_RPC.html) - 介绍Substrate RPC端点。

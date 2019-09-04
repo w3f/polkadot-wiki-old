@@ -6,16 +6,16 @@ Polkadot中继链本身并不支持智能合约，不过在它之上的平行链
 
 下文列出了开发者当前可使用的资源，帮助开始编写智能合约并部署在基于Substrate的平行链之上。
 
-- [ink!](https://github.com/paritytech/ink)——Parity的ink用于编写智能合约。
-- [部署首个合约](https://github.com/paritytech/ink/wiki/Deploying-Your-First-Contract)——部署给定的`flipper`合约的指南。
+- [ink!](https://github.com/paritytech/ink) - Parity的ink用于编写智能合约。
+- [部署首个合约](https://github.com/paritytech/ink/wiki/Deploying-Your-First-Contract) - 部署给定的`flipper`合约的指南。
 - [编写首份合同](https://github.com/paritytech/ink/wiki/Writing-Your-First-Contract)——编写`flipper`合约的指南。
-- [Substrate合约工作坊](https://shawntabrizi.github.io/substrate-contracts-workshop/#/)——帮助了解使用`ink!`和编写ERC20代币的基本方法。
+- [Substrate合约工作坊](https://shawntabrizi.github.io/substrate-contracts-workshop/#/) - 帮助了解使用`ink!`和编写ERC20代币的基本方法。
 
 ## 范例
 
 下文收集了一些用`ink!`编写的智能合约的社区示例。您也在编写智能合约吗？请让我们把它添加到这个页面！
 
-- [Ownable](https://github.com/JesseAbram/foRust/) ——OpenZeppelin `Ownable`合约的端口。
+- [Ownable](https://github.com/JesseAbram/foRust/) - OpenZeppelin `Ownable`合约的端口。
 
  
 
@@ -39,6 +39,6 @@ Polkadot中继链本身并不支持智能合约，不过在它之上的平行链
 
 ## 资源
 
-- [应该在什么时候构建Substrate运行时或构建Substrate智能合约](https://stackoverflow.com/a/56041305)——从技术角度回答了开发者什么时候可以选择开发运行时或智能合约。
+- [应该在什么时候构建Substrate运行时或构建Substrate智能合约](https://stackoverflow.com/a/56041305) - 从技术角度回答了开发者什么时候可以选择开发运行时或智能合约。
 
  

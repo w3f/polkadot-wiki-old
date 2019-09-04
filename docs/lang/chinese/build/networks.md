@@ -4,7 +4,7 @@
 
 ## 开发
 
-在以下`路径`安装`Polkadot`和Polkadot 二进制文件：
+在以下 `路径` 安装 `Polkadot` 和 Polkadot 二进制文件：
 
 ```bash
 cargo install --git https://github.com/paritytech/polkadot.git polkadot
@@ -18,17 +18,17 @@ polkadot --dev
 
 您可以复制和创建以下网站：
 
-http://github.com/paritytech/polka-ui and http://github.com/paritytech/polkadot-ui or just heading to https://polkadot.js.org/apps.
+http://github.com/paritytech/polka-ui 和 http://github.com/paritytech/polkadot-ui or 或前往到 https://polkadot.js.org/apps.
 
 ## Krumme Lanke
 
-Krumme Lanke是一个在Poc-2开发期间使用的测试网络。请在以下路径安装Polkadot PoC-2和`Polkadot 二进制`文件：
+Krumme Lanke 是一个在 Poc-2 开发期间使用的测试网络。请在以下路径安装 Polkadot PoC-2 和 `Polkadot 二进制` 文件：
 
 ```bash
 cargo install --git https://github.com/paritytech/substrate.git --branch v0.2 polkadot
 ```
 
-通过默认运行以下代码连接到全球“Krumme Lanke”测试网：
+通过默认运行以下代码连接到全球 "Krumme Lanke" 测试网：
 
 ```bash
 polkadot
@@ -36,15 +36,15 @@ polkadot
 
 ## Alexander（Poc-4）
 
-Alexander是一个在PoC-3和PoC-4开发期间使用的测试网络。
+Alexander 是一个在 PoC-3 和 PoC-4 开发期间使用的测试网络。
 
-请在以下`路径`安装Polkadot Poc-4和`polkadot`二进制文件：
+请在以下 `路径` 安装 Polkadot Poc-4 和 `polkadot` 二进制文件：
 
 ```bash
 cargo install --git https://github.com/paritytech/polkadot.git --branch v0.4 polkadot
 ```
 
-通过默认运行以下代码来连接到全球“Alexander测试网：”
+通过默认运行以下代码来连接到全球 "Alexander测试网:"
 
 ```bash
 Polkadot
