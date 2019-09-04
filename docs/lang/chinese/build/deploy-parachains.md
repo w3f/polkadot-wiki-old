@@ -1,26 +1,28 @@
-# 如何查询和部署平行链
+# 如何查看和部署平行链
 
-这个指南经已更新到Alexander测试网络
+指南已经更新，配合Alexander测试网使用。
 
-## 如何查询平行链
+## 如何查看平行链
 
-前往[Polkadot UI](https://polkadot.js.org/apps/#/explorer)的`Chain State`，选择`parachains`模组和`parachains(）`之后按下`+`按钮，之后会回传有效的平行链。
+在[Polkadot UI](https://polkadot.js.org/apps/#/explorer)找到`Chain State`选项卡，选择`parachains`模块以及`parachains()`，然后按`+`键，即可查看到一组当前活跃的平行链数组。
 
 ## 如何部署Adder平行链
 
-**现在需要至少拥有5 DOTs从而创建公投。**
-  
-`Adder`只是简单的平行链用来保留数值到存储中，并在消息发送给它时添加到该值。你可以在Polkadot Github库内的`test-parachains`找到。
+**您需要拥有创建公投所需的最低存款。目前为5个DOT。**
 
-### 代码生成
+`adder`平行链是一种简单平行链，它将保存价值，并在有信息传入时将信息添加至以上价值。您可以在`“test-parachains”`文件夹下的polkadot存储库中找到它。
 
-第一步首先下载Polkadot代码到你本地目录
+> [这里](https://www.youtube.com/watch?v=pDqkzvA4C0E)有一个由Adrian Brink提供的视频指南，不过现在稍微有点过时。如果文字指南和视频指南内容有分歧，请以文字指南为准。
+
+### 创建代码
+
+第一步是在本地下载 Polkadot代码4.0版本。
 
 ```bash
 git clone https://github.com/paritytech/polkadot.git
 ```
 
-确保你经己安装好了Rust
+确保您已经安装了Rust。
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
@@ -28,18 +30,18 @@ sudo apt install make clang pkg-config libssl-dev
 rustup update
 ```
 
-现在前往在Polkadot代码库裹的`test-parachains`资料夹并执行生成脚本
+然后找到Polkadot代码存储库中的`test-parachains`文件夹，运行创建脚本。
 
 ```bash
-cd polkadot/test-parachains
+cd test-parachains
 ./build.sh
 ```
 
-它会在这个资料夹建立简单`adder`平行链的Wasm可执行文件，它将简单地添加发送到给它的消息。Wasm可执行文件会在`parachains/test/res/adder.wasm`路径，所以确保你能在那找到。
+这会为该文件夹中包含的简单`adder`平行链创建Wasm可执行文件。该平行链将添加发送到它的信息。Wasm可执行文件将输出到`parachains/test/res/adder.wasm`路径，请确保您能在该路径下找到它。
 
-你需要生成并运行校对人(Collator)节点从而取得平行链的创世纪状态。
+您需要创建和运行校对人节点，以此获取该平行链的起始状态。
 
-前往`test-parachains/adder/collator`资料夹并执行`build`和`run`指令
+找到`test-parachains/adder/collator`路径并且运行`build`和`run`指令。
 
 ```bash
 cargo build
@@ -47,7 +49,7 @@ cargo run
 [ctrl-c]
 ```
 
-停止校对人节点后你将获得如下结果：
+您可以马上停止校对器节点。您将获得如下输出结果：
 
 ```
 Starting adder collator with genesis:
@@ -56,31 +58,30 @@ Dec: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 Hex: 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000011b4d03dd8c01f1049143cf9c4c817e4b167f1d1b83e5c6f0f10d89ba1e7bce
 ```
 
-最重要的资料是Hex字串，这是你的创世纪状态，你需要将它保存用于接下来步骤。
+hex字符串（十六进制字符串）是重要信息。这是您平行链的初始状态，您需要将它保存下来，下一步中要用到。
 
 ### 部署平行链
 
-前往[Polkadot UI](https://polkadot.js.org/apps/#/extrinsics)的`Extrinsics`标签，选择你要从中部署parachain的帐户，你需要创建公投从而部署平行链。
+找到`Extrinsic`标签页的[Polkadot UI](https://polkadot.js.org/apps/#/extrinsics)。选择您想要用来部署平行链的账户。要部署平行链，您需要创建一场全民公投。
 
-按下 `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`
+点击`democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`。
 
-在id栏位输入平行链的`id`，在这个简单的adder情况，将会是`100`。在`code`栏位，按下页面按钮之后你可以直接上传你之前编译好的`adder.wasm`二进制档案。在`initial_head_data`，你需要复制和贴下你从校对人取的Hex数据。在`value`栏位，你需要输入最小要求的数值从而创建公投，在Alexander测试网络暂时是5 DOTs。
+在`“id”`的位置输入平行链ID。如果是简单adder平行链的话，就输入`100`。在`code`的位置点击页面按钮，然后上传之前编译的`adder.wasm`二进制文件。在`initial head data`位置，将通过校对人节点时获取的十六进制数据复制粘贴进去。在`value`位置，您需要输入创建一场全民公投所需的最低保证金数值。撰文之时，在Alexander测试网上，这个数值是5个DOT。
 
-![registering a parachain](../../../img/parachain/register.png)
+![注册平行链](../../img/parachain/register.png)
 
-假如你前往到`Democracy`标签，你应该会看到你的提案在议案部分
+如果您导航到`“Democracy”`选项卡的话，您可以在提议部分看到自己的提议。
 
-一旦你等待的提案成为公投，你可以投票选择`赞成(Aye)`或`反对(Nay)`，投赞成票使你能够部署平行链。
+在等待提议通过的过程中，您可以对提议投`反对`或者`赞成`票。当然，因为此次投票是要为您自己部署平行链，所以您会投赞成票。
 
-![parachain referendum](../../../img/parachain/referendum.png)
+![平行链公投](../../img/parachain/referendum.png)
 
-当公投结束后，你可以查询你的平行链状态。
+在全民公投投票期结束后，您可以请求查看您的平行链的状态。
 
-前往`Chain State`标签之后选择查询`parachains`状态 ，你应该能够看到一些你的平行链资料。
+您可以到`Chain State`选项卡，通过请求查看`parachains`状态，您能够看到平行链上的一些信息。
 
-![parachain info](../../../img/parachain/info.png)
+![平行链信息](../../img/parachain/info.png)
 
-### 与Parachain互动
+### 与平行链交互
 
-即将快来了!!!
-
+*敬请期待！*
