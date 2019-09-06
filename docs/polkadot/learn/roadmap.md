@@ -9,9 +9,7 @@ We are targeting the end of 2019 for the initial release of Polkadot.
 
 Polkadot is currently undergoing a series of proof-of-concept testnet releases as new features are completed and rolled out.
 
-- PoC-7 (Release date TBD)
-- PoC-6 (Release date TBD)
-- PoC-5 (Release date TBD)
+- PoC-5 (Release date TBD) - Interchain message passing (ICMP), BABE block production, Parachain auction module
 - PoC-4 (Release date 3 April 2019) - _Staking changes and GRANDPA optimizations_ [Release Blog post](https://medium.com/polkadot-network/polkadot-proof-of-concept-4-arrives-with-new-ways-to-stake-3b27037346cc)
 - PoC-3 (Released 21 Dec 2018) - _GRANDPA finality gadget added,  Testnet: "Alexander"_ [Release Blog Post](https://medium.com/coinmonks/polkadot-hello-world-3-poc-3-on-substrate-is-here-c45d100f72e3)
 - BBQ-Birch testnet (Went live: 15 October 2018): _Added smart contract support._

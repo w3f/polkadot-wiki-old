@@ -21,6 +21,7 @@
 - [Security](./security.md) - How does the Polkadot network remain secure?
 - [SPREE](./spree.md) - Shared Protected Runtime Execution Environments,
 - [Staking](./staking.md) - How does staking work in Polkadot?
+- [Treasury](./treasury.md) - Making spending proposals on Polkadot and Kusama.
 - [WebAssembly](./wasm.md) - What is WebAssembly and how is it used in Polkadot?
 
 ## Resources

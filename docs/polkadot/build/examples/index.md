@@ -30,3 +30,7 @@ Examples are helpful to demonstrate patterns of development. In this repository 
 - Substrate inherents sample. [Repo](https://github.com/gautamdhameja/substrate-inherents-sample)
 - Collateralize non-fungible assets for cash. [Repo](https://github.com/nczhu/collateral)
 - CidChain. [Repo](https://github.com/Polygos/substrate-node-cidchain)
+- Katal. [Repo](https://github.com/Trinkler/katal-chain)
+    - [Fixed-point arithmetic](https://github.com/Trinkler/katal-chain/tree/master/modules/reals)
+    - [Time in ISO8601 format](https://github.com/Trinkler/katal-chain/tree/master/modules/time)
+    - [Permissioned Oracle](https://github.com/Trinkler/katal-chain/tree/master/modules/oracle)
