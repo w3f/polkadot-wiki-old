@@ -9,8 +9,8 @@ will be filled out.
 ## Block Explorers
 
 - [Polka.io](https://polka.io) - Blockchain explorer for Polkadot.
-- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to the Alexander testnet by default, but can be configured to connect to other remote or local endpoints.
-- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot. **Currently down.**
+- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to Kusama by default, but can be configured to connect to other remote or local endpoints.
+- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot.
 
 ## Wallets
 
