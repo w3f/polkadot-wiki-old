@@ -10,7 +10,7 @@ will be filled out.
 
 - [Polka.io](https://polka.io) - Blockchain explorer for Polkadot.
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to the Alexander testnet by default, but can be configured to connect to other remote or local endpoints.
-- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot. **Currently down.**
+- [Polkascan](https://polkascan.io/) - The Multi-chain Explorer for the Polkadot-ecosystem. Currently supports: [Kusama](https://polkascan.io/pre/kusama/dashboard), [Alexander](https://polkascan.io/pre/alexander/dashboard), [Edgeware (testnet)](https://polkascan.io/pre/edgeware-testnet/dashboard) and [Joystream (testnet)](https://polkascan.io/pre/joystream-testnet/dashboard)
 
 ## Wallets
 
