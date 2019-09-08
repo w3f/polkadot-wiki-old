@@ -6,7 +6,7 @@ Welcome to the network maintainers section of the Polkadot wiki. Here you will f
 
 - [Validator Home](./node-operator.md) - Gives high level overview of validator and related links.
 - [Validation Guide](./guides/how-to-validate.md) - Walkthrough on how to validator on PoC-4 Alexander testnet.
-- [Secure Validator Guide](./guides/how-to-set-up-secure-validate.md) - Adds extra layer of security on your validator.
+- [Secure Validator Setup Guide](./guides/how-to-set-up-secure-validate.md) - Adds an extra layer of security on your validator.
 
 ## Nominator
 
