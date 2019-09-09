@@ -114,7 +114,7 @@ will be parachains that do.
 
 Already Parity Technologies has laid much of the groundwork for an
 out-of-the-box solution for parachains that want to include smart contract
-functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/srml/contract)
+functionality. The Substrate [contract](https://github.com/paritytech/substrate/tree/master/srml/contracts)
 module in the core SRML will support smart contracts that are compiled
 to Wasm. 
 

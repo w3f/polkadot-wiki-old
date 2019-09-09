@@ -10,7 +10,7 @@ will be filled out.
 
 - [Polka.io](https://polka.io) - Blockchain explorer for Polkadot.
 - [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Currently connects to the Alexander testnet by default, but can be configured to connect to other remote or local endpoints.
-- [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot. **Currently down.**
+- [Polkascan](https://polkascan.io/) - The Multi-chain Explorer for the Polkadot-ecosystem. Currently supports: [Kusama](https://polkascan.io/pre/kusama/dashboard), [Alexander](https://polkascan.io/pre/alexander/dashboard), [Edgeware (testnet)](https://polkascan.io/pre/edgeware-testnet/dashboard) and [Joystream (testnet)](https://polkascan.io/pre/joystream-testnet/dashboard)
 
 ## Wallets
 
@@ -18,7 +18,6 @@ will be filled out.
 - [Bonds oo7 Polkadot UI](https://github.com/paritytech/substrate-ui) - built with the Bonds oo7 library.
 - [Polkawallet](https://polkawallet.io/) - A mobile wallet for Polkadot on both iOs and Android. Currently in development but a Beta version is available for download. Follow development on [GitHub](https://github.com/polkawallet-io/polkawallet-RN).
 - [SpeckleOS](https://www.speckleos.io/) - Browser extension wallet. In development - follow progress on [GitHub](https://github.com/SpeckleOS/speckle-browser-extension).
-- [ImageWallet](https://www.reddit.com/r/dot/comments/ah3py1/introducing_alpha_version_of_httpsimagewalletio/) - Cross-chain wallet with visuals. **In development with planned support for Polkadot and all Substrate chains.**
 
 ## Network Monitoring & Reporting
 
