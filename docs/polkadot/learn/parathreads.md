@@ -1,5 +1,7 @@
 # Parathreads
 
+![Parathreads](../../img/parathreads.jpeg)
+
 Parathreads are a way for parachains to benefit from Polkadot's security and connectivity without needing to lease a dedicated parachain slot. This is done through economically sharing the scarce resource of a _parachain slot_ among a number of competing resources (parathreads). Chains that otherwise would not be able to acquire a full parachain slot are enabled to still participate in Polkadot on a pay-as-you-go basis. It also offers graceful on and off-ramps to applications in the Polkadot ecosystem. Incoming applications can start interacting with Polkadot before raising funds to lease a slot, while parachains can downgrade to a parathread to recover their bond and still remain connected to and secured by Polkadot.
 
 ## Origin
