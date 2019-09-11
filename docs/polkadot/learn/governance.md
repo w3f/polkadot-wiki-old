@@ -84,7 +84,7 @@ All referendums have an *enactment delay* associated with them. This is the peri
 
 #### Public Referenda
 
-Proposals for referenda may be submitted by anyone, however they do not automatically get voted upon. When submitted, the proposer stakes a deposit (any size above a fixed minimum, probably set at around $50 on Polkadot) and the proposal enters a queue. While a proposal is in the queue, anybody may "second" it any number of times by placing a deposit of the same size behind the initial deposit.
+Proposals for referenda may be submitted by anyone, however they do not automatically get voted upon. When submitted, the proposer stakes a deposit (any size above a fixed minimum, probably set at around $50 on Polkadot) and the proposal enters a queue. While a proposal is in the queue, anybody may "second" it any number of times by placing a deposit of at least the same size behind the initial deposit.
 
 At a fixed interval, the item in the queue with the most stake associated with it is removed, all deposits are returned and a referendum takes place on it with each depositor being registered as voting in approval.
 
