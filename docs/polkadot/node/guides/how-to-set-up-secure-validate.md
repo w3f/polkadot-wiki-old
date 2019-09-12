@@ -198,7 +198,7 @@ So far you have successfully:
 
 - Configured the firewall
 - Set up and configured the Wireguard.
-- Ran a validator with public node
+- Ran a validator with public nodes.
 
 If you have experience with devops tools such as `Terraform` and `Ansible`, please check out the [secure validator setup](https://github.com/w3f/polkadot-secure-validator) repository. This tool does everything we talked about above, but you still need to define some credentials (e.g. IP of your server) in the inventory file and then you can manage the relevant servers in an automated way. 
 
