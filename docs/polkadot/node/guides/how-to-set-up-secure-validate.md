@@ -3,7 +3,7 @@
 
 The following article is based on the [polkadot-secure-validator](https://github.com/w3f/polkadot-secure-validator) repository and assumes you have already set up a Polkadot or Kusama validator. If do not have any validator set-up experience, please follow the guide [here](https://guide.kusama.network/en/latest/try/validate/) for an introductory tutorial first.
 
-In this guide, we will enhance the security of the validator by setting up public nodes, as well as configure a VPN to make your validator communicate only with the public nodes.
+In this guide, we will enhance the security of the validator by setting a layered architecture with public nodes and a private validator node. The validator is configured on a VPN with the public nodes so that it's only visible to its own public nodes for communication.
 
 We will use Ubuntu 18.04 and Wireguard to configure the VPN. Wireguard is a fast and secure VPN that uses state-of-the-art cryptography. If you want to learn more about Wireguard, please go [here](https://www.wireguard.com/). Before we move on to the next step, configure the firewall to open the required ports.
 
