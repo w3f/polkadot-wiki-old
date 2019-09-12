@@ -196,7 +196,7 @@ Based on the above output, there is only 1 peer connected to the validator.  Thi
 
 So far you have successfully:
 
-- Configured the firewall
+- Configured the firewall.
 - Set up and configured the Wireguard.
 - Ran a validator with public nodes.
 
