@@ -10,9 +10,9 @@ We will use Ubuntu 18.04 and Wireguard to configure the VPN. Wireguard is a fast
 ```bash
 # ssh port
 ufw allow 22/tcp
-# wireguard port  (Note: Only validator)
+# wireguard port  (Note: Only validator is required)
 ufw allow 51820/udp
-# libp2p  port
+# libp2p  port (Note: Only public node is required))
 ufw allow 30333/tcp
 ufw enable
 # double check the firewall rules
@@ -144,9 +144,11 @@ After you have started the `wg0` interface on your public node and validator, yo
 
 **Public Node (Full Polkadot/Kusama Node)**
 
+``--no-telemetry`` - Prevent the IP leak by not sending any data to the telemetry
+
 ```bash
 # Command
-polkadot --name "Public Node A"
+polkadot --name "Public Node A" --no-telemetry
 ```
 
 ```bash
@@ -165,8 +167,6 @@ polkadot --name "Public Node A"
 When you start the validator, add these two flags.
 
 ``--reserved-nodes`` - Nodes can communicate with your validator
-
-``--no-telemetry`` - Prevent the IP leak by not sending any data to the telemetry
 
 ```bash
 # Command
