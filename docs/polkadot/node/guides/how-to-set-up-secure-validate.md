@@ -1,7 +1,7 @@
 # Secure Validator Setup Guide
 
 
-This article is based on the [polkadot-secure-validator](https://github.com/w3f/polkadot-secure-validator) repository to write and assumes you have already set up a Polkadot / Kusama validator. If not, please go [here](https://guide.kusama.network/en/latest/try/validate/) first.
+The following article is based on the [polkadot-secure-validator](https://github.com/w3f/polkadot-secure-validator) repository and assumes you have already set up a Polkadot or Kusama validator. If do not have any validator set-up experience, please follow the guide [here](https://guide.kusama.network/en/latest/try/validate/) for an introductory tutorial first.
 
 In this guide, we will enhance the security of the validator by setting up public nodes, as well as configure a VPN to make your validator communicate only with the public nodes.
 
