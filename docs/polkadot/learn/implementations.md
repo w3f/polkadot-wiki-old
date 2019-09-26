@@ -10,8 +10,6 @@ There are Polkadot implementations developed in Rust, C++, Go, and JavaScript.
 
 <img src="../../../img/updated_pre.png" alt="polkadot runtime environment" class="polka-re"/>
 
-[**Golkadot**](https://github.com/opennetsys/golkadot) - A Go implementation of Polkadot Substrate in development by Open Network Systems.
-
 [**Polkadot-JS**](https://github.com/polkadot-js) - A JavaScript [client](https://github.com/polkadot-js/client) and tool set developed by [Polkadot JS](https://polkadot.js.org/).
 
 ## Why build multiple implementations?
